@@ -1,0 +1,14 @@
+<?php
+session_start();
+if(!session_is_registered("myuserid"))
+{
+header("location:mainlogin.html"); 
+echo"Login again.";
+}
+?>
+ 
+<html>
+<body>
+<center><strong><font face="Arial" size="4">Login successful!</font></strong></center>
+</body>
+</html>
