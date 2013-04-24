@@ -1,0 +1,35 @@
+<?php
+$host="localhost";
+$username="root";
+$password="thangamm";
+$db_name="TEST";
+$tbl_name="UserLogin";
+//Connect to server and DB.
+$db=mysqli_connect($host,$username,$password, $db_name);
+ 
+//data from form
+ 
+$myuserid=$_POST['myuserid'];
+$mypassword=$_POST['mypassword'];
+ 
+//prevent MySql injection
+ 
+$myuserid = stripslashes($myuserid);
+$mypassword = stripslashes($mypassword);
+$myuserid = mysqli_real_escape_string($db, $myuserid);
+$mypassword = mysqli_real_escape_string($db, $mypassword);
+$mysql = "SELECT * from $tbl_name WHERE userid='$myuserid' AND password ='$mypassword'";
+$result = mysqli_query($db,$mysql);
+ 
+//Count the rows obtained.If results match,register and redirect.
+$count=mysqli_num_rows($result);
+if ($count==1)
+{
+session_register("myuserid");
+header("location:login_success.php");
+}
+else
+{
+echo "Wrong username or password";
+}
+?>
