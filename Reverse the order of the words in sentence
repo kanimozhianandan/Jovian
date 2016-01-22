@@ -1,0 +1,10 @@
+#!/usr/bin/python
+n = int(raw_input());
+t = []
+for i in range(0,n):
+     k = raw_input()
+     t.append(k)
+for j in range(0,len(t)):
+     ty = ' '.join(reversed(t[j].split())) 
+     print ("Case #"+str(j)+": " +(ty));
+
