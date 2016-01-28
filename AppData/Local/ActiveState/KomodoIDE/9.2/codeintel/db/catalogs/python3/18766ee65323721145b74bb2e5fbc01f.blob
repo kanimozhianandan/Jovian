@@ -1,0 +1,33 @@
+<scope doc="A module that interfaces with the Windows Service Control Manager." ilk="blob" lang="Python3" name="servicemanager">
+      <variable citdl="int" name="COINIT_APARTMENTTHREADED" />
+      <variable citdl="int" name="COINIT_DISABLE_OLE1DDE" />
+      <variable citdl="int" name="COINIT_MULTITHREADED" />
+      <variable citdl="int" name="COINIT_SPEED_OVER_MEMORY" />
+      <scope ilk="function" name="CoInitializeEx" />
+      <scope ilk="function" name="CoUninitialize" />
+      <scope ilk="function" name="Debugging" />
+      <variable citdl="int" name="EVENTLOG_AUDIT_FAILURE" />
+      <variable citdl="int" name="EVENTLOG_AUDIT_SUCCESS" />
+      <variable citdl="int" name="EVENTLOG_ERROR_TYPE" />
+      <variable citdl="int" name="EVENTLOG_INFORMATION_TYPE" />
+      <variable citdl="int" name="EVENTLOG_WARNING_TYPE" />
+      <scope ilk="function" name="Finalize" />
+      <scope ilk="function" name="Initialize" />
+      <scope ilk="function" name="LogErrorMsg" />
+      <scope ilk="function" name="LogInfoMsg" />
+      <scope ilk="function" name="LogMsg" />
+      <scope ilk="function" name="LogWarningMsg" />
+      <variable citdl="int" name="PYS_SERVICE_STARTED" />
+      <variable citdl="int" name="PYS_SERVICE_STARTING" />
+      <variable citdl="int" name="PYS_SERVICE_STOPPED" />
+      <variable citdl="int" name="PYS_SERVICE_STOPPING" />
+      <scope ilk="function" name="PrepareToHostMultiple" />
+      <scope ilk="function" name="PrepareToHostSingle" />
+      <scope ilk="function" name="PumpWaitingMessages" />
+      <scope ilk="function" name="RegisterServiceCtrlHandler" />
+      <scope ilk="function" name="RunningAsService" />
+      <scope ilk="function" name="SetEventSourceName" />
+      <scope ilk="function" name="StartServiceCtrlDispatcher" />
+      <scope classrefs="Exception" ilk="class" name="startup_error" />
+    </scope>
+    

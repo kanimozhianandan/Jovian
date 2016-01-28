@@ -1,0 +1,149 @@
+<scope doc="Performance Data Helper (PDH) Query Classes  Wrapper classes for end-users and high-level access to the PDH query" ilk="blob" lang="Python3" name="win32pdhquery">
+      <scope classrefs="object" doc="Provides wrapped access to the Performance Data Helper query objects, generally you should use the child class Query unless you have need of doing weird things :)" ilk="class" line="130" lineend="322" name="BaseQuery">
+        <variable attributes="__instancevar__" citdl="list" line="161" name="paths" />
+        <scope doc="### Not a public method Called only when the Query is known to be open, runs over the whole set of counters, appending results to the temp, returns the values as a list." ilk="function" line="294" lineend="316" name="collectdataslave" returns="list" signature="collectdataslave(format=win32pdh.PDH_FMT_LONG)">
+          <variable citdl="BaseQuery" ilk="argument" name="self" />
+          <variable citdl="win32pdh.PDH_FMT_LONG" ilk="argument" name="format" />
+          <variable citdl="list" line="303" name="temp" />
+          <variable citdl="int" line="305" name="ok" />
+        </scope>
+        <scope doc="### Not a public method" ilk="function" line="318" lineend="322" name="__getinitargs__" returns="tuple" signature="__getinitargs__()">
+          <variable citdl="BaseQuery" ilk="argument" name="self" />
+        </scope>
+        <variable citdl="BaseQuery.close" line="282" name="__del__" />
+        <scope doc="Adds a single counter path, without catching any exceptions." ilk="function" line="181" lineend="188" name="rawaddcounter" signature="rawaddcounter(object, counter, instance=None, inum=-1, machine=None)">
+          <variable citdl="BaseQuery" ilk="argument" name="self" />
+          <variable ilk="argument" name="object" />
+          <variable ilk="argument" name="counter" />
+          <variable ilk="argument" name="instance" />
+          <variable citdl="int" ilk="argument" name="inum" />
+          <variable ilk="argument" name="machine" />
+          <variable citdl="win32pdh.MakeCounterPath()" line="187" name="path" />
+        </scope>
+        <scope doc="Returns the formatted current values for the Query" ilk="function" line="283" lineend="293" name="collectdata" returns="self.collectdataslave()" signature="collectdata(format=win32pdh.PDH_FMT_LONG)">
+          <variable citdl="BaseQuery" ilk="argument" name="self" />
+          <variable citdl="win32pdh.PDH_FMT_LONG" ilk="argument" name="format" />
+          <variable citdl="self.collectdataslave()" line="291" name="temp" />
+        </scope>
+        <scope doc="Adds a single counter path to the paths attribute." ilk="function" line="190" lineend="209" name="addcounter" returns="int" signature="addcounter(object, counter, instance=None, inum=-1, machine=None)">
+          <variable citdl="BaseQuery" ilk="argument" name="self" />
+          <variable ilk="argument" name="object" />
+          <variable ilk="argument" name="counter" />
+          <variable ilk="argument" name="instance" />
+          <variable citdl="int" ilk="argument" name="inum" />
+          <variable ilk="argument" name="machine" />
+        </scope>
+        <scope doc="Adds possibly multiple paths to the paths attribute of the query, does this by calling the standard counter browsing dialogue." ilk="function" line="167" lineend="180" name="addcounterbybrowsing" signature="addcounterbybrowsing(flags=win32pdh.PERF_DETAIL_WIZARD, windowtitle=&apos;Python Browser&apos;)">
+          <variable citdl="BaseQuery" ilk="argument" name="self" />
+          <variable citdl="win32pdh.PERF_DETAIL_WIZARD" ilk="argument" name="flags" />
+          <variable citdl="str" ilk="argument" name="windowtitle" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="win32pdh.OpenQuery()" line="164" name="_base" />
+        <variable attributes="__instancevar__" citdl="int" line="165" name="active" />
+        <scope doc="Makes certain that the underlying query object has been closed, and that all counters have been removed from it." ilk="function" line="269" lineend="281" name="close" signature="close()">
+          <variable citdl="BaseQuery" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="list" line="166" name="curpaths" />
+        <scope doc="### This is not a public method Mission critical function to kill the win32pdh objects held by this object." ilk="function" line="243" lineend="268" name="killbase" signature="killbase(base=None)">
+          <variable citdl="BaseQuery" ilk="argument" name="self" />
+          <variable ilk="argument" name="base" />
+          <variable citdl="list" line="253" name="counters" />
+        </scope>
+        <scope doc="Build the base query object for this wrapper, then add all of the counters required for the query." ilk="function" line="211" lineend="241" name="open" returns="int" signature="open()">
+          <variable citdl="BaseQuery" ilk="argument" name="self" />
+          <variable citdl="win32pdh.OpenQuery()" line="223" name="base" />
+        </scope>
+        <scope attributes="__ctor__" doc="The PDH Query object is initialised with a single, optional list argument, that must be properly formatted PDH Counter paths." ilk="function" line="146" lineend="166" name="__init__" signature="BaseQuery(paths=None)">
+          <variable citdl="BaseQuery" ilk="argument" name="self" />
+          <variable ilk="argument" name="paths" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="list" line="159" name="counters" />
+      </scope>
+      <scope classrefs="BaseQuery" doc="Performance Data Helper(PDH) Query object:  Provides a wrapper around the native PDH query object which" ilk="class" line="324" lineend="506" name="Query">
+        <scope doc="### Not an end-user function Calculate the paths for an instance object." ilk="function" line="386" lineend="410" name="getinstpaths" returns="list" signature="getinstpaths(object, counter, machine=None, objtype=&apos;Process&apos;, format=win32pdh.PDH_FMT_LONG)">
+          <variable citdl="Query" ilk="argument" name="self" />
+          <variable ilk="argument" name="object" />
+          <variable ilk="argument" name="counter" />
+          <variable ilk="argument" name="machine" />
+          <variable citdl="str" ilk="argument" name="objtype" />
+          <variable citdl="win32pdh.PDH_FMT_LONG" ilk="argument" name="format" />
+          <variable citdl="instances.index()" line="396" name="cur" />
+          <variable citdl="list" line="399" name="temp" />
+          <variable citdl="list" line="406" name="paths" />
+        </scope>
+        <scope doc="Non-threaded collection of performance data: This method allows you to specify the total period for which you would like to run the Query, and the time interval between individual runs." ilk="function" line="433" lineend="453" name="collectdatafor" signature="collectdatafor(totalperiod, period=1)">
+          <variable citdl="Query" ilk="argument" name="self" />
+          <variable ilk="argument" name="totalperiod" />
+          <variable citdl="int" ilk="argument" name="period" />
+          <variable citdl="list" line="445" name="tempresults" />
+        </scope>
+        <scope doc="Threaded collection of performance data: This method sets up a simple semaphor system for signalling when you would like to start and stop a threaded data collection method." ilk="function" line="454" lineend="477" name="collectdatawhile" signature="collectdatawhile(period=1)">
+          <variable citdl="Query" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="period" />
+        </scope>
+        <scope ilk="function" line="505" lineend="506" name="__setstate__" signature="__setstate__(volatilecounters)">
+          <variable citdl="Query" ilk="argument" name="self" />
+          <variable ilk="argument" name="volatilecounters" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="list" line="346" name="volatilecounters" />
+        <scope doc="### Not a public function Does the threaded work of collecting the data and storing it in an attribute of the class." ilk="function" line="484" lineend="498" name="collectdatawhile_slave" signature="collectdatawhile_slave(period)">
+          <variable citdl="Query" ilk="argument" name="self" />
+          <variable ilk="argument" name="period" />
+          <variable citdl="list" line="490" name="tempresults" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="int" line="476" name="collectdatawhile_active" />
+        <variable attributes="__instancevar__" citdl="list" line="451" name="curresults" />
+        <scope ilk="function" line="501" lineend="502" name="__getinitargs__" returns="tuple" signature="__getinitargs__()">
+          <variable citdl="Query" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="__ctor__" doc="The PDH Query object is initialised with a single, optional list argument, that must be properly formatted PDH Counter paths." ilk="function" line="333" lineend="347" name="__init__" signature="Query(*args, **namedargs)">
+          <variable citdl="Query" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+          <variable attributes="kwargs" ilk="argument" name="namedargs" />
+        </scope>
+        <scope ilk="function" line="503" lineend="504" name="__getstate__" returns="list" signature="__getstate__()">
+          <variable citdl="Query" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Explicitly open a query: When you are needing to make multiple calls to the same query, it is most efficient to open the query, run all of the calls, then close the query, instead of having the collectdata method" ilk="function" line="412" lineend="432" name="open" signature="open(*args, **namedargs)">
+          <variable citdl="Query" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+          <variable attributes="kwargs" ilk="argument" name="namedargs" />
+          <variable citdl="list" line="424" name="paths" />
+        </scope>
+        <scope doc="The purpose of using an instcounter is to track particular instances of a counter object (e.g." ilk="function" line="365" lineend="384" name="addinstcounter" signature="addinstcounter(object, counter, machine=None, objtype=&apos;Process&apos;, volatile=1, format=win32pdh.PDH_FMT_LONG)">
+          <variable citdl="Query" ilk="argument" name="self" />
+          <variable ilk="argument" name="object" />
+          <variable ilk="argument" name="counter" />
+          <variable ilk="argument" name="machine" />
+          <variable citdl="str" ilk="argument" name="objtype" />
+          <variable citdl="int" ilk="argument" name="volatile" />
+          <variable citdl="win32pdh.PDH_FMT_LONG" ilk="argument" name="format" />
+        </scope>
+        <scope doc="A &quot;Performance Counter&quot; is a stable, known, common counter, such as Memory, or Processor." ilk="function" line="348" lineend="364" name="addperfcounter" signature="addperfcounter(object, counter, machine=None)">
+          <variable citdl="Query" ilk="argument" name="self" />
+          <variable ilk="argument" name="object" />
+          <variable ilk="argument" name="counter" />
+          <variable ilk="argument" name="machine" />
+        </scope>
+        <scope doc="Signals the collectdatawhile slave thread to stop collecting data on the next logging iteration." ilk="function" line="478" lineend="483" name="collectdatawhile_stop" signature="collectdatawhile_stop()">
+          <variable citdl="Query" ilk="argument" name="self" />
+        </scope>
+      </scope>
+      <scope classrefs="object" ilk="class" line="509" lineend="514" name="QueryError">
+        <variable attributes="__instancevar__" line="511" name="query" />
+        <variable citdl="QueryError.__repr__" line="514" name="__str__" />
+        <scope ilk="function" line="512" lineend="513" name="__repr__" returns="str" signature="__repr__()">
+          <variable citdl="QueryError" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="510" lineend="511" name="__init__" signature="QueryError(query)">
+          <variable citdl="QueryError" ilk="argument" name="self" />
+          <variable ilk="argument" name="query" />
+        </scope>
+      </scope>
+      <import module="_thread" />
+      <import module="copy" />
+      <import module="time" />
+      <import module="win32api" />
+      <import module="win32pdh" />
+    </scope>
+    

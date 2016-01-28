@@ -1,0 +1,11 @@
+<scope ilk="blob" lang="Perl" name="Memoize::ExpireFile">
+      <scope ilk="class" line="1" lineend="52" name="Memoize::ExpireFile">
+        <import line="14" module="Carp" symbol="*" />
+        <variable line="13" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="18" lineend="22" name="TIEHASH" signature="TIEHASH($package, %args)" />
+        <scope ilk="function" line="25" lineend="32" name="STORE" signature="STORE($self, $key, $data)" />
+        <scope ilk="function" line="34" lineend="37" name="FETCH" signature="FETCH($self, $key)" />
+        <scope ilk="function" line="39" lineend="50" name="EXISTS" signature="EXISTS($self, $key)" />
+      </scope>
+    </scope>
+    

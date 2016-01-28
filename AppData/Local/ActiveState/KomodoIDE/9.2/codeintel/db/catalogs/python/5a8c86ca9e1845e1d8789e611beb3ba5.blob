@@ -1,0 +1,53 @@
+<scope doc="Utilities for the win32 Performance Data Helper module  Example:" ilk="blob" lang="Python" name="win32pdhutil">
+      <scope doc="# NOTE: This BrowseCallback doesn&apos;t seem to work on Vista for markh." ilk="function" line="138" lineend="146" name="BrowseCallBackDemo" signature="BrowseCallBackDemo(counter)">
+        <variable ilk="argument" name="counter" />
+        <variable citdl="GetPerformanceAttributes()" line="142" name="result" />
+      </scope>
+      <scope doc="Find peformance attributes by (case insensitive) instance name." ilk="function" line="68" lineend="98" name="FindPerformanceAttributesByName" returns="list" signature="FindPerformanceAttributesByName(instanceName, object=None, counter=None, format=256, machine=None, bRefresh=0)">
+        <variable citdl="find_pdh_counter_localized_name()" ilk="argument" name="object" />
+        <variable citdl="win32pdh.PDH_FMT_LONG" ilk="argument" name="format" />
+        <variable citdl="find_pdh_counter_localized_name()" ilk="argument" name="counter" />
+        <variable citdl="list" line="91" name="ret" />
+        <variable ilk="argument" name="machine" />
+        <variable citdl="int" ilk="argument" name="bRefresh" />
+        <variable citdl="dict" line="84" name="instance_dict" />
+        <variable citdl="instanceName.lower()" ilk="argument" name="instanceName" />
+      </scope>
+      <scope ilk="function" line="44" lineend="66" name="GetPerformanceAttributes" returns="val" signature="GetPerformanceAttributes(object, counter, instance=None, inum=-1, format=256, machine=None)">
+        <variable ilk="argument" name="counter" />
+        <variable citdl="win32pdh.PDH_FMT_LONG" ilk="argument" name="format" />
+        <variable citdl="win32pdh.OpenQuery()" line="56" name="hq" />
+        <variable ilk="argument" name="object" />
+        <variable ilk="argument" name="machine" />
+        <variable ilk="argument" name="instance" />
+        <variable citdl="int" ilk="argument" name="inum" />
+        <variable citdl="win32pdh.AddCounter()" line="58" name="hc" />
+        <variable citdl="win32pdh.MakeCounterPath()" line="55" name="path" />
+      </scope>
+      <scope ilk="function" line="100" lineend="134" name="ShowAllProcesses" signature="ShowAllProcesses()">
+        <variable citdl="list" line="118" name="hcs" />
+        <variable citdl="find_pdh_counter_localized_name()" line="101" name="object" />
+        <variable citdl="list" line="113" name="items" />
+        <variable citdl="win32pdh.OpenQuery()" line="117" name="hq" />
+        <variable citdl="win32pdh.MakeCounterPath()" line="120" name="path" />
+        <variable citdl="dict" line="105" name="instance_dict" />
+      </scope>
+      <scope ilk="function" line="148" lineend="150" name="browse" signature="browse(callback=&lt;function BrowseCallBackDemo&gt;, title=&apos;Python Browser&apos;, level=400)">
+        <variable citdl="BrowseCallBackDemo" ilk="argument" name="callback" />
+        <variable citdl="win32pdh.PERF_DETAIL_WIZARD" ilk="argument" name="level" />
+        <variable citdl="str" ilk="argument" name="title" />
+      </scope>
+      <variable citdl="dict" line="28" name="counter_english_map" />
+      <scope classrefs="Exception" ilk="class" line="23" name="error" />
+      <scope ilk="function" line="30" lineend="42" name="find_pdh_counter_localized_name" returns="win32pdh.LookupPerfNameByIndex()" signature="find_pdh_counter_localized_name(english_name, machine_name=None)">
+        <variable citdl="win32api.RegQueryValueEx()" line="33" name="counter_reg_value" />
+        <variable ilk="argument" name="machine_name" />
+        <variable line="35" name="counter_list" />
+        <variable citdl="int()" line="38" name="counter_id" />
+        <variable ilk="argument" name="english_name" />
+      </scope>
+      <import module="time" />
+      <import module="win32pdh" />
+      <variable attributes="__hidden__" citdl="find_pdh_counter_localized_name()" line="155" name="counter" />
+    </scope>
+    

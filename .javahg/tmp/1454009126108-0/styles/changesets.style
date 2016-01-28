@@ -1,0 +1,3 @@
+header = "U.O)-:]R*D8GZ9:GMC95"
+changeset = "{node}{rev}\n{author}\n{date|hgdate}\n{branch}\n{parents}{desc}\0"
+footer = "U.O)-:]R*D8GZ9:GMC95"

@@ -1,0 +1,15 @@
+<scope doc="# Class factory utilities." ilk="blob" lang="Python3" name="win32com.server.factory">
+      <scope doc="Given a list of CLSID, create and register class factories." ilk="function" line="4" lineend="18" name="RegisterClassFactories" returns="list" signature="RegisterClassFactories(clsids, flags=None, clsctx=None)">
+        <variable ilk="argument" name="clsids" />
+        <variable citdl="pythoncom.CLSCTX_LOCAL_SERVER" ilk="argument" name="clsctx" />
+        <variable citdl="list" line="11" name="ret" />
+        <variable citdl="pythoncom.MakePyFactory()" line="15" name="factory" />
+        <variable citdl="int" ilk="argument" name="flags" />
+        <variable citdl="pythoncom.CoRegisterClassObject()" line="16" name="regId" />
+      </scope>
+      <scope ilk="function" line="20" lineend="22" name="RevokeClassFactories" signature="RevokeClassFactories(infos)">
+        <variable ilk="argument" name="infos" />
+      </scope>
+      <import module="pythoncom" />
+    </scope>
+    

@@ -1,0 +1,18 @@
+<scope ilk="blob" lang="Perl" name="IO::File">
+      <scope classrefs="IO::Handle IO::Seekable Exporter" ilk="class" line="3" lineend="203" name="IO::File">
+        <import line="130" module="Carp" symbol="*" />
+        <import line="131" module="Symbol" symbol="*" />
+        <import line="132" module="SelectSaver" symbol="*" />
+        <import line="133" module="IO::Seekable" symbol="*" />
+        <import line="135" module="Exporter" />
+        <import line="145" module="Fcntl" />
+        <variable line="129" name="$VERSION" />
+        <variable line="129" name="@EXPORT" />
+        <variable line="129" name="@EXPORT_OK" />
+        <variable line="129" name="@ISA" />
+        <scope ilk="function" line="155" lineend="166" name="new" signature="new($type)" />
+        <scope ilk="function" line="172" lineend="188" name="open" signature="open($fh, $file)" />
+        <scope ilk="function" line="194" lineend="201" name="binmode" signature="binmode($fh, $layer)" />
+      </scope>
+    </scope>
+    

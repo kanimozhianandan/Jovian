@@ -1,0 +1,15 @@
+<scope ilk="blob" lang="Perl" name="TAP::Base">
+      <scope classrefs="TAP::Object" ilk="class" line="1" lineend="129" name="TAP::Base">
+        <import line="6" module="TAP::Object" symbol="*" />
+        <variable line="4" name="$VERSION" />
+        <variable line="4" name="@ISA" />
+        <scope ilk="function" line="55" lineend="69" name="_initialize" signature="_initialize($self, $arg_for, $ok_callback)" />
+        <scope ilk="function" line="77" lineend="92" name="callback" signature="callback($self, $event, $callback)" />
+        <scope ilk="function" line="94" lineend="97" name="_has_callbacks" signature="_has_callbacks($self)" />
+        <scope ilk="function" line="99" lineend="102" name="_callback_for" signature="_callback_for($self, $event)" />
+        <scope ilk="function" line="104" lineend="111" name="_make_callback" signature="_make_callback($self, $event)" />
+        <scope ilk="function" line="119" lineend="119" name="get_time" signature="get_time()" />
+        <scope ilk="function" line="127" lineend="127" name="time_is_hires" signature="time_is_hires()" />
+      </scope>
+    </scope>
+    

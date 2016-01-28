@@ -1,0 +1,15 @@
+<scope ilk="blob" lang="Python" name="win32trace">
+      <scope ilk="function" name="GetHandle" />
+      <scope ilk="function" name="GetTracer" />
+      <scope ilk="function" name="InitRead" />
+      <scope ilk="function" name="InitWrite" />
+      <scope ilk="function" name="TermRead" />
+      <scope ilk="function" name="TermWrite" />
+      <scope ilk="function" name="blockingread" />
+      <scope classrefs="Exception" ilk="class" name="error" />
+      <scope ilk="function" name="flush" />
+      <scope ilk="function" name="read" />
+      <scope ilk="function" name="setprint" />
+      <scope ilk="function" name="write" />
+    </scope>
+    

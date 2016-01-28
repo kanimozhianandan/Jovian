@@ -1,0 +1,9 @@
+<scope ilk="blob" lang="Python" name="win32lz">
+      <scope ilk="function" name="Close" />
+      <scope ilk="function" name="Copy" />
+      <scope ilk="function" name="GetExpandedName" />
+      <scope ilk="function" name="Init" />
+      <scope ilk="function" name="OpenFile" />
+      <scope classrefs="Exception" ilk="class" name="error" />
+    </scope>
+    

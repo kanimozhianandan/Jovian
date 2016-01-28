@@ -1,0 +1,75 @@
+/* separators */
+/* buttons */
+/* Embedded buttons */
+/* textboxes */
+/* Checkboxes */
+/* Radioboxes */
+/* Groupboxes */
+/* Tooltips */
+/* Wizards */
+/* Alerts */
+#breadcrumbBar {
+  overflow: hidden;
+  -moz-appearance: none;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+#breadcrumbBar .breadcrumb {
+  -moz-binding: url("chrome://breadcrumbs/content/bindings/toolbarbutton.xml#toolbarbutton");
+  position: relative;
+  margin-left: 6px !important;
+}
+#breadcrumbBar .breadcrumb:empty {
+  visibility: visible;
+}
+#breadcrumbBar .breadcrumb.overflown {
+  visibility: collapse;
+}
+#breadcrumbBar .breadcrumb.first-child {
+  margin-left: 0 !important;
+}
+#breadcrumbBar .breadcrumb .toolbarbutton-text {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+#breadcrumbBar .breadcrumb .file-scc,
+#breadcrumbBar .breadcrumb .toolbarbutton-icon {
+  visibility: collapse;
+  /*margin-right: 4px !important;*/
+
+}
+#breadcrumbBar menuitem .menu-iconic-left,
+#breadcrumbBar menu .menu-iconic-left {
+  visibility: visible;
+  /* Override OS preference */
+
+}
+#breadcrumbBar menuitem .menu-accel,
+#breadcrumbBar menu .menu-accel {
+  opacity: 0.6;
+}
+#breadcrumbBar.is-remote menuitem[anonid="findInFolder"],
+#breadcrumbBar.is-remote menuitem[anonid="fastOpenHere"],
+#breadcrumbBar.is-remote menuitem[anonid="showInPlaces"] {
+  visibility: collapse;
+}
+#breadcrumbBar #breadcrumbOverflowBtn dropmarker {
+  visibility: collapse;
+}
+#breadcrumbBar #breadcrumbOverflowBtn menuitem .menu-iconic-left {
+  visibility: visible;
+  /* Override OS preference */
+
+}
+#breadcrumbBar sectionlist {
+  margin-left: 5px;
+}
+#breadcrumbBar sectionlist image[anonid="section-arrows"] {
+  visibility: collapse;
+}
+#statusbar-message-deck-default {
+  -moz-box-direction: reverse !important;
+}

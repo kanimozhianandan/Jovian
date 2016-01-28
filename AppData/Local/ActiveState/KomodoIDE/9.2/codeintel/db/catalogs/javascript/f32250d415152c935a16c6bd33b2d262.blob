@@ -1,0 +1,43 @@
+<scope ilk="blob" lang="JavaScript" name="Signal.js">
+      <variable citdl="Object" name="MochiKit">
+        <variable citdl="Object" name="Signal">
+          <scope doc="Connects a signal to a slot, and return a unique identifier&#xA;that can be used to disconnect that signal. src is the&#xA;object that has the signal." ilk="function" name="connect" signature="connect(src, signal, dest[, func])" />
+          <scope doc="To disconnect a signal, pass its ident returned by&#xA;connect(). This is similar to how the browser&apos;s setTimeout&#xA;and clearTimeout works." ilk="function" name="disconnect" signature="disconnect(ident)" />
+          <scope doc="Removes a set of signals from src, similar to calling&#xA;disconnect(ident) for each one. disconnectAll(src) removes&#xA;all signals from src." ilk="function" name="disconnectAll" signature="disconnectAll(src[, signal, ...])" />
+          <scope doc="Removes a set of signals connected to dest, similar to&#xA;calling disconnect(ident) for each one.&#xA;disconnectAllTo(dest) removes all signals connected to dest." ilk="function" name="disconnectAllTo" signature="disconnectAllTo(dest[, func])" />
+          <scope doc="This will signal a signal, passing whatever additional&#xA;parameters on to the connected slots. src and signal are the&#xA;same as for connect()." ilk="function" name="signal" signature="signal(src, signal, ...)" />
+          <scope ilk="class" name="Event">
+            <scope doc="The native event produced by the browser. You should not&#xA;need to use this." ilk="function" name="event" signature="event()" />
+            <scope doc="The element that this signal is connected to." ilk="function" name="src" signature="src()" />
+            <scope doc="The event type (&apos;click&apos;, &apos;mouseover&apos;, &apos;keypress&apos;, etc.) as a&#xA;string. Does not include the &apos;on&apos; prefix." ilk="function" name="type" signature="type()" />
+            <scope doc="The element that triggered the event. This may be a child of&#xA;src()." ilk="function" name="target" signature="target()" />
+            <scope doc="Returns {shift, ctrl, meta, alt, any}, where each property&#xA;is true if its respective modifier key was pressed, false&#xA;otherwise. any is true if any modifier is pressed, false&#xA;otherwise." ilk="function" name="modifier" signature="modifier()" />
+            <scope doc="Works like W3C&apos;s stopPropagation()." ilk="function" name="stopPropagation" signature="stopPropagation()" />
+            <scope doc="Works like W3C&apos;s preventDefault()." ilk="function" name="preventDefault" signature="preventDefault()" />
+            <scope doc="Shortcut that calls stopPropagation() and preventDefault()." ilk="function" name="stop" signature="stop()" />
+            <scope doc="Returns {code, string}. Use &apos;onkeydown&apos; and &apos;onkeyup&apos;&#xA;handlers to detect control characters such as &apos;KEY_F1&apos;." ilk="function" name="key" signature="key()" />
+            <scope doc="Properties for &apos;onmouse*&apos;, &apos;onclick&apos;, &apos;ondblclick&apos;, and&#xA;&apos;oncontextmenu&apos;: page is a MochiKit.Style.Coordinates object&#xA;that represents the cursor position relative to the HTML&#xA;document. Equivalent to pageX and pageY in Safari, Mozilla,&#xA;and Opera." ilk="function" name="mouse" signature="mouse()" />
+            <scope doc="Returns the document element that the mouse has moved to.&#xA;This is generated for &apos;onmouseover&apos; and &apos;onmouseout&apos; events." ilk="function" name="relatedTarget" signature="relatedTarget()" />
+            <scope doc="In browsers that support the &apos;onbeforeunload&apos; event (IE and&#xA;Firefox), calling this in the event handler will show a&#xA;dialog box that allows the user to confirm or cancel the&#xA;navigation away from the page." ilk="function" name="confirmUnload" signature="confirmUnload(msg)" />
+          </scope>
+        </variable>
+      </variable>
+      <variable citdl="MochiKit.Signal.connect" name="connect" />
+      <variable citdl="MochiKit.Signal.disconnect" name="disconnect" />
+      <variable citdl="MochiKit.Signal.disconnectAll" name="disconnectAll" />
+      <variable citdl="MochiKit.Signal.disconnectAllTo" name="disconnectAllTo" />
+      <variable citdl="MochiKit.Signal.signal" name="signal" />
+      <variable citdl="MochiKit.Signal.event" name="event" />
+      <variable citdl="MochiKit.Signal.src" name="src" />
+      <variable citdl="MochiKit.Signal.type" name="type" />
+      <variable citdl="MochiKit.Signal.target" name="target" />
+      <variable citdl="MochiKit.Signal.modifier" name="modifier" />
+      <variable citdl="MochiKit.Signal.stopPropagation" name="stopPropagation" />
+      <variable citdl="MochiKit.Signal.preventDefault" name="preventDefault" />
+      <variable citdl="MochiKit.Signal.stop" name="stop" />
+      <variable citdl="MochiKit.Signal.key" name="key" />
+      <variable citdl="MochiKit.Signal.mouse" name="mouse" />
+      <variable citdl="MochiKit.Signal.relatedTarget" name="relatedTarget" />
+      <variable citdl="MochiKit.Signal.confirmUnload" name="confirmUnload" />
+    </scope>
+  

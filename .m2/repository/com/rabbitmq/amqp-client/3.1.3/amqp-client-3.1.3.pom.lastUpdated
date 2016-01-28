@@ -1,0 +1,5 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Mon Sep 14 15:58:50 EDT 2015
+abb03cf93e75a9c6e7e60f6632aa9c3323cdae8d@default-nexus-http\://nexus\:8081/nexus/content/groups/public/.lastUpdated=1442260466631
+http\://nexus.credorax.com\:8081/nexus/content/groups/public/.lastUpdated=1442260730757
+http\://nexus\:8081/nexus/content/groups/public/.error=Could not transfer artifact com.rabbitmq\:amqp-client\:pom\:3.1.3 from/to nexus (http\://nexus\:8081/nexus/content/groups/public)\: nexus

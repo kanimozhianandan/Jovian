@@ -1,0 +1,50 @@
+<scope doc="Python.Dictionary COM Server.  This module implements a simple COM server that acts much like a Python" ilk="blob" lang="Python3" name="win32com.servers.dictionary">
+      <scope classrefs="com_error" doc="An Exception object that is understood by the framework.  If the framework is presented with an exception of type class," ilk="class" name="COMException" />
+      <variable citdl="int" name="DISPATCH_METHOD" />
+      <variable citdl="int" name="DISPATCH_PROPERTYGET" />
+      <scope classrefs="BasicWrapPolicy" ilk="class" line="44" lineend="122" name="DictionaryPolicy">
+        <variable attributes="protected" citdl="str" line="58" name="_reg_progid_" />
+        <scope attributes="protected" ilk="function" line="114" lineend="122" name="_getidsofnames_" returns="tuple" signature="_getidsofnames_(names, lcid)">
+          <variable citdl="DictionaryPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="names" />
+          <variable ilk="argument" name="lcid" />
+          <variable line="117" name="name" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="66" lineend="67" name="_wrap_" signature="_wrap_(ob)">
+          <variable citdl="DictionaryPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="ob" />
+        </scope>
+        <variable attributes="protected" citdl="str" line="57" name="_reg_clsid_" />
+        <variable attributes="protected" citdl="dict" line="49" name="_name_to_dispid_" />
+        <scope attributes="protected" ilk="function" line="69" lineend="112" name="_invokeex_" returns="util.NewEnum()" signature="_invokeex_(dispid, lcid, wFlags, args, kwargs, serviceProvider)">
+          <variable citdl="DictionaryPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="dispid" />
+          <variable ilk="argument" name="lcid" />
+          <variable ilk="argument" name="wFlags" />
+          <variable ilk="argument" name="args" />
+          <variable ilk="argument" name="kwargs" />
+          <variable ilk="argument" name="serviceProvider" />
+          <variable citdl="len()" line="71" name="l" />
+          <variable citdl="key.lower()" line="75" name="key" />
+        </scope>
+        <variable attributes="protected" citdl="str" line="60" name="_reg_policy_spec_" />
+        <variable attributes="protected" citdl="str" line="56" name="_reg_desc_" />
+        <variable attributes="protected" citdl="list" line="46" name="_com_interfaces_" />
+        <variable attributes="protected" citdl="str" line="59" name="_reg_verprogid_" />
+        <variable attributes="protected __instancevar__" line="67" name="_obj_" />
+        <scope attributes="protected" ilk="function" line="62" lineend="64" name="_CreateInstance_" returns="pythoncom.WrapObject()" signature="_CreateInstance_(clsid, reqIID)">
+          <variable citdl="DictionaryPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="clsid" />
+          <variable ilk="argument" name="reqIID" />
+        </scope>
+      </scope>
+      <scope ilk="function" line="125" lineend="127" name="Register" returns="UseCommandLine()" signature="Register()" />
+      <variable citdl="int" name="S_OK" />
+      <import module="policy" />
+      <import module="pythoncom" />
+      <import module="pywintypes" />
+      <import module="types" />
+      <import module="util" />
+      <import module="winerror" />
+    </scope>
+    

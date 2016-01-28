@@ -1,0 +1,403 @@
+<scope doc="genpy.py - The worker for makepy.  See makepy.py for more details  This code was moved simply to speed Python in normal circumstances.  As the makepy.py" ilk="blob" lang="Python3" name="win32com.client.genpy">
+      <scope classrefs="OleItem WritableItem" ilk="class" line="133" lineend="171" name="AliasItem">
+        <variable attributes="__instancevar__" line="141" name="attr" />
+        <variable attributes="__instancevar__" citdl="alinfo.GetTypeAttr()" line="147" name="aliasAttr" />
+        <variable citdl="str" line="135" name="typename" />
+        <scope attributes="__ctor__" ilk="function" line="137" lineend="150" name="__init__" signature="AliasItem(typeinfo, attr, doc=None, bForUser=1)">
+          <variable citdl="AliasItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="typeinfo" />
+          <variable ilk="argument" name="attr" />
+          <variable ilk="argument" name="doc" />
+          <variable citdl="int" ilk="argument" name="bForUser" />
+          <variable line="140" name="ai" />
+          <variable line="144" name="href" />
+          <variable citdl="typeinfo.GetRefTypeInfo()" line="145" name="alinfo" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="int" line="171" name="bWritten" />
+        <scope ilk="function" line="152" lineend="171" name="WriteAliasItem" signature="WriteAliasItem(aliasDict, stream)">
+          <variable citdl="AliasItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="aliasDict" />
+          <variable ilk="argument" name="stream" />
+          <variable line="158" name="depName" />
+          <variable line="163" name="ai" />
+          <variable line="166" name="typeStr" />
+        </scope>
+        <variable citdl="int" line="134" name="order" />
+        <variable attributes="__instancevar__" citdl="alinfo.GetDocumentation()" line="146" name="aliasDoc" />
+      </scope>
+      <scope classrefs="OleItem WritableItem" ilk="class" line="541" lineend="607" name="CoClassItem">
+        <scope ilk="function" line="552" lineend="607" name="WriteClass" signature="WriteClass(generator)">
+          <variable citdl="CoClassItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="generator" />
+          <variable citdl="self.doc" line="554" name="doc" />
+          <variable citdl="generator.file" line="555" name="stream" />
+          <variable citdl="list" line="558" name="referenced_items" />
+          <variable citdl="pythoncom.ProgIDFromCLSID()" line="570" name="progId" />
+          <variable citdl="item" line="578" name="defItem" />
+          <variable citdl="repr()" line="584" name="key" />
+          <variable citdl="defItem.python_name" line="589" name="defName" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="list" line="548" name="sources" />
+        <variable attributes="__instancevar__" citdl="list" line="549" name="interfaces" />
+        <variable attributes="__instancevar__" citdl="int" line="606" name="bWritten" />
+        <variable citdl="str" line="543" name="typename" />
+        <variable attributes="__instancevar__" line="547" name="clsid" />
+        <variable attributes="__instancevar__" citdl="int" line="550" name="bIsDispatch" />
+        <variable citdl="int" line="542" name="order" />
+        <scope attributes="__ctor__" ilk="function" line="545" lineend="550" name="__init__" signature="CoClassItem(typeinfo, attr, doc=None, sources=[], interfaces=[], bForUser=1)">
+          <variable citdl="CoClassItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="typeinfo" />
+          <variable ilk="argument" name="attr" />
+          <variable ilk="argument" name="doc" />
+          <variable citdl="list" ilk="argument" name="sources" />
+          <variable citdl="list" ilk="argument" name="interfaces" />
+          <variable citdl="int" ilk="argument" name="bForUser" />
+        </scope>
+      </scope>
+      <scope classrefs="DispatchItem WritableItem" ilk="class" line="261" lineend="539" name="DispatchItem">
+        <scope ilk="function" line="269" lineend="281" name="WriteClass" signature="WriteClass(generator)">
+          <variable citdl="DispatchItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="generator" />
+        </scope>
+        <scope ilk="function" line="283" lineend="300" name="WriteClassHeader" signature="WriteClassHeader(generator)">
+          <variable citdl="DispatchItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="generator" />
+          <variable citdl="self.doc" line="285" name="doc" />
+          <variable citdl="generator.file" line="286" name="stream" />
+          <variable citdl="pythoncom.ProgIDFromCLSID()" line="290" name="progId" />
+        </scope>
+        <variable attributes="__instancevar__" line="266" name="type_attr" />
+        <scope ilk="function" line="346" lineend="357" name="WriteCallbackClassBody" signature="WriteCallbackClassBody(generator)">
+          <variable citdl="DispatchItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="generator" />
+          <variable citdl="generator.file" line="347" name="stream" />
+          <variable citdl="entry.desc" line="351" name="fdesc" />
+          <variable citdl="MakeEventMethodName()" line="352" name="methName" />
+        </scope>
+        <scope ilk="function" line="359" lineend="539" name="WriteClassBody" signature="WriteClassBody(generator)">
+          <variable citdl="DispatchItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="generator" />
+          <variable citdl="generator.file" line="360" name="stream" />
+          <variable citdl="list()" line="362" name="names" />
+          <variable citdl="dict" line="364" name="specialItems" />
+          <variable line="365" name="itemCount" />
+          <variable line="367" name="entry" />
+          <variable line="371" name="dispid" />
+          <variable citdl="key.lower()" line="379" name="lkey" />
+          <variable citdl="self.MakeFuncMethod()" line="392" name="ret" />
+          <variable citdl="entry.GetResultName()" line="400" name="resultName" />
+          <variable citdl="entry.desc" line="404" name="details" />
+          <variable line="405" name="resultDesc" />
+          <variable citdl="tuple" line="406" name="argDesc" />
+          <variable citdl="MakeMapLineEntry()" line="407" name="mapEntry" />
+          <variable citdl="str" line="459" name="defArgDesc" />
+          <variable citdl="str" line="478" name="typename" />
+          <variable citdl="enumEntry.GetResultCLSIDStr()" line="500" name="resultCLSID" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="int" line="281" name="bWritten" />
+        <scope ilk="function" line="302" lineend="344" name="WriteEventSinkClassHeader" signature="WriteEventSinkClassHeader(generator)">
+          <variable citdl="DispatchItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="generator" />
+          <variable citdl="self.doc" line="304" name="doc" />
+          <variable citdl="generator.file" line="305" name="stream" />
+          <variable citdl="pythoncom.ProgIDFromCLSID()" line="309" name="progId" />
+        </scope>
+        <variable attributes="__instancevar__" line="267" name="coclass_clsid" />
+        <variable citdl="int" line="262" name="order" />
+        <scope attributes="__ctor__" ilk="function" line="264" lineend="267" name="__init__" signature="DispatchItem(typeinfo, attr, doc=None)">
+          <variable citdl="DispatchItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="typeinfo" />
+          <variable ilk="argument" name="attr" />
+          <variable ilk="argument" name="doc" />
+        </scope>
+      </scope>
+      <scope classrefs="OleItem WritableItem" ilk="class" line="173" lineend="217" name="EnumerationItem">
+        <scope ilk="function" line="196" lineend="217" name="WriteEnumerationItems" signature="WriteEnumerationItems(stream)">
+          <variable citdl="EnumerationItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="stream" />
+          <variable line="197" name="enumName" />
+          <variable citdl="list()" line="199" name="names" />
+          <variable line="202" name="entry" />
+          <variable citdl="entry.desc" line="203" name="vdesc" />
+          <variable line="205" name="val" />
+          <variable citdl="int()" line="209" name="use" />
+        </scope>
+        <variable citdl="str" line="175" name="typename" />
+        <variable attributes="__instancevar__" line="180" name="clsid" />
+        <variable attributes="__instancevar__" citdl="dict" line="181" name="mapVars" />
+        <variable attributes="__instancevar__" citdl="int" line="183" name="hidden" />
+        <variable citdl="int" line="174" name="order" />
+        <scope attributes="__ctor__" ilk="function" line="177" lineend="189" name="__init__" signature="EnumerationItem(typeinfo, attr, doc=None, bForUser=1)">
+          <variable citdl="EnumerationItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="typeinfo" />
+          <variable ilk="argument" name="attr" />
+          <variable ilk="argument" name="doc" />
+          <variable citdl="int" ilk="argument" name="bForUser" />
+          <variable line="182" name="typeFlags" />
+          <variable citdl="typeinfo.GetVarDesc()" line="187" name="vdesc" />
+          <variable line="188" name="name" />
+        </scope>
+      </scope>
+      <variable citdl="str" line="28" name="GEN_DEMAND_BASE" />
+      <variable citdl="str" line="29" name="GEN_DEMAND_CHILD" />
+      <variable citdl="str" line="27" name="GEN_FULL" />
+      <scope classrefs="object" ilk="class" line="637" lineend="1053" name="Generator">
+        <scope ilk="function" line="800" lineend="846" name="do_gen_file_header" signature="do_gen_file_header()">
+          <variable citdl="Generator" ilk="argument" name="self" />
+          <variable citdl="self.typelib.GetLibAttr()" line="801" name="la" />
+          <variable citdl="self.typelib.GetDocumentation()" line="802" name="moduleDoc" />
+          <variable citdl="str" line="803" name="docDesc" />
+          <variable citdl="self.file.encoding" line="815" name="encoding" />
+        </scope>
+        <scope ilk="function" line="1039" lineend="1042" name="checkWriteDispatchBaseClass" signature="checkWriteDispatchBaseClass()">
+          <variable citdl="Generator" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="678" lineend="705" name="_Build_CoClassChildren" signature="_Build_CoClassChildren(coclass, coclass_info, oleItems, vtableItems)">
+          <variable citdl="Generator" ilk="argument" name="self" />
+          <variable ilk="argument" name="coclass" />
+          <variable ilk="argument" name="coclass_info" />
+          <variable ilk="argument" name="oleItems" />
+          <variable ilk="argument" name="vtableItems" />
+          <variable citdl="dict" line="679" name="sources" />
+          <variable citdl="dict" line="680" name="interfaces" />
+          <variable line="685" name="clsid" />
+          <variable citdl="DispatchItem" line="687" name="dispItem" />
+          <variable citdl="refType.GetRefTypeInfo()" line="699" name="refType" />
+          <variable citdl="refType.GetTypeAttr()" line="700" name="refAttr" />
+          <variable citdl="VTableItem" line="702" name="vtableItem" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="str" line="955" name="base_mod_name" />
+        <variable attributes="__instancevar__" citdl="str" line="792" name="generate_type" />
+        <variable attributes="__instancevar__" citdl="open_writer()" line="648" name="file" />
+        <variable attributes="__instancevar__" citdl="int" line="645" name="bBuildHidden" />
+        <scope ilk="function" line="650" lineend="658" name="CollectOleItemInfosFromType" returns="list" signature="CollectOleItemInfosFromType()">
+          <variable citdl="Generator" ilk="argument" name="self" />
+          <variable citdl="list" line="651" name="ret" />
+          <variable citdl="self.typelib.GetTypeInfo()" line="653" name="info" />
+          <variable citdl="self.typelib.GetTypeInfoType()" line="654" name="infotype" />
+          <variable citdl="self.typelib.GetDocumentation()" line="655" name="doc" />
+          <variable citdl="info.GetTypeAttr()" line="656" name="attr" />
+        </scope>
+        <scope ilk="function" line="727" lineend="761" name="BuildOleItemsFromType" returns="tuple" signature="BuildOleItemsFromType()">
+          <variable citdl="Generator" ilk="argument" name="self" />
+          <variable citdl="dict" line="729" name="oleItems" />
+          <variable citdl="dict" line="730" name="enumItems" />
+          <variable citdl="dict" line="731" name="recordItems" />
+          <variable citdl="dict" line="732" name="vtableItems" />
+          <variable line="736" name="clsid" />
+          <variable citdl="RecordItem" line="738" name="newItem" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="int" line="641" name="bHaveWrittenCoClassBaseClass" />
+        <variable attributes="__instancevar__" citdl="int" line="640" name="bHaveWrittenDispatchBaseClass" />
+        <scope attributes="__ctor__" ilk="function" line="638" lineend="648" name="__init__" signature="Generator(typelib, sourceFilename, progressObject, bBuildHidden=1, bUnicodeToString=None)">
+          <variable citdl="Generator" ilk="argument" name="self" />
+          <variable ilk="argument" name="typelib" />
+          <variable ilk="argument" name="sourceFilename" />
+          <variable ilk="argument" name="progressObject" />
+          <variable citdl="int" ilk="argument" name="bBuildHidden" />
+          <variable ilk="argument" name="bUnicodeToString" />
+        </scope>
+        <variable attributes="__instancevar__" line="646" name="progress" />
+        <scope doc="Generate a single child." ilk="function" line="946" lineend="1025" name="generate_child" signature="generate_child(child, dir)">
+          <variable citdl="Generator" ilk="argument" name="self" />
+          <variable ilk="argument" name="child" />
+          <variable ilk="argument" name="dir" />
+          <variable citdl="self.typelib.GetLibAttr()" line="950" name="la" />
+          <variable line="951" name="lcid" />
+          <variable line="952" name="clsid" />
+          <variable line="953" name="major" />
+          <variable line="954" name="minor" />
+          <variable citdl="dict" line="961" name="oleItems" />
+          <variable citdl="dict" line="962" name="vtableItems" />
+          <variable citdl="CollectOleItemInfosFromType()" line="963" name="infos" />
+          <variable citdl="int" line="964" name="found" />
+          <variable citdl="dict" line="994" name="items" />
+          <variable citdl="items.get()" line="998" name="existing" />
+          <variable citdl="tuple" line="1000" name="new_val" />
+          <variable citdl="vtableitem" line="1007" name="an_item" />
+          <variable citdl="os.path.join()" line="1011" name="out_name" />
+          <variable citdl="True" line="1012" name="worked" />
+        </scope>
+        <scope ilk="function" line="1027" lineend="1037" name="do_gen_child_item" signature="do_gen_child_item(oleitem)">
+          <variable citdl="Generator" ilk="argument" name="self" />
+          <variable ilk="argument" name="oleitem" />
+          <variable citdl="self.typelib.GetDocumentation()" line="1028" name="moduleDoc" />
+          <variable citdl="str" line="1029" name="docDesc" />
+        </scope>
+        <scope ilk="function" line="763" lineend="781" name="open_writer" returns="open()" signature="open_writer(filename, encoding=&apos;mbcs&apos;)">
+          <import line="779" module="codecs" />
+          <variable citdl="Generator" ilk="argument" name="self" />
+          <variable citdl="str" ilk="argument" name="filename" />
+          <variable citdl="str" ilk="argument" name="encoding" />
+          <variable citdl="codecs.open()" line="777" name="ret" />
+        </scope>
+        <scope ilk="function" line="1049" lineend="1053" name="checkWriteEventBaseClass" signature="checkWriteEventBaseClass()">
+          <variable citdl="Generator" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="__instancevar__" line="643" name="typelib" />
+        <scope attributes="protected" ilk="function" line="660" lineend="676" name="_Build_CoClass" returns="tuple" signature="_Build_CoClass(type_info_tuple)">
+          <variable citdl="Generator" ilk="argument" name="self" />
+          <variable ilk="argument" name="type_info_tuple" />
+          <variable citdl="list" line="663" name="child_infos" />
+          <variable citdl="info.GetImplTypeFlags()" line="665" name="flags" />
+          <variable citdl="info.GetRefTypeInfo()" line="667" name="refType" />
+          <variable citdl="refType.GetTypeAttr()" line="671" name="refAttr" />
+          <variable citdl="CoClassItem" line="675" name="newItem" />
+        </scope>
+        <variable attributes="__instancevar__" line="644" name="sourceFilename" />
+        <scope ilk="function" line="790" lineend="798" name="generate" signature="generate(file, is_for_demand=0)">
+          <variable citdl="Generator" ilk="argument" name="self" />
+          <variable ilk="argument" name="file" />
+          <variable citdl="int" ilk="argument" name="is_for_demand" />
+        </scope>
+        <scope ilk="function" line="1044" lineend="1047" name="checkWriteCoClassBaseClass" signature="checkWriteCoClassBaseClass()">
+          <variable citdl="Generator" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="int" line="642" name="bHaveWrittenEventBaseClass" />
+        <scope ilk="function" line="783" lineend="788" name="finish_writer" signature="finish_writer(filename, f, worked)">
+          <variable citdl="Generator" ilk="argument" name="self" />
+          <variable ilk="argument" name="filename" />
+          <variable ilk="argument" name="f" />
+          <variable ilk="argument" name="worked" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="707" lineend="725" name="_Build_Interface" returns="tuple" signature="_Build_Interface(type_info_tuple)">
+          <variable citdl="Generator" ilk="argument" name="self" />
+          <variable ilk="argument" name="type_info_tuple" />
+          <variable citdl="DispatchItem" line="709" name="oleItem" />
+          <variable citdl="info.GetRefTypeOfImplType()" line="716" name="refhtype" />
+          <variable citdl="info.GetRefTypeInfo()" line="717" name="info" />
+          <variable citdl="info.GetTypeAttr()" line="718" name="attr" />
+          <variable citdl="pythoncom.TKIND_INTERFACE" line="719" name="infotype" />
+          <variable citdl="VTableItem" line="724" name="vtableItem" />
+        </scope>
+        <scope ilk="function" line="848" lineend="944" name="do_generate" signature="do_generate()">
+          <variable citdl="Generator" ilk="argument" name="self" />
+          <variable citdl="self.typelib.GetDocumentation()" line="849" name="moduleDoc" />
+          <variable line="850" name="stream" />
+          <variable citdl="str" line="851" name="docDesc" />
+          <variable citdl="list()" line="866" name="items" />
+          <variable citdl="dict" line="929" name="map" />
+        </scope>
+      </scope>
+      <scope classrefs="object" ilk="class" line="609" lineend="635" name="GeneratorProgress">
+        <scope doc="We are entering a major step." ilk="function" line="619" name="SetDescription" signature="SetDescription(desc, maxticks=None)">
+          <variable citdl="GeneratorProgress" ilk="argument" name="self" />
+          <variable ilk="argument" name="desc" />
+          <variable ilk="argument" name="maxticks" />
+        </scope>
+        <scope ilk="function" line="632" lineend="633" name="LogBeginGenerate" signature="LogBeginGenerate(filename)">
+          <variable citdl="GeneratorProgress" ilk="argument" name="self" />
+          <variable ilk="argument" name="filename" />
+        </scope>
+        <scope doc="Verbose/Debugging output." ilk="function" line="626" name="VerboseProgress" signature="VerboseProgress(desc)">
+          <variable citdl="GeneratorProgress" ilk="argument" name="self" />
+          <variable ilk="argument" name="desc" />
+        </scope>
+        <scope doc="If a warning is generated" ilk="function" line="629" name="LogWarning" signature="LogWarning(desc)">
+          <variable citdl="GeneratorProgress" ilk="argument" name="self" />
+          <variable ilk="argument" name="desc" />
+        </scope>
+        <scope doc="Called when the process is complete." ilk="function" line="616" name="Finished" signature="Finished()">
+          <variable citdl="GeneratorProgress" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="634" lineend="635" name="Close" signature="Close()">
+          <variable citdl="GeneratorProgress" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="__instancevar__" line="615" name="tlb_desc" />
+        <scope doc="Minor progress step." ilk="function" line="623" name="Tick" signature="Tick(desc=None)">
+          <variable citdl="GeneratorProgress" ilk="argument" name="self" />
+          <variable ilk="argument" name="desc" />
+        </scope>
+        <scope doc="Called when the process starts." ilk="function" line="612" lineend="615" name="Starting" signature="Starting(tlb_desc)">
+          <variable citdl="GeneratorProgress" ilk="argument" name="self" />
+          <variable ilk="argument" name="tlb_desc" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="610" lineend="611" name="__init__" signature="GeneratorProgress()">
+          <variable citdl="GeneratorProgress" ilk="argument" name="self" />
+        </scope>
+      </scope>
+      <scope doc="# Given a propget function&apos;s arg desc, return the default parameters for all # params bar the first." ilk="function" line="60" lineend="67" name="MakeDefaultArgsForPropertyPut" returns="tuple()" signature="MakeDefaultArgsForPropertyPut(argsDesc)">
+        <variable ilk="argument" name="argsDesc" />
+        <variable citdl="build.MakeDefaultArgRepr()" line="63" name="default" />
+        <variable citdl="list" line="61" name="ret" />
+      </scope>
+      <scope ilk="function" line="76" lineend="80" name="MakeEventMethodName" returns="str" signature="MakeEventMethodName(eventName)">
+        <variable ilk="argument" name="eventName" />
+      </scope>
+      <scope ilk="function" line="70" lineend="74" name="MakeMapLineEntry" returns="tuple" signature="MakeMapLineEntry(dispid, wFlags, retType, argTypes, user, resultCLSID)">
+        <variable ilk="argument" name="resultCLSID" />
+        <variable ilk="argument" name="dispid" />
+        <variable ilk="argument" name="wFlags" />
+        <variable citdl="tuple()" ilk="argument" name="argTypes" />
+        <variable ilk="argument" name="retType" />
+        <variable ilk="argument" name="user" />
+      </scope>
+      <scope classrefs="OleItem WritableItem" ilk="class" line="108" lineend="124" name="RecordItem">
+        <variable citdl="str" line="110" name="typename" />
+        <scope attributes="__ctor__" ilk="function" line="112" lineend="121" name="__init__" signature="RecordItem(typeInfo, typeAttr, doc=None, bForUser=1)">
+          <variable citdl="RecordItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="typeInfo" />
+          <variable ilk="argument" name="typeAttr" />
+          <variable ilk="argument" name="doc" />
+          <variable citdl="int" ilk="argument" name="bForUser" />
+        </scope>
+        <variable citdl="int" line="109" name="order" />
+        <variable attributes="__instancevar__" line="121" name="clsid" />
+        <scope ilk="function" line="123" lineend="124" name="WriteClass" signature="WriteClass(generator)">
+          <variable citdl="RecordItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="generator" />
+        </scope>
+      </scope>
+      <scope classrefs="VTableItem WritableItem" ilk="class" line="219" lineend="259" name="VTableItem">
+        <scope ilk="function" line="222" lineend="224" name="WriteClass" signature="WriteClass(generator)">
+          <variable citdl="VTableItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="generator" />
+        </scope>
+        <variable citdl="int" line="220" name="order" />
+        <scope ilk="function" line="226" lineend="259" name="WriteVTableMap" signature="WriteVTableMap(generator)">
+          <variable citdl="VTableItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="generator" />
+          <variable citdl="generator.file" line="227" name="stream" />
+          <variable line="232" name="arg_desc" />
+          <variable citdl="list" line="234" name="arg_reprs" />
+          <variable citdl="int" line="236" name="item_num" />
+          <variable citdl="build.MakeDefaultArgRepr()" line="248" name="defval" />
+          <variable citdl="repr()" line="250" name="arg3_repr" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="int" line="224" name="bWritten" />
+      </scope>
+      <scope classrefs="object" doc="# MI is used to join my writable helpers, and the OLE # classes." ilk="class" line="92" lineend="105" name="WritableItem">
+        <scope ilk="function" line="100" lineend="103" name="__lt__" returns="bool" signature="__lt__(other)">
+          <variable citdl="WritableItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope ilk="function" line="104" lineend="105" name="__repr__" returns="tuple" signature="__repr__()">
+          <variable citdl="WritableItem" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Compare for sorting" ilk="function" line="94" lineend="98" name="__cmp__" returns="cmp()" signature="__cmp__(other)">
+          <variable citdl="WritableItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+          <variable citdl="cmp()" line="96" name="ret" />
+        </scope>
+      </scope>
+      <scope doc="# Given an enum, write all aliases for it." ilk="function" line="128" lineend="131" name="WriteAliasesForItem" signature="WriteAliasesForItem(item, aliasItems, stream)">
+        <variable ilk="argument" name="item" />
+        <variable ilk="argument" name="aliasItems" />
+        <variable ilk="argument" name="stream" />
+      </scope>
+      <scope ilk="function" line="82" lineend="87" name="WriteSinkEventMap" signature="WriteSinkEventMap(obj, stream)">
+        <variable citdl="entry.desc" line="85" name="fdesc" />
+        <variable ilk="argument" name="obj" />
+        <variable ilk="argument" name="stream" />
+      </scope>
+      <import module="build" />
+      <variable citdl="str" line="24" name="error" />
+      <variable citdl="str" line="25" name="makepy_version" />
+      <variable citdl="dict" line="35" name="mapVTToTypeString" />
+      <import module="os" />
+      <import module="pythoncom" />
+      <import module="sys" />
+      <import module="time" />
+      <import module="win32com" />
+    </scope>
+    

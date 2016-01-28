@@ -1,0 +1,12 @@
+<scope ilk="blob" lang="Perl" name="Unicode::Collate::Locale">
+      <scope ilk="class" line="1" lineend="119" name="Unicode::Collate::Locale">
+        <import line="4" module="Carp" symbol="*" />
+        <variable line="7" name="$VERSION" />
+        <scope ilk="function" line="42" lineend="75" name="_locale" signature="_locale($locale)" />
+        <scope ilk="function" line="77" lineend="79" name="getlocale" signature="getlocale()" />
+        <scope ilk="function" line="81" lineend="83" name="locale_version" signature="locale_version()" />
+        <scope ilk="function" line="85" lineend="98" name="_fetchpl" signature="_fetchpl($accepted)" />
+        <scope ilk="function" line="100" lineend="117" name="new" signature="new($class, %hash)" />
+      </scope>
+    </scope>
+    

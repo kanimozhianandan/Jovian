@@ -1,0 +1,67 @@
+<scope ilk="blob" lang="JavaScript" name="Iter.js">
+      <variable citdl="Object" name="MochiKit">
+        <variable citdl="Object" name="Iter">
+          <variable doc="The singleton MochiKit.Base.NamedError that signifies the&#xA;end of an iterator Availability: Available in MochiKit&#xA;1.3.1+" name="StopIteration" />
+          <scope doc="applymap(fun, seq) --&gt; fun.apply(self, seq0),&#xA;fun.apply(self, seq1), ..." ilk="function" name="applymap" signature="applymap(fun, seq[, self])" />
+          <scope doc="chain(p, q, ...) --&gt; p0, p1, ... plast, q0, q1, ..." ilk="function" name="chain" signature="chain(p, q[, ...])" />
+          <scope doc="count(n=0) --&gt; n, n + 1, n + 2, ..." ilk="function" name="count" signature="count(n=0)" />
+          <scope doc="cycle(p) --&gt; p0, p1, ... plast, p0, p1, ..." ilk="function" name="cycle" signature="cycle(p)" />
+          <scope doc="dropwhile(pred, seq) --&gt; seq[n], seq[n + 1], starting when&#xA;pred(seq[n]) fails Availability: Available in MochiKit&#xA;1.3.1+" ilk="function" name="dropwhile" signature="dropwhile(pred, seq)" />
+          <scope doc="Return true if func(item) is true for every item in&#xA;iterable." ilk="function" name="every" returns="Boolean" signature="every(iterable, func) =&gt; Boolean" />
+          <scope doc="Exhausts an iterable without saving the results anywhere,&#xA;like list(iterable) when you don&apos;t care what the output is." ilk="function" name="exhaust" signature="exhaust(iterable)" />
+          <scope doc="Call func for each item in iterable, and don&apos;t save the&#xA;results." ilk="function" name="forEach" signature="forEach(iterable, func[, self])" />
+          <scope doc="Make an iterator that returns consecutive keys and groups&#xA;from the iterable. The key is a function computing a key&#xA;value for each element." ilk="function" name="groupby" signature="groupby(iterable[, keyfunc])" />
+          <scope doc="Perform the same task as groupby(), except return an array&#xA;of arrays instead of an iterator of iterators." ilk="function" name="groupby_as_array" signature="groupby_as_array(iterable[, keyfunc])" />
+          <scope doc="Just like list(iterable), except it pushes results on lst&#xA;rather than creating a new one." ilk="function" name="iextend" signature="iextend(lst, iterable)" />
+          <scope doc="ifilter(pred, seq) --&gt; elements of seq where pred(elem) is&#xA;true Availability: Available in MochiKit 1.3.1+" ilk="function" name="ifilter" signature="ifilter(pred, seq)" />
+          <scope doc="ifilterfalse(pred, seq) --&gt; elements of seq where pred(elem)&#xA;is false Availability: Available in MochiKit 1.3.1+" ilk="function" name="ifilterfalse" signature="ifilterfalse(pred, seq)" />
+          <scope doc="imap(fun, p, q, ...) --&gt; fun(p0, q0, ...), fun(p1, q1, ...),&#xA;..." ilk="function" name="imap" signature="imap(fun, p, q[, ...])" />
+          <scope doc="islice(seq, [start,] stop[, step]) --&gt; elements from&#xA;seq[start:stop:step] (in Python slice syntax) Availability:&#xA;Available in MochiKit 1.3.1+" ilk="function" name="islice" signature="islice(seq, [start,] stop[, step])" />
+          <scope doc="Convert the given argument to an iterator (object&#xA;implementing .next()). If iterable is an iterator&#xA;(implements .next()), then it will be returned as-is." ilk="function" name="iter" signature="iter(iterable[, sentinel])" />
+          <scope doc="izip(p, q, ...) --&gt; [p0, q0, ...], [p1, q1, ...], ..." ilk="function" name="izip" signature="izip(p, q[, ...])" />
+          <scope doc="Convert iterable to a new Array Availability: Available in&#xA;MochiKit 1.3.1+" ilk="function" name="list" signature="list(iterable)" />
+          <scope doc="Return iterator.next() Availability: Available in MochiKit&#xA;1.3.1+" ilk="function" name="next" signature="next(iterator)" />
+          <scope doc="Return an iterator containing an arithmetic progression of&#xA;integers. range(i, j) returns iter([i, i + 1, i + 2, ..., j&#xA;- 1]) start (!) defaults to 0." ilk="function" name="range" signature="range([start,] stop[, step])" />
+          <scope doc="Apply fn(a, b) cumulatively to the items of an iterable from&#xA;left to right, so as to reduce the iterable to a single&#xA;value. For example: reduce(function (a, b) { return a + b;&#xA;}, [1, 2, 3, 4, 5]) calculates: ((((1 + 2) + 3) + 4) + 5)." ilk="function" name="reduce" signature="reduce(fn, iterable[, initial])" />
+          <scope doc="Register an iterator factory for use with the iter function.&#xA;check is a function(a) that returns true if a can be&#xA;converted into an iterator with iterfactory." ilk="function" name="registerIteratorFactory" signature="registerIteratorFactory(name, check, iterfactory[, override])" />
+          <scope doc="repeat(elem, [,n]) --&gt; elem, elem, elem, ..." ilk="function" name="repeat" signature="repeat(elem[, n])" />
+          <scope doc="Return a reversed array from iterable." ilk="function" name="reversed" signature="reversed(iterable)" />
+          <scope doc="Return true if func(item) is true for at least one item in&#xA;iterable." ilk="function" name="some" returns="Boolean" signature="some(iterable, func) =&gt; Boolean" />
+          <scope doc="Return a sorted array from iterable." ilk="function" name="sorted" signature="sorted(iterable[, cmp])" />
+          <scope doc="Returns the sum of a sequence of numbers plus the value of&#xA;parameter start (with a default of 0). When the sequence is&#xA;empty, returns start." ilk="function" name="sum" signature="sum(iterable, start=0)" />
+          <scope doc="takewhile(pred, seq) --&gt; seq[0], seq[1], ..." ilk="function" name="takewhile" signature="takewhile(pred, seq)" />
+          <scope doc="tee(it, n=2) --&gt; [it1, it2, it3, ..." ilk="function" name="tee" signature="tee(iterable, n=2)" />
+        </variable>
+      </variable>
+      <variable citdl="MochiKit.Iter.StopIteration" name="StopIteration" />
+      <variable citdl="MochiKit.Iter.applymap" name="applymap" />
+      <variable citdl="MochiKit.Iter.chain" name="chain" />
+      <variable citdl="MochiKit.Iter.count" name="count" />
+      <variable citdl="MochiKit.Iter.cycle" name="cycle" />
+      <variable citdl="MochiKit.Iter.dropwhile" name="dropwhile" />
+      <variable citdl="MochiKit.Iter.every" name="every" />
+      <variable citdl="MochiKit.Iter.exhaust" name="exhaust" />
+      <variable citdl="MochiKit.Iter.forEach" name="forEach" />
+      <variable citdl="MochiKit.Iter.groupby" name="groupby" />
+      <variable citdl="MochiKit.Iter.groupby_as_array" name="groupby_as_array" />
+      <variable citdl="MochiKit.Iter.iextend" name="iextend" />
+      <variable citdl="MochiKit.Iter.ifilter" name="ifilter" />
+      <variable citdl="MochiKit.Iter.ifilterfalse" name="ifilterfalse" />
+      <variable citdl="MochiKit.Iter.imap" name="imap" />
+      <variable citdl="MochiKit.Iter.islice" name="islice" />
+      <variable citdl="MochiKit.Iter.iter" name="iter" />
+      <variable citdl="MochiKit.Iter.izip" name="izip" />
+      <variable citdl="MochiKit.Iter.list" name="list" />
+      <variable citdl="MochiKit.Iter.next" name="next" />
+      <variable citdl="MochiKit.Iter.range" name="range" />
+      <variable citdl="MochiKit.Iter.reduce" name="reduce" />
+      <variable citdl="MochiKit.Iter.registerIteratorFactory" name="registerIteratorFactory" />
+      <variable citdl="MochiKit.Iter.repeat" name="repeat" />
+      <variable citdl="MochiKit.Iter.reversed" name="reversed" />
+      <variable citdl="MochiKit.Iter.some" name="some" />
+      <variable citdl="MochiKit.Iter.sorted" name="sorted" />
+      <variable citdl="MochiKit.Iter.sum" name="sum" />
+      <variable citdl="MochiKit.Iter.takewhile" name="takewhile" />
+      <variable citdl="MochiKit.Iter.tee" name="tee" />
+    </scope>
+  

@@ -1,0 +1,34 @@
+<scope ilk="blob" lang="Perl" name="Email::Address">
+      <scope ilk="class" line="1" lineend="529" name="Email::Address">
+        <variable line="6" name="$COMMENT_NEST_LEVEL" />
+        <variable line="6" name="$STRINGIFY" />
+        <variable line="6" name="$VERSION" />
+        <variable line="7" name="$COLLAPSE_SPACES" />
+        <variable line="8" name="%FORMAT_CACHE" />
+        <variable line="8" name="%NAME_CACHE" />
+        <variable line="8" name="%PARSE_CACHE" />
+        <variable line="9" name="$addr_spec" />
+        <variable line="9" name="$angle_addr" />
+        <variable line="9" name="$mailbox" />
+        <variable line="9" name="$name_addr" />
+        <scope ilk="function" line="147" lineend="147" name="_PHRASE" signature="_PHRASE()" />
+        <scope ilk="function" line="148" lineend="148" name="_ADDRESS" signature="_ADDRESS()" />
+        <scope ilk="function" line="149" lineend="149" name="_COMMENT" signature="_COMMENT()" />
+        <scope ilk="function" line="150" lineend="150" name="_ORIGINAL" signature="_ORIGINAL()" />
+        <scope ilk="function" line="151" lineend="151" name="_IN_CACHE" signature="_IN_CACHE()" />
+        <scope ilk="function" line="189" lineend="196" name="__get_cached_parse" signature="__get_cached_parse($class, $line)" />
+        <scope ilk="function" line="198" lineend="204" name="__cache_parse" signature="__cache_parse($class, $line, $addrs)" />
+        <scope ilk="function" line="206" lineend="251" name="parse" signature="parse($class, $line)" />
+        <scope attributes="__ctor__" ilk="function" line="268" lineend="273" name="new" signature="new($class, $phrase, $email, $comment, $orig)" />
+        <scope ilk="function" line="290" lineend="294" name="purge_cache" signature="purge_cache()" />
+        <scope ilk="function" line="308" lineend="312" name="disable_cache" signature="disable_cache($class)" />
+        <scope ilk="function" line="314" lineend="316" name="enable_cache" signature="enable_cache()" />
+        <scope ilk="function" line="395" lineend="395" name="host" signature="host()" />
+        <scope ilk="function" line="396" lineend="396" name="user" signature="user()" />
+        <scope ilk="function" line="409" lineend="413" name="format" signature="format()" />
+        <scope ilk="function" line="415" lineend="433" name="_format" signature="_format($self)" />
+        <scope ilk="function" line="514" lineend="519" name="as_string" signature="as_string()" />
+        <scope ilk="function" line="435" lineend="529" name="_enquoted_phrase" signature="_enquoted_phrase($self, $self)" />
+      </scope>
+    </scope>
+    

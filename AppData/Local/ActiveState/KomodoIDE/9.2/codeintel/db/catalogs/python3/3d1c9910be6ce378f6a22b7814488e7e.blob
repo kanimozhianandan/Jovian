@@ -1,0 +1,273 @@
+<scope doc="A utility for browsing COM objects.  Usage:" ilk="blob" lang="Python3" name="win32com.client.combrowse">
+      <scope classrefs="HLICOM" ilk="class" line="46" lineend="60" name="HLICLSID">
+        <scope ilk="function" line="57" lineend="58" name="CalculateIsExpandable" returns="int" signature="CalculateIsExpandable()">
+          <variable citdl="HLICLSID" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="59" lineend="60" name="GetSubList" returns="list" signature="GetSubList()">
+          <variable citdl="HLICLSID" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="47" lineend="56" name="__init__" signature="HLICLSID(myobject, name=None)">
+          <variable citdl="HLICLSID" ilk="argument" name="self" />
+          <variable citdl="pythoncom.MakeIID()" ilk="argument" name="myobject" />
+          <variable citdl="pythoncom.ProgIDFromCLSID()" ilk="argument" name="name" />
+        </scope>
+      </scope>
+      <scope classrefs="HLIPythonObject" ilk="class" line="40" lineend="44" name="HLICOM">
+        <scope ilk="function" line="43" lineend="44" name="CalculateIsExpandable" returns="int" signature="CalculateIsExpandable()">
+          <variable citdl="HLICOM" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="41" lineend="42" name="GetText" returns="self.name" signature="GetText()">
+          <variable citdl="HLICOM" ilk="argument" name="self" />
+        </scope>
+      </scope>
+      <scope classrefs="HLICOM" doc="An actual Registered Category" ilk="class" line="109" lineend="124" name="HLICategory">
+        <scope ilk="function" line="115" lineend="124" name="GetSubList" returns="list" signature="GetSubList()">
+          <variable citdl="HLICategory" ilk="argument" name="self" />
+          <variable citdl="pythoncom.CoCreateInstance()" line="118" name="catinf" />
+          <variable citdl="list" line="119" name="ret" />
+        </scope>
+        <scope ilk="function" line="111" lineend="114" name="GetText" returns="str" signature="GetText()">
+          <variable citdl="HLICategory" ilk="argument" name="self" />
+          <variable citdl="str" line="112" name="desc" />
+        </scope>
+      </scope>
+      <scope classrefs="HLITypeLibEntry" ilk="class" line="231" lineend="242" name="HLICoClass">
+        <scope ilk="function" line="232" lineend="242" name="GetSubList" returns="HLITypeLibEntry.GetSubList()" signature="GetSubList()">
+          <variable citdl="HLICoClass" ilk="argument" name="self" />
+          <variable citdl="HLITypeLibEntry.GetSubList()" line="233" name="ret" />
+          <variable citdl="tlb.GetTypeInfo()" line="235" name="typeinfo" />
+          <variable citdl="typeinfo.GetTypeAttr()" line="236" name="attr" />
+          <variable citdl="typeinfo.GetImplTypeFlags()" line="238" name="flags" />
+          <variable citdl="typeinfo.GetRefTypeInfo()" line="239" name="refType" />
+          <variable citdl="refType.GetTypeAttr()" line="240" name="refAttr" />
+        </scope>
+      </scope>
+      <scope classrefs="HLICOM" doc="A tree heading for registered categories" ilk="class" line="93" lineend="107" name="HLIHeadingCategory">
+        <scope ilk="function" line="97" lineend="107" name="GetSubList" returns="list" signature="GetSubList()">
+          <variable citdl="HLIHeadingCategory" ilk="argument" name="self" />
+          <variable citdl="pythoncom.CoCreateInstance()" line="98" name="catinf" />
+          <variable citdl="util.Enumerator()" line="99" name="enum" />
+          <variable citdl="list" line="100" name="ret" />
+        </scope>
+        <scope ilk="function" line="95" lineend="96" name="GetText" returns="str" signature="GetText()">
+          <variable citdl="HLIHeadingCategory" ilk="argument" name="self" />
+        </scope>
+      </scope>
+      <scope classrefs="HLICOM" doc="A tree heading for registered type libraries" ilk="class" line="473" lineend="517" name="HLIHeadingRegisterdTypeLibs">
+        <scope ilk="function" line="477" lineend="517" name="GetSubList" returns="list" signature="GetSubList()">
+          <variable citdl="HLIHeadingRegisterdTypeLibs" ilk="argument" name="self" />
+          <variable citdl="list" line="479" name="ret" />
+          <variable citdl="win32api.RegOpenKey()" line="480" name="key" />
+          <variable citdl="int" line="483" name="num" />
+          <variable citdl="win32api.RegEnumKey()" line="486" name="keyName" />
+          <variable citdl="win32api.RegOpenKey()" line="490" name="subKey" />
+          <variable citdl="win32api.RegQueryValue()" line="491" name="name" />
+          <variable citdl="int" line="493" name="subNum" />
+          <variable citdl="int" line="494" name="bestVersion" />
+          <variable citdl="win32api.RegEnumKey()" line="497" name="versionStr" />
+          <variable citdl="int" line="501" name="versionFlt" />
+        </scope>
+        <scope ilk="function" line="475" lineend="476" name="GetText" returns="str" signature="GetText()">
+          <variable citdl="HLIHeadingRegisterdTypeLibs" ilk="argument" name="self" />
+        </scope>
+      </scope>
+      <scope classrefs="HLICOM" ilk="class" line="126" lineend="143" name="HLIHelpFile">
+        <scope ilk="function" line="142" lineend="143" name="GetBitmapColumn" returns="int" signature="GetBitmapColumn()">
+          <variable citdl="HLIHelpFile" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="127" lineend="128" name="CalculateIsExpandable" returns="int" signature="CalculateIsExpandable()">
+          <variable citdl="HLIHelpFile" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="135" lineend="141" name="TakeDefaultAction" signature="TakeDefaultAction()">
+          <variable citdl="HLIHelpFile" ilk="argument" name="self" />
+          <variable citdl="win32con.HELP_CONTEXT" line="138" name="cmd" />
+        </scope>
+        <scope ilk="function" line="129" lineend="133" name="GetText" returns="str" signature="GetText()">
+          <import line="130" module="os" />
+          <variable citdl="HLIHelpFile" ilk="argument" name="self" />
+          <variable line="132" name="base" />
+        </scope>
+      </scope>
+      <scope classrefs="HLICOM" ilk="class" line="145" lineend="212" name="HLIRegisteredTypeLibrary">
+        <scope ilk="function" line="146" lineend="212" name="GetSubList" returns="list" signature="GetSubList()">
+          <import line="147" module="os" />
+          <variable citdl="HLIRegisteredTypeLibrary" ilk="argument" name="self" />
+          <variable citdl="list" line="149" name="collected" />
+          <variable citdl="str" line="150" name="helpPath" />
+          <variable citdl="win32api.RegOpenKey()" line="151" name="key" />
+          <variable citdl="int" line="154" name="num" />
+          <variable citdl="win32api.RegEnumKey()" line="157" name="subKey" />
+          <variable citdl="win32api.RegOpenKey()" line="160" name="hSubKey" />
+          <variable citdl="win32api.ExpandEnvironmentStrings()" line="164" name="value" />
+          <variable citdl="win32api.ExpandEnvironmentStrings()" line="170" name="flags" />
+          <variable citdl="int()" line="173" name="lcid" />
+          <variable citdl="win32api.RegOpenKey()" line="174" name="lcidkey" />
+          <variable citdl="int" line="176" name="lcidnum" />
+          <variable citdl="win32api.RegEnumKey()" line="179" name="platform" />
+          <variable citdl="win32api.RegOpenKey()" line="183" name="hplatform" />
+          <variable citdl="win32api.ExpandEnvironmentStrings()" line="186" name="fname" />
+          <variable citdl="list" line="199" name="ret" />
+          <variable citdl="list" line="203" name="extraDescs" />
+          <variable citdl="str" line="208" name="extraDesc" />
+        </scope>
+      </scope>
+      <scope classrefs="HLIPythonObject" ilk="class" line="32" lineend="38" name="HLIRoot">
+        <scope ilk="function" line="35" lineend="36" name="GetSubList" returns="list" signature="GetSubList()">
+          <variable citdl="HLIRoot" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="__instancevar__" line="34" name="name" />
+        <scope attributes="__ctor__" ilk="function" line="33" lineend="34" name="__init__" signature="HLIRoot(title)">
+          <variable citdl="HLIRoot" ilk="argument" name="self" />
+          <variable ilk="argument" name="title" />
+        </scope>
+        <scope ilk="function" line="37" lineend="38" name="__cmp__" returns="cmp()" signature="__cmp__(other)">
+          <variable citdl="HLIRoot" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+      </scope>
+      <variable citdl="dict" line="445" name="HLITypeKinds" />
+      <scope classrefs="HLICOM" ilk="class" line="456" lineend="471" name="HLITypeLib">
+        <scope ilk="function" line="457" lineend="471" name="GetSubList" returns="list" signature="GetSubList()">
+          <variable citdl="HLITypeLib" ilk="argument" name="self" />
+          <variable citdl="list" line="458" name="ret" />
+          <variable citdl="pythoncom.LoadTypeLib()" line="461" name="tlb" />
+        </scope>
+      </scope>
+      <scope classrefs="HLICOM" ilk="class" line="214" lineend="229" name="HLITypeLibEntry">
+        <scope ilk="function" line="223" lineend="229" name="GetSubList" returns="list" signature="GetSubList()">
+          <variable citdl="HLITypeLibEntry" ilk="argument" name="self" />
+          <variable citdl="list" line="226" name="ret" />
+        </scope>
+        <scope ilk="function" line="215" lineend="222" name="GetText" returns="str" signature="GetText()">
+          <variable citdl="HLITypeLibEntry" ilk="argument" name="self" />
+          <variable citdl="str" line="219" name="typedesc" />
+        </scope>
+      </scope>
+      <scope classrefs="HLITypeLibEntry" ilk="class" line="260" lineend="278" name="HLITypeLibEnum">
+        <scope ilk="function" line="267" lineend="268" name="GetText" returns="str" signature="GetText()">
+          <variable citdl="HLITypeLibEnum" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="269" lineend="278" name="GetSubList" returns="list" signature="GetSubList()">
+          <variable citdl="HLITypeLibEnum" ilk="argument" name="self" />
+          <variable citdl="list" line="270" name="ret" />
+          <variable citdl="typelib.GetTypeInfo()" line="272" name="typeinfo" />
+          <variable citdl="typeinfo.GetTypeAttr()" line="273" name="attr" />
+          <variable citdl="typeinfo.GetVarDesc()" line="275" name="vdesc" />
+          <variable line="276" name="name" />
+        </scope>
+        <variable attributes="__instancevar__" line="264" name="id" />
+        <scope attributes="__ctor__" ilk="function" line="261" lineend="266" name="__init__" signature="HLITypeLibEnum(myitem)">
+          <variable citdl="HLITypeLibEnum" ilk="argument" name="self" />
+          <variable ilk="argument" name="myitem" />
+          <variable citdl="typelib.GetTypeInfo()" line="263" name="typeinfo" />
+          <variable line="265" name="name" />
+        </scope>
+      </scope>
+      <scope classrefs="HLICOM" ilk="class" line="302" lineend="443" name="HLITypeLibFunction">
+        <variable citdl="dict" line="323" name="vartypes" />
+        <scope ilk="function" line="398" lineend="443" name="GetSubList" returns="list" signature="GetSubList()">
+          <variable citdl="HLITypeLibFunction" ilk="argument" name="self" />
+          <variable citdl="list" line="399" name="ret" />
+          <variable citdl="typeinfo.GetNames()" line="401" name="names" />
+          <variable citdl="typeinfo.GetFuncDesc()" line="405" name="fd" />
+          <variable citdl="str" line="410" name="val" />
+          <variable citdl="str" line="425" name="fkind" />
+          <variable citdl="str" line="430" name="ikind" />
+          <variable citdl="list" line="437" name="flagDescs" />
+        </scope>
+        <variable citdl="dict" line="308" name="invokekinds" />
+        <scope ilk="function" line="388" lineend="396" name="MakeReturnType" returns="HLITypeLibFunction.MakeReturnTypeName()" signature="MakeReturnType(returnTypeDesc)">
+          <variable citdl="HLITypeLibFunction" ilk="argument" name="self" />
+          <variable ilk="argument" name="returnTypeDesc" />
+          <variable line="390" name="first" />
+          <variable citdl="()" line="391" name="result" />
+        </scope>
+        <variable citdl="list" line="313" name="funcflags" />
+        <scope ilk="function" line="376" lineend="377" name="GetText" returns="str" signature="GetText()">
+          <variable citdl="HLITypeLibFunction" ilk="argument" name="self" />
+        </scope>
+        <variable citdl="dict" line="303" name="funckinds" />
+        <scope attributes="__ctor__" ilk="function" line="371" lineend="375" name="__init__" signature="HLITypeLibFunction(myitem)">
+          <variable citdl="HLITypeLibFunction" ilk="argument" name="self" />
+          <variable ilk="argument" name="myitem" />
+          <variable line="374" name="name" />
+        </scope>
+        <variable attributes="__instancevar__" line="373" name="id" />
+        <variable citdl="list" line="365" name="type_flags" />
+        <scope ilk="function" line="378" lineend="387" name="MakeReturnTypeName" returns="tuple" signature="MakeReturnTypeName(typ)">
+          <variable citdl="HLITypeLibFunction" ilk="argument" name="self" />
+          <variable ilk="argument" name="typ" />
+          <variable citdl="int" line="379" name="justtyp" />
+          <variable citdl="str" line="381" name="typname" />
+        </scope>
+      </scope>
+      <scope classrefs="HLITypeLibEntry" ilk="class" line="245" lineend="258" name="HLITypeLibMethod">
+        <variable attributes="__instancevar__" citdl="str" line="247" name="entry_type" />
+        <scope ilk="function" line="249" lineend="258" name="GetSubList" returns="HLITypeLibEntry.GetSubList()" signature="GetSubList()">
+          <variable citdl="HLITypeLibMethod" ilk="argument" name="self" />
+          <variable citdl="HLITypeLibEntry.GetSubList()" line="250" name="ret" />
+          <variable citdl="tlb.GetTypeInfo()" line="252" name="typeinfo" />
+          <variable citdl="typeinfo.GetTypeAttr()" line="253" name="attr" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="246" lineend="248" name="__init__" signature="HLITypeLibMethod(ob, name=None)">
+          <variable citdl="HLITypeLibMethod" ilk="argument" name="self" />
+          <variable ilk="argument" name="ob" />
+          <variable ilk="argument" name="name" />
+        </scope>
+      </scope>
+      <scope classrefs="HLICOM" ilk="class" line="280" lineend="300" name="HLITypeLibProperty">
+        <scope ilk="function" line="286" lineend="287" name="GetText" returns="str" signature="GetText()">
+          <variable citdl="HLITypeLibProperty" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="288" lineend="300" name="GetSubList" returns="list" signature="GetSubList()">
+          <variable citdl="HLITypeLibProperty" ilk="argument" name="self" />
+          <variable citdl="list" line="289" name="ret" />
+          <variable citdl="typeinfo.GetNames()" line="291" name="names" />
+          <variable citdl="typeinfo.GetVarDesc()" line="294" name="vd" />
+        </scope>
+        <variable attributes="__instancevar__" line="283" name="id" />
+        <scope attributes="__ctor__" ilk="function" line="281" lineend="285" name="__init__" signature="HLITypeLibProperty(myitem)">
+          <variable citdl="HLITypeLibProperty" ilk="argument" name="self" />
+          <variable ilk="argument" name="myitem" />
+          <variable line="284" name="name" />
+        </scope>
+      </scope>
+      <scope classrefs="HLI_Interface" ilk="class" line="65" lineend="75" name="HLI_Enum">
+        <scope ilk="function" line="66" lineend="67" name="GetBitmapColumn" returns="int" signature="GetBitmapColumn()">
+          <variable citdl="HLI_Enum" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="68" lineend="74" name="CalculateIsExpandable" returns="bool" signature="CalculateIsExpandable()">
+          <variable citdl="HLI_Enum" ilk="argument" name="self" />
+          <variable citdl="int" line="70" name="rc" />
+        </scope>
+      </scope>
+      <scope classrefs="HLI_Enum" ilk="class" line="77" lineend="83" name="HLI_IEnumMoniker">
+        <scope ilk="function" line="78" lineend="83" name="GetSubList" returns="list" signature="GetSubList()">
+          <variable citdl="HLI_IEnumMoniker" ilk="argument" name="self" />
+          <variable citdl="pythoncom.CreateBindCtx()" line="79" name="ctx" />
+          <variable citdl="list" line="80" name="ret" />
+        </scope>
+      </scope>
+      <scope classrefs="HLI_Interface" ilk="class" line="85" lineend="91" name="HLI_IMoniker">
+        <scope ilk="function" line="86" lineend="91" name="GetSubList" returns="list" signature="GetSubList()">
+          <variable citdl="HLI_IMoniker" ilk="argument" name="self" />
+          <variable citdl="list" line="87" name="ret" />
+          <variable citdl="self.myobject.Enum()" line="89" name="subenum" />
+        </scope>
+      </scope>
+      <scope classrefs="HLICOM" ilk="class" line="62" lineend="63" name="HLI_Interface" />
+      <import module="browser" />
+      <scope ilk="function" line="519" lineend="530" name="main" signature="main()">
+        <variable citdl="browser.dynamic_browser()" line="529" name="dlg" />
+        <variable citdl="HLIRoot" line="521" name="root" />
+      </scope>
+      <import module="pythoncom" />
+      <import module="sys" />
+      <import module="util" />
+      <import module="win32api" />
+      <import module="win32con" />
+      <import module="win32ui" />
+      <variable attributes="__hidden__" citdl="pythoncom._GetInterfaceCount()" line="537" name="ni" />
+      <variable attributes="__hidden__" citdl="pythoncom._GetGatewayCount()" line="538" name="ng" />
+    </scope>
+    

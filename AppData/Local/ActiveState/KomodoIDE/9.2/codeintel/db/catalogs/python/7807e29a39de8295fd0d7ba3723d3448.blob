@@ -1,0 +1,32 @@
+<scope doc="Exception Handling  Exceptions" ilk="blob" lang="Python" name="win32com.server.exception">
+      <scope classrefs="com_error" doc="An Exception object that is understood by the framework.  If the framework is presented with an exception of type class," ilk="class" line="19" lineend="70" name="COMException">
+        <scope ilk="function" line="69" lineend="70" name="__repr__" returns="tuple" signature="__repr__()">
+          <variable citdl="COMException" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="str" line="56" name="description" />
+        <variable attributes="__instancevar__" line="62" name="source" />
+        <variable attributes="__instancevar__" line="64" name="helpcontext" />
+        <variable attributes="__instancevar__" line="63" name="helpfile" />
+        <scope attributes="__ctor__" doc="Initialize an exception **Params**" ilk="function" line="32" lineend="67" name="__init__" signature="COMException(description=None, scode=None, source=None, helpfile=None, helpContext=None, desc=None, hresult=None)">
+          <variable citdl="COMException" ilk="argument" name="self" />
+          <variable ilk="argument" name="description" />
+          <variable citdl="int" ilk="argument" name="scode" />
+          <variable ilk="argument" name="source" />
+          <variable ilk="argument" name="helpfile" />
+          <variable ilk="argument" name="helpContext" />
+          <variable ilk="argument" name="desc" />
+          <variable ilk="argument" name="hresult" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="int" line="54" name="scode" />
+      </scope>
+      <scope classrefs="com_error" doc="An Exception object that is understood by the framework.  If the framework is presented with an exception of type class," ilk="class" line="75" name="Exception" />
+      <scope ilk="function" line="77" lineend="83" name="IsCOMException" returns="bool" signature="IsCOMException(t=None)">
+        <variable ilk="argument" name="t" />
+      </scope>
+      <scope ilk="function" line="85" lineend="91" name="IsCOMServerException" returns="issubclass()" signature="IsCOMServerException(t=None)">
+        <variable ilk="argument" name="t" />
+      </scope>
+      <import module="pythoncom" />
+      <import module="sys" />
+    </scope>
+    

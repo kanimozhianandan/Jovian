@@ -1,0 +1,7 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Sep 15 10:48:12 EDT 2015
+jackson-mapper-lgpl-1.9.12.jar>central=
+jackson-mapper-lgpl-1.9.12.pom>central=
+jackson-mapper-lgpl-1.9.12.pom>nexus=
+jackson-mapper-lgpl-1.9.12.jar>nexus=
+jackson-mapper-lgpl-1.9.12-sources.jar>nexus=

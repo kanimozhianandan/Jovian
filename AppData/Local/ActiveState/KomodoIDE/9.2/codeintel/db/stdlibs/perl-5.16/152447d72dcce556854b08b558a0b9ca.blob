@@ -1,0 +1,22 @@
+<scope ilk="blob" lang="Perl" name="Perl::Critic::Policy::ErrorHandling::RequireCheckingReturnValueOfEval">
+      <scope ilk="class" line="8" lineend="301" name="Perl::Critic::Policy::ErrorHandling::RequireCheckingReturnValueOfEval">
+        <import line="14" module="Readonly" symbol="*" />
+        <import line="16" module="Scalar::Util" symbol="refaddr" />
+        <import line="18" module="Perl::Critic::Utils" symbol="**" />
+        <variable line="22" name="$VERSION" />
+        <scope ilk="function" line="40" lineend="40" name="supported_parameters" signature="supported_parameters()" />
+        <scope ilk="function" line="41" lineend="41" name="default_severity" signature="default_severity()" />
+        <scope ilk="function" line="42" lineend="42" name="default_themes" signature="default_themes()" />
+        <scope ilk="function" line="43" lineend="43" name="applies_to" signature="applies_to()" />
+        <scope ilk="function" line="47" lineend="71" name="violates" signature="violates()" />
+        <scope ilk="function" line="75" lineend="102" name="_is_in_right_hand_side_of_assignment" signature="_is_in_right_hand_side_of_assignment($elem)" />
+        <scope ilk="function" line="104" lineend="120" name="_grandparent_for_is_in_right_hand_side_of_assignment" signature="_grandparent_for_is_in_right_hand_side_of_assignment($elem)" />
+        <scope ilk="function" line="126" lineend="165" name="_is_in_correct_position_in_a_condition_or_foreach_loop_collection" signature="_is_in_correct_position_in_a_condition_or_foreach_loop_collection($elem, $following)" />
+        <scope ilk="function" line="167" lineend="208" name="_is_in_correct_position_in_a_structure_condition" signature="_is_in_correct_position_in_a_structure_condition($elem, $parent, $following)" />
+        <scope ilk="function" line="211" lineend="221" name="_descendant_of" signature="_descendant_of($cursor, $potential_ancestor)" />
+        <scope ilk="function" line="225" lineend="257" name="_is_in_postfix_expression" signature="_is_in_postfix_expression($elem)" />
+        <scope ilk="function" line="261" lineend="282" name="_scan_backwards_for_grep" signature="_scan_backwards_for_grep($elem)" />
+        <scope ilk="function" line="286" lineend="297" name="_is_effectively_a_comma" signature="_is_effectively_a_comma($elem)" />
+      </scope>
+    </scope>
+    

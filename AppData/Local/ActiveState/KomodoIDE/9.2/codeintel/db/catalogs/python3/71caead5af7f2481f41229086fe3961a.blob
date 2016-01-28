@@ -1,0 +1,10 @@
+<scope doc="Module wrapping Kernal Transaction Manager functions, as used with transacted NTFS and transacted registry functions." ilk="blob" lang="Python3" name="win32transaction">
+      <scope ilk="function" name="CommitTransaction" />
+      <scope ilk="function" name="CommitTransactionAsync" />
+      <scope ilk="function" name="CreateTransaction" />
+      <scope ilk="function" name="GetTransactionId" />
+      <scope ilk="function" name="OpenTransaction" />
+      <scope ilk="function" name="RollbackTransaction" />
+      <scope ilk="function" name="RollbackTransactionAsync" />
+    </scope>
+    

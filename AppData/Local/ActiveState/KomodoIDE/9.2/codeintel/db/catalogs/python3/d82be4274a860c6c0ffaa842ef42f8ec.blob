@@ -1,0 +1,25 @@
+<scope doc="A Python wrapper around the ODBC API." ilk="blob" lang="Python3" name="odbc">
+      <variable citdl="str" name="DATE" />
+      <variable citdl="str" name="NUMBER" />
+      <variable citdl="str" name="RAW" />
+      <scope ilk="function" name="SQLDataSources" />
+      <variable citdl="int" name="SQL_FETCH_ABSOLUTE" />
+      <variable citdl="int" name="SQL_FETCH_FIRST" />
+      <variable citdl="int" name="SQL_FETCH_FIRST_SYSTEM" />
+      <variable citdl="int" name="SQL_FETCH_FIRST_USER" />
+      <variable citdl="int" name="SQL_FETCH_LAST" />
+      <variable citdl="int" name="SQL_FETCH_NEXT" />
+      <variable citdl="int" name="SQL_FETCH_PRIOR" />
+      <variable citdl="int" name="SQL_FETCH_RELATIVE" />
+      <variable citdl="str" name="STRING" />
+      <variable citdl="tuple" name="TYPES" />
+      <scope classrefs="Exception" ilk="class" name="dataError" />
+      <scope classrefs="Exception" ilk="class" name="error" />
+      <scope classrefs="Exception" ilk="class" name="integrityError" />
+      <scope classrefs="Exception" ilk="class" name="internalError" />
+      <scope classrefs="Exception" ilk="class" name="noError" />
+      <scope ilk="function" name="odbc" />
+      <scope classrefs="Exception" ilk="class" name="opError" />
+      <scope classrefs="Exception" ilk="class" name="progError" />
+    </scope>
+    

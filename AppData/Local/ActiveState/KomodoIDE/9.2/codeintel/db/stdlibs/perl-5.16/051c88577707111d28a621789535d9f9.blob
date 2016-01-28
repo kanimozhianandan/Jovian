@@ -1,0 +1,58 @@
+<scope ilk="blob" lang="Perl" name="CPANPLUS::Module">
+      <scope classrefs="CPANPLUS::Module::Signature CPANPLUS::Module::Checksums" ilk="class" line="1" lineend="1823" name="CPANPLUS::Module">
+        <import line="7" module="CPANPLUS::Dist" symbol="*" />
+        <import line="8" module="CPANPLUS::Error" symbol="*" />
+        <import line="9" module="CPANPLUS::Module::Signature" symbol="*" />
+        <import line="10" module="CPANPLUS::Module::Checksums" symbol="*" />
+        <import line="11" module="CPANPLUS::Internals::Constants" symbol="*" />
+        <import line="13" module="FileHandle" symbol="*" />
+        <import line="15" module="Locale::Maketext::Simple" symbol="Class" />
+        <import line="16" module="IPC::Cmd" symbol="can_run" />
+        <import line="16" module="IPC::Cmd" symbol="run" />
+        <import line="17" module="File::Find" symbol="find" />
+        <import line="18" module="Params::Check" symbol="check" />
+        <import line="19" module="File::Basename" symbol="dirname" />
+        <import line="20" module="Module::Load::Conditional" symbol="can_load" />
+        <import line="20" module="Module::Load::Conditional" symbol="check_install" />
+        <variable line="4" name="@ISA" />
+        <variable line="22" name="$Params::Check::VERBOSE" />
+        <variable line="192" name="*name" />
+        <variable line="1271" name="$method" />
+        <scope ilk="function" line="112" lineend="112" name="accessors" signature="accessors()" />
+        <scope ilk="function" line="155" lineend="169" name="dslip" signature="dslip($self)" />
+        <scope ilk="function" line="194" lineend="199" name="parent" signature="parent($self)" />
+        <scope attributes="__ctor__" ilk="function" line="319" lineend="331" name="new" signature="new($class, %hash)" />
+        <scope ilk="function" line="334" lineend="353" name="status" signature="status($self)" />
+        <scope ilk="function" line="357" lineend="361" name="_flush" signature="_flush($self)" />
+        <scope ilk="function" line="437" lineend="464" name="package_is_perl_core" signature="package_is_perl_core($self)" />
+        <scope ilk="function" line="466" lineend="491" name="module_is_supplied_with_perl_core" signature="module_is_supplied_with_perl_core($self, $ver)">
+          <import line="477" module="Module::CoreList" />
+        </scope>
+        <scope ilk="function" line="494" lineend="505" name="is_bundle" signature="is_bundle($self)" />
+        <scope ilk="function" line="508" lineend="515" name="is_autobundle" signature="is_autobundle($self)" />
+        <scope ilk="function" line="517" lineend="523" name="is_third_party" signature="is_third_party($self)" />
+        <scope ilk="function" line="525" lineend="531" name="third_party_information" signature="third_party_information($self)" />
+        <scope ilk="function" line="547" lineend="556" name="clone" signature="clone($self)" />
+        <scope ilk="function" line="569" lineend="595" name="fetch" signature="fetch($self)" />
+        <scope ilk="function" line="607" lineend="627" name="extract" signature="extract($self)" />
+        <scope ilk="function" line="641" lineend="720" name="get_installer_type" signature="get_installer_type($self, %hash)" />
+        <scope ilk="function" line="738" lineend="834" name="dist" signature="dist($self, %hash)" />
+        <scope ilk="function" line="848" lineend="851" name="prepare" signature="prepare($self)" />
+        <scope ilk="function" line="863" lineend="866" name="create" signature="create($self)" />
+        <scope ilk="function" line="879" lineend="882" name="test" signature="test($self)" />
+        <scope ilk="function" line="902" lineend="1088" name="install" signature="install($self, %hash)" />
+        <scope ilk="function" line="1101" lineend="1180" name="bundle_modules" signature="bundle_modules($self)" />
+        <scope ilk="function" line="1192" lineend="1235" name="readme" signature="readme($self)" />
+        <scope ilk="function" line="1327" lineend="1355" name="details" signature="details($self, %hash)" />
+        <scope ilk="function" line="1370" lineend="1378" name="contains" signature="contains($self)" />
+        <scope ilk="function" line="1393" lineend="1398" name="fetch_report" signature="fetch_report($self)" />
+        <scope ilk="function" line="1418" lineend="1519" name="uninstall" signature="uninstall($self, %hash)" />
+        <scope ilk="function" line="1530" lineend="1538" name="distributions" signature="distributions($self, %hash)" />
+        <scope ilk="function" line="1569" lineend="1693" name="_extutils_installed" signature="_extutils_installed($self, %hash)">
+          <import line="1628" module="Config" />
+        </scope>
+        <scope ilk="function" line="1707" lineend="1729" name="add_to_includepath" signature="add_to_includepath($self)" />
+        <scope ilk="function" line="1750" lineend="1794" name="best_path_to_module_build" signature="best_path_to_module_build($self)" />
+      </scope>
+    </scope>
+    

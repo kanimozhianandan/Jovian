@@ -1,0 +1,42 @@
+/* General */
+/* Much of this gets overwritten with scheme specific colors, see skin/partials/shceme-skinning.less */
+/* Autocomplete */
+#changeTracker_panel {
+  -moz-appearance: none;
+  border-radius: 4px;
+  padding: 4px;
+}
+#changeTracker_panel iframe {
+  width: 500px;
+}
+body#changeTrackerFrame {
+  background: none transparent;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+body#changeTrackerFrame .header {
+  margin-bottom: 0px;
+  color: #7d7d7d;
+}
+body#changeTrackerFrame .old,
+body#changeTrackerFrame .new {
+  margin-top: 4px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+body#changeTrackerFrame .comment {
+  color: #7d7d7d;
+}
+body#changeTrackerFrame .old {
+  color: #aa4646;
+}
+body#changeTrackerFrame .new {
+  color: #46aa46;
+}
+body#changeTrackerFrame pre {
+  width: 100%;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}

@@ -1,0 +1,27 @@
+<scope doc="Module containing common objects and functions used by various Pywin32 modules" ilk="blob" lang="Python3" name="pywintypes">
+      <scope ilk="function" name="ACL" />
+      <scope classrefs="object" ilk="class" name="ACLType" />
+      <scope ilk="function" name="CreateGuid" />
+      <scope classrefs="object" ilk="class" name="DEVMODEAType" />
+      <scope classrefs="object" ilk="class" name="DEVMODEType" />
+      <scope classrefs="object" ilk="class" name="DEVMODEWType" />
+      <scope ilk="function" name="DosDateTimeToTime" />
+      <variable citdl="bool" name="FALSE" />
+      <scope ilk="function" name="HANDLE" />
+      <scope classrefs="object" ilk="class" name="HANDLEType" />
+      <scope ilk="function" name="HKEY" />
+      <scope ilk="function" name="IID" />
+      <scope classrefs="object" ilk="class" name="IIDType" />
+      <scope ilk="function" name="IsTextUnicode" />
+      <scope ilk="function" name="OVERLAPPED" />
+      <scope classrefs="object" ilk="class" name="OVERLAPPEDType" />
+      <scope ilk="function" name="SECURITY_ATTRIBUTES" />
+      <scope classrefs="object" doc="A Python object, representing a SECURITY_ATTRIBUTES structure" ilk="class" name="SECURITY_ATTRIBUTESType" />
+      <scope ilk="function" name="SECURITY_DESCRIPTOR" />
+      <scope classrefs="object" ilk="class" name="SECURITY_DESCRIPTORType" />
+      <scope ilk="function" name="SID" />
+      <scope classrefs="object" ilk="class" name="SIDType" />
+      <variable citdl="bool" name="TRUE" />
+      <scope ilk="function" name="Time" />
+    </scope>
+    

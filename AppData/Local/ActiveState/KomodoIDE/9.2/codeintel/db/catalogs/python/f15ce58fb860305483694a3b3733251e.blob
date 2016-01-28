@@ -1,0 +1,190 @@
+<scope doc="Dispatcher  Please see policy.py for a discussion on dispatchers and policies" ilk="blob" lang="Python" name="win32com.server.dispatcher">
+      <scope classrefs="DispatcherTrace" doc="A tracing dispatcher that sends its output to the win32trace remote collector." ilk="class" line="268" name="DefaultDebugDispatcher" />
+      <scope doc="The base class for all Dispatchers.    This dispatcher supports wrapping all operations in exception handlers, " ilk="class" line="13" lineend="138" name="DispatcherBase">
+        <scope attributes="protected" ilk="function" line="57" lineend="61" name="_GetTypeInfo_" returns="self.policy._GetTypeInfo_()" signature="_GetTypeInfo_(index, lcid)">
+          <variable citdl="DispatcherBase" ilk="argument" name="self" />
+          <variable ilk="argument" name="index" />
+          <variable ilk="argument" name="lcid" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="105" lineend="109" name="_GetNextDispID_" returns="self._HandleException_()" signature="_GetNextDispID_(fdex, flags)">
+          <variable citdl="DispatcherBase" ilk="argument" name="self" />
+          <variable ilk="argument" name="fdex" />
+          <variable ilk="argument" name="flags" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="87" lineend="91" name="_DeleteMemberByDispID_" returns="self.policy._DeleteMemberByDispID_()" signature="_DeleteMemberByDispID_(id)">
+          <variable citdl="DispatcherBase" ilk="argument" name="self" />
+          <variable ilk="argument" name="id" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="111" lineend="115" name="_GetNameSpaceParent_" returns="self.policy._GetNameSpaceParent_()" signature="_GetNameSpaceParent_()">
+          <variable citdl="DispatcherBase" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="protected" doc="Called whenever an exception is raised." ilk="function" line="117" lineend="129" name="_HandleException_" signature="_HandleException_()">
+          <variable citdl="DispatcherBase" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="69" lineend="73" name="_GetDispID_" returns="self._HandleException_()" signature="_GetDispID_(name, fdex)">
+          <variable citdl="DispatcherBase" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="fdex" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="51" lineend="55" name="_GetIDsOfNames_" returns="self._HandleException_()" signature="_GetIDsOfNames_(names, lcid)">
+          <variable citdl="DispatcherBase" ilk="argument" name="self" />
+          <variable ilk="argument" name="names" />
+          <variable ilk="argument" name="lcid" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="93" lineend="97" name="_GetMemberProperties_" returns="self._HandleException_()" signature="_GetMemberProperties_(id, fdex)">
+          <variable citdl="DispatcherBase" ilk="argument" name="self" />
+          <variable ilk="argument" name="id" />
+          <variable ilk="argument" name="fdex" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="32" lineend="37" name="_CreateInstance_" returns="self._HandleException_()" signature="_CreateInstance_(clsid, reqIID)">
+          <variable citdl="DispatcherBase" ilk="argument" name="self" />
+          <variable ilk="argument" name="clsid" />
+          <variable ilk="argument" name="reqIID" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="131" lineend="138" name="_trace_" signature="_trace_(*args)">
+          <variable citdl="DispatcherBase" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+          <variable citdl="__builtins__.str.join()" line="133" name="record" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="45" lineend="49" name="_Invoke_" returns="self._HandleException_()" signature="_Invoke_(dispid, lcid, wFlags, args)">
+          <variable citdl="DispatcherBase" ilk="argument" name="self" />
+          <variable ilk="argument" name="dispid" />
+          <variable ilk="argument" name="lcid" />
+          <variable ilk="argument" name="wFlags" />
+          <variable ilk="argument" name="args" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="23" lineend="27" name="__init__" signature="DispatcherBase(policyClass, object)">
+          <variable citdl="DispatcherBase" ilk="argument" name="self" />
+          <variable ilk="argument" name="policyClass" />
+          <variable ilk="argument" name="object" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="__init__.policyClass()" line="24" name="policy" />
+        <scope attributes="protected" ilk="function" line="81" lineend="85" name="_DeleteMemberByName_" returns="self.policy._DeleteMemberByName_()" signature="_DeleteMemberByName_(name, fdex)">
+          <variable citdl="DispatcherBase" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="fdex" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="getattr()" line="27" name="logger" />
+        <scope attributes="protected" ilk="function" line="63" lineend="67" name="_GetTypeInfoCount_" returns="self._HandleException_()" signature="_GetTypeInfoCount_()">
+          <variable citdl="DispatcherBase" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="75" lineend="79" name="_InvokeEx_" returns="self.policy._InvokeEx_()" signature="_InvokeEx_(dispid, lcid, wFlags, args, kwargs, serviceProvider)">
+          <variable citdl="DispatcherBase" ilk="argument" name="self" />
+          <variable ilk="argument" name="dispid" />
+          <variable ilk="argument" name="lcid" />
+          <variable ilk="argument" name="wFlags" />
+          <variable ilk="argument" name="args" />
+          <variable ilk="argument" name="kwargs" />
+          <variable ilk="argument" name="serviceProvider" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="99" lineend="103" name="_GetMemberName_" returns="self._HandleException_()" signature="_GetMemberName_(dispid)">
+          <variable citdl="DispatcherBase" ilk="argument" name="self" />
+          <variable ilk="argument" name="dispid" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="39" lineend="43" name="_QueryInterface_" returns="self._HandleException_()" signature="_QueryInterface_(iid)">
+          <variable citdl="DispatcherBase" ilk="argument" name="self" />
+          <variable ilk="argument" name="iid" />
+        </scope>
+      </scope>
+      <scope classrefs="DispatcherTrace" doc="A tracing dispatcher that sends its output to win32api.OutputDebugString" ilk="class" line="210" lineend="217" name="DispatcherOutputDebugString">
+        <scope attributes="protected" ilk="function" line="214" lineend="217" name="_trace_" signature="_trace_(*args)">
+          <variable citdl="DispatcherOutputDebugString" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+        </scope>
+      </scope>
+      <scope classrefs="DispatcherBase" doc="A dispatcher, which causes a &apos;print&apos; line for each COM function called." ilk="class" line="140" lineend="195" name="DispatcherTrace">
+        <scope attributes="protected" ilk="function" line="153" lineend="155" name="_GetTypeInfo_" returns="DispatcherBase._GetTypeInfo_()" signature="_GetTypeInfo_(index, lcid)">
+          <variable citdl="DispatcherTrace" ilk="argument" name="self" />
+          <variable ilk="argument" name="index" />
+          <variable ilk="argument" name="lcid" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="177" lineend="179" name="_DeleteMemberByDispID_" returns="DispatcherBase._DeleteMemberByDispID_()" signature="_DeleteMemberByDispID_(id)">
+          <variable citdl="DispatcherTrace" ilk="argument" name="self" />
+          <variable ilk="argument" name="id" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="193" lineend="195" name="_GetNameSpaceParent_" returns="DispatcherBase._GetNameSpaceParent_()" signature="_GetNameSpaceParent_()">
+          <variable citdl="DispatcherTrace" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="149" lineend="151" name="_GetIDsOfNames_" returns="DispatcherBase._GetIDsOfNames_()" signature="_GetIDsOfNames_(names, lcid)">
+          <variable citdl="DispatcherTrace" ilk="argument" name="self" />
+          <variable ilk="argument" name="names" />
+          <variable ilk="argument" name="lcid" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="181" lineend="183" name="_GetMemberProperties_" returns="DispatcherBase._GetMemberProperties_()" signature="_GetMemberProperties_(id, fdex)">
+          <variable citdl="DispatcherTrace" ilk="argument" name="self" />
+          <variable ilk="argument" name="id" />
+          <variable ilk="argument" name="fdex" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="157" lineend="159" name="_GetTypeInfoCount_" returns="DispatcherBase._GetTypeInfoCount_()" signature="_GetTypeInfoCount_()">
+          <variable citdl="DispatcherTrace" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="161" lineend="163" name="_Invoke_" returns="DispatcherBase._Invoke_()" signature="_Invoke_(dispid, lcid, wFlags, args)">
+          <variable citdl="DispatcherTrace" ilk="argument" name="self" />
+          <variable ilk="argument" name="dispid" />
+          <variable ilk="argument" name="lcid" />
+          <variable ilk="argument" name="wFlags" />
+          <variable ilk="argument" name="args" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="143" lineend="147" name="_QueryInterface_" returns="DispatcherBase._QueryInterface_()" signature="_QueryInterface_(iid)">
+          <variable citdl="DispatcherTrace" ilk="argument" name="self" />
+          <variable ilk="argument" name="iid" />
+          <variable citdl="DispatcherBase._QueryInterface_()" line="144" name="rc" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="173" lineend="175" name="_DeleteMemberByName_" returns="DispatcherBase._DeleteMemberByName_()" signature="_DeleteMemberByName_(name, fdex)">
+          <variable citdl="DispatcherTrace" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="fdex" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="165" lineend="167" name="_GetDispID_" returns="DispatcherBase._GetDispID_()" signature="_GetDispID_(name, fdex)">
+          <variable citdl="DispatcherTrace" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="fdex" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="189" lineend="191" name="_GetNextDispID_" returns="DispatcherBase._GetNextDispID_()" signature="_GetNextDispID_(fdex, flags)">
+          <variable citdl="DispatcherTrace" ilk="argument" name="self" />
+          <variable ilk="argument" name="fdex" />
+          <variable ilk="argument" name="flags" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="169" lineend="171" name="_InvokeEx_" returns="DispatcherBase._InvokeEx_()" signature="_InvokeEx_(dispid, lcid, wFlags, args, kwargs, serviceProvider)">
+          <variable citdl="DispatcherTrace" ilk="argument" name="self" />
+          <variable ilk="argument" name="dispid" />
+          <variable ilk="argument" name="lcid" />
+          <variable ilk="argument" name="wFlags" />
+          <variable ilk="argument" name="args" />
+          <variable ilk="argument" name="kwargs" />
+          <variable ilk="argument" name="serviceProvider" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="185" lineend="187" name="_GetMemberName_" returns="DispatcherBase._GetMemberName_()" signature="_GetMemberName_(dispid)">
+          <variable citdl="DispatcherTrace" ilk="argument" name="self" />
+          <variable ilk="argument" name="dispid" />
+        </scope>
+      </scope>
+      <scope classrefs="DispatcherBase" doc="A source-level debugger dispatcher  A dispatcher which invokes the debugger as an object is instantiated, or " ilk="class" line="220" lineend="264" name="DispatcherWin32dbg">
+        <scope attributes="protected" doc="Invoke the debugger post mortem capability" ilk="function" line="242" lineend="264" name="_HandleException_" signature="_HandleException_()">
+          <variable citdl="DispatcherWin32dbg" ilk="argument" name="self" />
+          <variable citdl="int" line="247" name="debug" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="228" lineend="240" name="__init__" signature="DispatcherWin32dbg(policyClass, ob)">
+          <variable citdl="DispatcherWin32dbg" ilk="argument" name="self" />
+          <variable ilk="argument" name="policyClass" />
+          <variable ilk="argument" name="ob" />
+        </scope>
+      </scope>
+      <scope classrefs="DispatcherTrace" doc="A tracing dispatcher that sends its output to the win32trace remote collector." ilk="class" line="198" lineend="207" name="DispatcherWin32trace">
+        <scope attributes="__ctor__" ilk="function" line="202" lineend="207" name="__init__" signature="DispatcherWin32trace(policyClass, object)">
+          <import line="206" module="win32traceutil" />
+          <variable citdl="DispatcherWin32trace" ilk="argument" name="self" />
+          <variable ilk="argument" name="policyClass" />
+          <variable ilk="argument" name="object" />
+        </scope>
+      </scope>
+      <scope doc="Converts an IID to a string interface name." ilk="function" name="IIDToInterfaceName" signature="IIDToInterfaceName(iid)" />
+      <scope ilk="function" name="IsCOMServerException" signature="IsCOMServerException(t=None)" />
+      <scope doc="Return information about the most recent exception caught by an except clause in the current stack frame or in an older stack frame." ilk="function" name="exc_info" signature="exc_info() -&gt; (type, value, traceback)" />
+      <import module="pythoncom" />
+      <import module="traceback" />
+      <import module="win32api" />
+      <import module="win32com" />
+      <import module="win32trace" />
+    </scope>
+    

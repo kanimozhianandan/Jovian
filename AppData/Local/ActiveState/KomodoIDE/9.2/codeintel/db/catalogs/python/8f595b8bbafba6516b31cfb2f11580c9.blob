@@ -1,0 +1,7 @@
+<scope ilk="blob" lang="Python" name="win2kras">
+      <scope ilk="function" name="GetEapUserIdentity" />
+      <variable citdl="int" name="RASEAPF_Logon" />
+      <variable citdl="int" name="RASEAPF_NonInteractive" />
+      <variable citdl="int" name="RASEAPF_Preview" />
+    </scope>
+    

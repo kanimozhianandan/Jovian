@@ -1,0 +1,148 @@
+<scope ilk="blob" lang="Python" name="netbios">
+      <scope ilk="function" line="257" lineend="258" name="ACTION_HEADER" returns="NCBStruct" signature="ACTION_HEADER()" />
+      <variable citdl="list" line="174" name="ACTION_HEADER_ITEMS" />
+      <scope ilk="function" line="236" lineend="237" name="ADAPTER_STATUS" returns="NCBStruct" signature="ADAPTER_STATUS()" />
+      <variable citdl="list" line="98" name="ADAPTER_STATUS_ITEMS" />
+      <variable citdl="str" line="22" name="ALL_TRANSPORTS" />
+      <variable citdl="int" line="50" name="ASYNCH" />
+      <variable citdl="int" line="17" name="CALL_PENDING" />
+      <variable citdl="int" line="13" name="DEREGISTERED" />
+      <variable citdl="int" line="14" name="DUPLICATE" />
+      <variable citdl="int" line="15" name="DUPLICATE_DEREG" />
+      <scope ilk="function" line="254" lineend="255" name="FIND_NAME_BUFFER" returns="NCBStruct" signature="FIND_NAME_BUFFER()" />
+      <variable citdl="list" line="165" name="FIND_NAME_BUFFER_ITEMS" />
+      <scope ilk="function" line="251" lineend="252" name="FIND_NAME_HEADER" returns="NCBStruct" signature="FIND_NAME_HEADER()" />
+      <variable citdl="list" line="159" name="FIND_NAME_HEADER_ITEMS" />
+      <variable citdl="int" line="9" name="GROUP_NAME" />
+      <variable citdl="int" line="20" name="HANGUP_COMPLETE" />
+      <variable citdl="int" line="19" name="HANGUP_PENDING" />
+      <scope ilk="function" line="248" lineend="249" name="LANA_ENUM" returns="NCBStruct" signature="LANA_ENUM()" />
+      <variable citdl="list" line="154" name="LANA_ENUM_ITEMS" />
+      <variable citdl="int" line="16" name="LISTEN_OUTSTANDING" />
+      <variable citdl="int" line="7" name="MAX_LANA" />
+      <variable citdl="str" line="23" name="MS_NBF" />
+      <scope ilk="function" line="239" lineend="240" name="NAME_BUFFER" returns="NCBStruct" signature="NAME_BUFFER()" />
+      <variable citdl="list" line="132" name="NAME_BUFFER_ITEMS" />
+      <variable citdl="int" line="8" name="NAME_FLAGS_MASK" />
+      <scope classrefs="object" ilk="class" line="182" name="NCB" />
+      <variable citdl="int" line="47" name="NCBACTION" />
+      <variable citdl="int" line="41" name="NCBADDGRNAME" />
+      <variable citdl="int" line="35" name="NCBADDNAME" />
+      <variable citdl="int" line="38" name="NCBASTAT" />
+      <variable citdl="int" line="24" name="NCBCALL" />
+      <variable citdl="int" line="40" name="NCBCANCEL" />
+      <variable citdl="int" line="30" name="NCBCHAINSEND" />
+      <variable citdl="int" line="45" name="NCBCHAINSENDNA" />
+      <variable citdl="int" line="36" name="NCBDELNAME" />
+      <variable citdl="int" line="32" name="NCBDGRECV" />
+      <variable citdl="int" line="34" name="NCBDGRECVBC" />
+      <variable citdl="int" line="31" name="NCBDGSEND" />
+      <variable citdl="int" line="33" name="NCBDGSENDBC" />
+      <variable citdl="int" line="42" name="NCBENUM" />
+      <variable citdl="int" line="48" name="NCBFINDNAME" />
+      <variable citdl="int" line="26" name="NCBHANGUP" />
+      <variable citdl="int" line="46" name="NCBLANSTALERT" />
+      <variable citdl="int" line="25" name="NCBLISTEN" />
+      <variable citdl="int" line="6" name="NCBNAMSZ" />
+      <variable citdl="int" line="28" name="NCBRECV" />
+      <variable citdl="int" line="29" name="NCBRECVANY" />
+      <variable citdl="int" line="37" name="NCBRESET" />
+      <variable citdl="int" line="27" name="NCBSEND" />
+      <variable citdl="int" line="44" name="NCBSENDNA" />
+      <variable citdl="int" line="39" name="NCBSSTAT" />
+      <scope ilk="class" line="194" lineend="234" name="NCBStruct">
+        <scope ilk="function" line="227" lineend="234" name="__setattr__" signature="__setattr__(attr, val)">
+          <variable citdl="NCBStruct" ilk="argument" name="self" />
+          <variable ilk="argument" name="attr" />
+          <variable ilk="argument" name="val" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="__builtins__.str.join()" line="196" name="_format" />
+        <variable attributes="protected __instancevar__" citdl="win32wnet.NCBBuffer()" line="198" name="_buffer_" />
+        <scope attributes="protected" ilk="function" line="221" lineend="225" name="_unpack" signature="_unpack()">
+          <variable citdl="NCBStruct" ilk="argument" name="self" />
+          <variable citdl="struct.unpack()" line="222" name="items" />
+        </scope>
+        <variable attributes="protected __instancevar__" line="197" name="_items" />
+        <scope attributes="protected" ilk="function" line="211" lineend="219" name="_pack" signature="_pack()">
+          <variable citdl="NCBStruct" ilk="argument" name="self" />
+          <variable citdl="list" line="212" name="vals" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="195" lineend="209" name="__init__" signature="NCBStruct(items)">
+          <variable citdl="NCBStruct" ilk="argument" name="self" />
+          <variable ilk="argument" name="items" />
+          <variable citdl="str" line="203" name="val" />
+          <variable citdl="int()" line="207" name="l" />
+        </scope>
+      </scope>
+      <variable citdl="int" line="49" name="NCBTRACE" />
+      <variable citdl="int" line="43" name="NCBUNLINK" />
+      <variable citdl="int" line="63" name="NRC_ACTSES" />
+      <variable citdl="int" line="56" name="NRC_BADDR" />
+      <variable citdl="int" line="75" name="NRC_BRIDGE" />
+      <variable citdl="int" line="52" name="NRC_BUFLEN" />
+      <variable citdl="int" line="77" name="NRC_CANCEL" />
+      <variable citdl="int" line="76" name="NRC_CANOCCR" />
+      <variable citdl="int" line="60" name="NRC_CMDCAN" />
+      <variable citdl="int" line="54" name="NRC_CMDTMO" />
+      <variable citdl="int" line="78" name="NRC_DUPENV" />
+      <variable citdl="int" line="61" name="NRC_DUPNAME" />
+      <variable citdl="int" line="79" name="NRC_ENVNOTDEF" />
+      <variable citdl="int" line="51" name="NRC_GOODRET" />
+      <variable citdl="int" line="73" name="NRC_IFBUSY" />
+      <variable citdl="int" line="53" name="NRC_ILLCMD" />
+      <variable citdl="int" line="66" name="NRC_ILLNN" />
+      <variable citdl="int" line="55" name="NRC_INCOMP" />
+      <variable citdl="int" line="69" name="NRC_INUSE" />
+      <variable citdl="int" line="84" name="NRC_INVADDRESS" />
+      <variable citdl="int" line="85" name="NRC_INVDDID" />
+      <variable citdl="int" line="86" name="NRC_LOCKFAIL" />
+      <variable citdl="int" line="64" name="NRC_LOCTFUL" />
+      <variable citdl="int" line="81" name="NRC_MAXAPPS" />
+      <variable citdl="int" line="72" name="NRC_NAMCONF" />
+      <variable citdl="int" line="70" name="NRC_NAMERR" />
+      <variable citdl="int" line="62" name="NRC_NAMTFUL" />
+      <variable citdl="int" line="67" name="NRC_NOCALL" />
+      <variable citdl="int" line="58" name="NRC_NORES" />
+      <variable citdl="int" line="83" name="NRC_NORESOURCES" />
+      <variable citdl="int" line="82" name="NRC_NOSAPS" />
+      <variable citdl="int" line="68" name="NRC_NOWILD" />
+      <variable citdl="int" line="87" name="NRC_OPENERR" />
+      <variable citdl="int" line="80" name="NRC_OSRESNOTAV" />
+      <variable citdl="int" line="89" name="NRC_PENDING" />
+      <variable citdl="int" line="65" name="NRC_REMTFUL" />
+      <variable citdl="int" line="71" name="NRC_SABORT" />
+      <variable citdl="int" line="59" name="NRC_SCLOSED" />
+      <variable citdl="int" line="57" name="NRC_SNUMOUT" />
+      <variable citdl="int" line="88" name="NRC_SYSTEM" />
+      <variable citdl="int" line="74" name="NRC_TOOMANY" />
+      <scope ilk="function" line="183" lineend="192" name="Netbios" returns="win32wnet.Netbios()" signature="Netbios(ncb)">
+        <variable ilk="argument" name="ncb" />
+        <variable citdl="ncb.Buffer" line="184" name="ob" />
+        <variable citdl="hasattr()" line="185" name="is_ours" />
+      </scope>
+      <variable citdl="int" line="12" name="REGISTERED" />
+      <variable citdl="int" line="11" name="REGISTERING" />
+      <variable citdl="int" line="21" name="SESSION_ABORTED" />
+      <scope ilk="function" line="245" lineend="246" name="SESSION_BUFFER" returns="NCBStruct" signature="SESSION_BUFFER()" />
+      <variable citdl="list" line="145" name="SESSION_BUFFER_ITEMS" />
+      <variable citdl="int" line="18" name="SESSION_ESTABLISHED" />
+      <scope ilk="function" line="242" lineend="243" name="SESSION_HEADER" returns="NCBStruct" signature="SESSION_HEADER()" />
+      <variable citdl="list" line="138" name="SESSION_HEADER_ITEMS" />
+      <variable citdl="int" line="10" name="UNIQUE_NAME" />
+      <scope doc="Given an element in a binary buffer, return its integer value" ilk="function" line="260" lineend="265" name="byte_to_int" returns="ord()" signature="byte_to_int(b)">
+        <variable ilk="argument" name="b" />
+      </scope>
+      <import module="struct" />
+      <import module="sys" />
+      <import module="win32wnet" />
+      <variable attributes="__hidden__" citdl="str" line="93" name="WORD" />
+      <variable attributes="__hidden__" citdl="str" line="96" name="ULONG" />
+      <variable attributes="__hidden__" citdl="str" line="92" name="UCHAR" />
+      <variable attributes="__hidden__" citdl="ADAPTER_STATUS()" line="286" name="adapter" />
+      <variable attributes="__hidden__" citdl="str" line="95" name="USHORT" />
+      <variable attributes="__hidden__" citdl="Netbios()" line="274" name="rc" />
+      <variable attributes="__hidden__" citdl="LANA_ENUM()" line="272" name="la_enum" />
+      <variable attributes="__hidden__" citdl="str" line="94" name="DWORD" />
+      <variable attributes="__hidden__" citdl="NCB()" line="270" name="ncb" />
+    </scope>
+    

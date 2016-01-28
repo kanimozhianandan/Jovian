@@ -1,0 +1,15 @@
+<scope ilk="blob" lang="Perl" name="Shell">
+      <scope ilk="class" line="1" lineend="140" name="Shell">
+        <import line="5" module="File::Spec::Functions" symbol="*" />
+        <variable line="7" name="$AUTOLOAD" />
+        <variable line="7" name="$capture_stderr" />
+        <variable line="7" name="$raw" />
+        <variable line="7" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="11" lineend="11" name="new" signature="new()" />
+        <scope ilk="function" line="12" lineend="12" name="DESTROY" signature="DESTROY()" />
+        <scope ilk="function" line="14" lineend="27" name="import" signature="import($self)" />
+        <scope ilk="function" line="48" lineend="129" name="_make_cmd" signature="_make_cmd($cmd, @arr)" />
+        <scope ilk="function" line="131" lineend="138" name="AUTOLOAD" signature="AUTOLOAD()" />
+      </scope>
+    </scope>
+    

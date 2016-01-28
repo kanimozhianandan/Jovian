@@ -1,0 +1,15 @@
+<scope ilk="blob" lang="Perl" name="Pod::Simple::DumpAsXML">
+      <scope classrefs="Pod::Simple" ilk="class" line="3" lineend="82" name="Pod::Simple::DumpAsXML">
+        <import line="5" module="Pod::Simple" />
+        <import line="10" module="Carp" />
+        <import line="11" module="Text::Wrap" symbol="wrap" />
+        <variable line="4" name="$VERSION" />
+        <variable line="13" name="*DEBUG" />
+        <scope ilk="function" line="15" lineend="21" name="new" signature="new($self)" />
+        <scope ilk="function" line="25" lineend="45" name="_handle_element_start" signature="_handle_element_start()" />
+        <scope ilk="function" line="47" lineend="58" name="_handle_text" signature="_handle_text()" />
+        <scope ilk="function" line="60" lineend="65" name="_handle_element_end" signature="_handle_element_end()" />
+        <scope ilk="function" line="69" lineend="79" name="_xml_escape" signature="_xml_escape()" />
+      </scope>
+    </scope>
+    

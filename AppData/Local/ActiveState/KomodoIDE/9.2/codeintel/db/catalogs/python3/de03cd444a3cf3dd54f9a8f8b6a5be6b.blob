@@ -1,0 +1,23 @@
+<scope doc="A COM Server which exposes the NT Performance monitor in a very rudimentary way  Usage from VB:" ilk="blob" lang="Python3" name="win32com.servers.perfmon">
+      <scope classrefs="object" ilk="class" line="10" lineend="23" name="PerfMonQuery">
+        <variable attributes="protected" citdl="str" line="12" name="_reg_progid_" />
+        <variable attributes="protected" citdl="list" line="16" name="_public_methods_" />
+        <variable attributes="protected" citdl="str" line="14" name="_reg_clsid_" />
+        <variable attributes="protected" citdl="str" line="13" name="_reg_desc_" />
+        <variable attributes="protected" citdl="str" line="15" name="_reg_class_spec_" />
+        <variable attributes="protected" citdl="str" line="11" name="_reg_verprogid_" />
+        <scope ilk="function" line="17" lineend="23" name="Query" returns="win32pdhutil.GetPerformanceAttributes()" signature="Query(object, counter, instance=None, machine=None)">
+          <variable citdl="PerfMonQuery" ilk="argument" name="self" />
+          <variable ilk="argument" name="object" />
+          <variable ilk="argument" name="counter" />
+          <variable ilk="argument" name="instance" />
+          <variable ilk="argument" name="machine" />
+        </scope>
+      </scope>
+      <import module="exception" />
+      <import module="pythoncom" />
+      <import module="register" />
+      <import module="win32pdhutil" />
+      <import module="winerror" />
+    </scope>
+    

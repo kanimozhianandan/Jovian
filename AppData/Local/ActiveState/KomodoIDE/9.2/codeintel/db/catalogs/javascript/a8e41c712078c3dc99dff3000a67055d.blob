@@ -1,0 +1,146 @@
+<scope ilk="blob" lang="JavaScript" name="Base.js">
+      <variable citdl="Object" name="MochiKit">
+        <variable citdl="Object" name="Base">
+          <variable doc="A singleton error raised when no suitable adapter is found&#xA;Availability: Available in MochiKit 1.3.1+" name="NotFound" />
+          <scope doc="A registry to facilitate adaptation. All check/wrap function&#xA;pairs in a given registry should take the same number of&#xA;arguments." ilk="class" name="AdapterRegistry">
+            <scope doc="name: a unique identifier used to identify this adapter so&#xA;that it may be unregistered. check: function that should&#xA;return true if the given arguments are appropriate for the&#xA;wrap function." ilk="function" name="register" signature="register(name, check, wrap[, override])" />
+            <scope doc="Find an adapter for the given arguments by calling every&#xA;check function until one returns true. If no suitable&#xA;adapter is found, throws NotFound." ilk="function" name="match" signature="match(obj[, ...])" />
+            <scope doc="Remove a named adapter from the registry Availability:&#xA;Available in MochiKit 1.3.1+" ilk="function" name="unregister" signature="unregister(name)" />
+          </scope>
+          <scope doc="Convenience constructor for creating new errors (e.g." ilk="class" name="NamedError" />
+          <scope doc="Compare the arrays self and arr for equality using compare&#xA;on each element. Uses a fast-path for length differences." ilk="function" name="arrayEqual" signature="arrayEqual(self, arr)" />
+          <scope doc="This function is an alias of mean()." ilk="function" name="average" signature="average(lst[, ...])" />
+          <scope doc="Return a copy of func bound to self. This means whenever and&#xA;however the returned function is called, this will always&#xA;reference the given self." ilk="function" name="bind" signature="bind(func, self[, arg, ...])" />
+          <scope doc="Alternate version of bind that uses late lookup of the func&#xA;parameter in self. I.e, the self[func] function lookup will&#xA;occur on each call to the returned function, not when&#xA;bindLate is called." ilk="function" name="bindLate" signature="bindLate(func, self[, arg, ...])" />
+          <scope doc="Replace all functions meth on self with bind(meth, self).&#xA;This emulates Python&apos;s bound instance methods, where there&#xA;is no need to worry about preserving this when the method is&#xA;used as a callback." ilk="function" name="bindMethods" signature="bindMethods(self)" />
+          <scope doc="Converts hyphenated strings to camelCase: assert( camelize&#xA;(&quot;border-left&quot;) == &quot;borderLeft&quot; ); Availability: Available&#xA;in MochiKit 1.4+" ilk="function" name="camelize" signature="camelize(str)" />
+          <scope doc="Return a new object using obj as its prototype. Use this if&#xA;you want to return a mutable object (e.g." ilk="function" name="clone" returns="Object" signature="clone(obj) =&gt; Object" />
+          <scope doc="Compare two objects in a sensible manner. Currently this is:&#xA;undefined and null compare equal to each other undefined and&#xA;null are less than anything else If JavaScript says a == b,&#xA;then we trust it comparators registered with&#xA;registerComparator are used to find a good comparator." ilk="function" name="compare" signature="compare(a, b)" />
+          <scope doc="Return a new function as the combination of the given&#xA;function arguments, equivalent to f1(f2(arguments))." ilk="function" name="compose" returns="Function" signature="compose(f1, f2, ..., fN) =&gt; Function" />
+          <scope doc="Concatenates all given Array-like arguments and returns a&#xA;new Array: var lst = concat([&quot;1&quot;,&quot;3&quot;,&quot;5&quot;], [&quot;2&quot;,&quot;4&quot;,&quot;6&quot;]);&#xA;assert( lst.toString() == &quot;1,3,5,2,4,6&quot; ); Availability:&#xA;Available in MochiKit 1.3.1+" ilk="function" name="concat" signature="concat(lst[, ...])" />
+          <scope doc="Returns a function that will return a number one greater&#xA;than the previous returned value, starting at n. For&#xA;example: nextId = counter() assert( nextId() == 1 ) assert(&#xA;nextId() == 2 ) For an iterator with this behavior, see&#xA;MochiKit.Iter.count." ilk="function" name="counter" returns="Function" signature="counter(n=1) =&gt; Function" />
+          <scope doc="Mutate the array self by extending it with an Array-like&#xA;obj, starting from index skip. If null is given as the&#xA;initial array, a new one will be created." ilk="function" name="extend" signature="extend(self, obj, skip=0)" />
+          <scope doc="Unserialize a JSON [1] represenation of an object. Note that&#xA;this uses the eval function of the interpreter, and&#xA;therefore trusts the contents of aJSONString to be safe." ilk="function" name="evalJSON" signature="evalJSON(aJSONString)" />
+          <scope doc="Returns a new Array composed of all elements from lst where&#xA;fn(lst[i]) returns a true value. If fn is null,&#xA;operator.truth will be used." ilk="function" name="filter" returns="Array" signature="filter(fn, lst) =&gt; Array" />
+          <scope doc="Finds the index of value in the Array-like object lst using&#xA;compare. The search starts at the index start, and ends at&#xA;the index end - 1." ilk="function" name="findValue" signature="findValue(lst, value, start=0, end=lst.length)" />
+          <scope doc="Finds the index of value in the Array-like object lst using&#xA;the === operator. The search starts at the index start, and&#xA;ends at the index end - 1." ilk="function" name="findIdentical" signature="findIdentical(lst, value, start=0, end=lst.length)" />
+          <scope doc="Given a bunch of arguments, return a single Array containing&#xA;all of those arguments." ilk="function" name="flattenArguments" signature="flattenArguments(arg[, ...])" />
+          <scope doc="Return a new Array consisting of every item in lst with&#xA;Array items expanded in-place recursively. This differs from&#xA;flattenArguments in that it only takes one argument and it&#xA;only flattens items that are instanceof Array." ilk="function" name="flattenArray" returns="Array" signature="flattenArray(lst) =&gt; Array" />
+          <scope doc="Returns a function that forwards a method call to&#xA;this.name(...) Availability: Available in MochiKit 1.3.1+" ilk="function" name="forwardCall" returns="Function" signature="forwardCall(name) =&gt; Function" />
+          <scope doc="Returns true if all given arguments are Array-like (have a&#xA;.length property and typeof(obj) == &apos;object&apos;) Availability:&#xA;Available in MochiKit 1.3.1+" ilk="function" name="isArrayLike" returns="Boolean" signature="isArrayLike(obj[, ...]) =&gt; Boolean" />
+          <scope doc="Returns true if all given arguments are Date-like (have a&#xA;.getTime() method) Availability: Available in MochiKit&#xA;1.3.1+" ilk="function" name="isDateLike" returns="Boolean" signature="isDateLike(obj[, ...]) =&gt; Boolean" />
+          <scope doc="Returns true if all the given Array-like or string arguments&#xA;are empty (obj.length == 0) Availability: Available in&#xA;MochiKit 1.3.1+" ilk="function" name="isEmpty" returns="Boolean" signature="isEmpty(obj[, ...]) =&gt; Boolean" />
+          <scope doc="Returns true if all the given Array-like or string arguments&#xA;are not empty (obj.length &gt; 0) Availability: Available in&#xA;MochiKit 1.3.1+" ilk="function" name="isNotEmpty" returns="Boolean" signature="isNotEmpty(obj[, ...]) =&gt; Boolean" />
+          <scope doc="Returns true if all arguments are null." ilk="function" name="isNull" returns="Boolean" signature="isNull(obj[, ...]) =&gt; Boolean" />
+          <scope doc="Returns true if all arguments are undefined or null&#xA;Availability: Available in MochiKit 1.3.1+" ilk="function" name="isUndefinedOrNull" returns="Boolean" signature="isUndefinedOrNull(obj[, ...]) =&gt; Boolean" />
+          <scope doc="Returns a function(obj) that returns obj[name] Availability:&#xA;Available in MochiKit 1.3.1+" ilk="function" name="itemgetter" signature="itemgetter(name)" />
+          <scope doc="Return an Array of [propertyName, propertyValue] pairs for&#xA;the given obj (in the order determined by for propName in&#xA;obj)." ilk="function" name="items" returns="Array" signature="items(obj) =&gt; Array" />
+          <scope doc="A comparator factory that compares a[key] with b[key]." ilk="function" name="keyComparator" signature="keyComparator(key[, ...])" />
+          <scope doc="Return an Array of the property names of an object (in the&#xA;order determined by for propName in obj)." ilk="function" name="keys" returns="Array" signature="keys(obj) =&gt; Array" />
+          <scope doc="Return the largest element of an Array-like object, as&#xA;determined by compare. This is a special form of listMinMax,&#xA;specifically partial(listMinMax, 1)." ilk="function" name="listMax" signature="listMax(lst)" />
+          <scope doc="Return the smallest element of an Array-like object, as&#xA;determined by compare. This is a special form of listMinMax,&#xA;specifically partial(listMinMax, -1)." ilk="function" name="listMin" signature="listMin(lst)" />
+          <scope doc="If which == -1 then it will return the smallest element of&#xA;the Array-like lst. This is also available as listMin(lst)." ilk="function" name="listMinMax" signature="listMinMax(which, lst)" />
+          <scope doc="Return a new array composed of the results of fn(x) for&#xA;every x in lst. If fn is null, and only one sequence&#xA;argument is given the identity function is used." ilk="function" name="map" returns="Array" signature="map(fn, lst[, ...]) =&gt; Array" />
+          <scope doc="Returns the arithmetic mean (average) of the argument list,&#xA;or an array. This function applies flattenArguments() to the&#xA;argument list." ilk="function" name="mean" signature="mean(lst[, ...])" />
+          <scope doc="Returns the median of the argument list, or an array. This&#xA;function applies flattenArguments() to the argument list." ilk="function" name="median" signature="median(lst[, ...])" />
+          <scope doc="Create a new instance of Object that contains every property&#xA;from all given objects. If a property is defined on more&#xA;than one of the objects, the last property is used." ilk="function" name="merge" signature="merge(obj[, ...])" />
+          <scope doc="Alternate form of bind that takes the object before the&#xA;function." ilk="function" name="method" signature="method(self, func, ...)" />
+          <scope doc="Return a new function that calls a method on its argument,&#xA;for example: lst = map(methodcaller(&quot;toLowerCase&quot;), [&quot;THIS&quot;,&#xA;&quot;is&quot;, &quot;LoWeRCaSe&quot;]); assert( lst.join(&quot; &quot;) == &quot;this is&#xA;lowercase&quot; ); Availability: Available in MochiKit 1.4+" ilk="function" name="methodcaller" returns="Function" signature="methodcaller(name[, args...]) =&gt; Function" />
+          <scope doc="Given a namespace (object or function) with a NAME property,&#xA;find all methods in it and give them nice NAME properties&#xA;too (for use with repr)." ilk="function" name="nameFunctions" signature="nameFunctions(namespace)" />
+          <scope doc="A function that performs no operation. Use this where you&#xA;would otherwise use (function () {}) in order to avoid&#xA;Internet Explorer cyclic garbage leakage." ilk="function" name="noop" signature="noop()" />
+          <scope doc="Return true if compare(a, b) == 0 Availability: Available in&#xA;MochiKit 1.3.1+" ilk="function" name="objEqual" returns="Boolean" signature="objEqual(a, b) =&gt; Boolean" />
+          <scope doc="Non-recursive generic node walking function (e.g. for a&#xA;DOM)." ilk="function" name="nodeWalk" signature="nodeWalk(node, visitor)" />
+          <scope doc="Return the maximum object according to compare out of the&#xA;given arguments. This is similar to listMax, except is uses&#xA;the arguments instead of a given Array-like." ilk="function" name="objMax" signature="objMax(obj[, ...])" />
+          <scope doc="Return the minimum object according to compare out of the&#xA;given arguments. This is similar to listMin, except it uses&#xA;the arguments instead of a given Array-like." ilk="function" name="objMin" signature="objMin(obj[, ...])" />
+          <variable doc="A table of JavaScript&apos;s operators for usage with map,&#xA;filter, etc." name="operator" />
+          <scope doc="Parse a name=value pair URL query string into an object with&#xA;a property for each pair. e.g.: var args =&#xA;parseQueryString(&quot;foo=value%20one&amp;bar=two&quot;); assert(&#xA;args.foo == &quot;value one&quot; &amp;&amp; args.bar == &quot;two&quot; ); If you&#xA;expect that the query string will reuse the same name, then&#xA;give true as a second argument, which will use arrays to&#xA;store the values." ilk="function" name="parseQueryString" signature="parseQueryString(encodedString[, useArrays=false])" />
+          <scope doc="Return a partially applied function, e.g.: addNumbers =&#xA;function (a, b) { return a + b; } addOne =&#xA;partial(addNumbers, 1); assert(addOne(2) == 3); partial is a&#xA;special form of bind that does not alter the bound self (if&#xA;any). It is equivalent to calling: bind(func, undefined,&#xA;arg[, ...]); See the documentation for bind for more details&#xA;about this facility." ilk="function" name="partial" signature="partial(func, arg[, ...])" />
+          <scope doc="Creates a URL query string from a pair of Array-like objects&#xA;representing names and values. Each name=value pair will be&#xA;URL encoded by urlEncode." ilk="function" name="queryString" signature="queryString(names, values)" />
+          <scope doc="Register a comparator for use with compare. name: unique&#xA;identifier describing the comparator." ilk="function" name="registerComparator" signature="registerComparator(name, check, comparator[, override])" />
+          <scope doc="Register a simplifier function for use with serializeJSON.&#xA;name: unique identifier describing the serialization." ilk="function" name="registerJSON" signature="registerJSON(name, check, simplifier[, override])" />
+          <scope doc="Register a programmer representation function. repr&#xA;functions should take one argument and return a string&#xA;representation of it suitable for developers, primarily used&#xA;when debugging." ilk="function" name="registerRepr" signature="registerRepr(name, check, wrap[, override])" />
+          <scope doc="Return a programmer representation for obj. See the&#xA;Programmer Representation overview for more information&#xA;about this function." ilk="function" name="repr" signature="repr(obj)" />
+          <scope doc="A comparator factory that compares a[key] with b[key] in&#xA;reverse." ilk="function" name="reverseKeyComparator" signature="reverseKeyComparator(key)" />
+          <scope doc="Serialize anObject in the JSON [1] format, see JSON&#xA;Serialization for the coercion rules. For unserializable&#xA;objects (functions that do not have an adapter, __json__&#xA;method, or json method), this will return undefined." ilk="function" name="serializeJSON" signature="serializeJSON(anObject)" />
+          <scope doc="Mutate self by adding all properties from other object(s)&#xA;that it does not already have set. If self is null, a new&#xA;Object instance will be created and returned." ilk="function" name="setdefault" signature="setdefault(self, obj[, ...])" />
+          <scope doc="Given a set of types (as string arguments), returns a&#xA;function(obj[, ...]) that will return true if the types of&#xA;the given arguments are all members of that set." ilk="function" name="typeMatcher" signature="typeMatcher(typ[, ...])" />
+          <scope doc="Mutate self by replacing its key:value pairs with those from&#xA;other object(s). Key:value pairs from later objects will&#xA;overwrite those from earlier objects." ilk="function" name="update" signature="update(self, obj[, ...])" />
+          <scope doc="Mutate self by replacing its key:value pairs with those from&#xA;other object(s). If a given key has an object value in both&#xA;self and obj, then this function will be called recursively,&#xA;updating instead of replacing that object." ilk="function" name="updatetree" signature="updatetree(self, obj[, ...])" />
+          <scope doc="Converts unencoded into a URL-encoded string. In this&#xA;implementation, spaces are converted to %20 instead of &quot;+&quot;." ilk="function" name="urlEncode" signature="urlEncode(unencoded)" />
+          <scope doc="Return an Array of the property values of an object (in the&#xA;order determined by for propName in obj)." ilk="function" name="values" returns="Array" signature="values(obj) =&gt; Array" />
+          <scope doc="Returns a new Array composed of the arguments where fn(obj)&#xA;returns a true value. If fn is null, operator.truth will be&#xA;used." ilk="function" name="xfilter" returns="Array" signature="xfilter(fn, obj[, ...]) =&gt; Array" />
+          <scope doc="Return a new Array composed of fn(obj) for every obj given&#xA;as an argument. If fn is null, operator.identity is used." ilk="function" name="xmap" returns="Array" signature="xmap(fn, obj[, ...) =&gt; Array" />
+          <scope doc="Returns an array where the n-th element is an array of the&#xA;n-th elements from each of the arrays p, q, ... This is&#xA;equivalent to calling map(fn, p, q, ...) with null as the&#xA;first argument." ilk="function" name="zip" returns="Array" signature="zip(p, q, ...) =&gt; Array" />
+        </variable>
+      </variable>
+      <variable citdl="MochiKit.Base.NotFound" name="NotFound" />
+      <variable citdl="MochiKit.Base.AdapterRegistry" name="AdapterRegistry" />
+      <variable citdl="MochiKit.Base.register" name="register" />
+      <variable citdl="MochiKit.Base.match" name="match" />
+      <variable citdl="MochiKit.Base.unregister" name="unregister" />
+      <variable citdl="MochiKit.Base.NamedError" name="NamedError" />
+      <variable citdl="MochiKit.Base.arrayEqual" name="arrayEqual" />
+      <variable citdl="MochiKit.Base.average" name="average" />
+      <variable citdl="MochiKit.Base.bind" name="bind" />
+      <variable citdl="MochiKit.Base.bindLate" name="bindLate" />
+      <variable citdl="MochiKit.Base.bindMethods" name="bindMethods" />
+      <variable citdl="MochiKit.Base.camelize" name="camelize" />
+      <variable citdl="MochiKit.Base.clone" name="clone" />
+      <variable citdl="MochiKit.Base.compare" name="compare" />
+      <variable citdl="MochiKit.Base.compose" name="compose" />
+      <variable citdl="MochiKit.Base.concat" name="concat" />
+      <variable citdl="MochiKit.Base.counter" name="counter" />
+      <variable citdl="MochiKit.Base.extend" name="extend" />
+      <variable citdl="MochiKit.Base.evalJSON" name="evalJSON" />
+      <variable citdl="MochiKit.Base.filter" name="filter" />
+      <variable citdl="MochiKit.Base.findValue" name="findValue" />
+      <variable citdl="MochiKit.Base.findIdentical" name="findIdentical" />
+      <variable citdl="MochiKit.Base.flattenArguments" name="flattenArguments" />
+      <variable citdl="MochiKit.Base.flattenArray" name="flattenArray" />
+      <variable citdl="MochiKit.Base.forwardCall" name="forwardCall" />
+      <variable citdl="MochiKit.Base.isArrayLike" name="isArrayLike" />
+      <variable citdl="MochiKit.Base.isDateLike" name="isDateLike" />
+      <variable citdl="MochiKit.Base.isEmpty" name="isEmpty" />
+      <variable citdl="MochiKit.Base.isNotEmpty" name="isNotEmpty" />
+      <variable citdl="MochiKit.Base.isNull" name="isNull" />
+      <variable citdl="MochiKit.Base.isUndefinedOrNull" name="isUndefinedOrNull" />
+      <variable citdl="MochiKit.Base.itemgetter" name="itemgetter" />
+      <variable citdl="MochiKit.Base.items" name="items" />
+      <variable citdl="MochiKit.Base.keyComparator" name="keyComparator" />
+      <variable citdl="MochiKit.Base.keys" name="keys" />
+      <variable citdl="MochiKit.Base.listMax" name="listMax" />
+      <variable citdl="MochiKit.Base.listMin" name="listMin" />
+      <variable citdl="MochiKit.Base.listMinMax" name="listMinMax" />
+      <variable citdl="MochiKit.Base.map" name="map" />
+      <variable citdl="MochiKit.Base.mean" name="mean" />
+      <variable citdl="MochiKit.Base.median" name="median" />
+      <variable citdl="MochiKit.Base.merge" name="merge" />
+      <variable citdl="MochiKit.Base.method" name="method" />
+      <variable citdl="MochiKit.Base.methodcaller" name="methodcaller" />
+      <variable citdl="MochiKit.Base.nameFunctions" name="nameFunctions" />
+      <variable citdl="MochiKit.Base.noop" name="noop" />
+      <variable citdl="MochiKit.Base.objEqual" name="objEqual" />
+      <variable citdl="MochiKit.Base.nodeWalk" name="nodeWalk" />
+      <variable citdl="MochiKit.Base.objMax" name="objMax" />
+      <variable citdl="MochiKit.Base.objMin" name="objMin" />
+      <variable citdl="MochiKit.Base.operator" name="operator" />
+      <variable citdl="MochiKit.Base.parseQueryString" name="parseQueryString" />
+      <variable citdl="MochiKit.Base.partial" name="partial" />
+      <variable citdl="MochiKit.Base.queryString" name="queryString" />
+      <variable citdl="MochiKit.Base.registerComparator" name="registerComparator" />
+      <variable citdl="MochiKit.Base.registerJSON" name="registerJSON" />
+      <variable citdl="MochiKit.Base.registerRepr" name="registerRepr" />
+      <variable citdl="MochiKit.Base.repr" name="repr" />
+      <variable citdl="MochiKit.Base.reverseKeyComparator" name="reverseKeyComparator" />
+      <variable citdl="MochiKit.Base.serializeJSON" name="serializeJSON" />
+      <variable citdl="MochiKit.Base.setdefault" name="setdefault" />
+      <variable citdl="MochiKit.Base.typeMatcher" name="typeMatcher" />
+      <variable citdl="MochiKit.Base.update" name="update" />
+      <variable citdl="MochiKit.Base.updatetree" name="updatetree" />
+      <variable citdl="MochiKit.Base.urlEncode" name="urlEncode" />
+      <variable citdl="MochiKit.Base.values" name="values" />
+      <variable citdl="MochiKit.Base.xfilter" name="xfilter" />
+      <variable citdl="MochiKit.Base.xmap" name="xmap" />
+      <variable citdl="MochiKit.Base.zip" name="zip" />
+    </scope>
+  

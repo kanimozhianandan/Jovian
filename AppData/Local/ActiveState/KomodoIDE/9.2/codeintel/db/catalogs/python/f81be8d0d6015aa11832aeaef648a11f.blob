@@ -1,0 +1,49 @@
+<scope ilk="blob" lang="Python" name="pywintypes">
+      <scope ilk="function" name="ACL" />
+      <scope classrefs="object" ilk="class" name="ACLType" />
+      <scope ilk="function" name="CreateGuid" />
+      <scope classrefs="object" ilk="class" name="DEVMODEAType" />
+      <scope classrefs="object" ilk="class" name="DEVMODEType" />
+      <scope classrefs="object" ilk="class" name="DEVMODEWType" />
+      <scope ilk="function" name="DosDateTimeToTime" />
+      <variable citdl="bool" name="FALSE" />
+      <scope ilk="function" name="HANDLE" />
+      <scope classrefs="object" ilk="class" name="HANDLEType" />
+      <scope ilk="function" name="HKEY" />
+      <scope ilk="function" name="IID" />
+      <scope classrefs="object" ilk="class" name="IIDType" />
+      <scope ilk="function" name="IsTextUnicode" />
+      <scope ilk="function" name="OVERLAPPED" />
+      <scope classrefs="object" ilk="class" name="OVERLAPPEDType" />
+      <scope ilk="function" name="SECURITY_ATTRIBUTES" />
+      <scope classrefs="object" doc="A Python object, representing a SECURITY_ATTRIBUTES structure" ilk="class" name="SECURITY_ATTRIBUTESType" />
+      <scope ilk="function" name="SECURITY_DESCRIPTOR" />
+      <scope classrefs="object" ilk="class" name="SECURITY_DESCRIPTORType" />
+      <scope ilk="function" name="SID" />
+      <scope classrefs="object" ilk="class" name="SIDType" />
+      <variable citdl="bool" name="TRUE" />
+      <scope ilk="function" name="Time" />
+      <scope classrefs="object" ilk="class" name="TimeType" />
+      <scope ilk="function" name="Unicode" />
+      <scope ilk="function" name="UnicodeFromRaw" />
+      <scope classrefs="basestring" doc="unicode(string [, encoding[, errors]]) -&gt; object  Create a new Unicode object from the given encoded string." ilk="class" name="UnicodeType" />
+      <scope ilk="function" name="WAVEFORMATEX" />
+      <scope classrefs="object" ilk="class" name="WAVEFORMATEXType" />
+      <variable citdl="int" name="WAVE_FORMAT_PCM" />
+      <scope ilk="function" line="3" lineend="121" name="__import_pywin32_system_module__" signature="__import_pywin32_system_module__(modname, globs)">
+        <variable line="109" name="old_mod" />
+        <variable ilk="argument" name="modname" />
+        <variable citdl="str" line="41" name="suffix" />
+        <variable citdl="str" line="45" name="filename" />
+        <variable citdl="os.path.join()" line="57" name="found" />
+        <variable citdl="imp.load_dynamic()" line="30" name="mod" />
+        <variable ilk="argument" name="globs" />
+        <variable citdl="os.path.dirname()" line="28" name="look" />
+      </scope>
+      <scope classrefs="Exception" ilk="class" name="com_error" />
+      <scope classrefs="Exception" ilk="class" name="error" />
+      <import module="imp" />
+      <import module="os" />
+      <import module="sys" />
+    </scope>
+    

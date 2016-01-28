@@ -1,0 +1,63 @@
+.notify-panel {
+  -moz-appearance: none !important;
+  padding: 6px;
+  color: #EEE;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+  background: rgba(34, 34, 34, 0.9);
+  border-radius: 4px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 0 6px rgba(0, 0, 0, 0.4);
+  border: 0 !important;
+}
+.notify-panel.p-notification {
+  background-color: rgba(81, 79, 117, 0.9);
+}
+.notify-panel.p-warning {
+  background-color: rgba(106, 114, 78, 0.9);
+}
+.notify-panel.p-error {
+  background-color: rgba(114, 78, 78, 0.9);
+}
+.notify-panel.p-now {
+  background-color: rgba(58, 58, 58, 0.9);
+}
+.notify-panel.clickable description {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.notify-panel description {
+  max-width: 500px;
+  margin-right: 25px;
+}
+.notify-panel button {
+  -moz-appearance: none;
+  margin: 0 6px;
+  background: transparent;
+  border: 0 !important;
+  min-height: 0 !important;
+  min-width: 0 !important;
+  width: 16px;
+  height: 16px;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-size: 16px !important;
+}
+.notify-panel button dropmarker {
+  visibility: collapse;
+}
+.notify-panel button:hover {
+  opacity: 1.0;
+}
+.notify-panel button.menu,
+.notify-panel button:hover.menu {
+  background: url(koicon://ko-svg/chrome/icomoon/skin/cog2.svg?preset=hud) center left no-repeat !important;
+}
+.notify-panel button.undo,
+.notify-panel button:hover.undo {
+  background: url(koicon://ko-svg/chrome/icomoon/skin/undo2.svg?preset=hud) center left no-repeat !important;
+}
+.notify-panel button.close,
+.notify-panel button:hover.close {
+  background: url(koicon://ko-svg/chrome/icomoon/skin/close2.svg?preset=hud) center left no-repeat !important;
+}

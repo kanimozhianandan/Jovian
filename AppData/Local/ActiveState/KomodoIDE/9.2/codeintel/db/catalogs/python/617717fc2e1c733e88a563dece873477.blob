@@ -1,0 +1,21 @@
+<scope ilk="blob" lang="Python" name="win32wnet">
+      <scope classrefs="object" ilk="class" name="NCB" />
+      <scope doc="Creates a memory buffer" ilk="function" name="NCBBuffer" />
+      <scope classrefs="object" ilk="class" name="NCBType" />
+      <scope classrefs="object" ilk="class" name="NETRESOURCE" />
+      <scope classrefs="object" ilk="class" name="NETRESOURCEType" />
+      <scope doc="Calls the windows Netbios function" ilk="function" name="Netbios" />
+      <scope doc="WNetAddConnection2(NetResource, Password, UserName, Flags)" ilk="function" name="WNetAddConnection2" signature="WNetAddConnection2(NetResource, Password, UserName, Flags)" />
+      <scope doc="WNetAddConnection3(HwndParent, NetResource, Password, UserName, Flags)" ilk="function" name="WNetAddConnection3" signature="WNetAddConnection3(HwndParent, NetResource, Password, UserName, Flags)" />
+      <scope doc="localname,dwflags,bforce" ilk="function" name="WNetCancelConnection2" />
+      <scope doc="PyHANDLE from WNetOpenEnum()" ilk="function" name="WNetCloseEnum" />
+      <scope doc="Enum" ilk="function" name="WNetEnumResource" />
+      <scope doc="Retrieves extended error information set by a network provider when one of the WNet* functions fails" ilk="function" name="WNetGetLastError" />
+      <scope doc="Finds the type and provider of a network resource" ilk="function" name="WNetGetResourceInformation" />
+      <scope doc="Finds the parent resource of a network resource" ilk="function" name="WNetGetResourceParent" />
+      <scope doc="localPath, infoLevel=UNIVERSAL_NAME_INFO_LEVEL" ilk="function" name="WNetGetUniversalName" />
+      <scope doc="connectionName=None" ilk="function" name="WNetGetUser" />
+      <scope doc="dwScope,dwType,dwUsage,NETRESOURCE - returns PyHANDLE" ilk="function" name="WNetOpenEnum" />
+      <scope classrefs="Exception" ilk="class" name="error" />
+    </scope>
+    

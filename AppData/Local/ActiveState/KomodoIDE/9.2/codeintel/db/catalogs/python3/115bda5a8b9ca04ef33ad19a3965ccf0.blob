@@ -1,0 +1,47 @@
+<scope doc="A module which supports the Windows Clipboard API." ilk="blob" lang="Python3" name="win32clipboard">
+      <variable citdl="int" name="CF_BITMAP" />
+      <variable citdl="int" name="CF_DIB" />
+      <variable citdl="int" name="CF_DIBV5" />
+      <variable citdl="int" name="CF_DIF" />
+      <variable citdl="int" name="CF_DSPBITMAP" />
+      <variable citdl="int" name="CF_DSPENHMETAFILE" />
+      <variable citdl="int" name="CF_DSPMETAFILEPICT" />
+      <variable citdl="int" name="CF_DSPTEXT" />
+      <variable citdl="int" name="CF_ENHMETAFILE" />
+      <variable citdl="int" name="CF_HDROP" />
+      <variable citdl="int" name="CF_LOCALE" />
+      <variable citdl="int" name="CF_MAX" />
+      <variable citdl="int" name="CF_METAFILEPICT" />
+      <variable citdl="int" name="CF_OEMTEXT" />
+      <variable citdl="int" name="CF_OWNERDISPLAY" />
+      <variable citdl="int" name="CF_PALETTE" />
+      <variable citdl="int" name="CF_PENDATA" />
+      <variable citdl="int" name="CF_RIFF" />
+      <variable citdl="int" name="CF_SYLK" />
+      <variable citdl="int" name="CF_TEXT" />
+      <variable citdl="int" name="CF_TIFF" />
+      <variable citdl="int" name="CF_UNICODETEXT" />
+      <variable citdl="int" name="CF_WAVE" />
+      <scope ilk="function" name="ChangeClipboardChain" />
+      <scope ilk="function" name="CloseClipboard" />
+      <scope ilk="function" name="CountClipboardFormats" />
+      <scope ilk="function" name="EmptyClipboard" />
+      <scope ilk="function" name="EnumClipboardFormats" />
+      <scope ilk="function" name="GetClipboardData" />
+      <scope ilk="function" name="GetClipboardDataHandle" />
+      <scope ilk="function" name="GetClipboardFormatName" />
+      <scope ilk="function" name="GetClipboardOwner" />
+      <scope ilk="function" name="GetClipboardSequenceNumber" />
+      <scope ilk="function" name="GetClipboardViewer" />
+      <scope ilk="function" name="GetGlobalMemory" />
+      <scope ilk="function" name="GetOpenClipboardWindow" />
+      <scope ilk="function" name="GetPriorityClipboardFormat" />
+      <scope ilk="function" name="IsClipboardFormatAvailable" />
+      <scope ilk="function" name="OpenClipboard" />
+      <scope ilk="function" name="RegisterClipboardFormat" />
+      <scope ilk="function" name="SetClipboardData" />
+      <scope ilk="function" name="SetClipboardText" />
+      <scope ilk="function" name="SetClipboardViewer" />
+      <variable citdl="bool" name="UNICODE" />
+    </scope>
+    

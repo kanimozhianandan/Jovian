@@ -1,0 +1,23 @@
+<scope doc="Utility file for generating PyIEnum support.  This is almost a &apos;template&apos; file.  It simplay contains almost full" ilk="blob" lang="Python" name="win32com.makegw.makegwenum">
+      <scope ilk="function" line="16" lineend="17" name="is_interface_enum" returns="bool" signature="is_interface_enum(enumtype)">
+        <variable ilk="argument" name="enumtype" />
+      </scope>
+      <import module="string" />
+      <scope attributes="protected __hidden__" ilk="function" line="20" lineend="185" name="_write_enumifc_cpp" signature="_write_enumifc_cpp(f, interface)">
+        <variable ilk="argument" name="f" />
+        <variable ilk="argument" name="interface" />
+        <variable citdl="list" line="21" name="enumtype" />
+        <variable citdl="list" line="24" name="enum_interface" />
+        <variable citdl="locals()" line="25" name="converter" />
+        <variable citdl="locals()" line="26" name="arraydeclare" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="189" lineend="317" name="_write_enumgw_cpp" signature="_write_enumgw_cpp(f, interface)">
+        <variable ilk="argument" name="f" />
+        <variable ilk="argument" name="interface" />
+        <variable citdl="list" line="190" name="enumtype" />
+        <variable citdl="list" line="193" name="enum_interface" />
+        <variable citdl="str" line="194" name="converter" />
+        <variable citdl="str" line="195" name="argdeclare" />
+      </scope>
+    </scope>
+    

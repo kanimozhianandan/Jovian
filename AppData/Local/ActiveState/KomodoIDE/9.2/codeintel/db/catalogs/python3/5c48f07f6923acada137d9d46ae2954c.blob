@@ -1,0 +1,4 @@
+<scope doc="Extension that wraps Win32 Timer functions" ilk="blob" lang="Python3" name="timer">
+      <variable citdl="bytes" name="__version__" />
+    </scope>
+    

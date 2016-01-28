@@ -1,0 +1,34 @@
+<scope ilk="blob" lang="Perl" name="JSON">
+      <scope ilk="class" line="1" lineend="397" name="JSON">
+        <import line="5" module="Carp" />
+        <variable line="7" name="@JSON::EXPORT" />
+        <variable line="10" name="$JSON::VERSION" />
+        <variable line="11" name="$JSON::DEBUG" />
+        <variable line="320" name="$JSON::true" />
+        <variable line="321" name="$JSON::false" />
+        <scope ilk="function" line="77" lineend="112" name="import" signature="import($pkg)" />
+        <scope ilk="function" line="117" lineend="124" name="jsonToObj" signature="jsonToObj()" />
+        <scope ilk="function" line="126" lineend="133" name="objToJson" signature="objToJson()" />
+        <scope ilk="function" line="138" lineend="155" name="to_json" signature="to_json()" />
+        <scope ilk="function" line="158" lineend="172" name="from_json" signature="from_json()" />
+        <scope ilk="function" line="175" lineend="175" name="true" signature="true()" />
+        <scope ilk="function" line="177" lineend="177" name="false" signature="false()" />
+        <scope ilk="function" line="179" lineend="179" name="null" signature="null()" />
+        <scope ilk="function" line="182" lineend="182" name="require_xs_version" signature="require_xs_version()" />
+        <scope ilk="function" line="184" lineend="187" name="backend" signature="backend($proto)" />
+        <scope ilk="function" line="192" lineend="194" name="is_xs" signature="is_xs()" />
+        <scope ilk="function" line="197" lineend="199" name="is_pp" signature="is_pp()" />
+        <scope ilk="function" line="202" lineend="202" name="pureperl_only_methods" signature="pureperl_only_methods()" />
+        <scope ilk="function" line="205" lineend="237" name="property" signature="property($self, $name, $value)" />
+        <scope ilk="function" line="243" lineend="273" name="_load_xs" signature="_load_xs($opt)" />
+        <scope ilk="function" line="276" lineend="309" name="_load_pp" signature="_load_pp($opt)" />
+        <scope ilk="function" line="312" lineend="336" name="_set_module" signature="_set_module($module)" />
+      </scope>
+      <scope ilk="class" line="344" lineend="372" name="JSON::Boolean">
+        <scope ilk="function" line="348" lineend="372" name="_overrride_overload" signature="_overrride_overload()" />
+      </scope>
+      <scope ilk="class" line="379" lineend="389" name="JSON::Backend::PP">
+        <scope ilk="function" line="381" lineend="389" name="init" signature="init()" />
+      </scope>
+    </scope>
+    

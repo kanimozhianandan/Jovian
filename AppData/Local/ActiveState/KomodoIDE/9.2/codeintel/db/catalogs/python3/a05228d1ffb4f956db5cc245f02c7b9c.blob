@@ -1,0 +1,10 @@
+<scope doc="Interface to the Windows Console functions for dealing with character-mode applications." ilk="blob" lang="Python3" name="win32trace">
+      <scope ilk="function" name="GetHandle" />
+      <scope ilk="function" name="GetTracer" />
+      <scope ilk="function" name="InitRead" />
+      <scope ilk="function" name="InitWrite" />
+      <scope ilk="function" name="TermRead" />
+      <scope ilk="function" name="TermWrite" />
+      <scope ilk="function" name="blockingread" />
+    </scope>
+    

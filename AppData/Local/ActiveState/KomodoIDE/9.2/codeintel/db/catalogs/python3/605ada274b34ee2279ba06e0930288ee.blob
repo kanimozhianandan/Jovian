@@ -1,0 +1,91 @@
+<scope doc="Stamp a Win32 binary with version information." ilk="blob" lang="Python3" name="win32verstamp">
+      <scope ilk="function" name="BeginUpdateResource" />
+      <scope ilk="function" name="EndUpdateResource" />
+      <scope ilk="function" line="62" lineend="68" name="String" returns="addlen()" signature="String(key, value)">
+        <variable citdl="nullterm()" ilk="argument" name="value" />
+        <variable citdl="nullterm()" ilk="argument" name="key" />
+        <variable citdl="struct.pack()" line="65" name="result" />
+      </scope>
+      <scope ilk="function" line="79" lineend="84" name="StringFileInfo" returns="addlen()" signature="StringFileInfo(data)">
+        <variable ilk="argument" name="data" />
+        <variable citdl="struct.pack()" line="80" name="result" />
+      </scope>
+      <scope ilk="function" line="70" lineend="77" name="StringTable" returns="addlen()" signature="StringTable(key, data)">
+        <variable ilk="argument" name="data" />
+        <variable citdl="struct.pack()" line="72" name="result" />
+        <variable citdl="nullterm()" ilk="argument" name="key" />
+      </scope>
+      <scope ilk="function" name="UpdateResource" />
+      <variable citdl="int" line="15" name="VOS_NT_WINDOWS32" />
+      <variable citdl="int" line="14" name="VS_FFI_FILEFLAGSMASK" />
+      <variable citdl="int" line="12" name="VS_FFI_SIGNATURE" />
+      <variable citdl="int" line="13" name="VS_FFI_STRUCVERSION" />
+      <scope ilk="function" line="31" lineend="45" name="VS_FIXEDFILEINFO" returns="struct.pack()" signature="VS_FIXEDFILEINFO(maj, min, sub, build, debug=0, is_dll=1)">
+        <variable ilk="argument" name="sub" />
+        <variable ilk="argument" name="min" />
+        <variable ilk="argument" name="build" />
+        <variable citdl="int" ilk="argument" name="is_dll" />
+        <variable citdl="int" ilk="argument" name="debug" />
+        <variable ilk="argument" name="maj" />
+      </scope>
+      <scope ilk="function" line="100" lineend="106" name="VS_VERSION_INFO" returns="addlen()" signature="VS_VERSION_INFO(maj, min, sub, build, sdata, vdata, debug=0, is_dll=1)">
+        <variable ilk="argument" name="vdata" />
+        <variable ilk="argument" name="sub" />
+        <variable ilk="argument" name="sdata" />
+        <variable ilk="argument" name="min" />
+        <variable ilk="argument" name="build" />
+        <variable citdl="VS_FIXEDFILEINFO()" line="101" name="ffi" />
+        <variable citdl="int" ilk="argument" name="is_dll" />
+        <variable citdl="int" ilk="argument" name="debug" />
+        <variable ilk="argument" name="maj" />
+        <variable citdl="pad32()" line="102" name="result" />
+      </scope>
+      <scope ilk="function" line="86" lineend="90" name="Var" returns="addlen()" signature="Var(key, value)">
+        <variable ilk="argument" name="value" />
+        <variable ilk="argument" name="key" />
+        <variable citdl="struct.pack()" line="87" name="result" />
+      </scope>
+      <scope ilk="function" line="92" lineend="98" name="VarFileInfo" returns="addlen()" signature="VarFileInfo(data)">
+        <variable ilk="argument" name="data" />
+        <variable citdl="struct.pack()" line="93" name="result" />
+      </scope>
+      <scope ilk="function" line="59" lineend="60" name="addlen" returns="struct.pack()" signature="addlen(s)">
+        <variable ilk="argument" name="s" />
+      </scope>
+      <scope doc="# Set VS_FF_PRERELEASE and DEBUG if Debug" ilk="function" line="21" lineend="24" name="file_flags" returns="int" signature="file_flags(debug)">
+        <variable ilk="argument" name="debug" />
+      </scope>
+      <scope ilk="function" line="26" lineend="29" name="file_type" returns="int" signature="file_type(is_dll)">
+        <variable ilk="argument" name="is_dll" />
+      </scope>
+      <import module="glob" />
+      <variable citdl="bytes" line="17" name="null_byte" />
+      <scope ilk="function" line="48" lineend="50" name="nullterm" signature="nullterm(s)">
+        <variable ilk="argument" name="s" />
+      </scope>
+      <import module="optparse" />
+      <import module="os" />
+      <scope ilk="function" line="52" lineend="57" name="pad32" returns="__builtins__.str.encode()" signature="pad32(s, extra=2)">
+        <variable ilk="argument" name="s" />
+        <variable citdl="int" line="54" name="l" />
+        <variable citdl="int" ilk="argument" name="extra" />
+      </scope>
+      <scope ilk="function" line="108" lineend="164" name="stamp" signature="stamp(pathname, options)">
+        <variable citdl="dict" line="144" name="vdata" />
+        <variable citdl="options.version" line="118" name="ver" />
+        <variable citdl="dict" line="132" name="sdata" />
+        <variable citdl="open()" line="113" name="f" />
+        <variable citdl="BeginUpdateResource()" line="159" name="h" />
+        <variable citdl="os.path.basename()" line="128" name="ofn" />
+        <variable citdl="options.debug" line="150" name="is_debug" />
+        <variable citdl="VS_VERSION_INFO()" line="157" name="vs" />
+        <variable ilk="argument" name="pathname" />
+        <variable citdl="options.dll" line="147" name="is_dll" />
+        <variable citdl="os.path.basename()" line="125" name="ifn" />
+        <variable citdl="list" line="120" name="bits" />
+        <variable ilk="argument" name="options" />
+      </scope>
+      <import module="struct" />
+      <variable attributes="__hidden__" citdl="optparse.OptionParser()" line="167" name="parser" />
+    </scope>
+    

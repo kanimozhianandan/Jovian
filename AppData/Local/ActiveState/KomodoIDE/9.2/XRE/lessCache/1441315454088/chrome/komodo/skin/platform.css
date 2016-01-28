@@ -1,0 +1,3289 @@
+@import url("chrome://komodo/skin/plat/global.css");
+/* Inherited Style Groups */
+/* Action Icons */
+/* Folder Icons */
+/* SCC File Symbols */
+/* Subpanel icons (Places projects subpanel) */
+/* Scrolltabs */
+/* File/Folder actions */
+/* Buffer Actions */
+/* Editing Icons */
+/* Global Symbols */
+/* Menu Specific Icons */
+/* Browser Icons */
+/* Miscellaneous */
+/* OSX Only */
+/* Toolbars - Standard */
+/* Toolbars - Tools */
+/* Toolbars - Workspace */
+/* Toolbars - SCC */
+/* Toolbars - Debug */
+/* Toolbars - Macro's */
+/* Toolbars - Komodo Resources */
+/* Addon Icons */
+/* SCC Icons */
+/* Debug Icons */
+/* Unit Test Icons */
+/* Macro Icons */
+/* Breakpoint Icons */
+/* Sync Icons */
+/* Widget Icons */
+/* Notification Widget */
+/* Code Browser Widget */
+/* DOM Browser Widget */
+/* Database Widget */
+/* Collaboration Widget */
+/* Collaboration Widget */
+/* Syntax checking widget */
+/* Find Results Widget */
+/* Breadcrumbs */
+/* Pref Icons */
+/**
+ * Syntax checking statusbar images
+ */
+/* Hud Icons */
+/* Workspace Icons */
+/* Folder Icons */
+/* Copyright (c) 2000-2006 ActiveState Software Inc.
+   See the file LICENSE.txt for licensing information. */
+tabs[type="scrollable"] {
+  -moz-binding: url('chrome://komodo/content/bindings/scrolltabs.xml#tabs-scrollable');
+}
+tab[type="file-tab"] {
+  -moz-binding: url('chrome://komodo/content/bindings/scrolltabs.xml#file-status-tab');
+  max-width: 250px;
+}
+.tabs-select-button {
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  /* Avoid bgcolor alpha-channel tweaks for .tabs-select-button not
+         in a sidebar. */
+
+  background-color: inherit !important;
+}
+.tabs-select-button:hover:active,
+.tabs-select-button[open="true"] {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.tabs-select-button > .toolbarbutton-menu-dropmarker {
+  display: none;
+}
+.tabs-select-button > .toolbarbutton-text {
+  display: none;
+}
+.tabs-select-button > .toolbarbutton-icon {
+  -moz-margin-end: 2px;
+}
+.scroll-arrow-right-icon {
+  list-style-image: url("chrome://komodo/skin/images/scrollArrowRight.png");
+}
+.scroll-arrow-right-icon:hover {
+  list-style-image: url("chrome://komodo/skin/images/scrollArrowRight_hover.png");
+}
+.scroll-arrow-right-icon[disabled="true"],
+.scroll-arrow-right-icon[disabled="true"]:hover,
+.scroll-arrow-right-icon[disabled="true"]:hover:active {
+  list-style-image: url("chrome://komodo/skin/images/scrollArrowRight_disable.png");
+}
+.scroll-arrow-left-icon {
+  list-style-image: url("chrome://komodo/skin/images/scrollArrowLeft.png");
+}
+.scroll-arrow-left-icon:hover {
+  list-style-image: url("chrome://komodo/skin/images/scrollArrowLeft_hover.png");
+}
+.scroll-arrow-left-icon[disabled="true"],
+.scroll-arrow-left-icon[disabled="true"]:hover,
+.scroll-arrow-left-icon[disabled="true"]:hover:active {
+  list-style-image: url("chrome://komodo/skin/images/scrollArrowLeft_disable.png");
+}
+.scroll-x-icon {
+  list-style-image: url("chrome://komodo/skin/images/small-x.png");
+}
+.scroll-x-icon:hover {
+  list-style-image: url("chrome://komodo/skin/images/small-x_hover.png");
+}
+.scroll-x-icon[disabled="true"],
+.scroll-x-icon[disabled="true"]:hover,
+.scroll-x-icon[disabled="true"]:hover:active {
+  list-style-image: url("chrome://komodo/skin/images/small-x_disable.png");
+}
+.scroll-minimize-left-icon {
+  list-style-image: url("chrome://komodo/skin/images/minimize_left.gif");
+}
+.scroll-minimize-left-icon:hover {
+  list-style-image: url("chrome://komodo/skin/images/minimize_left_hover.gif");
+}
+.scroll-minimize-left-icon[disabled="true"],
+.scroll-minimize-left-icon[disabled="true"]:hover,
+.scroll-minimize-left-icon[disabled="true"]:hover:active {
+  list-style-image: url("chrome://komodo/skin/images/minimize_left_disable.gif");
+}
+.scroll-minimize-right-icon {
+  list-style-image: url("chrome://komodo/skin/images/minimize_right.png");
+}
+.scroll-minimize-right-icon:hover {
+  list-style-image: url("chrome://komodo/skin/images/minimize_right_hover.png");
+}
+.scroll-minimize-right-icon[disabled="true"],
+.scroll-minimize-right-icon[disabled="true"]:hover,
+.scroll-minimize-right-icon[disabled="true"]:hover:active {
+  list-style-image: url("chrome://komodo/skin/images/minimize_right_disable.png");
+}
+.scroll-minimize-down-icon {
+  list-style-image: url("chrome://komodo/skin/images/minimize_down.gif");
+}
+.scroll-minimize-down-icon:hover {
+  list-style-image: url("chrome://komodo/skin/images/minimize_down_hover.gif");
+}
+.scroll-minimize-down-icon[disabled="true"],
+.scroll-minimize-down-icon[disabled="true"]:hover,
+.scroll-minimize-down-icon[disabled="true"]:hover:active {
+  list-style-image: url("chrome://komodo/skin/images/minimize_down_disable.gif");
+}
+.tab-icon {
+  padding: 0px;
+  margin: 0px;
+  margin-right: 4px;
+}
+/* Menuitem for the selected tab in the tabs-droplist. */
+tabs menuitem.selected {
+  font-weight: bold;
+}
+/* Force icon size for HiDPI displays */
+button[class$='-icon'] image:not(.autorepeatbutton-icon),
+toolbarbutton[class$='-icon'] image:not(.autorepeatbutton-icon),
+menuitem[class$='-icon'] image:not(.autorepeatbutton-icon),
+tab[class$='-icon'] image:not(.autorepeatbutton-icon),
+button [class$='-icon'] image:not(.autorepeatbutton-icon),
+toolbarbutton [class$='-icon'] image:not(.autorepeatbutton-icon),
+menuitem [class$='-icon'] image:not(.autorepeatbutton-icon),
+tab [class$='-icon'] image:not(.autorepeatbutton-icon),
+button[class$='_icon'] image:not(.autorepeatbutton-icon),
+toolbarbutton[class$='_icon'] image:not(.autorepeatbutton-icon),
+menuitem[class$='_icon'] image:not(.autorepeatbutton-icon),
+tab[class$='_icon'] image:not(.autorepeatbutton-icon),
+button [class$='_icon'] image:not(.autorepeatbutton-icon),
+toolbarbutton [class$='_icon'] image:not(.autorepeatbutton-icon),
+menuitem [class$='_icon'] image:not(.autorepeatbutton-icon),
+tab [class$='_icon'] image:not(.autorepeatbutton-icon),
+button image[class$='-icon']:not(.autorepeatbutton-icon),
+toolbarbutton image[class$='-icon']:not(.autorepeatbutton-icon),
+menuitem image[class$='-icon']:not(.autorepeatbutton-icon),
+tab image[class$='-icon']:not(.autorepeatbutton-icon),
+button image[class$='-icon']:not(.autorepeatbutton-icon),
+toolbarbutton image[class$='-icon']:not(.autorepeatbutton-icon),
+menuitem image[class$='-icon']:not(.autorepeatbutton-icon),
+tab image[class$='-icon']:not(.autorepeatbutton-icon),
+button image[class$='_icon']:not(.autorepeatbutton-icon),
+toolbarbutton image[class$='_icon']:not(.autorepeatbutton-icon),
+menuitem image[class$='_icon']:not(.autorepeatbutton-icon),
+tab image[class$='_icon']:not(.autorepeatbutton-icon),
+button image[class$='_icon']:not(.autorepeatbutton-icon),
+toolbarbutton image[class$='_icon']:not(.autorepeatbutton-icon),
+menuitem image[class$='_icon']:not(.autorepeatbutton-icon),
+tab image[class$='_icon']:not(.autorepeatbutton-icon) {
+  max-width: 16px;
+}
+.toolbarbutton-icon,
+.button-icon,
+.menu-iconic-icon,
+treechildren::-moz-tree-image,
+.textbox-search-icon,
+.native_file_image,
+dropmarker > image {
+  max-width: 16px;
+}
+#main-toolboxrow toolbarbutton > image,
+#main-toolboxrow toolbarbutton .toolbarbutton-icon {
+  width: 16px;
+  max-width: none;
+}
+toolbarbutton image #placesViewbox_placesWrapper #findresults_tabpanel-toolbarbox.toolbarbutton-icon,
+toolbarbutton image .panel-toolbar-buttons.toolbarbutton-icon,
+button image #placesViewbox_placesWrapper #findresults_tabpanel-toolbarbox.toolbarbutton-icon,
+button image .panel-toolbar-buttons.toolbarbutton-icon {
+  max-width: 14px;
+}
+/* Icon Tweaks */
+treechildren::-moz-tree-image(project-icon),
+#placesSubpanelProjectsTreechildren_SPV::-moz-tree-image {
+  margin-right: 5px;
+}
+/* Icon Values */
+treechildren::-moz-tree-image(project-icon),
+.project-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/box.svg?preset=base&iconset=dark") !important;
+}
+/* GLOBAL */
+button[type="moreinfo"] > .button-box > .button-icon {
+  margin-right: 0px;
+  margin-left: 2px;
+}
+button[class$='-icon'][disabled="true"] > image,
+toolbarbutton[class$='-icon'][disabled="true"] > image,
+menuitem[class$='-icon'][disabled="true"] > image,
+button [class$='-icon'][disabled="true"] > image,
+toolbarbutton [class$='-icon'][disabled="true"] > image,
+menuitem [class$='-icon'][disabled="true"] > image,
+button[class$='_icon'][disabled="true"] > image,
+toolbarbutton[class$='_icon'][disabled="true"] > image,
+menuitem[class$='_icon'][disabled="true"] > image,
+button [class$='_icon'][disabled="true"] > image,
+toolbarbutton [class$='_icon'][disabled="true"] > image,
+menuitem [class$='_icon'][disabled="true"] > image {
+  opacity: 0.6;
+}
+/* Allow the icons in menus to determine for themselves what height they require */
+.menu-iconic-icon {
+  height: auto;
+}
+/* Enforce 16px height for checked menuitem's as they use background-image
+ * instead of list-style-image, which requires fixed dimensions */
+:not(menulist) > menupopup > :-moz-any(menuitem[selected="true"], menuitem[checked="true"]) > .menu-iconic-left .menu-iconic-icon {
+  height: 16px;
+}
+/* Check / Radio items */
+menuitem[type="checkbox"] > .menu-iconic-left {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px;
+  min-height: 16px;
+}
+menuitem[type="checkbox"][checked="true"] > .menu-iconic-left {
+  
+}
+menuitem.languageicon[type="checkbox"] > .menu-iconic-left {
+  background-position: top left !important;
+}
+menuitem[type="radio"] > .menu-iconic-left {
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 16px;
+  min-height: 16px;
+}
+menuitem[type="radio"][checked="true"] > .menu-iconic-left,
+menuitem[type="radio"][selected="true"] > .menu-iconic-left {
+  
+}
+/* Tree Checkboxes */
+/* Small */
+treechildren::-moz-tree-image(col-checkbox) {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/checkmark2.svg?preset=base&iconset=dark");
+  opacity: 0.4;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+}
+treechildren::-moz-tree-image(col-checkbox, checked) {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/checkmark.svg?preset=base&iconset=dark");
+}
+treechildren::-moz-tree-image(col-checkbox, parent-checked),
+treechildren::-moz-tree-image(col-checkbox, no-parent) {
+  opacity: 1.0;
+}
+treechildren::-moz-tree-image(col-checkbox, checked, parent-checked),
+treechildren::-moz-tree-image(col-checkbox, checked, no-parent) {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/checkmark.svg?preset=base&iconset=dark");
+}
+/* Regular */
+treechildren::-moz-tree-checkbox {
+  
+}
+treechildren::-moz-tree-checkbox(checked) {
+  
+}
+treechildren::-moz-tree-checkbox(nocheckbox),
+treechildren::-moz-tree-checkbox(sccLoading),
+treechildren::-moz-tree-checkbox(sccError),
+treechildren::-moz-tree-checkbox(syncLoading),
+treechildren::-moz-tree-checkbox(syncError) {
+  list-style-image: none !important;
+}
+/* Menu Icons */
+menu .menu-right {
+  
+}
+/* Folder Icons */
+.upfolder-icon {
+  list-style-image: url("chrome://komodo/skin/global/images/upLevel.png");
+}
+.new-folder-icon,
+.newfolder-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/folder-plus3.svg?preset=base&iconset=dark");
+}
+menulist dropmarker,
+textbox[type="autocomplete"] dropmarker,
+.button-menubutton-dropmarker {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-down2.svg?preset=base&iconset=dark") !important;
+  width: 16px;
+}
+/* General Icons */
+.refresh-icon {
+  list-style-image: url("chrome://komodo/skin/global/images/refresh.png");
+}
+.goback-icon {
+  list-style-image: url("chrome://komodo/skin/global/images/goBack.png");
+}
+.warning-icon {
+  list-style-image: url("chrome://global/skin/icons/Warning.png");
+}
+.small-warning-icon {
+  list-style-image: url("chrome://komodo/skin/global/images/warning_small.png");
+  min-height: 16px;
+}
+.question-icon {
+  list-style-image: url("chrome://global/skin/icons/Question.png");
+}
+.native-help-icon,
+.help-icon {
+  list-style-image: url("chrome://komodo/skin/images/help.png");
+}
+menu .help-icon,
+menuitem .help-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/question2.svg?preset=base&iconset=dark");
+}
+.double-down-icon,
+.more-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-down2.svg?preset=base&iconset=dark");
+}
+.double-up-icon,
+.less-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-up2.svg?preset=base&iconset=dark");
+}
+.arrow-right-small-icon {
+  list-style-image: none;
+}
+.arrow-right-small-icon image {
+  background-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-right3.svg?preset=base&iconset=dark");
+  background-position: center;
+  width: 8px;
+  height: 8px;
+}
+.project-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/box.svg?preset=base&iconset=dark");
+}
+.server-pref-icon {
+  list-style-image: url("chrome://komodo/skin/global/images/serverAccount.png");
+}
+.preview-icon {
+  list-style-image: url("chrome://komodo/skin/global/images/preview.png");
+}
+.refreshFile-icon {
+  list-style-image: url("chrome://komodo/skin/global/images/refreshFile.png");
+}
+.configure-icon {
+  list-style-image: url("chrome://komodo/skin/global/images/cog_edit.png");
+}
+.properties-icon {
+  list-style-image: url("chrome://komodo/skin/global/images/cog.png");
+}
+.clear-text-icon {
+  list-style-image: url("chrome://fugue/skin/icons/application-run.png");
+}
+.bulletlist-icon {
+  list-style-image: url("chrome://komodo/skin/images/bulletlist.png");
+}
+.bulletlist-icon[disabled="true"] {
+  list-style-image: url("chrome://komodo/skin/images/bulletlist_disable.png");
+}
+.scrollright-arrow-mini-icon {
+  list-style-image: url("chrome://komodo/skin/images/scrollArrowRight-mini.png");
+}
+.scroll-arrow-right-icon {
+  list-style-image: url("chrome://komodo/skin/images/scrollArrowRight.png");
+}
+.scroll-arrow-right-icon:hover {
+  list-style-image: url("chrome://komodo/skin/images/scrollArrowRight_hover.png");
+}
+.scroll-arrow-right-icon[disabled="true"],
+.scroll-arrow-right-icon[disabled="true"]:hover,
+.scroll-arrow-right-icon[disabled="true"]:hover:active {
+  list-style-image: url("chrome://komodo/skin/images/scrollArrowRight_disable.png");
+}
+.scroll-arrow-left-icon {
+  list-style-image: url("chrome://komodo/skin/images/scrollArrowLeft.png");
+}
+.scroll-arrow-left-icon:hover {
+  list-style-image: url("chrome://komodo/skin/images/scrollArrowLeft_hover.png");
+}
+.scroll-arrow-left-icon[disabled="true"],
+.scroll-arrow-left-icon[disabled="true"]:hover,
+.scroll-arrow-left-icon[disabled="true"]:hover:active {
+  list-style-image: url("chrome://komodo/skin/images/scrollArrowLeft_disable.png");
+}
+.colorbg-icon {
+  list-style-image: url("chrome://komodo/skin/images/colorbg.png");
+}
+.boldtext-icon {
+  list-style-image: url("chrome://komodo/skin/images/boldButton.png");
+}
+.boldtext-icon[disabled="true"] {
+  list-style-image: url("chrome://komodo/skin/images/boldButton_disable.png");
+}
+.italictext-icon {
+  list-style-image: url("chrome://komodo/skin/images/italicButton.png");
+}
+.italictext-icon[disabled="true"] {
+  list-style-image: url("chrome://komodo/skin/images/italicButton_disable.png");
+}
+.find-stop-icon {
+  list-style-image: url("chrome://komodo/skin/images/find_stop.png");
+}
+.find-stop-icon[disabled="true"] {
+  list-style-image: url("chrome://komodo/skin/images/find_stop_disable.png");
+}
+.find-undo-icon,
+.native-undo-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/undo2.svg?preset=base&iconset=dark");
+}
+.native-redo-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/redo2.svg?preset=base&iconset=dark");
+}
+.find-copy-icon {
+  list-style-image: url("chrome://fugue/skin/icons/clipboard--plus.png");
+}
+/* TODO: disabled versions of these */
+.find-lock-icon {
+  list-style-image: url("chrome://fugue/skin/icons/lock-unlock.png");
+}
+.find-lock-icon[locked="true"] {
+  list-style-image: url("chrome://fugue/skin/icons/lock.png");
+}
+.new-project-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/box.svg?preset=base&iconset=dark");
+}
+.new-file-icon,
+.native-new-file-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/file-plus.svg?preset=base&iconset=dark") !important;
+}
+.new-window-icon {
+  list-style-image: url("chrome://komodo/skin/images/komodo_16x16.png");
+}
+.native_open_icon,
+.open-file-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/folder-open.svg?preset=base&iconset=dark") !important;
+}
+.native_folder_icon {
+  list-style-image: url("chrome://global/skin/dirListing/folder.png");
+}
+#invoketool_toolbar_options,
+.collab-sessions-menu-icon,
+.codeintel-settings-button,
+.project-tools-icon,
+.preferences-icon,
+page .cog-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_cog_small.svg?preset=base&iconset=dark&size=14") !important;
+}
+.customize-panes-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/grid3.svg?preset=base&iconset=dark");
+}
+.packages-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/box-add.svg?preset=base&iconset=dark");
+}
+.new-template-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/file6.svg?preset=base&iconset=dark") !important;
+}
+.save-buffer-icon,
+.native-save-icon {
+  list-style-image: url("chrome://komodo/skin/images/save.png");
+}
+.run-command-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/play4.svg?preset=base&iconset=dark");
+}
+.next-buffer-icon {
+  list-style-image: url("chrome://komodo/skin/images/scrollArrowRight.png");
+}
+.next-buffer-icon[disabled="true"] {
+  list-style-image: url("chrome://komodo/skin/images/scrollArrowRight_disable.png");
+}
+.previous-buffer-icon {
+  list-style-image: url("chrome://komodo/skin/images/scrollArrowLeft.png");
+}
+.previous-buffer-icon[disabled="true"] {
+  list-style-image: url("chrome://komodo/skin/images/scrollArrowLeft_disable.png");
+}
+.list-item-down-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-down4.svg?preset=base&iconset=dark") !important;
+}
+.list-item-up-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-up4.svg?preset=base&iconset=dark") !important;
+}
+.list-item-add-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/plus.svg?preset=base&iconset=dark") !important;
+}
+.list-item-edit-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/pencil6.svg?preset=base&iconset=dark") !important;
+}
+.list-item-remove-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/close2.svg?preset=base&iconset=dark") !important;
+}
+.green-undo-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/undo.svg?preset=base&iconset=dark");
+}
+button[type="moreinfo"][open="true"] {
+  list-style-image: url("chrome://komodo/skin/images/less.gif");
+}
+button[type="moreinfo"] {
+  list-style-image: url("chrome://komodo/skin/images/more.gif");
+}
+.remote-folder-icon,
+treechildren::-moz-tree-image(remotefolder) {
+  list-style-image: url('chrome://komodo/skin/images/folder-closed.png');
+}
+.remote-file-icon,
+treechildren::-moz-tree-image(remotefile) {
+  list-style-image: url('chrome://komodo/skin/images/file_icon.png');
+}
+.small-stop-sign-icon {
+  list-style-image: url("chrome://komodo/skin/images/find_stop.png");
+}
+.small-cut-icon {
+  list-style-image: url("chrome://komodo/skin/images/cut.png");
+}
+.textbox-search-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/search3.svg?preset=base&iconset=dark");
+}
+/* Komodo icons */
+.komodo-16x16 {
+  list-style-image: url("chrome://komodo/skin/images/komodo_16x16.png");
+}
+/* Browser icons */
+.browser-firefox-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/firefox.svg?preset=base&iconset=dark");
+}
+.browser-camino-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/earth.svg?preset=base&iconset=dark");
+}
+.browser-internetexplorer-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/IE.svg?preset=base&iconset=dark");
+}
+.browser-konqueror-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/earth.svg?preset=base&iconset=dark");
+}
+.browser-mozilla-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/earth.svg?preset=base&iconset=dark");
+}
+.browser-msnexplorer-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/earth.svg?preset=base&iconset=dark");
+}
+.browser-netscape-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/earth.svg?preset=base&iconset=dark");
+}
+.browser-opera-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/opera.svg?preset=base&iconset=dark");
+}
+.browser-safari-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/safari.svg?preset=base&iconset=dark");
+}
+.browser-googlechrome-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/chrome.svg?preset=base&iconset=dark");
+}
+/* Toolbars */
+#main-toolboxrow-wrapper {
+  /* Addon Icons */
+
+}
+#main-toolboxrow-wrapper .history-back-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-left3.svg?preset=toolbar&iconset=dark");
+}
+#main-toolboxrow-wrapper .history-forward-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-right4.svg?preset=toolbar&iconset=dark");
+}
+#main-toolboxrow-wrapper .native-undo-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/undo2.svg?preset=toolbar&iconset=dark");
+}
+#main-toolboxrow-wrapper .native-redo-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/redo2.svg?preset=toolbar&iconset=dark");
+}
+#main-toolboxrow-wrapper .native-new-file-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/file-plus.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper .native_open_icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/folder-open.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper .native-save-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_save.svg?preset=toolbar&iconset=dark");
+}
+#main-toolboxrow-wrapper .save-all-buffers-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_save-all.svg?preset=toolbar&iconset=dark");
+}
+#main-toolboxrow-wrapper .cut-button,
+#main-toolboxrow-wrapper .native-cut-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/scissors.svg?preset=toolbar&iconset=dark");
+}
+#main-toolboxrow-wrapper .copy-button,
+#main-toolboxrow-wrapper .native-copy-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/files.svg?preset=toolbar&iconset=dark");
+}
+#main-toolboxrow-wrapper .paste-button,
+#main-toolboxrow-wrapper .native-paste-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/paste2.svg?preset=toolbar&iconset=dark");
+}
+#main-toolboxrow-wrapper .print-button,
+#main-toolboxrow-wrapper .native-print-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/print.svg?preset=toolbar&iconset=dark");
+}
+#main-toolboxrow-wrapper .native-help-icon,
+#main-toolboxrow-wrapper .help-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/question2.svg?preset=toolbar&iconset=dark");
+}
+#main-toolboxrow-wrapper #buttonBrowserPreview {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/earth.svg?preset=toolbar&iconset=dark");
+}
+#main-toolboxrow-wrapper .rx-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_regexp.svg?preset=toolbar&iconset=dark");
+}
+#main-toolboxrow-wrapper .http-inspector {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_http_inspector.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper .ishell-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/console.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper #tb_tdkTclMenu {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/quill3.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper #tb_pdkPerlMenu {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_perl.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper #toggleLeftPane {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_layout-left3.svg?preset=toolbar&iconset=dark");
+}
+#main-toolboxrow-wrapper #toggleRightPane {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_layout-right3.svg?preset=toolbar&iconset=dark");
+}
+#main-toolboxrow-wrapper #toggleBottomPane {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_layout-bottom3.svg?preset=toolbar&iconset=dark");
+}
+#main-toolboxrow-wrapper #toggleLeftPane[checked="true"] {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_layout-left4.svg?preset=selected&iconset=dark");
+}
+#main-toolboxrow-wrapper #toggleRightPane[checked="true"] {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_layout-right4.svg?preset=selected&iconset=dark");
+}
+#main-toolboxrow-wrapper #toggleBottomPane[checked="true"] {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_layout-bottom4.svg?preset=selected&iconset=dark");
+}
+#main-toolboxrow-wrapper .tabPicker-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_tab-down.svg?preset=toolbar&iconset=dark");
+}
+#main-toolboxrow-wrapper .scc-button-menu {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_scc_menu2.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper .scc-button-checkout {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_scc_checkout.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper .scc-button-add {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_scc_add.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper .scc-button-edit {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_scc_edit2.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper .scc-button-revert {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_scc_revert.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper .scc-button-remove {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_scc_remove.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper .scc-button-update {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_scc_update.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper .scc-button-diff {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_scc_diff.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper .scc-button-history {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_scc_history.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper .scc-button-commit {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_scc_commit.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper .scc-button-push {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_scc_push.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper .debug-stepin-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_step-into.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper .debug-stepover-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_step-over.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper .debug-stepout-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_step-out.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper .debug-continue-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/play4.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper .debug-break-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/pause2.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper .debug-stop-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/stop2.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper .macro-new-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/plus-circle.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper .macro-play-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/play3.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper .macro-pause-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/pause.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper .macro-record-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_record.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper .macro-stop-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/stop.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper .macro-save-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_save-circle.svg?preset=toolbar&iconset=dark") !important;
+}
+#main-toolboxrow-wrapper .komodo-button-community {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/users4.svg?preset=base&iconset=dark");
+}
+#main-toolboxrow-wrapper .komodo-button-maillist {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/envelop.svg?preset=base&iconset=dark");
+}
+#main-toolboxrow-wrapper .komodo-button-bugs {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/bug.svg?preset=base&iconset=dark");
+}
+#main-toolboxrow-wrapper .menu-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/menu3.svg?preset=toolbar&iconset=dark") !important;
+}
+statusbar .menu-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/menu3.svg?preset=toolbar&iconset=dark") !important;
+}
+/* Icons that appear in menu's and misc places */
+#buttonBrowserPreview {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/earth.svg?preset=base&iconset=dark");
+}
+.save-all-buffers-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_save-all.svg?preset=base&iconset=dark");
+}
+.cut-button,
+.native-cut-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/scissors.svg?preset=base&iconset=dark");
+}
+.copy-button,
+.native-copy-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/files.svg?preset=base&iconset=dark");
+}
+.paste-button,
+.native-paste-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/paste2.svg?preset=base&iconset=dark");
+}
+.print-button,
+.native-print-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/print.svg?preset=base&iconset=dark");
+}
+/* Use same image for checked as the button itself already has a toggle effect */
+#pin-btn,
+#pin-btn[checked] {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/pushpin.svg?preset=base&iconset=dark") !important;
+}
+.komodo-button-community {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/users4.svg?preset=base&iconset=dark");
+}
+.komodo-button-maillist {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/envelop.svg?preset=base&iconset=dark");
+}
+.komodo-button-bugs {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/bug.svg?preset=base&iconset=dark");
+}
+.tabs-select-button {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_tab-down.svg?preset=base&iconset=dark") !important;
+}
+.close-button,
+#tabs-closebutton,
+.tabs-closebutton,
+.tab-close-button {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/close2.svg?preset=base&iconset=dark");
+}
+.tabs-closebutton {
+  opacity: 0.5;
+}
+.tabs-closebutton:hover {
+  opacity: 1.0;
+}
+.favourite-icon {
+  list-style-image: url("chrome://famfamfamsilk/skin/icons/star.png");
+}
+box.favourite-icon {
+  background-image: url("chrome://famfamfamsilk/skin/icons/star.png");
+}
+/* Bug #100021 */
+#statusbar-message-wrap button.close-button image {
+  margin: 0;
+}
+#statusbar-message-wrap button.close-button label {
+  visibility: collapse;
+}
+.tab-arrowscrollbox .scrollbutton-up {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-left2.svg?preset=base&iconset=dark");
+}
+.tab-arrowscrollbox .scrollbutton-down {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-right3.svg?preset=base&iconset=dark");
+}
+.tab-arrowscrollbox[orient="vertical"] .scrollbutton-up {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-up2.svg?preset=base&iconset=dark");
+}
+.tab-arrowscrollbox[orient="vertical"] .scrollbutton-down {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-down2.svg?preset=base&iconset=dark");
+}
+.tab-arrowscrollbox .scrollbutton-up > image,
+.tab-arrowscrollbox .scrollbutton-down > image {
+  -moz-appearance: none;
+}
+#main-toolboxrow .overflow-toolbarbutton .toolbarbutton-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-right3.svg?preset=base&iconset=dark");
+}
+/* Misc Specific Icons */
+#php_debugger_config_status_image {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/warning2.svg?preset=base&iconset=dark");
+}
+#php_debugger_config_status_image[configured="true"] {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/checkmark.svg?preset=base&iconset=dark");
+}
+#php_debugger_config_status_image[checking="true"] {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/loop4.svg?preset=base&iconset=dark");
+}
+/* Images for the Diff Toolbar  */
+.previous-diff-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-up16.svg?preset=base&iconset=dark");
+}
+.next-diff-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-down16.svg?preset=base&iconset=dark");
+}
+.reveal-in-editor-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/file.svg?preset=base&iconset=dark");
+}
+.move-to-editor-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/file-upload2.svg?preset=base&iconset=dark");
+}
+.history-back-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-left3.svg?preset=base&iconset=dark");
+}
+.history-forward-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-right4.svg?preset=base&iconset=dark");
+}
+/* Addon Icons */
+.rx-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_regexp.svg?preset=base&iconset=dark");
+}
+.ishell-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/console.svg?preset=base&iconset=dark") !important;
+}
+#tb_tdkTclMenu {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/quill3.svg?preset=base&iconset=dark") !important;
+}
+#tb_pdkPerlMenu {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_perl.svg?preset=base&iconset=dark") !important;
+}
+/* SCC Icons */
+.scc-button-menu {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_scc_menu2.svg?preset=base&iconset=dark") !important;
+}
+.scc-button-checkout {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_scc_checkout.svg?preset=base&iconset=dark") !important;
+}
+.scc-button-add {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_scc_add.svg?preset=base&iconset=dark") !important;
+}
+.scc-button-edit {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_scc_edit2.svg?preset=base&iconset=dark") !important;
+}
+.scc-button-revert {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_scc_revert.svg?preset=base&iconset=dark") !important;
+}
+.scc-button-remove {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_scc_remove.svg?preset=base&iconset=dark") !important;
+}
+.scc-button-update {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_scc_update.svg?preset=base&iconset=dark") !important;
+}
+.scc-button-diff {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_scc_diff.svg?preset=base&iconset=dark") !important;
+}
+.scc-button-history {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_scc_history.svg?preset=base&iconset=dark") !important;
+}
+.scc-button-commit {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_scc_commit.svg?preset=base&iconset=dark") !important;
+}
+.scc-button-push {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_scc_push.svg?preset=base&iconset=dark") !important;
+}
+/* Debug Icons */
+.debug-stepin-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_step-into.svg?preset=base&iconset=dark") !important;
+}
+.debug-stepover-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_step-over.svg?preset=base&iconset=dark") !important;
+}
+.debug-stepout-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_step-out.svg?preset=base&iconset=dark") !important;
+}
+.debug-continue-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/play4.svg?preset=base&iconset=dark") !important;
+}
+.debug-break-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/pause2.svg?preset=base&iconset=dark") !important;
+}
+.debug-stop-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/stop2.svg?preset=base&iconset=dark") !important;
+}
+.debug-detach-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/forward3.svg?preset=base&iconset=dark") !important;
+}
+.debug-inspect-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/console.svg?preset=base&iconset=dark") !important;
+}
+.dbg_status_icon[dbg_language][dbg_status="starting"] {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-right3.svg?preset=base&iconset=dark") !important;
+}
+.dbg_status_icon[dbg_language][dbg_status="running"] {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/play4.svg?preset=base&iconset=dark") !important;
+}
+.dbg_status_icon[dbg_language][dbg_status="break"] {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/pause2.svg?preset=base&iconset=dark") !important;
+}
+.dbg_status_icon[dbg_language][dbg_status="stopping"] {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/checkbox-partial2.svg?preset=base&iconset=dark") !important;
+}
+.dbg_status_icon[dbg_language][dbg_status="stopped"] {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/stop2.svg?preset=base&iconset=dark") !important;
+}
+.dbg_status_icon[dbg_language][dbg_status="interactive"] {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/last.svg?preset=base&iconset=dark") !important;
+}
+#DebuggerPanelContent .show-hidden-vars-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/eye3.svg?preset=base&iconset=dark") !important;
+}
+/* Unit Testing */
+.edit-testplan-icon {
+  /* Requires !important due to hierarchy of platform.less - Bug #97665 */
+
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/pencil6.svg?preset=base&iconset=dark") !important;
+}
+/* Macro Icons */
+.macro-new-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/plus-circle.svg?preset=base&iconset=dark") !important;
+}
+.macro-play-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/play3.svg?preset=base&iconset=dark") !important;
+}
+.macro-pause-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/pause.svg?preset=base&iconset=dark") !important;
+}
+.macro-record-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_record.svg?preset=base&iconset=dark") !important;
+}
+.macro-stop-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/stop.svg?preset=base&iconset=dark") !important;
+}
+.macro-save-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_save-circle.svg?preset=base&iconset=dark") !important;
+}
+/* Breakpoint Icons */
+.breakpoint-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_breakpoint.svg?preset=base&iconset=dark") !important;
+}
+.breakpoint-new-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_breakpoint_add.svg?preset=base&iconset=dark") !important;
+}
+.spawnpoint-new-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-right2.svg?preset=base&iconset=dark") !important;
+}
+.breakpoint-delete-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_breakpoint_remove.svg?preset=base&iconset=dark") !important;
+}
+.breakpoint-delete-all-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_breakpoint_delete_all.svg?preset=base&iconset=dark") !important;
+}
+.breakpoint-toggle-icon,
+.breakpoint-toggle-state-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_breakpoint_toggle.svg?preset=base&iconset=dark") !important;
+}
+.breakpoint-go-to-source-code-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_breakpoint_goto.svg?preset=base&iconset=dark") !important;
+}
+.breakpoint-properties-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_breakpoint_properties.svg?preset=base&iconset=dark") !important;
+}
+/* Sync */
+#sync-setup,
+#sync-menu {
+  /* Requires !important due to hierarchy of platform.less - Bug #97665 */
+
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/spinner10.svg?preset=base&iconset=dark") !important;
+}
+/* Widget Icons */
+ko-pane[type="icons"] tab .tab-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/file5.svg?preset=widgets&iconset=dark") !important;
+}
+ko-pane[type="icons"] tab[selected] .tab-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/file5.svg?preset=selected&iconset=dark") !important;
+}
+ko-pane[type="icons"] tab[widget="openfilesViewbox"] .tab-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/files.svg?preset=widgets&iconset=dark") !important;
+}
+ko-pane[type="icons"] tab[widget="openfilesViewbox"][selected] .tab-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/files.svg?preset=selected&iconset=dark") !important;
+}
+ko-pane[type="icons"] tab[widget="placesViewbox"] .tab-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/folder5.svg?preset=widgets&iconset=dark") !important;
+}
+ko-pane[type="icons"] tab[widget="placesViewbox"][selected] .tab-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/folder5.svg?preset=selected&iconset=dark") !important;
+}
+ko-pane[type="icons"] tab[widget="codebrowserviewbox"] .tab-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_code2.svg?preset=widgets&iconset=dark") !important;
+}
+ko-pane[type="icons"] tab[widget="codebrowserviewbox"][selected] .tab-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_code2.svg?preset=selected&iconset=dark") !important;
+}
+ko-pane[type="icons"] tab[widget="dbexplorer_viewbox"] .tab-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_database.svg?preset=widgets&iconset=dark") !important;
+}
+ko-pane[type="icons"] tab[widget="dbexplorer_viewbox"][selected] .tab-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_database.svg?preset=selected&iconset=dark") !important;
+}
+ko-pane[type="icons"] tab[widget="DOMviewbox"] .tab-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_markup.svg?preset=widgets&iconset=dark") !important;
+}
+ko-pane[type="icons"] tab[widget="DOMviewbox"][selected] .tab-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_markup.svg?preset=selected&iconset=dark") !important;
+}
+ko-pane[type="icons"] tab[widget="collab-panel"] .tab-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_collab.svg?preset=widgets&iconset=dark") !important;
+}
+ko-pane[type="icons"] tab[widget="collab-panel"][selected] .tab-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_collab.svg?preset=selected&iconset=dark") !important;
+}
+ko-pane[type="icons"] tab[widget="toolbox2viewbox"] .tab-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/briefcase3.svg?preset=widgets&iconset=dark") !important;
+}
+ko-pane[type="icons"] tab[widget="toolbox2viewbox"][selected] .tab-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/briefcase3.svg?preset=selected&iconset=dark") !important;
+}
+ko-pane[type="icons"] tab[widget="breakpoints-tabpanel"] .tab-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_breakpoint.svg?preset=widgets&iconset=dark") !important;
+}
+ko-pane[type="icons"] tab[widget="breakpoints-tabpanel"][selected] .tab-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_breakpoint.svg?preset=selected&iconset=dark") !important;
+}
+ko-pane[type="icons"] tab[widget="runoutput-desc-tabpanel"] .tab-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/console.svg?preset=widgets&iconset=dark") !important;
+}
+ko-pane[type="icons"] tab[widget="runoutput-desc-tabpanel"][selected] .tab-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/console.svg?preset=selected&iconset=dark") !important;
+}
+ko-pane[type="icons"] tab[widget="findresults1_tabpanel"] .tab-icon,
+ko-pane[type="icons"] tab[widget="findresults2_tabpanel"] .tab-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/binoculars.svg?preset=widgets&iconset=dark") !important;
+}
+ko-pane[type="icons"] tab[widget="findresults1_tabpanel"][selected] .tab-icon,
+ko-pane[type="icons"] tab[widget="findresults2_tabpanel"][selected] .tab-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/binoculars.svg?preset=selected&iconset=dark") !important;
+}
+ko-pane[type="icons"] tab[widget="projectUnitTestsResults_tabpanel"] .tab-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/lab.svg?preset=widgets&iconset=dark") !important;
+}
+ko-pane[type="icons"] tab[widget="projectUnitTestsResults_tabpanel"][selected] .tab-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/lab.svg?preset=selected&iconset=dark") !important;
+}
+ko-pane[type="icons"] tab[widget="notifications-widget"] .tab-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/info2.svg?preset=widgets&iconset=dark") !important;
+}
+ko-pane[type="icons"] tab[widget="notifications-widget"][selected] .tab-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/info2.svg?preset=selected&iconset=dark") !important;
+}
+ko-pane[type="icons"] tab[widget="klint_tabpanel"] .tab-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/warning2.svg?preset=widgets&iconset=dark") !important;
+}
+ko-pane[type="icons"] tab[widget="klint_tabpanel"][selected] .tab-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/warning2.svg?preset=selected&iconset=dark") !important;
+}
+/* Notification Widget */
+#notificationWidget #filter-error {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/cancel-circle2.svg?preset=base&iconset=dark") !important;
+}
+#notificationWidget #filter-warning {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/warning2.svg?preset=base&iconset=dark") !important;
+}
+#notificationWidget #filter-info {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/info2.svg?preset=base&iconset=dark") !important;
+}
+#notificationWidget #filter-progress {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/history.svg?preset=base&iconset=dark") !important;
+}
+/* Syntax checking widget */
+#klint-disable-syntax-checking {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/blocked.svg?preset=base&iconset=dark");
+}
+#klint-refresh {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/loop4.svg?preset=base&iconset=dark");
+}
+/* Code Browser */
+.codeintel-locate {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_locate_small.svg?preset=base&iconset=dark&size=14") !important;
+}
+/* Dom Browser Widget */
+#domviewerPane .show-attributes-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_dom_small.svg?preset=base&iconset=dark&size=14") !important;
+}
+#domviewerPane .locate-node {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_locate_small.svg?preset=base&iconset=dark&size=14") !important;
+}
+/* Database Widget */
+#dbExplorerPane .show-databaseAdd-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_plus_small.svg?preset=base&iconset=dark&size=14") !important;
+}
+/* Collaboration Widget */
+#collab-pane .collab-sessions-add-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_plus_small.svg?preset=base&iconset=dark&size=14") !important;
+}
+#collab-pane .collab-sessions-refresh-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_refresh_small.svg?preset=base&iconset=dark&size=14") !important;
+}
+/* Places Widget */
+#placesViewbox_placesWrapper #placesSubpanelToggle {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-down2.svg?preset=base&iconset=dark") !important;
+}
+#placesViewbox_placesWrapper #placesSubpanelToggle[state="collapsed"] {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-up2.svg?preset=base&iconset=dark") !important;
+}
+#placesViewbox_placesWrapper toolbarbutton image.toolbarbutton-icon {
+  width: 14px;
+  height: 14px;
+}
+/* Find Results Widget */
+#findresults_tabpanel-toolbarbox .list-item-up-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-up4.svg?preset=base&iconset=dark");
+}
+#findresults_tabpanel-toolbarbox .list-item-down-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-down4.svg?preset=base&iconset=dark");
+}
+#findresults_tabpanel-toolbarbox .find-stop-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/stop2.svg?preset=base&iconset=dark");
+}
+#findresults_tabpanel-toolbarbox .find-undo-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/undo2.svg?preset=base&iconset=dark");
+}
+#findresults_tabpanel-toolbarbox .find-copy-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/files.svg?preset=base&iconset=dark");
+}
+#findresults_tabpanel-toolbarbox .find-lock-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_unlocked.svg?preset=base&iconset=dark");
+}
+#findresults_tabpanel-toolbarbox .find-lock-icon[locked="true"] {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/lock.svg?preset=base&iconset=dark");
+}
+#findresults_tabpanel-toolbarbox toolbarbutton image.toolbarbutton-icon {
+  width: 14px;
+  max-height: 14px;
+}
+/* Panel widget icons */
+.panel-toolbar-buttons toolbarbutton,
+.panel-toolbar-buttons button {
+  /* Button Icon */
+
+}
+.panel-toolbar-buttons toolbarbutton image.toolbarbutton-icon,
+.panel-toolbar-buttons button image.toolbarbutton-icon {
+  width: 14px;
+  max-height: 15px;
+}
+/**
+ * Syntax checking statusbar images.
+ */
+#statusbar-check.syntax-okay {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/checkmark-circle2.svg?preset=base&iconset=dark") !important;
+}
+#statusbar-check.syntax-in-progress {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/busy4.svg?preset=base&iconset=dark") !important;
+}
+#statusbar-check.syntax-warning {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/warning2.svg?preset=base&iconset=dark") !important;
+}
+#statusbar-check.syntax-error {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/cancel-circle2.svg?preset=base&iconset=dark") !important;
+}
+window.hud-skinning .hud,
+window.hud-skinning statusbar {
+  /**
+     * Syntax checking statusbar images.
+     */
+
+}
+window.hud-skinning .hud .new-file-icon,
+window.hud-skinning statusbar .new-file-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/file-plus.svg?preset=hud") !important;
+}
+window.hud-skinning .hud .new-template-icon,
+window.hud-skinning statusbar .new-template-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/file6.svg?preset=hud") !important;
+}
+window.hud-skinning .hud .project-icon,
+window.hud-skinning statusbar .project-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/box.svg?preset=hud") !important;
+}
+window.hud-skinning .hud .open-file-icon,
+window.hud-skinning statusbar .open-file-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/folder-open.svg?preset=hud") !important;
+}
+window.hud-skinning .hud .open-workspace-icon,
+window.hud-skinning statusbar .open-workspace-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/books.svg?preset=hud") !important;
+}
+window.hud-skinning .hud .preferences-icon,
+window.hud-skinning statusbar .preferences-icon,
+window.hud-skinning .hud .cog-icon,
+window.hud-skinning statusbar .cog-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_cog_small.svg?preset=hud&size=14") !important;
+}
+window.hud-skinning .hud .customize-panes-icon,
+window.hud-skinning statusbar .customize-panes-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/grid3.svg?preset=hud");
+}
+window.hud-skinning .hud .packages-icon,
+window.hud-skinning statusbar .packages-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/box-add.svg?preset=hud");
+}
+window.hud-skinning .hud .ko-findbar-case-sensitive,
+window.hud-skinning statusbar .ko-findbar-case-sensitive {
+  -moz-image-region: auto !important;
+}
+window.hud-skinning .hud .ko-findbar-case-sensitive[value="FOC_SENSITIVE"],
+window.hud-skinning statusbar .ko-findbar-case-sensitive[value="FOC_SENSITIVE"] {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/type.svg?preset=hud") !important;
+}
+window.hud-skinning .hud .ko-findbar-case-sensitive[value="FOC_INSENSITIVE"],
+window.hud-skinning statusbar .ko-findbar-case-sensitive[value="FOC_INSENSITIVE"] {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/font-size.svg?preset=hud") !important;
+}
+window.hud-skinning .hud .ko-findbar-case-sensitive[value="FOC_SMART"],
+window.hud-skinning statusbar .ko-findbar-case-sensitive[value="FOC_SMART"] {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/text-height.svg?preset=hud") !important;
+}
+window.hud-skinning .hud .ko-findbar-open-dialog,
+window.hud-skinning statusbar .ko-findbar-open-dialog {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/new-tab.svg?preset=hud") !important;
+}
+window.hud-skinning .hud .ko-findbar-next,
+window.hud-skinning statusbar .ko-findbar-next,
+window.hud-skinning .hud .down-icon,
+window.hud-skinning statusbar .down-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-down4.svg?preset=hud") !important;
+}
+window.hud-skinning .hud .ko-findbar-prev,
+window.hud-skinning statusbar .ko-findbar-prev,
+window.hud-skinning .hud .up-icon,
+window.hud-skinning statusbar .up-icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-up4.svg?preset=hud") !important;
+}
+window.hud-skinning .hud .ko-findbar-closebutton,
+window.hud-skinning statusbar .ko-findbar-closebutton,
+window.hud-skinning .hud .close-icon,
+window.hud-skinning statusbar .close-icon {
+  -moz-image-region: auto !important;
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/close2.svg?preset=hud") !important;
+}
+window.hud-skinning .hud .ko-findbar-pattern-type,
+window.hud-skinning statusbar .ko-findbar-pattern-type {
+  -moz-image-region: auto !important;
+}
+window.hud-skinning .hud .ko-findbar-pattern-type[value="FOT_SIMPLE"],
+window.hud-skinning statusbar .ko-findbar-pattern-type[value="FOT_SIMPLE"] {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/quotes-right3.svg?preset=hud") !important;
+}
+window.hud-skinning .hud .ko-findbar-pattern-type[value="FOT_WILDCARD"],
+window.hud-skinning statusbar .ko-findbar-pattern-type[value="FOT_WILDCARD"] {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/power.svg?preset=hud") !important;
+}
+window.hud-skinning .hud .ko-findbar-pattern-type[value="FOT_REGEX_PYTHON"],
+window.hud-skinning statusbar .ko-findbar-pattern-type[value="FOT_REGEX_PYTHON"] {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/ko_regexp.svg?preset=hud") !important;
+}
+window.hud-skinning .hud toolbarbutton > dropmarker,
+window.hud-skinning statusbar toolbarbutton > dropmarker {
+  visibility: collapse;
+}
+window.hud-skinning .hud menulist dropmarker,
+window.hud-skinning statusbar menulist dropmarker,
+window.hud-skinning .hud textbox[type="autocomplete"] dropmarker,
+window.hud-skinning statusbar textbox[type="autocomplete"] dropmarker,
+window.hud-skinning .hud .button-menubutton-dropmarker,
+window.hud-skinning statusbar .button-menubutton-dropmarker {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-down2.svg?preset=hud") !important;
+}
+window.hud-skinning .hud #statusbar-check.syntax-okay,
+window.hud-skinning statusbar #statusbar-check.syntax-okay {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/checkmark.svg?preset=hud") !important;
+}
+window.hud-skinning .hud #statusbar-check.syntax-in-progress,
+window.hud-skinning statusbar #statusbar-check.syntax-in-progress {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/busy4.svg?preset=hud") !important;
+}
+window.hud-skinning .hud #statusbar-check.syntax-warning,
+window.hud-skinning statusbar #statusbar-check.syntax-warning {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/warning2.svg?preset=hud") !important;
+}
+window.hud-skinning .hud #statusbar-check.syntax-error,
+window.hud-skinning statusbar #statusbar-check.syntax-error {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/cancel-circle2.svg?preset=hud") !important;
+}
+.wordspace_open_icon {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/books.svg?preset=base&iconset=dark");
+}
+/* Copyright (c) 2010-2011 ActiveState Software Inc. .
+   See the file LICENSE.txt for licensing information. */
+/* General */
+/* Much of this gets overwritten with scheme specific colors, see skin/partials/shceme-skinning.less */
+/* Autocomplete */
+.hud {
+  -moz-appearance: none;
+  background: rgba(34, 34, 34, 0.9);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  color: #eeeeee;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  box-shadow: none;
+}
+.hud .docked {
+  background: rgba(255, 255, 255, 0.3);
+}
+.hud .special {
+  background: rgba(255, 255, 255, 0.4);
+}
+.hud richlistbox,
+.hud listbox {
+  -moz-appearance: none;
+  background: transparent !important;
+}
+.hud richlistitem,
+.hud listitem,
+.hud row {
+  -moz-appearance: none !important;
+  background-color: transparent;
+  color: #eeeeee;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+.hud richlistitem[selected="true"],
+.hud listitem[selected="true"],
+.hud row[selected="true"] {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+.hud richlistitem[focused]:not([selected]),
+.hud listitem[focused]:not([selected]),
+.hud row[focused]:not([selected]) {
+  border: 1px dotted rgba(255, 255, 255, 0.3);
+}
+.hud textbox {
+  -moz-appearance: none !important;
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  color: #ffffff;
+  border: 0;
+}
+.hud textbox > hbox {
+  -moz-appearance: none !important;
+  background-color: transparent !important;
+}
+.hud :not(button) > button:not(.button-plain),
+.hud > button:not(.button-plain) {
+  -moz-appearance: none !important;
+  background: rgba(255, 255, 255, 0.3);
+  color: #eeeeee;
+  border: 0;
+  border-radius: 3px;
+  padding: 2px 4px;
+}
+.hud :not(button) > button:not(.button-plain):hover,
+.hud > button:not(.button-plain):hover {
+  background-color: rgba(204, 204, 204, 0.3);
+}
+.hud toolbarbutton {
+  -moz-appearance: none !important;
+  opacity: 0.8;
+  margin: auto 4px;
+}
+.hud toolbarbutton:hover {
+  opacity: 1.0;
+}
+.hud button > button {
+  -moz-appearance: none;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.hud .button-menubutton-dropmarker {
+  -moz-appearance: none !important;
+}
+.hud dropmarker {
+  -moz-appearance: none !important;
+}
+/* Main Editor */
+#komodo_main:not(.toolbox-hidden) #komodo-editor-vbox {
+  /* Set the border exclusively on the pane, as setting it on the toolbox
+       creates an awkward fuzzy effect when using dark color shchemes */
+
+  border-top: 0;
+}
+/* Findbar */
+ko-findbar.hud {
+  border-width: 1px 0 0 0 !important;
+}
+ko-findbar.hud toolbarbutton {
+  width: 32px !important;
+}
+/* Autocompletions */
+scintilla[anonid="scintilla"] > panel[anonid="autocompletepopup"] {
+  border-radius: 2px;
+}
+scintilla[anonid="scintilla"] > panel[anonid="autocompletepopup"] > hbox > grid {
+  -moz-user-focus: normal;
+}
+scintilla[anonid="scintilla"] > panel[anonid="autocompletepopup"] .ko-autocomplete-item {
+  -moz-box-align: center;
+  /* The default font; if possible, the item construction code will use the
+         * scintilla default style font instead.
+         */
+
+  font-family: monospace;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 2px;
+  padding: 2px;
+}
+scintilla[anonid="scintilla"] > panel[anonid="autocompletepopup"] .ko-autocomplete-item[focused]:not([selected]) {
+  border: 0;
+  border-top: 1px;
+  border-bottom: 1px;
+  border-style: dotted;
+}
+scintilla[anonid="scintilla"] > panel[anonid="autocompletepopup"] .ko-autocomplete-item > [column-type="image"] {
+  min-width: 18px;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+}
+scintilla[anonid="scintilla"] > panel[anonid="autocompletepopup"] .ko-autocomplete-item > [column-type="text"] text-wrapper {
+  /* this is needed to make cropping work correctly */
+
+  display: block;
+}
+scintilla[anonid="scintilla"] > panel[anonid="autocompletepopup"] .ko-autocomplete-item > [column-type="text"] text-wrapper > description {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  /* Normally the margins are thicker on the bottom than the top. Try to make
+                 * things look vaguely more centered here.
+                 */
+
+  margin-top: 3px;
+  margin-bottom: 2px;
+}
+/* Dialogs */
+#dialog-prompt.hud separator,
+#dialog-prompt.hud .dialog-button[icon="cancel"],
+#dialog-prompt.hud .dialog-button[icon="accept"],
+#dialog-prompt.hud textbox dropmarker {
+  visibility: collapse;
+}
+.hud.shell-output label {
+  opacity: 0.6;
+}
+.hud.shell-output textbox {
+  background: transparent !important;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+.hud scrollbar {
+  border: 0;
+  background: transparent;
+}
+.hud scrollbar slider {
+  -moz-appearance: none;
+  border: 0;
+  background: #222222;
+}
+.hud scrollbar thumb {
+  -moz-appearance: none;
+  background: rgba(21, 21, 21, 0.9);
+  border: 0;
+}
+.hud scrollbar thumb:hover {
+  -moz-appearance: none;
+  background: rgba(8, 8, 8, 0.9);
+}
+.hud scrollbar:hover slider {
+  -moz-appearance: none;
+  background: #1d1d1d;
+}
+/* Larger Style Groups */
+/* separators */
+/* buttons */
+/* Embedded buttons */
+/* textboxes */
+/* Checkboxes */
+/* Radioboxes */
+/* Groupboxes */
+/* Tooltips */
+/* Wizards */
+/* Alerts */
+window,
+page,
+dialog,
+wizard,
+wizardpage,
+prefwindow {
+  background: Window;
+}
+label#desc,
+label.desc,
+description,
+label.wizard-header-label {
+  
+}
+.inset {
+  
+}
+.outset {
+  
+}
+/* Splitter */
+splitter {
+  -moz-appearance: splitter;
+  min-width: 3px;
+  min-height: 3px;
+}
+splitter grippy {
+  
+}
+/* "workspace_splitter": A splitter used between main panes in the
+ * Komodo window.
+ */
+splitter.workspace_splitter[orient="vertical"] {
+  -moz-appearance: none;
+  min-height: 3px;
+  border: none;
+  z-index: 100;
+  position: relative;
+  background: transparent;
+  margin-bottom: -2px;
+  border-top: 1px solid #bfbfbf;
+}
+splitter.workspace_splitter[orient="vertical"]:-moz-window-inactive {
+  border-top: 1px solid #bfbfbf;
+}
+splitter.workspace_splitter[orient="horizontal"] {
+  -moz-appearance: none;
+  min-width: 3px;
+  border: none;
+}
+splitter.workspace_splitter[orient="horizontal"]:not(.workspace_splitter_right) {
+  min-width: 3px;
+  width: 3px;
+  z-index: 100;
+  position: relative;
+  margin-left: -2px;
+  background: transparent;
+  border-right: 1px solid Transparent;
+}
+splitter.workspace_splitter[orient="horizontal"].workspace_splitter_right {
+  min-width: 3px;
+  width: 3px;
+  z-index: 100;
+  position: relative;
+  margin-right: -2px;
+  background: transparent;
+  border-left: 1px solid Transparent;
+}
+/* Separators */
+separator.groovy-thin,
+separator.groove {
+  
+}
+/* Main Window */
+.blank-workspace {
+  background: appworkspace !important;
+}
+/* Buttons */
+button.show-icon .button-icon {
+  display: block !important;
+}
+button:not(.button-toolbar-a):not(.button-toolbar-b):not(.button-toolbar-c):not(.button-toolbar-d):not(.button-link):not(.button-plain):not([type="menu"]),
+:not(toolbarbutton):not(toolbaritem) > toolbarbutton {
+  
+}
+button:not(.button-toolbar-a):not(.button-toolbar-b):not(.button-toolbar-c):not(.button-toolbar-d):not(.button-link):not(.button-plain):not([type="menu"])[disabled="true"],
+:not(toolbarbutton):not(toolbaritem) > toolbarbutton[disabled="true"] {
+  
+}
+/* Embedded buttons - buttons that do not look like buttons unless interacted with */
+button:-moz-any(.button-toolbar-a, .button-toolbar-b, .button-toolbar-c, .button-toolbar-d, .button-plain),
+:not(toolbarbutton):not(toolbaritem) > toolbarbutton {
+  
+}
+button:-moz-any(.button-toolbar-a, .button-toolbar-b, .button-toolbar-c, .button-toolbar-d, .button-plain):-moz-any(button),
+:not(toolbarbutton):not(toolbaritem) > toolbarbutton:-moz-any(button) {
+  
+}
+button:-moz-any(.button-toolbar-a, .button-toolbar-b, .button-toolbar-c, .button-toolbar-d, .button-plain):-moz-any(toolbarbutton),
+:not(toolbarbutton):not(toolbaritem) > toolbarbutton:-moz-any(toolbarbutton) {
+  
+}
+button:-moz-any(.button-toolbar-a, .button-toolbar-b, .button-toolbar-c, .button-toolbar-d, .button-plain)[disabled="true"],
+:not(toolbarbutton):not(toolbaritem) > toolbarbutton[disabled="true"] {
+  
+}
+/* Button States */
+button:not([disabled="true"]):not(.button-link):not([type="menu"]),
+:not(toolbarbutton):not(toolbaritem) > toolbarbutton:not([disabled="true"]) {
+  
+}
+button:not([disabled="true"]):not(.button-link):not([type="menu"]) .button-internal-box,
+:not(toolbarbutton):not(toolbaritem) > toolbarbutton:not([disabled="true"]) .button-internal-box {
+  
+}
+button:not([disabled="true"]):not(.button-link):not([type="menu"]):-moz-any(button),
+:not(toolbarbutton):not(toolbaritem) > toolbarbutton:not([disabled="true"]):-moz-any(button) {
+  
+}
+button:not([disabled="true"]):not(.button-link):not([type="menu"]):-moz-any(toolbarbutton),
+:not(toolbarbutton):not(toolbaritem) > toolbarbutton:not([disabled="true"]):-moz-any(toolbarbutton) {
+  
+}
+button:not([disabled="true"]):not(.button-link):not([type="menu"]):hover,
+:not(toolbarbutton):not(toolbaritem) > toolbarbutton:not([disabled="true"]):hover {
+  
+}
+button:not([disabled="true"]):not(.button-link):not([type="menu"]):hover .button-internal-box,
+:not(toolbarbutton):not(toolbaritem) > toolbarbutton:not([disabled="true"]):hover .button-internal-box {
+  
+}
+button:not([disabled="true"]):not(.button-link):not([type="menu"]):active,
+:not(toolbarbutton):not(toolbaritem) > toolbarbutton:not([disabled="true"]):active {
+  
+}
+/* Buttons with forced icons */
+button.with-icon .button-icon {
+  display: block !important;
+  margin-right: 5px;
+}
+/* Textbox & Menu Elements */
+:-moz-any(textbox, menulist, button[type="menu"]):not(.plain) {
+  
+}
+:-moz-any(textbox, menulist, button[type="menu"]):not(.plain)[disabled="true"] {
+  
+}
+:-moz-any(textbox, menulist, button[type="menu"]):not(.plain)[type="autocomplete"][disabled="true"] > hbox {
+  
+}
+:-moz-any(textbox, menulist, button[type="menu"]):not(.plain):-moz-any(textbox) {
+  
+}
+:-moz-any(textbox, menulist, button[type="menu"]):not(.plain):-moz-any(textbox)[enablehistory=true] > .autocomplete-textbox-container {
+  /* Override the -moz-appearance set on autocomplete textboxes. */
+
+}
+:-moz-any(textbox, menulist, button[type="menu"]):not(.plain):-moz-any(menulist, button[type="menu"]) {
+  min-height: 20px;
+  min-width: 40px;
+}
+:-moz-any(textbox, menulist, button[type="menu"]):not(.plain):-moz-any(menulist, button[type="menu"]) .menulist-editable-box {
+  
+}
+:-moz-any(textbox, menulist, button[type="menu"]):not(.plain):-moz-any(menulist, textbox[type="autocomplete"]) dropmarker {
+  
+}
+.menulist-editable-input {
+  
+}
+/* Statusbar */
+statusbar .statusbar-resizerpanel {
+  visibility: collapse;
+}
+/* Statusbar Buttons */
+statusbar:not(.bottombar) button:not([type="menu"]),
+statusbar:not(.bottombar) toolbarbutton {
+  -moz-appearance: none;
+  background: transparent;
+  border: none !important;
+  margin: 0;
+  padding: 0 2px !important;
+  border-radius: 4px;
+}
+statusbar:not(.bottombar) button:not([type="menu"]):hover,
+statusbar:not(.bottombar) toolbarbutton:hover {
+  background: rgba(0, 0, 0, 0.07);
+  border: none !important;
+}
+textbox.plain {
+  
+}
+/* Checkboxes */
+checkbox {
+  
+}
+checkbox .checkbox-spacer-box {
+  
+}
+checkbox .checkbox-check {
+  width: 16px;
+  height: 16px;
+}
+checkbox .checkbox-check[checked="true"] {
+  
+}
+checkbox .checkbox-label-box {
+  
+}
+checkbox[disabled="true"] {
+  
+}
+checkbox:hover {
+  
+}
+/* Radioboxes */
+radio {
+  
+}
+radio .radio-spacer-box {
+  width: 16px;
+  height: 16px;
+}
+radio .radio-spacer-box .radio-check-box1 {
+  
+}
+radio .radio-label-box {
+  
+}
+radio[selected="true"] .radio-spacer-box {
+  
+}
+radio[disabled="true"] {
+  
+}
+radio:hover {
+  
+}
+/* Statusbar */
+statusbar {
+  -moz-appearance: statusbar !important;
+  background: none;
+  padding: 0 !important;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: 0 !important;
+}
+statusbar > statusbarpanel {
+  -moz-appearance: none;
+  background: transparent;
+  padding: 2px;
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  border-color: ThreeDShadow;
+  -moz-border-image: none;
+}
+statusbar > statusbarpanel:last-child,
+statusbar > statusbarpanel#statusbar-line-col {
+  border-right: 0;
+}
+/* Tree Elements */
+tree {
+  -moz-appearance: none !important;
+  background: -moz-EvenTreeRow !important;
+  border: 1px solid threedshadow;
+}
+tree treecol:not([hideheader]),
+tree treecolpicker {
+  -moz-appearance: treeheadercell;
+  padding: 2px;
+  border: 0;
+}
+tree treechildren::-moz-tree-cell-text {
+  
+}
+tree treechildren::-moz-tree-cell-text(selected) {
+  color: HighlightText !important;
+}
+tree treechildren::-moz-tree-cell-text(selected, focus) {
+  color: HighlightText !important;
+}
+tree treechildren::-moz-tree-row {
+  background: transparent;
+  border: 0;
+}
+tree treechildren::-moz-tree-row(multicol, odd) {
+  
+}
+tree treechildren::-moz-tree-row(selected) {
+  background: Highlight;
+}
+tree treechildren::-moz-tree-row(selected, focus) {
+  background: Highlight;
+}
+listbox {
+  -moz-appearance: none !important;
+  background: -moz-EvenTreeRow !important;
+  border: 1px solid threedshadow;
+}
+listbox listheader {
+  -moz-appearance: treeheadercell;
+  padding: 2px;
+  border: 0;
+}
+listbox listitem {
+  border: 0;
+}
+listbox listitem[selected="true"] {
+  color: HighlightText;
+  background: Highlight;
+}
+listbox listitem[selected="true"]:focus {
+  color: HighlightText;
+  background: Highlight;
+}
+richlistbox {
+  -moz-appearance: none !important;
+  background: -moz-EvenTreeRow !important;
+  border: 1px solid threedshadow;
+}
+richlistbox listheader {
+  -moz-appearance: treeheadercell;
+  padding: 2px;
+  border: 0;
+}
+richlistbox richlistitem,
+richlistbox notification {
+  border: 0;
+}
+richlistbox richlistitem[selected="true"],
+richlistbox notification[selected="true"] {
+  color: HighlightText;
+  background: Highlight;
+}
+richlistbox richlistitem[selected="true"]:focus,
+richlistbox notification[selected="true"]:focus {
+  color: HighlightText;
+  background: Highlight;
+}
+/* Pref Window */
+.pref-window:not(dialog):not(#prefWindow):not(#prefProjectsWindow) {
+  background: transparent;
+  -moz-appearance: none;
+  /* Cannot set padding on window element as it screws up scrollbar positioning */
+
+}
+.pref-window:not(dialog):not(#prefWindow):not(#prefProjectsWindow) > vbox,
+.pref-window:not(dialog):not(#prefWindow):not(#prefProjectsWindow) > hbox,
+.pref-window:not(dialog):not(#prefWindow):not(#prefProjectsWindow) > box {
+  padding: 10px;
+}
+#prefWindow #panelFrame,
+#prefProjectsWindow #panelFrame {
+  margin-top: 2px;
+  -moz-appearance: none !important;
+  background: -moz-EvenTreeRow !important;
+  border: 1px solid threedshadow;
+}
+#pref-deck-vbox + splitter {
+  -moz-appearance: none !important;
+  border: 0;
+  background: transparent;
+}
+/* Unified Menu */
+#unifiedMenuPrimaryPane,
+#unifiedMenuSecondaryPane {
+  min-width: 200px;
+}
+#unifiedMenuPrimaryPane {
+  border-right: 1px solid Transparent;
+}
+/* Groupboxes */
+groupbox {
+  
+}
+caption {
+  
+}
+/* Tooltips */
+tooltip {
+  
+}
+tooltip description {
+  
+}
+/* Wizards */
+wizard wizardpage,
+wizard .wizard-header {
+  background: Window;
+}
+wizard .wizard-header {
+  
+}
+wizard .wizard-buttons {
+  background: Window;
+}
+/* Alerts */
+.alertBox {
+  
+}
+.alert-box {
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  border-radius: 3px;
+  font-weight: bold;
+  margin: 5px;
+  padding: 5px;
+}
+.alertImageBox {
+  
+}
+.alertTextBox,
+.alertCloseBox {
+  
+}
+/* Find bar */
+ko-findbar {
+  background: Window;
+  border-top: 1px solid #bfbfbf;
+}
+/* Misc */
+sidebarheader {
+  background: Window;
+}
+.blank-workspace {
+  background: transparent;
+}
+#workspace_left_area tabpanel {
+  border-right: 1px solid #bfbfbf;
+}
+#workspace_right_area tabpanel {
+  border-left: 1px solid #bfbfbf;
+}
+view tabbox:not(.tabs-bottom) > tabs {
+  border-bottom: 1px solid #bfbfbf;
+}
+view tabbox:not(.tabs-bottom) > tabs tab {
+  margin-top: 1px;
+}
+splitter.workspace_splitter[orient="horizontal"] {
+  -moz-appearance: none;
+  min-width: 3px;
+  border: none;
+}
+splitter.workspace_splitter[orient="horizontal"]:not(.workspace_splitter_right) {
+  margin-left: -3px;
+}
+splitter.workspace_splitter[orient="horizontal"].workspace_splitter_right {
+  margin-right: -3px;
+}
+/* Variables & Helpers */
+tabbox.native {
+  /* Remove the default 5px margin around a xul tabbox. */
+
+  margin-left: 0px;
+  margin-right: 0px;
+}
+tabbox:not(.native):not(#tabbed-view):not(#variables-tabpanels):not(.tabs-bottom) tabpanels {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+tabbox:not(.native):not(#tabbed-view):not(#variables-tabpanels):not(.tabs-bottom) tab {
+  border-top: 1px solid transparent;
+  padding: 0 4px;
+}
+tabbox:not(.native):not(#tabbed-view):not(#variables-tabpanels):not(.tabs-bottom) tab:hover {
+  
+}
+tabbox:not(.native):not(#tabbed-view):not(#variables-tabpanels):not(.tabs-bottom) tab[selected="true"] {
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+}
+tabbox:not(.tabs-bottom) tabpanels {
+  -moz-appearance: tabpanels;
+  border: none;
+  -moz-border-bottom-colors: none;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+tabbox:not(.tabs-bottom) tabpanels > tabpanel {
+  margin: 0;
+  padding: 0;
+}
+tabbox#tabbed-view tabpanels {
+  -moz-appearance: none;
+}
+tabbox#tabbed-view:not(.tabs-bottom) tabpanels {
+  padding: 0;
+}
+spacer.tabs-left,
+spacer.tabs-right {
+  
+}
+#editorvbox .tabstrip-box {
+  border-bottom: 0;
+}
+#komodo_main:not(.toolbox-hidden) #editorvbox #tabbed-view tabs {
+  /* Set the border exclusively on the pane, as setting it on the toolbox
+       creates an awkward fuzzy effect when using dark color shchemes */
+
+  border-top: 0 !important;
+}
+tabs:not(.tabs-bottom) {
+  border: none;
+  -moz-box-pack: center;
+  -moz-box-align: stretch;
+  min-height: 25px;
+  padding-bottom: 0;
+  /* remove the -12px margin set by the global tabbox.css */
+
+  margin-bottom: 0px;
+  /* remove the 10px padding set by the global tabbox.css */
+
+  padding-left: 0px;
+  padding-right: 0px;
+  /**
+     * Tab Drag and Drop
+     */
+
+  /*
+     * Tab close button
+     */
+
+}
+tabs:not(.tabs-bottom) .tabstrip-box {
+  color: ThreeDDarkShadow;
+  box-shadow: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  background-color: #f5f6f7;
+}
+tabs:not(.tabs-bottom) .tabstrip-box:-moz-window-inactive {
+  
+}
+tabs:not(.tabs-bottom) .tabs-left {
+  display: -moz-box;
+  width: 3px;
+}
+tabs:not(.tabs-bottom)[overflow="true"] .tabs-left {
+  display: none;
+}
+tabs:not(.tabs-bottom) .tab-drop-indicator-bar {
+  height: 10px;
+  margin-top: -10px;
+  position: relative;
+  /* set -moz-margin-start to -1/2 indicator width: */
+
+  -moz-margin-start: -4px;
+}
+tabs:not(.tabs-bottom) .tab-drop-indicator-bar .tab-drop-indicator {
+  height: 33px;
+  width: 10px;
+  margin-bottom: -24px;
+  position: relative;
+  z-index: 1;
+  background: url('chrome://komodo/skin/tabs/tabDragIndicator.png') 50% 40% no-repeat;
+}
+tabs:not(.tabs-bottom) .tab-close-button,
+tabs:not(.tabs-bottom) .tabs-closebutton {
+  -moz-appearance: none;
+  opacity: 0.8;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+tabs:not(.tabs-bottom) .tab-close-button[selected="true"],
+tabs:not(.tabs-bottom) .tabs-closebutton[selected="true"] {
+  opacity: 1;
+  display: inherit;
+}
+tabs:not(.tabs-bottom) .tab-close-button:focus,
+tabs:not(.tabs-bottom) .tabs-closebutton:focus {
+  outline: none !important;
+}
+tabs:not(.tabs-bottom) .tab-close-button:hover,
+tabs:not(.tabs-bottom) .tabs-closebutton:hover {
+  opacity: 1;
+  border-color: transparent;
+}
+/**
+ * Tab selection.
+ */
+.tabs-select-button {
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  background: inherit;
+}
+.tabs-select-button > image {
+  opacity: 0.7;
+}
+.tabs-select-button:hover > image {
+  opacity: 1.0;
+}
+.tabs-select-button > .toolbarbutton-menu-dropmarker {
+  display: none;
+}
+.tabs-select-button > .toolbarbutton-text {
+  display: none;
+}
+.tabs-select-button > .toolbarbutton-icon {
+  -moz-margin-end: 2px;
+}
+/*
+ * Tab scrollbox
+ */
+.tab-arrowscrollbox > .scrollbutton-up,
+.tab-arrowscrollbox > .scrollbutton-down-stack > .scrollbutton-down[chromedir="rtl"] {
+  border: 0;
+  border-right: 2px solid;
+  -moz-border-right-colors: rgba(0, 0, 0, 0.25) rgba(255, 255, 255, 0.15);
+  padding: 0;
+  margin: 0;
+}
+.tab-arrowscrollbox > .scrollbutton-down-stack > .scrollbutton-down[chromedir="rtl"] {
+  -moz-border-end: none;
+}
+.tab-arrowscrollbox > .scrollbutton-up[chromedir="rtl"] {
+  -moz-border-start: none;
+}
+.tab-arrowscrollbox > .scrollbutton-up:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.tab-arrowscrollbox > .scrollbutton-up:hover:active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.tab-arrowscrollbox > .scrollbutton-up[disabled="true"],
+.tab-arrowscrollbox > .scrollbutton-down-stack > .scrollbutton-down[disabled="true"][chromedir="rtl"] {
+  background-color: transparent !important;
+}
+.tab-arrowscrollbox .scrollbutton-down,
+.tab-arrowscrollbox > .scrollbutton-up[chromedir="rtl"] {
+  border-left: 2px solid;
+  -moz-border-left-colors: rgba(0, 0, 0, 0.25) rgba(255, 255, 255, 0.15);
+  -moz-padding-start: 2px;
+  -moz-padding-end: 0;
+  margin: 0;
+}
+.tab-arrowscrollbox > .scrollbutton-up[chromedir="rtl"] {
+  -moz-border-start: none;
+}
+.tab-arrowscrollbox .scrollbutton-down:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.tab-arrowscrollbox .scrollbutton-down:hover:active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.tab-arrowscrollbox > .scrollbutton-down-stack > .scrollbutton-down[disabled="true"],
+.tab-arrowscrollbox > .scrollbutton-up[disabled="true"][chromedir="rtl"] {
+  background-color: transparent !important;
+}
+/*
+ * For some bizarre reason this does not work when placed properly
+ * under "tabs .tabstrip-box"
+ */
+tabs:not(.tabs-bottom) tab {
+  -moz-appearance: none;
+  outline: none !important;
+  background: #f5f6f7;
+  border-radius: 0;
+  box-shadow: none;
+  border: 0;
+  border-right: 1px solid transparent;
+  border-top: 1px solid transparent;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+tabs:not(.tabs-bottom) tab:-moz-window-inactive {
+  
+}
+tabs:not(.tabs-bottom) tab .tab-text {
+  color: ThreeDDarkShadow;
+  margin: 0;
+  overflow: hidden;
+  opacity: 0.7;
+}
+tabs:not(.tabs-bottom) tab ko-vertical-text {
+  padding: 3px 0;
+}
+tabs:not(.tabs-bottom) tab:hover {
+  border-right: 1px solid transparent;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: none;
+}
+tabs:not(.tabs-bottom) tab:hover .tab-text {
+  color: inherit;
+}
+tabs:not(.tabs-bottom) tab[selected="true"] {
+  -moz-user-focus: normal;
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
+  background: #ffffff;
+  box-shadow: inherit;
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+}
+tabs:not(.tabs-bottom) tab[selected="true"]:-moz-window-inactive {
+  
+}
+tabs:not(.tabs-bottom) tab[selected="true"] .tab-text {
+  color: WindowText;
+  opacity: 1;
+}
+tabs:not(.tabs-bottom) tab .tab-image-left,
+tabs:not(.tabs-bottom) tab .tab-image-right {
+  width: 8px;
+  margin: 0px;
+  padding: 0px;
+}
+/* Horizontal Pane Tabs */
+ko-pane:not([type="vertical"]):not([type="icons"]) .pane-tabs-container tabs tab {
+  padding: 0 2px;
+}
+/*
+ * Vertical Tabs 
+ */
+ko-pane[type="vertical"] .pane-tabs-container tabs {
+  box-shadow: none;
+}
+ko-pane[type="vertical"] .pane-tabs-container tabs tab {
+  -moz-appearance: none;
+  width: 2em;
+  min-width: inherit !important;
+  border: 0;
+  border-right: 0 !important;
+  border-top: 1px solid transparent !important;
+  background: #f5f6f7;
+  box-shadow: none;
+}
+ko-pane[type="vertical"] .pane-tabs-container tabs tab[selected="true"] {
+  background: #ffffff;
+  box-shadow: inherit;
+}
+ko-pane[type="vertical"] .pane-tabs-container tabs tab:hover {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: none;
+}
+ko-pane[type="vertical"] .pane-tabs-container tabs tab:active {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: none;
+}
+ko-pane[type="vertical"] .pane-tabs-container tabs tab:last-child {
+  border-bottom: 1px solid transparent !important;
+}
+#workspace_left_area[type="vertical"] .pane-tabs-container tabs {
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
+}
+#workspace_right_area[type="vertical"] .pane-tabs-container tabs {
+  border-left: 1px solid rgba(0, 0, 0, 0.25);
+}
+/* Icon Tabs */
+ko-pane[type="icons"] .pane-tabs-container tabs .tabstrip-box {
+  border-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+ko-pane[type="icons"] .pane-tabs-container tabs .tabstrip-box:-moz-window-inactive {
+  
+}
+ko-pane[type="icons"] .pane-tabs-container tabs .tabstrip-box .scrollbox-innerbox {
+  -moz-box-align: center;
+  -moz-box-pack: center;
+}
+ko-pane[type="icons"] .pane-tabs-container tabs .tabstrip-box .tabs-select-button {
+  display: none;
+}
+ko-pane[type="icons"] tab {
+  -moz-appearance: none;
+  padding: 2px 4px;
+  opacity: 1;
+  background: none;
+  border: 1px solid transparent !important;
+  box-shadow: none;
+}
+ko-pane[type="icons"] tab:hover {
+  border: 1px solid transparent !important;
+  box-shadow: none;
+}
+ko-pane[type="icons"] tab[selected="true"] {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.25) !important;
+  opacity: 1;
+}
+ko-pane[type="icons"] tab .tab-middle {
+  padding: 0;
+}
+ko-pane[type="icons"] tab .tab-icon {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+/* Bottom Panel Tabs */
+#workspace_bottom_area .tab-text {
+  padding: 0 5px;
+}
+tabbox.tabs-bottom {
+  margin: 0 !important;
+}
+tabbox.tabs-bottom > tabpanels {
+  padding: 0 !important;
+}
+.native tabs {
+  height: auto;
+}
+ko-pane[type="vertical"] tabs[anonid="tabs"] ko-vertical-text .label {
+  margin-left: 3px;
+}
+ko-pane[type="icons"] .tabstrip-box {
+  height: auto !important;
+  padding-top: 2px;
+}
+window ko-pane[type="icons"] tab {
+  margin: 0 2px;
+}
+window ko-pane[type="icons"] tab:not(.foobar),
+window ko-pane[type="icons"] tab:hover,
+window ko-pane[type="icons"] tab[selected="true"] {
+  border-bottom: 0 !important;
+}
+view[type="editor"] tabs .tabstrip-box {
+  border-bottom: 0 !important;
+}
+tabs:not(.tabs-bottom) tab[selected="true"] {
+  border-left: 1px solid rgba(0, 0, 0, 0.25);
+}
+tabbox:not(.native):not(#tabbed-view):not(#variables-tabpanels):not(.tabs-bottom) tab:not([selected="true"]):not(:hover) {
+  background-color: transparent;
+}
+tabs.tabs-bottom tab:first-child {
+  margin-left: 4px;
+}
+#workspace_bottom_area tabs tab {
+  border-top: 0 !important;
+}
+#workspace_bottom_area tabs tab:first-child {
+  border-left: 0 !important;
+}
+/* Variables & Helpers */
+/*#303030;*/
+/* Skinning Variables */
+/* Button Group */
+#main-toolboxrow toolbar > toolbaritem {
+  border-width: 0 1px;
+  border-style: solid;
+  border-color: transparent rgba(0, 0, 0, 0.25) transparent rgba(255, 255, 255, 0.35);
+  height: 24px;
+  margin: 0 3px;
+  /* Button */
+
+}
+#main-toolboxrow toolbar > toolbaritem toolbarbutton {
+  -moz-appearance: none;
+}
+#main-toolboxrow toolbar > toolbaritem > toolbarbutton {
+  min-width: 24px;
+  height: 24px;
+  max-height: 24px;
+  padding: 0 5px 0 5px !important;
+  margin: 0 1px 0 0;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  box-shadow: inherit;
+  border-radius: 2px;
+  background-color: inherit;
+  background-image: none;
+  background-position: inherit;
+  background-repeat: inherit;
+  /* Hovered Icon */
+
+  /* Checked / Active Button */
+
+  /* First button in group */
+
+  /* Last button in group */
+
+  /*
+         * The recent locations button is a bit special and needs to be merged
+         * into it's previous sibling
+        */
+
+}
+#main-toolboxrow toolbar > toolbaritem > toolbarbutton > toolbarbutton {
+  margin: 0;
+  padding: 0;
+}
+#main-toolboxrow toolbar > toolbaritem > toolbarbutton > dropmarker {
+  margin-right: -3px;
+}
+#main-toolboxrow toolbar > toolbaritem > toolbarbutton:hover {
+  box-shadow: inherit;
+  background-color: transparent;
+  background-image: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.25);
+}
+#main-toolboxrow toolbar > toolbaritem > toolbarbutton[checked],
+#main-toolboxrow toolbar > toolbaritem > toolbarbutton[open="true"],
+#main-toolboxrow toolbar > toolbaritem > toolbarbutton:active {
+  background-color: #ffffff;
+  background-image: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.25);
+}
+#main-toolboxrow toolbar > toolbaritem > toolbarbutton.first-child {
+  background-position: 100px, center center;
+  border-width: 1px;
+}
+#main-toolboxrow toolbar > toolbaritem > toolbarbutton.last-child {
+  padding-right: 5px !important;
+  border-width: 1px;
+  padding-right: 0;
+}
+#main-toolboxrow toolbar > toolbaritem > toolbarbutton.last-child image {
+  border-right: 0;
+}
+#main-toolboxrow toolbar > toolbaritem > toolbarbutton.first-child.last-child {
+  border-width: 1px;
+}
+#main-toolboxrow toolbar > toolbaritem > toolbarbutton#historyRecentLocations {
+  padding-left: 0;
+  min-width: 0;
+  max-width: 8px;
+  border-left: 0 !important;
+  margin-left: -8px;
+  /* If it has no sibling, revert the "merge" */
+
+}
+#main-toolboxrow toolbar > toolbaritem > toolbarbutton#historyRecentLocations > hbox > vbox {
+  visibility: collapse;
+}
+#main-toolboxrow toolbar > toolbaritem > toolbarbutton#historyRecentLocations.first-child {
+  padding-left: 6px;
+  min-width: 24px;
+  margin-left: 0;
+}
+#main-toolboxrow toolbar > toolbaritem > toolbarbutton[type=menu] {
+  -moz-binding: url("chrome://global/content/bindings/toolbarbutton.xml#menu-vertical");
+}
+#main-toolboxrow toolbar > toolbaritem > toolbarbutton#tabPicker .toolbarbutton-menu-dropmarker {
+  visibility: collapse;
+}
+#main-toolboxrow .overflow-toolbarbutton {
+  -moz-appearance: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 5px;
+}
+#main-toolboxrow .overflow-toolbarbutton .toolbarbutton-text {
+  visibility: collapse;
+}
+#main-toolboxrow .overflow-toolbarbutton menuitem label {
+  color: inherit;
+}
+#main-toolboxrow toolbar[mode="full"] toolbaritem {
+  margin-right: 5px;
+}
+#main-toolboxrow toolbar[mode="full"] toolbaritem > toolbarbutton {
+  height: auto !important;
+  max-height: inherit !important;
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
+#main-toolboxrow toolbar:not([kohidden="true"]).first-child toolbaritem.has-children:first-child {
+  border-width: 0 1px 0 0;
+}
+#main-toolboxrow toolbar:not([kohidden="true"]).last-child toolbaritem.has-children:last-child {
+  border-width: 0 0 0 1px;
+}
+/* Main toolbox (menu bar and toolbars) */
+#main-toolboxrow-wrapper {
+  
+}
+toolbox {
+  
+}
+toolbox > toolbar {
+  
+}
+#toolbox_main {
+  -moz-appearance: none;
+  background: #f5f6f7;
+  border-bottom: 0 !important;
+}
+#toolbar-menubar {
+  border: 0;
+}
+#main-toolboxrow {
+  -moz-appearance: none !important;
+  padding-bottom: 1px;
+  padding-top: 1px;
+  border-bottom: none !important;
+}
+#openToolbar,
+#findToolbar {
+  -moz-appearance: none;
+  border: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#openToolbar .unified-textbox-wrapper,
+#findToolbar .unified-textbox-wrapper {
+  background: -moz-Field;
+  border-radius: 8px;
+  border: 1px solid rgba(142, 142, 142, 0.8);
+}
+#openToolbar .unified-textbox-wrapper.focus,
+#findToolbar .unified-textbox-wrapper.focus {
+  
+}
+#openToolbar#openToolbar,
+#findToolbar#openToolbar {
+  margin-right: 4px;
+}
+#openToolbar#openToolbar .unified-textbox-wrapper,
+#findToolbar#openToolbar .unified-textbox-wrapper {
+  border-radius: 4px;
+}
+#openToolbar textbox,
+#findToolbar textbox {
+  -moz-appearance: none;
+  width: 180px;
+  padding: 2px;
+  margin: 0;
+  border: 0 !important;
+  background: transparent;
+  color: -moz-FieldText;
+}
+#openToolbar textbox input,
+#findToolbar textbox input,
+#openToolbar textbox hbox,
+#findToolbar textbox hbox {
+  -moz-appearance: none;
+  border: 0 !important;
+}
+#openToolbar textbox#textbox_find,
+#findToolbar textbox#textbox_find {
+  padding-right: 0px;
+  margin-right: 0;
+}
+#openToolbar textbox#textbox_findInFiles,
+#findToolbar textbox#textbox_findInFiles {
+  margin-left: 0;
+}
+#openToolbar textbox#textbox_findInFiles > hbox,
+#findToolbar textbox#textbox_findInFiles > hbox {
+  padding-left: 4px;
+  border-left: 1px solid ThreeDShadow !important;
+}
+#openToolbar textbox#textbox_findInFiles dropmarker,
+#findToolbar textbox#textbox_findInFiles dropmarker {
+  visibility: collapse;
+}
+#openToolbar dropmarker,
+#findToolbar dropmarker {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-down2.svg?preset=base&iconset=dark");
+  -moz-appearance: none;
+  border: 0;
+  background: none;
+}
+#openToolbar #find-toolbar-browsedirectory,
+#findToolbar #find-toolbar-browsedirectory {
+  min-width: 0px;
+  -moz-appearance: none;
+  margin-left: 4px;
+  margin-right: 2px;
+}
+#openToolbar #find-toolbar-browsedirectory:active image,
+#findToolbar #find-toolbar-browsedirectory:active image {
+  margin-top: 2px;
+}
+/* Generic Toolbars */
+toolbarbutton[disabled="true"] > image,
+toolbarbutton[disabled="true"] > label,
+toolbarbutton[disabled="true"] > dropmarker {
+  opacity: 0.6;
+  border-bottom: none !important;
+}
+toolbarbutton > .toolbarbutton-text[label],
+toolbarbutton > .toolbarbutton-text[value] {
+  padding-left: 4px;
+}
+/* Widget Toolbar */
+.widgetToolbarWrap {
+  -moz-box-align: center;
+}
+.widgetToolbarWrap:not(.embedded) {
+  border-top: 1px solid #bfbfbf;
+  box-shadow: inherit;
+}
+.widgetToolbarWrap.top {
+  border-bottom: 1px solid #bfbfbf;
+  border-top: 0;
+  box-shadow: none;
+}
+.widgetToolbarWrap .widgetToolbar {
+  -moz-appearance: none;
+  border: 0;
+}
+.widgetToolbarWrap > :-moz-any(textbox, menulist) {
+  margin-top: 0;
+  margin-bottom: 0;
+  -moz-box-align: center;
+}
+.widgetToolbarWrap.embedded,
+.widgetToolbarWrap.embedded .widgetToolbar {
+  background: -moz-EvenTreeRow;
+}
+.widgetToolbarWrap.centered,
+.widgetToolbar.centered {
+  -moz-box-pack: center;
+  -moz-box-flex: 1;
+}
+/*---- history toolbar items
+ * Parts are based on FF back/forward buttons,
+ * http://mxr.mozilla.org/firefox/source/browser/themes/winstripe/browser/browser.css#390
+ */
+toolbar #historyRecentLocations {
+  /* Image from Firefox:
+  http://mxr.mozilla.org/firefox/source/browser/themes/winstripe/browser/browser.css#450
+  list-style-image: url("chrome://browser/skin/Toolbar-small.png");
+  */
+
+  list-style-image: url("chrome://komodo/skin/images/Toolbar-small.png");
+  -moz-image-region: rect(0px 301px 24px 288px);
+}
+toolbar #historyRecentLocations[disabled="true"] {
+  -moz-image-region: rect(48px 301px 72px 288px);
+}
+toolbarbutton {
+  -moz-appearance: toolbarbutton;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  margin: 0;
+  border: 1px solid transparent;
+  padding: 3px;
+  background-color: transparent;
+  color: -moz-DialogText;
+}
+#toolbox_main,
+#main-toolboxrow,
+#menubar_main,
+#main-toolboxrow-wrapper {
+  -moz-appearance: none !important;
+}
+#komodo-box {
+  background: #f5f6f7;
+  padding-top: 2px;
+}
+#main-toolboxrow {
+  padding-bottom: 3px;
+  padding-top: 3px;
+}
+#main-toolboxrow toolbaritem {
+  margin-right: 0 !important;
+}
+#main-toolboxrow toolbaritem toolbarbutton toolbarbutton {
+  border: 0 !important;
+}
+*:not(#main-toolboxrow) toolbarbutton {
+  margin: 0 2px;
+}
+.widgetToolbarWrap {
+  padding: 2px 0;
+}
+#openToolbar .unified-textbox-wrapper,
+#findToolbar .unified-textbox-wrapper {
+  border-radius: 0 !important;
+}
+/* Variables & Helpers */
+/* Addons Page */
+page#addons-page,
+page#addons-page .main-content,
+page#addons-page .view-header {
+  background: Window;
+}
+page#addons-page .addon,
+page#addons-page #search-filter,
+page#addons-page .view-header {
+  border-top: 0;
+  border-bottom: 1px solid #bfbfbf;
+}
+page#addons-page #view-port-container {
+  border: 1px solid #bfbfbf;
+}
+page#addons-page #categories {
+  border: 1px solid #bfbfbf;
+  border-right: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+page#addons-page .addon,
+page#addons-page .name-container {
+  
+}
+page#addons-page .category {
+  
+}
+page#addons-page .category[selected="true"] {
+  color: HighlightText;
+  background: Highlight;
+  border: none;
+}
+page#addons-page .category[selected="true"]:focus {
+  color: HighlightText;
+  background: Highlight;
+  border: none;
+}
+page#addons-page #header-search,
+page#addons-page #header-search:hover,
+page#addons-page #header-search[focused] {
+  
+}
+page#addons-page .header-button {
+  
+}
+page#addons-page .header-button:hover {
+  
+}
+/* Account Setup Wizard */
+wizard#accountSetup {
+  background: Window;
+}
+#debuggerPanel > hbox.toolbar-background {
+  padding: 4px;
+}
+#DebuggerPanelContent #viewer-splitter {
+  -moz-appearance: none;
+  position: relative;
+  z-index: 100;
+  width: 4px;
+  min-width: 4px;
+  margin-right: -4px;
+  background: transparent;
+  border-left: 1px solid #bfbfbf;
+}
+#DebuggerPanelContent #viewer-splitter grippy {
+  background-image: none;
+}
+/* Debug Output Tabs */
+#DebuggerPanelContent tabbox {
+  -moz-appearance: none;
+}
+#DebuggerPanelContent tabbox tabs {
+  height: 25px;
+  padding: 0px;
+  margin: 0px;
+  -moz-appearance: none;
+  border: none;
+}
+#DebuggerPanelContent tabbox tabs .tabstrip-box {
+  margin-top: 0;
+  padding-left: 2px;
+  padding-right: 2px;
+  border: none;
+  border-top: 1px solid #bfbfbf;
+  background: Window;
+}
+#DebuggerPanelContent tabbox tab {
+  -moz-appearance: none;
+  height: 18px !important;
+  max-height: 18px;
+  max-width: 20em;
+  margin: 2px;
+  padding: 0;
+  background: transparent;
+  border-width: 0;
+  border-style: none;
+  border-color: inherit;
+  border-radius: 0;
+  font-weight: normal;
+  color: inherit;
+  text-shadow: none;
+  box-shadow: none;
+  opacity: 1;
+  -moz-border-top-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+}
+#DebuggerPanelContent tabbox tab:hover {
+  background: transparent;
+  border-width: 0;
+  border-style: none;
+  border-color: inherit;
+  border-radius: 0;
+  font-weight: normal;
+  color: inherit;
+  text-shadow: none;
+  box-shadow: none;
+  opacity: 1;
+}
+#DebuggerPanelContent tabbox tab[selected="true"] {
+  background: transparent;
+  border-width: 0;
+  border-style: none;
+  border-color: inherit;
+  border-radius: 0;
+  font-weight: bold;
+  color: inherit;
+  text-shadow: none;
+  box-shadow: none;
+  opacity: 1;
+}
+#DebuggerPanelContent tabbox tab > hbox {
+  -moz-appearance: none;
+  padding: 0;
+}
+#DebuggerPanelContent tabbox tabpanels {
+  -moz-appearance: none;
+  border: none;
+  padding: 0px;
+  margin: 0px;
+}
+#DebuggerPanelContent tabbox tabpanels > tabpanel {
+  padding: 0px;
+  margin: 0px;
+}
+#DebuggerPanelContent tabbox view {
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+#callstack-listbox {
+  -moz-appearance: none;
+}
+.panel-label,
+#collab-sessions-label,
+#collab-friends-label,
+#placesRootButton,
+#placesSubpanelSplitterProjectLabel {
+  color: inherit;
+  font-weight: bold;
+  text-transform: none;
+  text-shadow: none;
+  font-family: inherit;
+}
+.panel-label menupopup,
+#collab-sessions-label menupopup,
+#collab-friends-label menupopup,
+#placesRootButton menupopup,
+#placesSubpanelSplitterProjectLabel menupopup {
+  text-transform: none;
+  text-shadow: none;
+  font-weight: normal;
+}
+#notificationWidget #toolbar {
+  border-right: 0px;
+}
+#notificationWidget #message-container {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  border-left: 0px !important;
+  border-right: 0px !important;
+}
+#notificationWidget #message-container notification {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+/* Breadcrumbs */
+#breadcrumbBar .breadcrumb {
+  margin-right: 4px;
+}
+#breadcrumbBar .breadcrumb .breadcrumb-arrow {
+  background-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-right3.svg?preset=base&iconset=dark");
+  background-size: 16px;
+  margin-right: -16px;
+  width: 16px;
+  max-width: 16px;
+  height: 16px;
+  opacity: 0.6;
+}
+#breadcrumbBar .breadcrumb-file-icon {
+  
+}
+#breadcrumbBar .breadcrumb-folder-icon:not(.project-folder) {
+  list-style-image: url("chrome://global/skin/dirListing/folder.png");
+}
+#breadcrumbBar .breadcrumb-folder-icon.project-folder {
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/box.svg?preset=base&iconset=dark");
+}
+/* Browser Preview */
+toolbar#nav-bar {
+  border: 0;
+}
+/* Quick Launch */
+#quicklaunch {
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+#quicklaunch :not(button) > button {
+  width: 250px;
+  padding: 6px 4px;
+  margin: 2px 0 1px;
+}
+#quicklaunch :not(button) > button image.button-icon {
+  display: block;
+  margin-right: 6px;
+}
+#quicklaunch :not(button) > button label {
+  text-align: left;
+}
+/* Variables & Helpers */
+/* Customization styling */
+/* Widgets & Panes */
+#komodo_main:not(.toolbox-hidden) ko-pane:not(#workspace_bottom_area) {
+  /* Set the border exclusively on the pane, as setting it on the toolbox
+       creates an awkward fuzzy effect when using dark color shchemes */
+
+  border-top: 0 !important;
+}
+page.widget,
+page.widget .toolbar-background {
+  -moz-appearance: none;
+  background-color: transparent;
+}
+ko-pane tabpanels {
+  background-color: transparent !important;
+  border: 0;
+  padding: 0px;
+  margin: 0px;
+}
+.widget_splitter,
+#placesSubpanelSplitter {
+  -moz-appearance: none;
+  background-image: none;
+  background: transparent;
+  border: 0;
+}
+.widget_splitter[orient="vertical"],
+#placesSubpanelSplitter[orient="vertical"] {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.widget_splitter[orient="vertical"] > box,
+#placesSubpanelSplitter[orient="vertical"] > box {
+  -moz-box-orient: horizontal;
+  height: 1px;
+  background: #adadad;
+  margin: 0 10px;
+}
+.widget_splitter:not([orient="vertical"]),
+#placesSubpanelSplitter:not([orient="vertical"]) {
+  position: relative;
+  z-index: 999;
+  margin-left: -2px;
+  margin-right: -3px;
+}
+.widget_splitter:not([orient="vertical"]) > box,
+#placesSubpanelSplitter:not([orient="vertical"]) > box {
+  -moz-box-orient: vertical;
+  width: 2px;
+  padding-left: 2px;
+  border-left: 1px solid #bfbfbf;
+}
+#workspace_left_area,
+#workspace_right_area {
+  background: #ffffff;
+}
+#workspace_left_area:-moz-window-inactive,
+#workspace_right_area:-moz-window-inactive {
+  background: #ffffff;
+}
+#workspace_bottom_area {
+  background: Window;
+}
+#workspace_bottom_area:-moz-window-inactive {
+  background: Window;
+}
+page.widget .pane-text,
+page.widget .toolbarbutton-text,
+page.widget .menulist-label,
+page.widget description {
+  
+}
+page.widget toolbarseparator {
+  -moz-appearance: splitter !important;
+}
+:-moz-any(#klint-tree, #breakpoints-tree) treecol {
+  border-top: 0 !important;
+}
+page.widget[containerOrient="vertical"] tree {
+  margin: 0;
+  -moz-appearance: none !important;
+  background: transparent !important;
+  border: 0;
+}
+page.widget[containerOrient="vertical"] tree treecol:not([hideheader]),
+page.widget[containerOrient="vertical"] tree treecolpicker {
+  -moz-appearance: treeheadercell;
+  padding: 2px;
+  border: 0;
+}
+page.widget[containerOrient="vertical"] tree treechildren::-moz-tree-cell-text {
+  
+}
+page.widget[containerOrient="vertical"] tree treechildren::-moz-tree-cell-text(selected) {
+  color: HighlightText !important;
+}
+page.widget[containerOrient="vertical"] tree treechildren::-moz-tree-cell-text(selected, focus) {
+  color: HighlightText !important;
+}
+page.widget[containerOrient="vertical"] tree treechildren::-moz-tree-row {
+  background: transparent;
+  border: 0;
+}
+page.widget[containerOrient="vertical"] tree treechildren::-moz-tree-row(multicol, odd) {
+  background: transparent;
+}
+page.widget[containerOrient="vertical"] tree treechildren::-moz-tree-row(selected) {
+  background: Highlight;
+}
+page.widget[containerOrient="vertical"] tree treechildren::-moz-tree-row(selected, focus) {
+  background: Highlight;
+}
+page.widget[containerOrient="vertical"] richlistbox,
+page.widget[containerOrient="vertical"] listbox {
+  margin: 0;
+  -moz-appearance: none !important;
+  background: transparent !important;
+  border: 0;
+}
+page.widget[containerOrient="vertical"] richlistbox listheader,
+page.widget[containerOrient="vertical"] listbox listheader {
+  -moz-appearance: treeheadercell;
+  padding: 2px;
+  border: 0;
+}
+page.widget[containerOrient="vertical"] richlistbox listitem,
+page.widget[containerOrient="vertical"] listbox listitem {
+  background: transparent;
+  border: 0;
+}
+page.widget[containerOrient="vertical"] richlistbox listitem[selected="true"],
+page.widget[containerOrient="vertical"] listbox listitem[selected="true"] {
+  color: HighlightText;
+  background: Highlight;
+}
+page.widget[containerOrient="vertical"] richlistbox listitem[selected="true"]:focus,
+page.widget[containerOrient="vertical"] listbox listitem[selected="true"]:focus {
+  color: HighlightText;
+  background: Highlight;
+}
+page.widget[containerOrient="horizontal"] :-moz-any(tree, richlistbox, page) {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+/* Customization styling */
+/* Drop target :: The wrapper for drag/drop indicators */
+ko-pane:not([customizing]) .pane-drop-target {
+  display: none;
+}
+ko-pane .pane-drop-target {
+  /**
+     * Having a non-transparent background makes sure we catch the mouse events,
+     * rather than the plugin getting it and giving us non-sensical data
+     */
+
+  background-color: rgba(255, 255, 255, 0.01);
+}
+/* Empty Container */
+ko-pane .pane-empty-container description {
+  color: graytext;
+  width: 0;
+  margin: 2em;
+  text-align: center;
+}
+/* Draggable Widget */
+ko-pane:not([ko-pane-drag-status]) .pane-drop-placeholders > :not(splitter) {
+  background-color: rgba(255, 255, 255, 0.5);
+  background-image: url("koicon://ko-svg/chrome/icomoon/skin/move.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px dashed rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+ko-pane:not([ko-pane-drag-status]) .pane-drop-placeholders > :not(splitter):hover {
+  border: 2px dashed rgba(0, 0, 0, 0.5);
+}
+/* Drop Area */
+ko-pane[ko-pane-drag-status] .pane-drop-placeholders {
+  background-color: rgba(255, 255, 255, 0.3);
+  background-image: url("koicon://ko-svg/chrome/icomoon/skin/download3.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px dashed rgba(0, 0, 0, 0.3);
+  cursor: move;
+}
+/* Drop Area on Drag hover */
+ko-pane[ko-pane-drag-status="dragover"] .pane-drop-feedback {
+  /* While customizing, display the drag-over effect on panes
+   */
+
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px dashed rgba(0, 0, 0, 0.3);
+}
+textbox input:focus:-moz-placeholder {
+  color: rgba(150, 150, 150, 0.3);
+}
+window.pref-window:not(.show-advanced) .advanced {
+  visibility: collapse;
+}
+/* Fix disabled autocomplete-textbox styling on Linux and Vista (bug 75996).
+ *
+ * Only *specifically* doing this for non-MacOSX and for textboxes of
+ * type autocomplete because for those other cases the result is a
+ * properly colored hbox inside the textbox **with a white border area
+ * around it that I am unable to style**.
+ *
+ * As well, on Mac OS X the border of the textbox is the standard (albeit
+ * subtle) distinguishing UI for the readonly-ness of the textbox. The
+ * current XUL theme handles that already.
+ */
+textbox[type="autocomplete"][disabled="true"] > hbox {
+  background-color: -moz-Dialog;
+}
+/* Menu Bar */
+menubar {
+  -moz-appearance: none !important;
+  border: 0;
+}
+menubar:not(#menubar_main) {
+  
+}
+menubar > menu {
+  -moz-appearance: none;
+  margin: 0;
+  padding: 4px;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  box-shadow: none;
+  -moz-border-top-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+}
+menubar > menu:first-child {
+  padding-left: 8px;
+}
+menubar > menu .menubar-text {
+  margin: 0 !important;
+  color: rgba(0, 0, 0, 0.7);
+}
+menubar > menu:hover {
+  background: #ffffff;
+  border-width: 0;
+  border-style: solid;
+  box-shadow: none;
+}
+menubar > menu:hover .menubar-text {
+  
+}
+menubar > menu[open="true"] {
+  background: rgba(0, 0, 0, 0.2);
+  border-width: 0;
+  border-style: solid;
+}
+menubar > menu[open="true"] .menubar-text {
+  
+}
+/* Menu Popups */
+menupopup,
+panel {
+  
+}
+menupopup menuitem,
+menupopup menu {
+  
+}
+menupopup menuitem label,
+menupopup menu label {
+  
+}
+menupopup menuitem[_moz-menuactive="true"],
+menupopup menu[_moz-menuactive="true"] {
+  
+}
+menupopup menuitem[_moz-menuactive="true"] label,
+menupopup menu[_moz-menuactive="true"] label {
+  
+}
+menupopup menuitem[disabled="true"] label,
+menupopup menu[disabled="true"] label {
+  
+}
+menupopup menuitem label:-moz-any(.menu-iconic-accel,.menu-accel),
+menupopup menu label:-moz-any(.menu-iconic-accel,.menu-accel) {
+  
+}
+menupopup menuitem .menu-right,
+menupopup menu .menu-right {
+  
+}
+menupopup menuseparator {
+  
+}
+#unifiedMenuButton dropmarker {
+  visibility: collapse;
+}
+menuitem[type="checkbox"] > .menu-iconic-left {
+  
+}
+menuitem[type="radiobox"] > .menu-iconic-left {
+  
+}
+/* View Toolbars & Tabs */
+/* See Bug #100432 */
+#menu_view_tabs menuitem[type="checkbox"] > .menu-iconic-left {
+  visibility: hidden;
+}
+#menubar_main {
+  border-bottom: 0;
+}
+#menubar_main > menu {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+/**
+ * File Status within menu items.
+ */
+menuitem.menuitem-file-status {
+  padding-left: 4px;
+}
+menuitem.menuitem-file-status label {
+  padding-left: 2px;
+}
+/**
+ * View as Language menu's.
+ */
+menuitem.languageicon[type="checkbox"] image {
+  /* Make sure the image is visible, otherwise no language icon appears. */
+
+  display: inherit;
+}
+menuitem.languageicon[type="checkbox"] image:not(:-moz-system-metric(windows-classic)) {
+  /* This needs the explicit :not(:windows-classic) to be more specific than
+   * the rules in platform-agnostic komodo.css
+   */
+
+  /* Push the image to the right of the menuitem checkbox. */
+
+  margin-left: 26px;
+  /* Move the label (on the right) closer to the image. */
+
+  margin-right: -7px;
+}
+menuitem.languageicon[type="checkbox"]:-moz-system-metric(windows-classic) {
+  /* On Windows with the classic theme, drop the excessive left margin next to
+   * the checkbox.
+   */
+
+  margin-left: -10px;
+}
+/* Skinning Rules */
+/* Do not use this file, it is meant to be overriden by toolbar themes */

@@ -1,0 +1,304 @@
+<scope doc="# This is a work in progress - see Demos/win32gui_menu.py" ilk="blob" lang="Python" name="win32gui_struct">
+      <scope doc="# An object returned by UnpackDEV_BROADCAST." ilk="class" line="638" lineend="643" name="DEV_BROADCAST_INFO">
+        <scope ilk="function" line="642" lineend="643" name="__str__" returns="str" signature="__str__()">
+          <variable citdl="DEV_BROADCAST_INFO" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="__instancevar__" line="640" name="devicetype" />
+        <scope attributes="__ctor__" ilk="function" line="639" lineend="641" name="__init__" signature="DEV_BROADCAST_INFO(devicetype, **kw)">
+          <variable citdl="DEV_BROADCAST_INFO" ilk="argument" name="self" />
+          <variable ilk="argument" name="devicetype" />
+          <variable attributes="kwargs" ilk="argument" name="kw" />
+        </scope>
+      </scope>
+      <scope doc="# Make a new buffer suitable for querying an items attributes." ilk="function" line="540" lineend="556" name="EmptyLVCOLUMN" returns="tuple" signature="EmptyLVCOLUMN(mask=None, text_buf_size=512)">
+        <variable citdl="str" line="551" name="format" />
+        <variable citdl="list" line="541" name="extra" />
+        <variable citdl="int" ilk="argument" name="mask" />
+        <variable citdl="_make_empty_text_buffer()" line="546" name="text_buffer" />
+        <variable citdl="int" line="550" name="text_addr" />
+        <variable citdl="int" ilk="argument" name="text_buf_size" />
+        <variable citdl="struct.pack()" line="552" name="buf" />
+      </scope>
+      <scope doc="# Make a new buffer suitable for querying an items attributes." ilk="function" line="477" lineend="494" name="EmptyLVITEM" returns="tuple" signature="EmptyLVITEM(item, subitem, mask=None, text_buf_size=512)">
+        <variable citdl="list" line="478" name="extra" />
+        <variable citdl="str" line="488" name="format" />
+        <variable citdl="int" ilk="argument" name="mask" />
+        <variable citdl="_make_empty_text_buffer()" line="483" name="text_buffer" />
+        <variable citdl="int" line="487" name="text_addr" />
+        <variable ilk="argument" name="item" />
+        <variable ilk="argument" name="subitem" />
+        <variable citdl="int" ilk="argument" name="text_buf_size" />
+        <variable citdl="struct.pack()" line="489" name="buf" />
+      </scope>
+      <scope ilk="function" line="266" lineend="282" name="EmptyMENUINFO" returns="array.array()" signature="EmptyMENUINFO(mask=None)">
+        <variable citdl="struct.pack()" line="272" name="buf" />
+        <variable citdl="int" ilk="argument" name="mask" />
+      </scope>
+      <scope ilk="function" line="186" lineend="220" name="EmptyMENUITEMINFO" returns="tuple" signature="EmptyMENUITEMINFO(mask=None, text_buf_size=512)">
+        <variable citdl="list" line="188" name="extra" />
+        <variable citdl="int" ilk="argument" name="mask" />
+        <variable citdl="_make_empty_text_buffer()" line="197" name="text_buffer" />
+        <variable citdl="int" line="201" name="text_addr" />
+        <variable citdl="int" ilk="argument" name="text_buf_size" />
+        <variable citdl="struct.pack()" line="205" name="buf" />
+      </scope>
+      <scope doc="# Make a new buffer suitable for querying hitem&apos;s attributes." ilk="function" line="342" lineend="361" name="EmptyTVITEM" returns="tuple" signature="EmptyTVITEM(hitem, mask=None, text_buf_size=512)">
+        <variable citdl="list" line="343" name="extra" />
+        <variable citdl="str" line="354" name="format" />
+        <variable citdl="int" ilk="argument" name="mask" />
+        <variable citdl="_make_empty_text_buffer()" line="349" name="text_buffer" />
+        <variable citdl="int" line="353" name="text_addr" />
+        <variable citdl="int" ilk="argument" name="text_buf_size" />
+        <variable ilk="argument" name="hitem" />
+        <variable citdl="struct.pack()" line="355" name="buf" />
+      </scope>
+      <scope doc="# Generic function for packing a DEV_BROADCAST_* structure - generally used # by the other PackDEV_BROADCAST_* functions in this module." ilk="function" line="601" lineend="609" name="PackDEV_BROADCAST" returns="_make_bytes()" signature="PackDEV_BROADCAST(devicetype, rest_fmt, rest_data, extra_data=&apos;&apos;)">
+        <variable citdl="str" line="606" name="format" />
+        <variable citdl="tuple" line="608" name="data" />
+        <variable ilk="argument" name="rest_data" />
+        <variable ilk="argument" name="devicetype" />
+        <variable ilk="argument" name="rest_fmt" />
+        <variable citdl="_make_bytes()" ilk="argument" name="extra_data" />
+        <variable citdl="struct.calcsize()" line="607" name="full_size" />
+      </scope>
+      <scope ilk="function" line="620" lineend="635" name="PackDEV_BROADCAST_DEVICEINTERFACE" returns="PackDEV_BROADCAST()" signature="PackDEV_BROADCAST_DEVICEINTERFACE(classguid, name=&apos;&apos;)">
+        <variable citdl="tuple" line="634" name="rest_data" />
+        <variable citdl="len()" line="632" name="rest_fmt" />
+        <variable citdl="name.encode()" ilk="argument" name="name" />
+        <variable ilk="argument" name="classguid" />
+      </scope>
+      <scope ilk="function" line="611" lineend="614" name="PackDEV_BROADCAST_HANDLE" returns="PackDEV_BROADCAST()" signature="PackDEV_BROADCAST_HANDLE(handle, hdevnotify=0, guid=&apos;\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00&apos;, name_offset=0, data=&apos;\x00&apos;)">
+        <variable citdl="int" ilk="argument" name="hdevnotify" />
+        <variable citdl="_make_bytes()" ilk="argument" name="guid" />
+        <variable ilk="argument" name="handle" />
+        <variable citdl="int" ilk="argument" name="name_offset" />
+        <variable citdl="_make_bytes()" ilk="argument" name="data" />
+      </scope>
+      <scope ilk="function" line="616" lineend="618" name="PackDEV_BROADCAST_VOLUME" returns="PackDEV_BROADCAST()" signature="PackDEV_BROADCAST_VOLUME(unitmask, flags)">
+        <variable ilk="argument" name="unitmask" />
+        <variable ilk="argument" name="flags" />
+      </scope>
+      <scope ilk="function" line="571" lineend="595" name="PackHDITEM" returns="tuple" signature="PackHDITEM(cxy=None, text=None, hbm=None, fmt=None, param=None, image=None, order=None)">
+        <variable ilk="argument" name="hbm" />
+        <variable citdl="list" line="573" name="extra" />
+        <variable ilk="argument" name="cxy" />
+        <variable ilk="argument" name="fmt" />
+        <variable citdl="str" line="591" name="format" />
+        <variable citdl="int" line="574" name="mask" />
+        <variable citdl="_make_text_buffer()" line="586" name="text_buffer" />
+        <variable ilk="argument" name="param" />
+        <variable citdl="len()" line="589" name="text_len" />
+        <variable citdl="int" line="584" name="text_addr" />
+        <variable ilk="argument" name="image" />
+        <variable ilk="argument" name="text" />
+        <variable citdl="struct.pack()" line="592" name="buf" />
+        <variable ilk="argument" name="order" />
+      </scope>
+      <scope doc="# List view column structure" ilk="function" line="498" lineend="519" name="PackLVCOLUMN" returns="tuple" signature="PackLVCOLUMN(fmt=None, cx=None, text=None, subItem=None, image=None, order=None)">
+        <variable citdl="list" line="499" name="extra" />
+        <variable ilk="argument" name="text" />
+        <variable ilk="argument" name="fmt" />
+        <variable citdl="str" line="514" name="format" />
+        <variable citdl="int" line="500" name="mask" />
+        <variable citdl="_make_text_buffer()" line="510" name="text_buffer" />
+        <variable citdl="len()" line="513" name="text_len" />
+        <variable citdl="int" line="508" name="text_addr" />
+        <variable ilk="argument" name="cx" />
+        <variable ilk="argument" name="subItem" />
+        <variable ilk="argument" name="image" />
+        <variable citdl="struct.pack()" line="515" name="buf" />
+        <variable ilk="argument" name="order" />
+      </scope>
+      <scope doc="# List view hit-test." ilk="function" line="559" lineend="564" name="PackLVHITTEST" returns="tuple" signature="PackLVHITTEST(pt)">
+        <variable citdl="struct.pack()" line="561" name="buf" />
+        <variable ilk="argument" name="pt" />
+        <variable citdl="str" line="560" name="format" />
+      </scope>
+      <scope doc="# List view items" ilk="function" line="404" lineend="438" name="PackLVITEM" returns="tuple" signature="PackLVITEM(item=None, subItem=None, state=None, stateMask=None, text=None, image=None, param=None, indent=None)">
+        <variable citdl="int" ilk="argument" name="indent" />
+        <variable citdl="list" line="405" name="extra" />
+        <variable ilk="argument" name="text" />
+        <variable citdl="int" ilk="argument" name="stateMask" />
+        <variable citdl="str" line="432" name="format" />
+        <variable citdl="int" line="406" name="mask" />
+        <variable citdl="_make_text_buffer()" line="428" name="text_buffer" />
+        <variable citdl="int" ilk="argument" name="param" />
+        <variable citdl="len()" line="429" name="text_len" />
+        <variable citdl="int" line="425" name="text_addr" />
+        <variable citdl="int" ilk="argument" name="item" />
+        <variable citdl="int" ilk="argument" name="state" />
+        <variable citdl="int" ilk="argument" name="subItem" />
+        <variable citdl="struct.pack()" line="433" name="buf" />
+        <variable citdl="int" ilk="argument" name="image" />
+      </scope>
+      <scope ilk="function" line="225" lineend="248" name="PackMENUINFO" returns="array.array()" signature="PackMENUINFO(dwStyle=None, cyMax=None, hbrBack=None, dwContextHelpID=None, dwMenuData=None, fMask=0)">
+        <variable citdl="int" ilk="argument" name="dwStyle" />
+        <variable citdl="int" ilk="argument" name="dwMenuData" />
+        <variable citdl="int" ilk="argument" name="dwContextHelpID" />
+        <variable citdl="struct.pack()" line="239" name="item" />
+        <variable citdl="int" ilk="argument" name="hbrBack" />
+        <variable citdl="int" ilk="argument" name="fMask" />
+        <variable citdl="int" ilk="argument" name="cyMax" />
+      </scope>
+      <scope ilk="function" line="89" lineend="156" name="PackMENUITEMINFO" returns="tuple" signature="PackMENUITEMINFO(fType=None, fState=None, wID=None, hSubMenu=None, hbmpChecked=None, hbmpUnchecked=None, dwItemData=None, text=None, hbmpItem=None, dwTypeData=None)">
+        <variable citdl="int" ilk="argument" name="wID" />
+        <variable citdl="int" ilk="argument" name="dwItemData" />
+        <variable citdl="int" ilk="argument" name="hbmpChecked" />
+        <variable ilk="argument" name="dwTypeData" />
+        <variable ilk="argument" name="hbmpUnchecked" />
+        <variable citdl="int" ilk="argument" name="fState" />
+        <variable citdl="struct.pack()" line="139" name="item" />
+        <variable citdl="int" line="132" name="lptext" />
+        <variable citdl="int" ilk="argument" name="fType" />
+        <variable ilk="argument" name="text" />
+        <variable citdl="int" line="129" name="cch" />
+        <variable citdl="int" ilk="argument" name="hSubMenu" />
+        <variable citdl="_make_text_buffer()" line="128" name="str_buf" />
+        <variable citdl="int" line="105" name="fMask" />
+        <variable citdl="int" ilk="argument" name="hbmpItem" />
+        <variable citdl="list" line="94" name="extras" />
+      </scope>
+      <scope ilk="function" line="307" lineend="311" name="PackTVINSERTSTRUCT" returns="tuple" signature="PackTVINSERTSTRUCT(parent, insertAfter, tvitem)">
+        <variable ilk="argument" name="insertAfter" />
+        <variable ilk="argument" name="tvitem" />
+        <variable citdl="len()" line="310" name="format" />
+        <variable ilk="argument" name="parent" />
+        <variable citdl="tvitem_buf.tostring()" line="309" name="tvitem_buf" />
+      </scope>
+      <scope ilk="function" line="313" lineend="339" name="PackTVITEM" returns="tuple" signature="PackTVITEM(hitem, state, stateMask, text, image, selimage, citems, param)">
+        <variable ilk="argument" name="citems" />
+        <variable ilk="argument" name="text" />
+        <variable citdl="int" ilk="argument" name="stateMask" />
+        <variable citdl="list" line="314" name="extra" />
+        <variable citdl="int" line="315" name="mask" />
+        <variable citdl="_make_text_buffer()" line="328" name="text_buffer" />
+        <variable ilk="argument" name="param" />
+        <variable citdl="len()" line="329" name="text_len" />
+        <variable citdl="int" line="326" name="text_addr" />
+        <variable ilk="argument" name="state" />
+        <variable ilk="argument" name="hitem" />
+        <variable ilk="argument" name="selimage" />
+        <variable citdl="struct.pack()" line="333" name="buf" />
+        <variable ilk="argument" name="image" />
+        <variable citdl="str" line="332" name="format" />
+      </scope>
+      <scope doc="# Support for unpacking the &apos;lparam&apos;" ilk="function" line="646" lineend="676" name="UnpackDEV_BROADCAST" returns="DEV_BROADCAST_INFO" signature="UnpackDEV_BROADCAST(lparam)">
+        <variable ilk="argument" name="lparam" />
+        <variable citdl="struct.calcsize()" line="650" name="hdr_size" />
+        <variable citdl="dict" line="658" name="extra" />
+        <variable citdl="str" line="661" name="fmt" />
+        <variable citdl="win32gui.PyGetMemory()" line="651" name="hdr_buf" />
+        <variable citdl="str" line="649" name="hdr_format" />
+        <variable citdl="win32gui.PyGetMemory()" line="656" name="buf" />
+      </scope>
+      <scope ilk="function" line="521" lineend="536" name="UnpackLVCOLUMN" returns="tuple" signature="UnpackLVCOLUMN(lparam)">
+        <variable ilk="argument" name="lparam" />
+        <variable citdl="str" line="522" name="format" />
+        <variable citdl="win32gui.PyGetString()" line="533" name="text" />
+        <variable line="526" name="fmt" />
+        <variable line="531" name="order" />
+        <variable line="528" name="text_addr" />
+        <variable line="527" name="cx" />
+        <variable line="529" name="subItem" />
+        <variable line="530" name="image" />
+      </scope>
+      <scope doc="# Unpack an &quot;LVNOTIFY&quot; message" ilk="function" line="460" lineend="465" name="UnpackLVDISPINFO" returns="tuple" signature="UnpackLVDISPINFO(lparam)">
+        <variable ilk="argument" name="lparam" />
+        <variable citdl="win32gui.PyGetMemory()" line="462" name="buf" />
+        <variable citdl="UnpackLVITEM()" line="464" name="item" />
+        <variable citdl="str" line="461" name="format" />
+      </scope>
+      <scope ilk="function" line="566" lineend="569" name="UnpackLVHITTEST" returns="tuple" signature="UnpackLVHITTEST(buf)">
+        <variable ilk="argument" name="buf" />
+        <variable citdl="str" line="567" name="format" />
+      </scope>
+      <scope ilk="function" line="440" lineend="457" name="UnpackLVITEM" returns="tuple" signature="UnpackLVITEM(buffer)">
+        <variable line="448" name="item_param" />
+        <variable line="447" name="item_image" />
+        <variable ilk="argument" name="buffer" />
+        <variable line="449" name="item_indent" />
+        <variable line="446" name="item_textptr" />
+        <variable citdl="win32gui.PyGetString()" line="453" name="text" />
+        <variable line="450" name="item_state" />
+      </scope>
+      <scope ilk="function" line="467" lineend="473" name="UnpackLVNOTIFY" returns="tuple" signature="UnpackLVNOTIFY(lparam)">
+        <variable ilk="argument" name="lparam" />
+        <variable citdl="win32gui.PyGetMemory()" line="469" name="buf" />
+        <variable citdl="str" line="468" name="format" />
+      </scope>
+      <scope ilk="function" line="250" lineend="264" name="UnpackMENUINFO" returns="tuple" signature="UnpackMENUINFO(s)">
+        <variable line="259" name="dwStyle" />
+        <variable line="263" name="dwMenuData" />
+        <variable line="262" name="dwContextHelpID" />
+        <variable line="261" name="hbrBack" />
+        <variable ilk="argument" name="s" />
+        <variable line="260" name="cyMax" />
+      </scope>
+      <scope ilk="function" line="158" lineend="184" name="UnpackMENUITEMINFO" returns="tuple" signature="UnpackMENUITEMINFO(s)">
+        <variable line="174" name="wID" />
+        <variable line="177" name="dwItemData" />
+        <variable line="176" name="hbmpChecked" />
+        <variable citdl="win32gui.PyGetString()" line="180" name="text" />
+        <variable line="173" name="fState" />
+        <variable ilk="argument" name="s" />
+        <variable line="172" name="fType" />
+        <variable line="175" name="hSubMenu" />
+        <variable line="178" name="hbmpItem" />
+      </scope>
+      <scope ilk="function" line="395" lineend="400" name="UnpackTVDISPINFO" returns="tuple" signature="UnpackTVDISPINFO(lparam)">
+        <variable ilk="argument" name="lparam" />
+        <variable citdl="win32gui.PyGetMemory()" line="397" name="buf" />
+        <variable citdl="UnpackTVITEM()" line="399" name="item" />
+        <variable citdl="str" line="396" name="format" />
+      </scope>
+      <scope ilk="function" line="363" lineend="383" name="UnpackTVITEM" returns="tuple" signature="UnpackTVITEM(buffer)">
+        <variable line="373" name="item_param" />
+        <variable line="372" name="item_image" />
+        <variable ilk="argument" name="buffer" />
+        <variable citdl="win32gui.PyGetString()" line="378" name="text" />
+        <variable line="370" name="item_textptr" />
+        <variable line="374" name="item_selimage" />
+        <variable line="371" name="item_cChildren" />
+        <variable line="375" name="item_state" />
+      </scope>
+      <scope doc="# Unpack the lparm from a &quot;TVNOTIFY&quot; message" ilk="function" line="386" lineend="393" name="UnpackTVNOTIFY" returns="tuple" signature="UnpackTVNOTIFY(lparam)">
+        <variable ilk="argument" name="lparam" />
+        <variable citdl="UnpackTVITEM()" line="392" name="item_new" />
+        <variable citdl="UnpackTVITEM()" line="391" name="item_old" />
+        <variable citdl="win32gui.PyGetMemory()" line="388" name="buf" />
+        <variable citdl="str" line="387" name="format" />
+      </scope>
+      <scope doc="# Generic WM_NOTIFY unpacking" ilk="function" line="75" lineend="79" name="UnpackWMNOTIFY" returns="tuple" signature="UnpackWMNOTIFY(lparam)">
+        <variable ilk="argument" name="lparam" />
+        <variable citdl="win32gui.PyGetMemory()" line="77" name="buf" />
+        <variable citdl="str" line="76" name="format" />
+      </scope>
+      <import module="array" />
+      <import module="commctrl" />
+      <import module="pywintypes" />
+      <import module="struct" />
+      <import module="sys" />
+      <import module="win32con" />
+      <import module="win32gui" />
+      <scope attributes="protected __hidden__" ilk="function" line="68" lineend="69" name="_make_memory" returns="bytes()" signature="_make_memory(ob)">
+        <variable ilk="argument" name="ob" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="71" lineend="72" name="_make_bytes" returns="sval.encode()" signature="_make_bytes(sval)">
+        <variable ilk="argument" name="sval" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="299" lineend="305" name="_GetMaskAndVal" returns="tuple" signature="_GetMaskAndVal(val, default, mask, flag)">
+        <variable ilk="argument" name="val" />
+        <variable ilk="argument" name="default" />
+        <variable ilk="argument" name="mask" />
+        <variable ilk="argument" name="flag" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="58" lineend="59" name="_make_empty_text_buffer" returns="_make_text_buffer()" signature="_make_empty_text_buffer(cch)">
+        <variable ilk="argument" name="cch" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="str" line="223" name="_menuinfo_fmt" />
+      <variable attributes="protected __hidden__" citdl="str" line="87" name="_menuiteminfo_fmt" />
+      <scope attributes="protected __hidden__" ilk="function" line="52" lineend="55" name="_make_text_buffer" returns="array.array()" signature="_make_text_buffer(text)">
+        <variable citdl="text.encode()" ilk="argument" name="text" />
+      </scope>
+    </scope>
+    

@@ -1,0 +1,53 @@
+<scope doc="Event Log Utilities - helper for win32evtlog.pyd" ilk="blob" lang="Python" name="win32evtlogutil">
+      <scope doc="Add a source of messages to the event log." ilk="function" line="10" lineend="52" name="AddSourceToRegistry" signature="AddSourceToRegistry(appName, msgDLL=None, eventLogType=&apos;Application&apos;, eventLogFlags=None)">
+        <variable citdl="win32api.RegCreateKey()" line="34" name="hkey" />
+        <variable citdl="str" ilk="argument" name="eventLogType" />
+        <variable citdl="win32evtlog.__file__" ilk="argument" name="msgDLL" />
+        <variable citdl="int" ilk="argument" name="eventLogFlags" />
+        <variable ilk="argument" name="appName" />
+      </scope>
+      <scope ilk="function" line="140" lineend="152" name="FeedEventLogRecords" signature="FeedEventLogRecords(feeder, machineName=None, logName=&apos;Application&apos;, readFlags=None)">
+        <variable ilk="argument" name="machineName" />
+        <variable ilk="argument" name="feeder" />
+        <variable citdl="win32evtlog.ReadEventLog()" line="147" name="objects" />
+        <variable citdl="int" ilk="argument" name="readFlags" />
+        <variable citdl="win32evtlog.OpenEventLog()" line="144" name="h" />
+        <variable citdl="str" ilk="argument" name="logName" />
+      </scope>
+      <scope doc="Given a tuple from ReadEventLog, and optionally where the event record came from, load the message, and process message inserts." ilk="function" line="84" lineend="124" name="FormatMessage" returns="unicode" signature="FormatMessage(eventLogRecord, logType=&apos;Application&apos;)">
+        <variable citdl="win32api.RegOpenKey()" line="101" name="handle" />
+        <variable citdl="win32api.LoadLibraryEx()" line="112" name="dllHandle" />
+        <variable citdl="str" ilk="argument" name="logType" />
+        <variable citdl="win32api.ExpandEnvironmentStrings()" line="110" name="dllName" />
+        <variable citdl="str" line="97" name="keyName" />
+        <variable line="103" name="dllNames" />
+        <variable ilk="argument" name="eventLogRecord" />
+        <variable citdl="win32api.FormatMessageW()" line="105" name="data" />
+      </scope>
+      <scope doc="Removes a source of messages from the event log." ilk="function" line="54" lineend="64" name="RemoveSourceFromRegistry" signature="RemoveSourceFromRegistry(appName, eventLogType=&apos;Application&apos;)">
+        <variable citdl="str" ilk="argument" name="eventLogType" />
+        <variable ilk="argument" name="appName" />
+      </scope>
+      <scope doc="Report an event for a previously added event source." ilk="function" line="67" name="ReportEvent" signature="ReportEvent(appName, eventID, eventCategory=0, eventType=1, strings=None, data=None, sid=None)">
+        <variable ilk="argument" name="eventID" />
+        <variable citdl="win32evtlog.RegisterEventSource()" line="71" name="hAppLog" />
+        <variable ilk="argument" name="appName" />
+        <variable citdl="win32evtlog.EVENTLOG_ERROR_TYPE" ilk="argument" name="eventType" />
+        <variable citdl="int" ilk="argument" name="eventCategory" />
+        <variable ilk="argument" name="sid" />
+        <variable ilk="argument" name="data" />
+        <variable ilk="argument" name="strings" />
+      </scope>
+      <scope doc="As for FormatMessage, except returns an error message if the message can not be processed." ilk="function" line="126" lineend="138" name="SafeFormatMessage" returns="tuple" signature="SafeFormatMessage(eventLogRecord, logType=None)">
+        <variable citdl="str" ilk="argument" name="logType" />
+        <variable ilk="argument" name="eventLogRecord" />
+        <variable citdl="__builtins__.unicode.join()" line="135" name="desc" />
+      </scope>
+      <scope classrefs="Exception" ilk="class" line="6" name="error" />
+      <variable citdl="int" line="8" name="langid" />
+      <import module="win32api" />
+      <import module="win32con" />
+      <import module="win32evtlog" />
+      <import module="winerror" />
+    </scope>
+    

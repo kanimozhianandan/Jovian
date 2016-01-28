@@ -1,0 +1,12 @@
+<scope ilk="blob" lang="JavaScript" name="xpcom">
+      
+      <variable doc="XPCOM base object" name="Components" />
+      
+      <variable citdl="Components.classes" name="Cc" />
+      <variable citdl="Components.classes" name="CC" />
+      <variable citdl="Components.interfaces" name="Ci" />
+      <variable citdl="Components.interfaces" name="CI" />
+      <variable citdl="Components.utils" name="Cu" />
+      <variable citdl="Components.utils" name="CU" />
+    </scope>
+  

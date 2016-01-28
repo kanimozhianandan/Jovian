@@ -1,0 +1,11 @@
+<scope ilk="blob" lang="Perl" name="Pod::Perldoc::ToRtf">
+      <scope ilk="class" line="1" lineend="25" name="Pod::Perldoc::ToRtf">
+        <import line="4" module="parent" symbol="Pod::Simple::RTF" />
+        <variable line="6" name="$VERSION" />
+        <scope ilk="function" line="9" lineend="9" name="is_pageable" signature="is_pageable()" />
+        <scope ilk="function" line="10" lineend="10" name="write_with_binmode" signature="write_with_binmode()" />
+        <scope ilk="function" line="11" lineend="11" name="output_extension" signature="output_extension()" />
+        <scope ilk="function" line="13" lineend="23" name="page_for_perldoc" signature="page_for_perldoc($self, $tempfile, $perldoc)" />
+      </scope>
+    </scope>
+    

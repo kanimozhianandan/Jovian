@@ -1,0 +1,43 @@
+<scope ilk="blob" lang="JavaScript" name="Style.js">
+      <variable citdl="Object" name="MochiKit">
+        <variable citdl="Object" name="Style">
+          <scope doc="Looks up a CSS property for the given element. The element&#xA;can be specified as either a string with the element&apos;s ID or&#xA;the element object itself." ilk="function" name="getStyle" signature="getStyle(element, cssSelector)" />
+          <scope doc="Set CSS properties on a the given element. The element can&#xA;be specified as either a string with the element&apos;s ID or the&#xA;element object itself." ilk="function" name="setStyle" signature="setStyle(element, styles)" />
+          <scope doc="Sets opacity for element. Valid opacity values range from 0&#xA;(invisible) to 1 (opaque)." ilk="function" name="setOpacity" signature="setOpacity(element, opacity)" />
+          <scope doc="Return the absolute pixel width and height of element as an&#xA;object with w and h properties, or undefined if element is&#xA;not in the document. The size will include padding and&#xA;border, but not margins, unless contentSize is set to true,&#xA;in which case the size will be only the content size,&#xA;without padding and border." ilk="function" name="getElementDimensions" signature="getElementDimensions(element[, contentSize=false])" />
+          <scope doc="Sets the dimensions of element in the document from an&#xA;object with w and h properties. Warning: IE in quirks-mode&#xA;seems to behave strange when you set the height off an&#xA;element containing text to 0." ilk="function" name="setElementDimensions" signature="setElementDimensions(element, dimensions[, units=&apos;px&apos;])" />
+          <scope doc="Return the absolute pixel position of element in the&#xA;document as an object with x and y properties, or undefined&#xA;if element is not in the document. element may be specified&#xA;as a string to be looked up with getElement, a DOM element,&#xA;or trivially as an object with x and/or y properties." ilk="function" name="getElementPosition" signature="getElementPosition(element[, relativeTo={x: 0, y: 0}])" />
+          <scope doc="Sets the absolute position of element in the document from&#xA;an object with x and y properties. element: A reference to&#xA;the DOM element to update (if a string is given,&#xA;getElement(node) will be used to locate the node) position:&#xA;An object with x and y properties." ilk="function" name="setElementPosition" signature="setElementPosition(element, position[, units=&apos;px&apos;])" />
+          <scope doc="Ensure that element.style.position is set to &quot;relative&quot; if&#xA;it is not set or is &quot;static&quot;. If element is a string, then&#xA;it will be looked up with getElement." ilk="function" name="makePositioned" signature="makePositioned(element)" />
+          <scope doc="Restore the setting of element.style.position set by&#xA;makePositioned(element). If element is a string, then it&#xA;will be looked up with getElement." ilk="function" name="undoPositioned" signature="undoPositioned(element)" />
+          <scope doc="Ensure that element.style.overflow = &apos;hidden&apos;. If element is&#xA;a string, then it will be looked up with getElement." ilk="function" name="makeClipping" signature="makeClipping(element)" />
+          <scope doc="Restore the setting of element.style.overflow set by&#xA;makeClipping(element). If element is a string, then it will&#xA;be looked up with getElement." ilk="function" name="undoClipping" signature="undoClipping(element, overflow)" />
+          <scope doc="Change the style.display for the given element(s). Usually&#xA;used as the partial forms: showElement(element, ...)&#xA;hideElement(element, ...) Elements are looked up with&#xA;getElement, so string identifiers are acceptable." ilk="function" name="setDisplayForElement" signature="setDisplayForElement(display, element[, ...])" />
+          <scope doc="Partial form of setDisplayForElement, specifically:&#xA;partial(setDisplayForElement, &quot;block&quot;) For information about&#xA;the caveats of using a style.display based show/hide&#xA;mechanism, and a CSS based alternative, see Element&#xA;Visibility." ilk="function" name="showElement" signature="showElement(element, ...)" />
+          <scope doc="Partial form of setDisplayForElement, specifically:&#xA;partial(setDisplayForElement, &quot;none&quot;) For information about&#xA;the caveats of using a style.display based show/hide&#xA;mechanism, and a CSS based alternative, see Element&#xA;Visibility." ilk="function" name="hideElement" signature="hideElement(element, ...)" />
+          <scope doc="Return the pixel width and height of the viewport as an&#xA;object with w and h properties." ilk="function" name="getViewportDimensions" signature="getViewportDimensions()" />
+          <scope doc="Return the pixel position of the viewport inside the window,&#xA;as a Coordinates object." ilk="function" name="getViewportPosition" signature="getViewportPosition()" />
+          <scope doc="Constructs an object with x and y properties. obj.toString()&#xA;returns something like {x: 0, y: 42} for debugging." ilk="function" name="Coordinates" signature="Coordinates(x, y)" />
+          <scope doc="Constructs an object with w and h properties. obj.toString()&#xA;returns something like {w: 0, h: 42} for debugging." ilk="function" name="Dimensions" signature="Dimensions(w, h)" />
+        </variable>
+      </variable>
+      <variable citdl="MochiKit.Style.getStyle" name="getStyle" />
+      <variable citdl="MochiKit.Style.setStyle" name="setStyle" />
+      <variable citdl="MochiKit.Style.setOpacity" name="setOpacity" />
+      <variable citdl="MochiKit.Style.getElementDimensions" name="getElementDimensions" />
+      <variable citdl="MochiKit.Style.setElementDimensions" name="setElementDimensions" />
+      <variable citdl="MochiKit.Style.getElementPosition" name="getElementPosition" />
+      <variable citdl="MochiKit.Style.setElementPosition" name="setElementPosition" />
+      <variable citdl="MochiKit.Style.makePositioned" name="makePositioned" />
+      <variable citdl="MochiKit.Style.undoPositioned" name="undoPositioned" />
+      <variable citdl="MochiKit.Style.makeClipping" name="makeClipping" />
+      <variable citdl="MochiKit.Style.undoClipping" name="undoClipping" />
+      <variable citdl="MochiKit.Style.setDisplayForElement" name="setDisplayForElement" />
+      <variable citdl="MochiKit.Style.showElement" name="showElement" />
+      <variable citdl="MochiKit.Style.hideElement" name="hideElement" />
+      <variable citdl="MochiKit.Style.getViewportDimensions" name="getViewportDimensions" />
+      <variable citdl="MochiKit.Style.getViewportPosition" name="getViewportPosition" />
+      <variable citdl="MochiKit.Style.Coordinates" name="Coordinates" />
+      <variable citdl="MochiKit.Style.Dimensions" name="Dimensions" />
+    </scope>
+  

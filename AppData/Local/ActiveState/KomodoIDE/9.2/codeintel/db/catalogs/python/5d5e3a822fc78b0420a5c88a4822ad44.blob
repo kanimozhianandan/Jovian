@@ -1,0 +1,7 @@
+<scope ilk="blob" lang="Python" name="timer">
+      <variable citdl="str" name="__version__" />
+      <scope classrefs="Exception" ilk="class" name="error" />
+      <scope doc="Stops a timer" ilk="function" name="kill_timer" signature="kill_timer(timer_id) -&gt; boolean" />
+      <scope doc="int = set_timer(milliseconds, callback} Creates a timer that executes a callback function" ilk="function" name="set_timer" />
+    </scope>
+    

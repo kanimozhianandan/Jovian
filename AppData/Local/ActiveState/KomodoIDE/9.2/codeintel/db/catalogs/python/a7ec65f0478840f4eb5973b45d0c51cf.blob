@@ -1,0 +1,94 @@
+<scope doc="# Some registry helpers." ilk="blob" lang="Python" name="regutil">
+      <scope doc="Builds a string containing the path to the current registry key." ilk="function" line="43" lineend="51" name="BuildDefaultPythonKey" returns="str" signature="BuildDefaultPythonKey()" />
+      <variable citdl="str" line="10" name="CLSIDPyFile" />
+      <scope ilk="function" line="53" lineend="54" name="GetAppPathsKey" returns="str" signature="GetAppPathsKey()" />
+      <scope doc="Get a registered .exe" ilk="function" line="79" lineend="82" name="GetRegisteredExe" returns="win32api.RegQueryValue()" signature="GetRegisteredExe(exeAlias)">
+        <variable ilk="argument" name="exeAlias" />
+      </scope>
+      <scope doc="Given a description, return the registered entry." ilk="function" line="158" lineend="168" name="GetRegisteredHelpFile" returns="GetRegistryDefaultValue()" signature="GetRegisteredHelpFile(helpDesc)">
+        <variable ilk="argument" name="helpDesc" />
+      </scope>
+      <scope doc="Get a registered named path, or None if it doesnt exist." ilk="function" line="114" lineend="125" name="GetRegisteredNamedPath" returns="win32api.RegQueryValue()" signature="GetRegisteredNamedPath(name)">
+        <variable citdl="str" line="117" name="keyStr" />
+        <variable ilk="argument" name="name" />
+      </scope>
+      <scope doc="A helper to return the default value for a key in the registry." ilk="function" line="24" lineend="28" name="GetRegistryDefaultValue" returns="win32api.RegQueryValue()" signature="GetRegistryDefaultValue(subkey, rootkey=None)">
+        <variable citdl="GetRootKey()" ilk="argument" name="rootkey" />
+        <variable ilk="argument" name="subkey" />
+      </scope>
+      <scope doc="Retrieves the Registry root in use by Python." ilk="function" line="15" lineend="22" name="GetRootKey" returns="win32con.HKEY_LOCAL_MACHINE" signature="GetRootKey()" />
+      <scope doc="Registers the core DLL in the registry." ilk="function" line="218" lineend="239" name="RegisterCoreDLL" signature="RegisterCoreDLL(coredllName=None)">
+        <variable citdl="win32api.RegCreateKey()" line="233" name="hKey" />
+        <variable citdl="win32api.GetModuleFileName()" ilk="argument" name="coredllName" />
+      </scope>
+      <scope ilk="function" line="278" lineend="282" name="RegisterDDECommand" signature="RegisterDDECommand(shellCommand, ddeApp, ddeTopic, ddeCommand)">
+        <variable ilk="argument" name="ddeApp" />
+        <variable ilk="argument" name="ddeCommand" />
+        <variable citdl="str" line="279" name="base" />
+        <variable ilk="argument" name="shellCommand" />
+        <variable ilk="argument" name="ddeTopic" />
+      </scope>
+      <scope doc="Register the core Python file extensions." ilk="function" line="241" lineend="265" name="RegisterFileExtensions" signature="RegisterFileExtensions(defPyIcon, defPycIcon, runCommand)">
+        <variable ilk="argument" name="defPycIcon" />
+        <variable citdl="str" line="254" name="base" />
+        <variable ilk="argument" name="runCommand" />
+        <variable ilk="argument" name="defPyIcon" />
+        <variable citdl="str" line="249" name="pythonFileId" />
+      </scope>
+      <scope doc="Register a help file in the registry." ilk="function" line="170" lineend="189" name="RegisterHelpFile" signature="RegisterHelpFile(helpFile, helpPath, helpDesc=None, bCheckFile=1)">
+        <variable citdl="os.path.join()" line="182" name="fullHelpFile" />
+        <variable ilk="argument" name="helpDesc" />
+        <variable ilk="argument" name="helpPath" />
+        <variable citdl="int" ilk="argument" name="bCheckFile" />
+        <variable ilk="argument" name="helpFile" />
+      </scope>
+      <scope doc="Register an explicit module in the registry." ilk="function" line="128" lineend="143" name="RegisterModule" signature="RegisterModule(modName, modPath)">
+        <variable ilk="argument" name="modName" />
+        <variable ilk="argument" name="modPath" />
+      </scope>
+      <scope doc="Register a named path - ie, a named PythonPath entry." ilk="function" line="95" lineend="100" name="RegisterNamedPath" signature="RegisterNamedPath(name, path)">
+        <variable ilk="argument" name="path" />
+        <variable citdl="str" line="98" name="keyStr" />
+        <variable ilk="argument" name="name" />
+      </scope>
+      <scope doc="Register a .exe file that uses Python." ilk="function" line="56" lineend="77" name="RegisterPythonExe" signature="RegisterPythonExe(exeFullPath, exeAlias=None, exeAppPath=None)">
+        <variable ilk="argument" name="exeFullPath" />
+        <variable citdl="os.path.basename()" ilk="argument" name="exeAlias" />
+        <variable ilk="argument" name="exeAppPath" />
+      </scope>
+      <scope ilk="function" line="267" lineend="276" name="RegisterShellCommand" signature="RegisterShellCommand(shellCommand, exeCommand, shellUserCommand=None)">
+        <variable ilk="argument" name="exeCommand" />
+        <variable citdl="str" line="272" name="base" />
+        <variable ilk="argument" name="shellCommand" />
+        <variable ilk="argument" name="shellUserCommand" />
+      </scope>
+      <variable citdl="str" line="12" name="RegistryIDPyFile" />
+      <variable citdl="str" line="13" name="RegistryIDPycFile" />
+      <scope doc="A helper to set the default value for a key in the registry" ilk="function" line="30" lineend="41" name="SetRegistryDefaultValue" signature="SetRegistryDefaultValue(subKey, value, rootkey=None)">
+        <variable citdl="win32con.REG_SZ" line="35" name="typeId" />
+        <variable citdl="GetRootKey()" ilk="argument" name="rootkey" />
+        <variable ilk="argument" name="subKey" />
+        <variable ilk="argument" name="value" />
+      </scope>
+      <scope doc="Unregister a help file in the registry." ilk="function" line="191" lineend="216" name="UnregisterHelpFile" signature="UnregisterHelpFile(helpFile, helpDesc=None)">
+        <variable ilk="argument" name="helpDesc" />
+        <variable citdl="win32api.RegOpenKey()" line="197" name="key" />
+        <variable ilk="argument" name="helpFile" />
+      </scope>
+      <scope doc="Unregister an explicit module in the registry." ilk="function" line="145" lineend="156" name="UnregisterModule" signature="UnregisterModule(modName)">
+        <variable ilk="argument" name="modName" />
+      </scope>
+      <scope doc="Unregister a named path - ie, a named PythonPath entry." ilk="function" line="102" name="UnregisterNamedPath" signature="UnregisterNamedPath(name)">
+        <variable citdl="BuildDefaultPythonKey()" line="105" name="keyStr" />
+        <variable ilk="argument" name="name" />
+      </scope>
+      <scope doc="Unregister a .exe file that uses Python." ilk="function" line="84" name="UnregisterPythonExe" signature="UnregisterPythonExe(exeAlias)">
+        <variable ilk="argument" name="exeAlias" />
+      </scope>
+      <variable citdl="str" line="7" name="error" />
+      <import module="os" />
+      <import module="sys" />
+      <import module="win32api" />
+      <import module="win32con" />
+    </scope>
+    

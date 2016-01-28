@@ -1,0 +1,7 @@
+<scope ilk="blob" lang="Python" name="win32crypt">
+      <scope ilk="function" name="CryptProtectData" />
+      <scope ilk="function" name="CryptUnprotectData" />
+      <variable citdl="int" name="UNICODE" />
+      <scope classrefs="Exception" ilk="class" name="error" />
+    </scope>
+    

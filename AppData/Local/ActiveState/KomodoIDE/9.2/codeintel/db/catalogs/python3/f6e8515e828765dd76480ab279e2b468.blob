@@ -1,0 +1,126 @@
+<scope doc="# Utilities for the pywin32 tests" ilk="blob" lang="Python3" name="pywin32_testutil">
+      <scope classrefs="TestCase" doc="An &apos;adaptor&apos; which takes another test.  In debug builds we execute the test once to remove one-off side-effects, then capture the total reference count, then execute the test a few times.  If the total" ilk="class" line="48" lineend="117" name="LeakTestCase">
+        <variable attributes="__instancevar__" line="61" name="real_test" />
+        <variable attributes="__instancevar__" citdl="int" line="63" name="num_leak_iters" />
+        <scope ilk="function" line="91" lineend="92" name="runTest" signature="runTest()">
+          <variable citdl="LeakTestCase" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="94" lineend="117" name="_do_leak_tests" signature="_do_leak_tests(result=None)">
+          <variable citdl="LeakTestCase" ilk="argument" name="self" />
+          <variable ilk="argument" name="result" />
+          <variable citdl="sys.gettotalrefcount" line="96" name="gtrc" />
+          <variable citdl="gtrc()" line="101" name="trc" />
+          <variable citdl="int" line="110" name="lost" />
+          <variable citdl="str" line="112" name="msg" />
+          <variable citdl="AssertionError()" line="116" name="exc" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="int" line="62" name="num_test_cases" />
+        <scope ilk="function" line="70" lineend="89" name="__call__" signature="__call__(result=None)">
+          <import line="73" module="pythoncom" symbol="_GetInterfaceCount" />
+          <import line="73" module="pythoncom" symbol="_GetGatewayCount" />
+          <variable citdl="LeakTestCase" ilk="argument" name="self" />
+          <variable ilk="argument" name="result" />
+          <variable citdl="_GetInterfaceCount()" line="75" name="ni" />
+          <variable citdl="_GetGatewayCount()" line="76" name="ng" />
+          <variable citdl="_GetInterfaceCount()" line="83" name="lost_i" />
+          <variable citdl="_GetGatewayCount()" line="84" name="lost_g" />
+          <variable citdl="str" line="86" name="msg" />
+          <variable citdl="AssertionError()" line="88" name="exc" />
+        </scope>
+        <scope ilk="function" line="67" lineend="68" name="countTestCases" returns="int" signature="countTestCases()">
+          <variable citdl="LeakTestCase" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="59" lineend="65" name="__init__" signature="LeakTestCase(real_test)">
+          <variable citdl="LeakTestCase" ilk="argument" name="self" />
+          <variable ilk="argument" name="real_test" />
+        </scope>
+      </scope>
+      <scope classrefs="TestLoader" ilk="class" line="120" lineend="161" name="TestLoader">
+        <scope ilk="function" line="130" lineend="136" name="fixupTestsForLeakTests" returns="self._getTestWrapper()" signature="fixupTestsForLeakTests(test)">
+          <variable citdl="TestLoader" ilk="argument" name="self" />
+          <variable ilk="argument" name="test" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="138" lineend="144" name="_getTestWrapper" returns="LeakTestCase" signature="_getTestWrapper(test)">
+          <variable citdl="TestLoader" ilk="argument" name="self" />
+          <variable ilk="argument" name="test" />
+          <variable citdl="getattr()" line="140" name="no_leak_tests" />
+        </scope>
+        <scope doc="Return a suite of all tests cases contained in testCaseClass" ilk="function" line="121" lineend="128" name="loadTestsFromTestCase" returns="self.suiteClass()" signature="loadTestsFromTestCase(testCaseClass)">
+          <variable citdl="TestLoader" ilk="argument" name="self" />
+          <variable ilk="argument" name="testCaseClass" />
+          <variable citdl="list" line="123" name="leak_tests" />
+          <variable citdl="testCaseClass()" line="125" name="real_test" />
+          <variable citdl="self._getTestWrapper()" line="126" name="leak_test" />
+        </scope>
+        <scope ilk="function" line="153" lineend="161" name="loadTestsFromName" returns="_getTestWrapper()" signature="loadTestsFromName(name, module=None)">
+          <variable citdl="TestLoader" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="module" />
+          <variable citdl="unittest.TestLoader.loadTestsFromName()" line="154" name="test" />
+        </scope>
+        <scope ilk="function" line="146" lineend="151" name="loadTestsFromModule" returns="TestLoader.fixupTestsForLeakTests()" signature="loadTestsFromModule(mod)">
+          <variable citdl="TestLoader" ilk="argument" name="self" />
+          <variable ilk="argument" name="mod" />
+          <variable citdl="mod.suite()" line="148" name="tests" />
+        </scope>
+      </scope>
+      <scope classrefs="TestProgram" doc="# TestProgream subclass necessary just to get our TestRunner hooked up, # which is necessary to get our TestResult hooked up *sob*" ilk="class" line="256" lineend="260" name="TestProgram">
+        <variable attributes="__instancevar__" citdl="TestRunner" line="259" name="testRunner" />
+        <scope ilk="function" line="257" lineend="260" name="runTests" signature="runTests()">
+          <variable citdl="TestProgram" ilk="argument" name="self" />
+        </scope>
+      </scope>
+      <scope classrefs="_TextTestResult" doc="# The &apos;TestResult&apos; subclass that records the failures and has the special # handling for the TestSkipped exception." ilk="class" line="197" lineend="246" name="TestResult">
+        <variable attributes="__instancevar__" citdl="dict" line="200" name="skips" />
+        <scope ilk="function" line="243" lineend="246" name="printErrors" signature="printErrors()">
+          <variable citdl="TestResult" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="198" lineend="200" name="__init__" signature="TestResult(*args, **kw)">
+          <variable citdl="TestResult" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+          <variable attributes="kwargs" ilk="argument" name="kw" />
+        </scope>
+        <scope doc="Called when an error has occurred." ilk="function" line="202" lineend="241" name="addError" signature="addError(test, err)">
+          <import line="207" module="pywintypes" />
+          <variable citdl="TestResult" ilk="argument" name="self" />
+          <variable ilk="argument" name="test" />
+          <variable ilk="argument" name="err" />
+          <variable citdl="TestSkipped" line="208" name="exc_val" />
+          <variable citdl="tuple()" line="227" name="reason" />
+        </scope>
+      </scope>
+      <scope classrefs="TextTestRunner" doc="# TestRunner subclass necessary just to get our TestResult hooked up." ilk="class" line="249" lineend="251" name="TestRunner">
+        <scope attributes="protected" ilk="function" line="250" lineend="251" name="_makeResult" returns="TestResult" signature="_makeResult()">
+          <variable citdl="TestRunner" ilk="argument" name="self" />
+        </scope>
+      </scope>
+      <scope classrefs="Exception" doc="# If this exception is raised by a test, the test is reported as a &apos;skip&apos;" ilk="class" line="191" lineend="192" name="TestSkipped" />
+      <scope ilk="function" line="175" lineend="187" name="check_is_admin" returns="bool" signature="check_is_admin()">
+        <variable attributes="protected" citdl="True" line="181" name="_is_admin" />
+      </scope>
+      <import module="gc" />
+      <scope doc="return a long on py2k" ilk="function" line="11" lineend="13" name="int2long" returns="long" signature="int2long(val)">
+        <variable ilk="argument" name="val" />
+      </scope>
+      <variable citdl="list" line="171" name="non_admin_error_codes" />
+      <scope doc="# Sometimes we want to pass an object that exposes its memory" ilk="function" line="33" lineend="37" name="ob2memory" returns="buffer()" signature="ob2memory(ob)">
+        <variable ilk="argument" name="ob" />
+      </scope>
+      <scope doc="# The test suite has lots of string constants containing binary data, but # the strings are used in various &quot;bytes&quot; contexts." ilk="function" line="17" lineend="20" name="str2bytes" returns="sval.encode()" signature="str2bytes(sval)">
+        <variable citdl="sval.decode()" ilk="argument" name="sval" />
+      </scope>
+      <scope doc="# Sometimes we want to pass a string that should explicitly be treated as # a memory blob." ilk="function" line="25" lineend="29" name="str2memory" returns="buffer()" signature="str2memory(sval)">
+        <variable ilk="argument" name="sval" />
+      </scope>
+      <import module="sys" />
+      <scope doc="# A convenient entry-point - if used, &apos;SKIPPED&apos; exceptions will be supressed." ilk="function" line="263" lineend="268" name="testmain" signature="testmain(*args, **kw)">
+        <variable citdl="kw.copy()" line="264" name="new_kw" />
+        <variable attributes="varargs" ilk="argument" name="args" />
+        <variable attributes="kwargs" ilk="argument" name="kw" />
+        <variable citdl="new_kw.get()" line="267" name="program_class" />
+      </scope>
+      <import module="unittest" />
+      <import module="winerror" />
+      <variable attributes="protected __hidden__" line="174" name="_is_admin" />
+    </scope>
+    

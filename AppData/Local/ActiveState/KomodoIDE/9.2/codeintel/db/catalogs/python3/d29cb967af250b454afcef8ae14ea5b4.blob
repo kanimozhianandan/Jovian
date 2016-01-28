@@ -1,0 +1,170 @@
+<scope doc="Utilities for registering objects.  This module contains utility functions to register Python objects as" ilk="blob" lang="Python3" name="win32com.server.register">
+      <variable citdl="str" line="16" name="CATID_PythonCOMServer" />
+      <scope doc="Given a CLSID for a server and option name, return the option value" ilk="function" line="344" lineend="348" name="GetRegisteredServerOption" returns="_get_string()" signature="GetRegisteredServerOption(clsid, optionName)">
+        <variable ilk="argument" name="optionName" />
+        <variable ilk="argument" name="clsid" />
+        <variable citdl="str" line="347" name="keyNameRoot" />
+      </scope>
+      <scope doc="Given a server, return a list of of (&quot;key&quot;, root), which are keys recursively and uncondtionally deleted at unregister or uninstall time." ilk="function" line="306" lineend="326" name="GetUnregisterServerKeys" returns="list" signature="GetUnregisterServerKeys(clsid, progID=None, verProgID=None, customKeys=None)">
+        <variable ilk="argument" name="verProgID" />
+        <variable ilk="argument" name="customKeys" />
+        <variable ilk="argument" name="progID" />
+        <variable ilk="argument" name="clsid" />
+        <variable citdl="list" line="311" name="ret" />
+      </scope>
+      <scope doc="# Attempt to &apos;re-execute&apos; our current process with elevation." ilk="function" line="482" lineend="552" name="ReExecuteElevated" signature="ReExecuteElevated(flags)">
+        <variable citdl="open()" line="512" name="batf" />
+        <variable citdl="os.environ.get()" line="525" name="executable" />
+        <variable citdl="tempfile.mktemp()" line="508" name="tempbase" />
+        <variable citdl="__builtins__.str.join()" line="491" name="new_params" />
+        <variable citdl="ShellExecuteEx()" line="526" name="rc" />
+        <variable citdl="win32process.GetExitCodeProcess()" line="534" name="exit_code" />
+        <variable citdl="tempfile.mktemp()" line="509" name="outfile" />
+        <variable ilk="argument" name="flags" />
+        <variable line="532" name="hproc" />
+        <variable citdl="open()" line="535" name="outf" />
+        <variable citdl="int" line="499" name="hwnd" />
+        <variable citdl="tempfile.mktemp()" line="510" name="batfile" />
+        <variable citdl="outf.read()" line="537" name="output" />
+        <variable citdl="os.getcwd()" line="514" name="cwd" />
+      </scope>
+      <scope ilk="function" line="368" lineend="433" name="RegisterClasses" signature="RegisterClasses(*classes, **flags)">
+        <variable citdl="bool" line="370" name="debugging" />
+        <variable citdl="flags.get()" line="431" name="extra" />
+        <variable citdl="bool" line="385" name="addPyComCat" />
+        <variable citdl="_get()" line="376" name="verProgID" />
+        <variable citdl="_get()" line="382" name="clsctx" />
+        <variable citdl="str" line="415" name="scriptDir" />
+        <variable citdl="cls._reg_clsid_" line="372" name="clsid" />
+        <variable attributes="kwargs" ilk="argument" name="flags" />
+        <variable citdl="cls.__module__" line="375" name="spec" />
+        <variable citdl="_get()" line="377" name="defIcon" />
+        <variable citdl="pythoncom.LoadTypeLib()" line="427" name="typelib" />
+        <variable citdl="str" line="394" name="debuggingDesc" />
+        <variable citdl="_get()" line="378" name="threadingModel" />
+        <variable citdl="_get()" line="379" name="catids" />
+        <variable citdl="_get()" line="374" name="desc" />
+        <variable citdl="cls.__module__" line="402" name="moduleName" />
+        <variable citdl="_get()" line="381" name="policySpec" />
+        <variable citdl="bool" line="369" name="quiet" />
+        <variable attributes="varargs" ilk="argument" name="classes" />
+        <variable citdl="_get()" line="390" name="dispatcherSpec" />
+        <variable citdl="_get()" line="373" name="progID" />
+        <variable citdl="win32api.GetFullPathName()" line="386" name="addnPath" />
+        <variable citdl="_get()" line="380" name="options" />
+        <variable citdl="_get()" line="383" name="tlb_filename" />
+      </scope>
+      <scope doc="Register the Python COM Server component category." ilk="function" line="576" lineend="582" name="RegisterPyComCategory" signature="RegisterPyComCategory()">
+        <variable citdl="_cat_registrar()" line="579" name="regCat" />
+      </scope>
+      <scope doc="Registers a Python object as a COM Server." ilk="function" line="143" lineend="304" name="RegisterServer" signature="RegisterServer(clsid, pythonInstString=None, desc=None, progID=None, verProgID=None, defIcon=None, threadingModel=&apos;both&apos;, policy=None, catids=[], other={}, addPyComCat=None, dispatcher=None, clsctx=None, addnPath=None)">
+        <variable ilk="argument" name="verProgID" />
+        <variable ilk="argument" name="defIcon" />
+        <variable citdl="win32api.GetShortPathName()" line="229" name="exeName" />
+        <variable citdl="_find_localserver_module()" line="236" name="pyfile" />
+        <variable ilk="argument" name="pythonInstString" />
+        <variable citdl="_cat_registrar()" line="273" name="regCat" />
+        <variable citdl="int" ilk="argument" name="clsctx" />
+        <variable ilk="argument" name="addnPath" />
+        <variable citdl="os.path.basename()" line="211" name="dllName" />
+        <variable citdl="dict" ilk="argument" name="other" />
+        <variable citdl="str" line="230" name="command" />
+        <variable ilk="argument" name="progID" />
+        <variable ilk="argument" name="clsid" />
+        <variable ilk="argument" name="policy" />
+        <variable citdl="str" ilk="argument" name="threadingModel" />
+        <variable citdl="str()" line="186" name="keyNameRoot" />
+        <variable citdl="list" ilk="argument" name="catids" />
+        <variable ilk="argument" name="dispatcher" />
+        <variable citdl="bool" ilk="argument" name="addPyComCat" />
+        <variable ilk="argument" name="desc" />
+      </scope>
+      <scope ilk="function" line="435" lineend="464" name="UnregisterClasses" signature="UnregisterClasses(*classes, **flags)">
+        <variable citdl="_get()" line="440" name="verProgID" />
+        <variable citdl="flags.get()" line="462" name="extra" />
+        <variable citdl="_get()" line="441" name="customKeys" />
+        <variable citdl="bool" line="442" name="unregister_typelib" />
+        <variable citdl="bool" line="436" name="quiet" />
+        <variable citdl="_get()" line="448" name="tlb_guid" />
+        <variable attributes="varargs" ilk="argument" name="classes" />
+        <variable attributes="kwargs" ilk="argument" name="flags" />
+        <variable citdl="_get()" line="439" name="progID" />
+        <variable citdl="cls._reg_clsid_" line="438" name="clsid" />
+        <variable citdl="_get()" line="454" name="lcid" />
+      </scope>
+      <scope doc="# Unregister info is for installers or external uninstallers." ilk="function" line="470" lineend="479" name="UnregisterInfoClasses" returns="GetUnregisterServerKeys()" signature="UnregisterInfoClasses(*classes, **flags)">
+        <variable citdl="_get()" line="475" name="verProgID" />
+        <variable citdl="_get()" line="476" name="customKeys" />
+        <variable citdl="list" line="471" name="ret" />
+        <variable attributes="varargs" ilk="argument" name="classes" />
+        <variable attributes="kwargs" ilk="argument" name="flags" />
+        <variable citdl="_get()" line="474" name="progID" />
+        <variable citdl="cls._reg_clsid_" line="473" name="clsid" />
+      </scope>
+      <scope doc="Unregisters a Python COM server." ilk="function" line="329" lineend="333" name="UnregisterServer" signature="UnregisterServer(clsid, progID=None, verProgID=None, customKeys=None)">
+        <variable ilk="argument" name="verProgID" />
+        <variable ilk="argument" name="customKeys" />
+        <variable ilk="argument" name="progID" />
+        <variable ilk="argument" name="clsid" />
+      </scope>
+      <scope ilk="function" line="554" lineend="574" name="UseCommandLine" returns="UnregisterInfoClasses()" signature="UseCommandLine(*classes, **flags)">
+        <variable citdl="bool" line="556" name="unregister" />
+        <variable citdl="bool" line="555" name="unregisterInfo" />
+        <variable attributes="varargs" ilk="argument" name="classes" />
+        <variable attributes="kwargs" ilk="argument" name="flags" />
+      </scope>
+      <import module="os" />
+      <import module="pythoncom" />
+      <scope doc="Recursively delete registry keys." ilk="function" line="52" lineend="81" name="recurse_delete_key" signature="recurse_delete_key(path, base=-2147483648)">
+        <variable ilk="argument" name="path" />
+        <variable citdl="win32con.HKEY_CLASSES_ROOT" ilk="argument" name="base" />
+        <variable citdl="win32api.RegEnumKey()" line="70" name="subkeyname" />
+        <variable citdl="win32api.RegOpenKey()" line="58" name="h" />
+      </scope>
+      <import module="sys" />
+      <import module="win32api" />
+      <import module="win32con" />
+      <import module="winerror" />
+      <scope attributes="protected __hidden__" ilk="function" line="83" lineend="88" name="_cat_registrar" returns="pythoncom.CoCreateInstance()" signature="_cat_registrar()" />
+      <scope attributes="protected __hidden__" doc="Get a string value from the registry." ilk="function" line="34" lineend="40" name="_get_string" returns="win32api.RegQueryValue()" signature="_get_string(path, base=win32con.HKEY_CLASSES_ROOT)">
+        <variable ilk="argument" name="path" />
+        <variable citdl="win32con.HKEY_CLASSES_ROOT" ilk="argument" name="base" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="123" lineend="141" name="_find_localserver_module" returns="os.path.join()" signature="_find_localserver_module()">
+        <import line="124" module="win32com.server" />
+        <variable line="125" name="path" />
+        <variable citdl="str" line="126" name="baseName" />
+        <variable citdl="os.path.join()" line="127" name="pyfile" />
+        <variable citdl="str" line="133" name="ext" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Remove a string from the registry." ilk="function" line="42" lineend="50" name="_remove_key" signature="_remove_key(path, base=win32con.HKEY_CLASSES_ROOT)">
+        <variable ilk="argument" name="path" />
+        <variable citdl="win32con.HKEY_CLASSES_ROOT" ilk="argument" name="base" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="351" lineend="366" name="_get" returns="getattr()" signature="_get(ob, attr, default=None)">
+        <variable ilk="argument" name="ob" />
+        <variable ilk="argument" name="attr" />
+        <variable ilk="argument" name="default" />
+        <variable citdl="ob.__bases__" line="358" name="bases" />
+        <variable citdl="()" line="363" name="val" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Set a string value in the registry." ilk="function" line="26" lineend="32" name="_set_string" signature="_set_string(path, value, base=win32con.HKEY_CLASSES_ROOT)">
+        <variable ilk="argument" name="path" />
+        <variable ilk="argument" name="value" />
+        <variable citdl="win32con.HKEY_CLASSES_ROOT" ilk="argument" name="base" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="18" lineend="24" name="_set_subkeys" signature="_set_subkeys(keyName, valueDict, base=win32con.HKEY_CLASSES_ROOT)">
+        <variable ilk="argument" name="keyName" />
+        <variable ilk="argument" name="valueDict" />
+        <variable citdl="win32con.HKEY_CLASSES_ROOT" ilk="argument" name="base" />
+        <variable citdl="win32api.RegCreateKey()" line="19" name="hkey" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="91" lineend="121" name="_find_localserver_exe" returns="os.path.join()" signature="_find_localserver_exe(mustfind)">
+        <variable ilk="argument" name="mustfind" />
+        <variable citdl="str" line="95" name="exeBaseName" />
+        <variable citdl="os.path.join()" line="99" name="exeName" />
+        <variable citdl="sys.winver" line="112" name="key" />
+        <variable citdl="win32api.RegQueryValue()" line="113" name="path" />
+      </scope>
+    </scope>
+    

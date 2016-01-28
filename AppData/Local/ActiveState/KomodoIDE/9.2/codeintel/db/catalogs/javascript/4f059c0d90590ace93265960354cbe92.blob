@@ -1,0 +1,15 @@
+<scope ilk="blob" lang="JavaScript" name="Sortable.js">
+      <variable citdl="Object" name="MochiKit">
+        <variable citdl="Object" name="Sortable">
+          <variable doc="Observer for DragAndDrop object. You normally don&apos;t have to&#xA;access this, only for customization purpose." name="SortableObserver" />
+          <scope doc="Create a new Sortable. Usually you&apos;ll call it with a UL&#xA;element, but it can be customized with options to use&#xA;something else." ilk="function" name="create" signature="create(element [, options])" />
+          <scope doc="Destroy a previously created sortable. It prevents further&#xA;use of the Sortable functionnality on the element, unless&#xA;recreated." ilk="function" name="destroy" signature="destroy(element)" />
+          <scope doc="Serialize the content of a Sortable. Useful to send this&#xA;content through a XMLHTTPRequest." ilk="function" name="serialize" signature="serialize(element [, options])" />
+        </variable>
+      </variable>
+      <variable citdl="MochiKit.Sortable.SortableObserver" name="SortableObserver" />
+      <variable citdl="MochiKit.Sortable.create" name="create" />
+      <variable citdl="MochiKit.Sortable.destroy" name="destroy" />
+      <variable citdl="MochiKit.Sortable.serialize" name="serialize" />
+    </scope>
+  

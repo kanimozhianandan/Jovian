@@ -1,0 +1,31 @@
+<scope doc="Swig doesn&apos;t do docstrings ?????" ilk="blob" lang="Python3" name="win32evtlog">
+      <scope ilk="function" name="BackupEventLog" />
+      <scope ilk="function" name="ClearEventLog" />
+      <scope ilk="function" name="CloseEventLog" />
+      <scope ilk="function" name="DeregisterEventSource" />
+      <variable citdl="int" name="EVENTLOG_AUDIT_FAILURE" />
+      <variable citdl="int" name="EVENTLOG_AUDIT_SUCCESS" />
+      <variable citdl="int" name="EVENTLOG_BACKWARDS_READ" />
+      <variable citdl="int" name="EVENTLOG_END_ALL_PAIRED_EVENTS" />
+      <variable citdl="int" name="EVENTLOG_END_PAIRED_EVENT" />
+      <variable citdl="int" name="EVENTLOG_ERROR_TYPE" />
+      <variable citdl="int" name="EVENTLOG_FORWARDS_READ" />
+      <variable citdl="int" name="EVENTLOG_INFORMATION_TYPE" />
+      <variable citdl="int" name="EVENTLOG_PAIRED_EVENT_ACTIVE" />
+      <variable citdl="int" name="EVENTLOG_PAIRED_EVENT_INACTIVE" />
+      <variable citdl="int" name="EVENTLOG_SEEK_READ" />
+      <variable citdl="int" name="EVENTLOG_SEQUENTIAL_READ" />
+      <variable citdl="int" name="EVENTLOG_START_PAIRED_EVENT" />
+      <variable citdl="int" name="EVENTLOG_SUCCESS" />
+      <variable citdl="int" name="EVENTLOG_WARNING_TYPE" />
+      <scope ilk="function" name="GetNumberOfEventLogRecords" />
+      <scope ilk="function" name="GetOldestEventLogRecord" />
+      <scope ilk="function" name="NotifyChangeEventLog" />
+      <scope ilk="function" name="OpenBackupEventLog" />
+      <scope ilk="function" name="OpenEventLog" />
+      <scope ilk="function" name="ReadEventLog" />
+      <scope ilk="function" name="RegisterEventSource" />
+      <scope ilk="function" name="ReportEvent" />
+      <variable citdl="int" name="UNICODE" />
+    </scope>
+    

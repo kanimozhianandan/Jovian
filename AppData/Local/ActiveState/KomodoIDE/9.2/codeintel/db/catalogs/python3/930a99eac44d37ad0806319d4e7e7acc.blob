@@ -1,0 +1,5 @@
+<scope doc="Exists only to load Pywin32 system modules" ilk="blob" lang="Python3" name="_win32sysloader">
+      <scope ilk="function" name="GetModuleFilename" />
+      <scope ilk="function" name="LoadModule" />
+    </scope>
+    

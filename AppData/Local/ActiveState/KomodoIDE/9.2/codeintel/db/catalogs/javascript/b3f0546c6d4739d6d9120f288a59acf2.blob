@@ -1,0 +1,19 @@
+<scope ilk="blob" lang="JavaScript" name="Selector.js">
+      <variable citdl="Object" name="MochiKit">
+        <variable citdl="Object" name="Selector">
+          <scope doc="Performs a selection on the active document." ilk="function" name="findDocElements" signature="findDocElements(expression[, ...])" />
+          <scope doc="Traverses the child nodes of element and returns the subset&#xA;of those that match any of the selector expressions in&#xA;expressions. Each expression can be a combination of simple&#xA;expressions, by concatenating them with spaces or&#xA;combinators." ilk="function" name="findChildElements" signature="findChildElements(element, expressions)" />
+          <scope doc="An alias to findDocElements." ilk="function" name="$$" signature="$$(expression[, ...])" />
+          <scope doc="An object storing the parsed version of a simple CSS&#xA;selector expression and providing functions for executing&#xA;searches. Simple means that the expression is not a&#xA;combination of expressions, i.e." ilk="class" name="Selector">
+            <scope attributes="__ctor__" doc="An object storing the parsed version of a simple CSS&#xA;selector expression and providing functions for executing&#xA;searches. Simple means that the expression is not a&#xA;combination of expressions, i.e." ilk="function" name="Selector" signature="Selector(simpleExpression)" />
+            <scope doc="Performs a search on scope. The value of axis controls what&#xA;relatives of scope are considered." ilk="function" name="findElements" signature="findElements(scope[, axis=&quot;&quot;])" />
+          </scope>
+        </variable>
+      </variable>
+      <variable citdl="MochiKit.Selector.findDocElements" name="findDocElements" />
+      <variable citdl="MochiKit.Selector.findChildElements" name="findChildElements" />
+      <variable citdl="MochiKit.Selector.$$" name="$$" />
+      <variable citdl="MochiKit.Selector.Selector" name="Selector" />
+      <variable citdl="MochiKit.Selector.findElements" name="findElements" />
+    </scope>
+  

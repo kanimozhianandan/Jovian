@@ -1,0 +1,14 @@
+<scope ilk="blob" lang="Perl" name="Moose::Error::Default">
+      <scope ilk="class" line="1" lineend="108" name="Moose::Error::Default">
+        <import line="12" module="Carp::Heavy" symbol="*" />
+        <import line="13" module="Class::MOP::MiniTrait" symbol="*" />
+        <import line="15" module="Moose::Error::Util" symbol="*" />
+        <variable line="3" name="$Moose::Error::Default::AUTHORITY" />
+        <variable line="6" name="$Moose::Error::Default::VERSION" />
+        <scope ilk="function" line="21" lineend="32" name="new" signature="new($self, @args)" />
+        <scope ilk="function" line="34" lineend="42" name="_inline_new" signature="_inline_new($self, %args)" />
+        <scope ilk="function" line="44" lineend="47" name="create_error_croak" signature="create_error_croak($self, @args)" />
+        <scope ilk="function" line="49" lineend="52" name="create_error_confess" signature="create_error_confess($self, @args)" />
+      </scope>
+    </scope>
+    

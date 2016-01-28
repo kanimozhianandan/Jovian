@@ -1,0 +1,8 @@
+<scope ilk="blob" lang="Perl" name="CPAN::Exception::yaml_not_installed">
+      <scope ilk="class" line="3" lineend="23" name="CPAN::Exception::yaml_not_installed">
+        <variable line="8" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="13" lineend="16" name="new" signature="new($class, $module, $file, $during)" />
+        <scope ilk="function" line="18" lineend="21" name="as_string" signature="as_string()" />
+      </scope>
+    </scope>
+    

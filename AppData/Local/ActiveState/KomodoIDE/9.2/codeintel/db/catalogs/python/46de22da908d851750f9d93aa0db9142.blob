@@ -1,0 +1,5 @@
+<scope ilk="blob" lang="Python" name="_win32sysloader">
+      <scope ilk="function" name="GetModuleFilename" />
+      <scope ilk="function" name="LoadModule" />
+    </scope>
+    

@@ -1,0 +1,9 @@
+<scope doc="Event Log Utilities - helper for win32evtlog.pyd" ilk="blob" lang="Python3" name="win32evtlogutil">
+      <scope doc="Add a source of messages to the event log." ilk="function" name="AddSourceToRegistry" signature="AddSourceToRegistry(appName, msgDLL=None, eventLogType=&apos;Application&apos;, eventLogFlags=None)" />
+      <scope ilk="function" name="FeedEventLogRecords" signature="FeedEventLogRecords(feeder, machineName=None, logName=&apos;Application&apos;, readFlags=None)" />
+      <scope doc="Given a tuple from ReadEventLog, and optionally where the event record came from, load the message, and process message inserts." ilk="function" name="FormatMessage" signature="FormatMessage(eventLogRecord, logType=&apos;Application&apos;)" />
+      <scope doc="Removes a source of messages from the event log." ilk="function" name="RemoveSourceFromRegistry" signature="RemoveSourceFromRegistry(appName, eventLogType=&apos;Application&apos;)" />
+      <scope doc="Report an event for a previously added event source." ilk="function" name="ReportEvent" signature="ReportEvent(appName, eventID, eventCategory=0, eventType=1, strings=None, data=None, sid=None)" />
+      <scope doc="As for FormatMessage, except returns an error message if the message can not be processed." ilk="function" name="SafeFormatMessage" signature="SafeFormatMessage(eventLogRecord, logType=None)" />
+    </scope>
+    

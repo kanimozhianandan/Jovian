@@ -1,0 +1,43 @@
+<scope doc="A module encapsulating the Windows Remote Access Service (RAS) API." ilk="blob" lang="Python3" name="win32ras">
+      <scope ilk="function" name="CreatePhonebookEntry" />
+      <scope ilk="function" name="Dial" />
+      <scope ilk="function" name="EditPhonebookEntry" />
+      <scope ilk="function" name="EnumConnections" />
+      <scope ilk="function" name="EnumEntries" />
+      <scope ilk="function" name="GetConnectStatus" />
+      <scope ilk="function" name="GetEntryDialParams" />
+      <scope ilk="function" name="GetErrorString" />
+      <scope ilk="function" name="HangUp" />
+      <scope ilk="function" name="IsHandleValid" />
+      <variable citdl="int" name="RASCS_AllDevicesConnected" />
+      <variable citdl="int" name="RASCS_AuthAck" />
+      <variable citdl="int" name="RASCS_AuthCallback" />
+      <variable citdl="int" name="RASCS_AuthChangePassword" />
+      <variable citdl="int" name="RASCS_AuthLinkSpeed" />
+      <variable citdl="int" name="RASCS_AuthNotify" />
+      <variable citdl="int" name="RASCS_AuthProject" />
+      <variable citdl="int" name="RASCS_AuthRetry" />
+      <variable citdl="int" name="RASCS_Authenticate" />
+      <variable citdl="int" name="RASCS_Authenticated" />
+      <variable citdl="int" name="RASCS_CallbackComplete" />
+      <variable citdl="int" name="RASCS_CallbackSetByCaller" />
+      <variable citdl="int" name="RASCS_ConnectDevice" />
+      <variable citdl="int" name="RASCS_Connected" />
+      <variable citdl="int" name="RASCS_DeviceConnected" />
+      <variable citdl="int" name="RASCS_Disconnected" />
+      <variable citdl="int" name="RASCS_Interactive" />
+      <variable citdl="int" name="RASCS_LogonNetwork" />
+      <variable citdl="int" name="RASCS_OpenPort" />
+      <variable citdl="int" name="RASCS_PasswordExpired" />
+      <variable citdl="int" name="RASCS_PortOpened" />
+      <variable citdl="int" name="RASCS_PrepareForCallback" />
+      <variable citdl="int" name="RASCS_Projected" />
+      <variable citdl="int" name="RASCS_ReAuthenticate" />
+      <variable citdl="int" name="RASCS_RetryAuthentication" />
+      <variable citdl="int" name="RASCS_StartAuthentication" />
+      <variable citdl="int" name="RASCS_WaitForCallback" />
+      <variable citdl="int" name="RASCS_WaitForModemReset" />
+      <scope ilk="function" name="RASDIALEXTENSIONS" />
+      <scope ilk="function" name="SetEntryDialParams" />
+    </scope>
+    

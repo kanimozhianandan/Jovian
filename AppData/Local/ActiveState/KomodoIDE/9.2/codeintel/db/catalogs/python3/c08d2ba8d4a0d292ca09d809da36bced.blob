@@ -1,0 +1,4 @@
+<scope doc="# Generated file - this directory may be deleted to reset the COM cache..." ilk="blob" lang="Python3" name="win32com.gen_py">
+      <import module="win32com" />
+    </scope>
+    

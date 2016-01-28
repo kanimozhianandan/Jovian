@@ -1,0 +1,6 @@
+<scope doc="# This is a helper for the win32trace module" ilk="blob" lang="Python3" name="win32traceutil">
+      <scope ilk="function" line="27" lineend="41" name="RunAsCollector" signature="RunAsCollector()" />
+      <scope ilk="function" line="44" lineend="50" name="SetupForPrint" signature="SetupForPrint()" />
+      <import module="win32trace" />
+    </scope>
+    

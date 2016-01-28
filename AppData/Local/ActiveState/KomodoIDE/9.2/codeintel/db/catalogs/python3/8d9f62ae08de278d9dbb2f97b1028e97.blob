@@ -1,0 +1,8 @@
+<scope doc="# Code that packs and unpacks the Univgw structures." ilk="blob" lang="Python3" name="win32com.universal">
+      <scope classrefs="object" ilk="class" name="Arg" />
+      <scope classrefs="object" ilk="class" name="Definition" />
+      <scope classrefs="object" ilk="class" name="Method" />
+      <scope ilk="function" name="RegisterInterfaces" signature="RegisterInterfaces(typelibGUID, lcid, major, minor, interface_names=None)" />
+      <import module="_univgw" />
+    </scope>
+    

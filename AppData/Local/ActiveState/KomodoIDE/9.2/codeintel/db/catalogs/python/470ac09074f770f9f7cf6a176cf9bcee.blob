@@ -1,0 +1,262 @@
+<scope doc="Contains knowledge to build a COM object definition.  This module is used by both the @dynamic@ and @makepy@ modules to build" ilk="blob" lang="Python" name="win32com.client.build">
+      <scope doc="Builds a Python declaration for a method." ilk="function" line="577" lineend="629" name="BuildCallList" returns="MakeDefaultArgRepr()" signature="BuildCallList(fdesc, names, defNamedOptArg, defNamedNotOptArg, defUnnamedArg, defOutArg, is_comment=False)">
+        <variable citdl="False" ilk="argument" name="is_comment" />
+        <variable line="581" name="numOptArgs" />
+        <variable citdl="str" line="582" name="strval" />
+        <variable citdl="int" line="591" name="namedArg" />
+        <variable ilk="argument" name="defNamedOptArg" />
+        <variable ilk="argument" name="defNamedNotOptArg" />
+        <variable citdl="len()" line="584" name="firstOptArg" />
+        <variable citdl="MakeDefaultArgRepr()" line="597" name="defArgVal" />
+        <variable ilk="argument" name="defOutArg" />
+        <variable citdl="len()" line="580" name="numArgs" />
+        <variable ilk="argument" name="fdesc" />
+        <variable ilk="argument" name="names" />
+        <variable ilk="argument" name="defUnnamedArg" />
+        <variable citdl="MakePublicAttributeName()" line="590" name="argName" />
+        <variable line="595" name="thisdesc" />
+      </scope>
+      <scope classrefs="OleItem" ilk="class" line="99" lineend="385" name="DispatchItem">
+        <scope doc="Return tuple counting in/outs/OPTS. Sum of result may not be len(argTuple), as some args may be in/out." ilk="function" line="276" lineend="291" name="CountInOutOptArgs" returns="tuple" signature="CountInOutOptArgs(argTuple)">
+          <variable citdl="DispatchItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="argTuple" />
+          <variable citdl="int" line="278" name="ins" />
+          <variable line="280" name="inOut" />
+          <variable citdl="int" line="283" name="out" />
+          <variable citdl="int" line="288" name="opts" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="str" line="108" name="defaultDispatchName" />
+        <variable attributes="__instancevar__" citdl="dict" line="106" name="propMapPut" />
+        <scope attributes="protected" ilk="function" line="148" lineend="223" name="_AddFunc_" returns="tuple" signature="_AddFunc_(typeinfo, fdesc, bForUser)">
+          <variable citdl="DispatchItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="typeinfo" />
+          <variable ilk="argument" name="fdesc" />
+          <variable ilk="argument" name="bForUser" />
+          <variable citdl="fdesc.memid" line="149" name="id" />
+          <variable citdl="fdesc.wFuncFlags" line="150" name="funcflags" />
+          <variable citdl="typeinfo.GetNames()" line="152" name="names" />
+          <variable citdl="str" line="153" name="name" />
+          <variable citdl="typeinfo.GetDocumentation()" line="158" name="doc" />
+          <variable citdl="fdesc.invkind" line="168" name="invkind" />
+          <variable citdl="list" line="177" name="argList" />
+          <variable citdl="tuple" line="182" name="argDesc" />
+          <variable citdl="bool" line="187" name="hidden" />
+          <variable citdl="dict" line="189" name="map" />
+          <variable citdl="self.propMapPut.get()" line="198" name="existing" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="dict" line="107" name="mapFuncs" />
+        <scope attributes="protected" ilk="function" line="131" lineend="146" name="_propMapGetCheck_" signature="_propMapGetCheck_(key, item)">
+          <variable citdl="DispatchItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="key" />
+          <variable ilk="argument" name="item" />
+          <variable citdl="str" line="135" name="newKey" />
+          <variable citdl="int" line="136" name="deleteExisting" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="int" line="109" name="hidden" />
+        <variable citdl="str" line="100" name="typename" />
+        <scope ilk="function" line="300" lineend="364" name="MakeDispatchFuncMethod" returns="list" signature="MakeDispatchFuncMethod(entry, name, bMakeClass=1)">
+          <variable citdl="DispatchItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="entry" />
+          <variable ilk="argument" name="name" />
+          <variable citdl="int" ilk="argument" name="bMakeClass" />
+          <variable citdl="entry.desc" line="301" name="fdesc" />
+          <variable citdl="entry.doc" line="302" name="doc" />
+          <variable citdl="entry.names" line="303" name="names" />
+          <variable citdl="list" line="304" name="ret" />
+          <variable citdl="str" line="306" name="linePrefix" />
+          <variable citdl="str" line="307" name="defNamedOptArg" />
+          <variable citdl="str" line="308" name="defNamedNotOptArg" />
+          <variable citdl="str" line="309" name="defUnnamedArg" />
+          <variable citdl="str" line="315" name="defOutArg" />
+          <variable line="316" name="id" />
+          <variable citdl="str" line="318" name="s" />
+          <variable citdl="entry.GetResultCLSID()" line="325" name="resclsid" />
+          <variable citdl="list" line="331" name="retDesc" />
+          <variable citdl="tuple()" line="332" name="argsDesc" />
+          <variable citdl="list" line="337" name="param_flags" />
+          <variable citdl="list" line="338" name="bad_params" />
+          <variable line="341" name="rd" />
+        </scope>
+        <scope ilk="function" line="253" lineend="274" name="Build" signature="Build(typeinfo, attr, bForUser=1)">
+          <variable citdl="DispatchItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="typeinfo" />
+          <variable ilk="argument" name="attr" />
+          <variable citdl="int" ilk="argument" name="bForUser" />
+          <variable citdl="typeinfo.GetVarDesc()" line="259" name="fdesc" />
+        </scope>
+        <variable attributes="__instancevar__" line="254" name="clsid" />
+        <variable attributes="__instancevar__" citdl="bool" line="255" name="bIsDispatch" />
+        <variable attributes="__instancevar__" citdl="dict" line="104" name="propMap" />
+        <scope ilk="function" line="293" lineend="298" name="MakeFuncMethod" returns="self.MakeVarArgsFuncMethod()" signature="MakeFuncMethod(entry, name, bMakeClass=1)">
+          <variable citdl="DispatchItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="entry" />
+          <variable ilk="argument" name="name" />
+          <variable citdl="int" ilk="argument" name="bMakeClass" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="225" lineend="251" name="_AddVar_" returns="tuple" signature="_AddVar_(typeinfo, fdesc, bForUser)">
+          <variable citdl="DispatchItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="typeinfo" />
+          <variable ilk="argument" name="fdesc" />
+          <variable ilk="argument" name="bForUser" />
+          <variable citdl="fdesc.memid" line="230" name="id" />
+          <variable citdl="typeinfo.GetNames()" line="231" name="names" />
+          <variable citdl="typeinfo.GetDocumentation()" line="236" name="doc" />
+          <variable citdl="dict" line="243" name="map" />
+          <variable citdl="int" line="245" name="hidden" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="114" lineend="129" name="_propMapPutCheck_" signature="_propMapPutCheck_(key, item)">
+          <variable citdl="DispatchItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="key" />
+          <variable ilk="argument" name="item" />
+          <variable citdl="str" line="118" name="newKey" />
+          <variable citdl="int" line="119" name="deleteExisting" />
+        </scope>
+        <scope ilk="function" line="366" lineend="385" name="MakeVarArgsFuncMethod" returns="list" signature="MakeVarArgsFuncMethod(entry, name, bMakeClass=1)">
+          <variable citdl="DispatchItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="entry" />
+          <variable ilk="argument" name="name" />
+          <variable citdl="int" ilk="argument" name="bMakeClass" />
+          <variable citdl="entry.desc" line="367" name="fdesc" />
+          <variable citdl="entry.names" line="368" name="names" />
+          <variable citdl="entry.doc" line="369" name="doc" />
+          <variable citdl="list" line="370" name="ret" />
+          <variable citdl="str" line="371" name="argPrefix" />
+          <variable citdl="str" line="373" name="linePrefix" />
+          <variable citdl="pythoncom.DISPATCH_METHOD" line="379" name="invoketype" />
+          <variable citdl="str" line="382" name="s" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="102" lineend="112" name="__init__" signature="DispatchItem(typeinfo=None, attr=None, doc=None, bForUser=1)">
+          <variable citdl="DispatchItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="typeinfo" />
+          <variable ilk="argument" name="attr" />
+          <variable ilk="argument" name="doc" />
+          <variable citdl="int" ilk="argument" name="bForUser" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="dict" line="105" name="propMapGet" />
+      </scope>
+      <variable citdl="str" line="35" name="DropIndirection" />
+      <scope classrefs="DispatchItem" doc="# A Lazy dispatch item - builds an item on request using info from # an ITypeComp.  The dynamic module makes the called to build each item, # and also holds the references to the typeinfo and typecomp." ilk="class" line="411" lineend="415" name="LazyDispatchItem">
+        <variable citdl="str" line="412" name="typename" />
+        <variable attributes="__instancevar__" line="414" name="clsid" />
+        <scope attributes="__ctor__" ilk="function" line="413" lineend="415" name="__init__" signature="LazyDispatchItem(attr, doc)">
+          <variable citdl="LazyDispatchItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="attr" />
+          <variable ilk="argument" name="doc" />
+        </scope>
+      </scope>
+      <scope doc="# Given a default value passed by a type library, return a string with # an appropriate repr() for the type." ilk="function" line="556" lineend="575" name="MakeDefaultArgRepr" returns="repr()" signature="MakeDefaultArgRepr(defArgVal)">
+        <variable citdl="val.hour" line="572" name="hour" />
+        <variable line="565" name="val" />
+        <variable citdl="val.msec" line="572" name="msec" />
+        <variable ilk="argument" name="defArgVal" />
+        <variable citdl="val.month" line="572" name="month" />
+        <variable citdl="val.second" line="572" name="second" />
+        <variable citdl="val.minute" line="572" name="minute" />
+        <variable citdl="val.year" line="572" name="year" />
+        <variable citdl="val.day" line="572" name="day" />
+        <variable citdl="pythoncom.PARAMFLAG_FIN" line="558" name="inOut" />
+      </scope>
+      <scope doc="# Given a &quot;public name&quot; (eg, the name of a class, function, etc) # make sure it is a legal (and reasonable!) Python name." ilk="function" line="519" lineend="549" name="MakePublicAttributeName" returns="__builtins__.str.join()" signature="MakePublicAttributeName(className, is_global=False)">
+        <variable citdl="str" ilk="argument" name="className" />
+        <variable citdl="False" ilk="argument" name="is_global" />
+        <variable citdl="className.capitalize()" line="536" name="ret" />
+      </scope>
+      <scope doc="Simple holder for named attibutes - items in a map." ilk="class" line="53" lineend="82" name="MapEntry">
+        <scope ilk="function" line="74" lineend="77" name="GetResultCLSIDStr" returns="str" signature="GetResultCLSIDStr()">
+          <variable citdl="MapEntry" ilk="argument" name="self" />
+          <variable citdl="GetResultCLSID()" line="75" name="rc" />
+        </scope>
+        <variable attributes="__instancevar__" line="66" name="resultDocumentation" />
+        <variable attributes="__instancevar__" line="64" name="doc" />
+        <scope ilk="function" line="69" lineend="72" name="GetResultCLSID" returns="pythoncom.IID_NULL" signature="GetResultCLSID()">
+          <variable citdl="MapEntry" ilk="argument" name="self" />
+          <variable citdl="pythoncom.IID_NULL" line="70" name="rc" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="pythoncom.IID_NULL" line="65" name="resultCLSID" />
+        <variable attributes="__instancevar__" line="57" name="dispid" />
+        <variable attributes="__instancevar__" line="63" name="names" />
+        <scope ilk="function" line="79" lineend="82" name="GetResultName" signature="GetResultName()">
+          <variable citdl="MapEntry" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="int" line="68" name="hidden" />
+        <variable attributes="__instancevar__" citdl="int" line="67" name="wasProperty" />
+        <scope attributes="__ctor__" ilk="function" line="55" lineend="68" name="__init__" signature="MapEntry(desc_or_id, names=None, doc=None, resultCLSID=pythoncom.IID_NULL, resultDoc=None, hidden=0)">
+          <variable citdl="MapEntry" ilk="argument" name="self" />
+          <variable ilk="argument" name="desc_or_id" />
+          <variable ilk="argument" name="names" />
+          <variable ilk="argument" name="doc" />
+          <variable citdl="pythoncom.IID_NULL" ilk="argument" name="resultCLSID" />
+          <variable ilk="argument" name="resultDoc" />
+          <variable citdl="int" ilk="argument" name="hidden" />
+        </scope>
+        <variable attributes="__instancevar__" line="58" name="desc" />
+      </scope>
+      <variable citdl="dict" line="49" name="NoTranslateMap" />
+      <variable citdl="list" line="37" name="NoTranslateTypes" />
+      <scope classrefs="Exception" ilk="class" line="34" lineend="34" name="NotSupportedException" />
+      <scope ilk="class" line="84" lineend="97" name="OleItem">
+        <variable attributes="__instancevar__" citdl="int" line="94" name="bIsDispatch" />
+        <variable attributes="__instancevar__" citdl="int" line="95" name="bIsSink" />
+        <variable attributes="__instancevar__" line="88" name="doc" />
+        <variable attributes="__instancevar__" line="97" name="co_class" />
+        <variable citdl="str" line="85" name="typename" />
+        <variable attributes="__instancevar__" line="96" name="clsid" />
+        <variable attributes="__instancevar__" citdl="int" line="93" name="bWritten" />
+        <scope attributes="__ctor__" ilk="function" line="87" lineend="97" name="__init__" signature="OleItem(doc=None)">
+          <variable citdl="OleItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="doc" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="MakePublicAttributeName()" line="90" name="python_name" />
+      </scope>
+      <scope classrefs="object" ilk="class" name="TimeType" />
+      <scope classrefs="DispatchItem" doc="# Note - &quot;DispatchItem&quot; poorly named - need a new intermediate class." ilk="class" line="388" lineend="406" name="VTableItem">
+        <variable attributes="__instancevar__" citdl="list" line="404" name="vtableFuncs" />
+        <scope ilk="function" line="389" lineend="406" name="Build" signature="Build(typeinfo, attr, bForUser=1)">
+          <variable citdl="VTableItem" ilk="argument" name="self" />
+          <variable ilk="argument" name="typeinfo" />
+          <variable ilk="argument" name="attr" />
+          <variable citdl="int" ilk="argument" name="bForUser" />
+          <variable citdl="list()" line="393" name="meth_list" />
+          <scope ilk="function" line="396" lineend="397" name="cmp_vtable_off" returns="cmp()" signature="cmp_vtable_off(m1, m2)">
+            <variable ilk="argument" name="m1" />
+            <variable ilk="argument" name="m2" />
+          </scope>
+        </scope>
+      </scope>
+      <import module="datetime" />
+      <scope ilk="function" line="510" lineend="515" name="demunge_leading_underscores" returns="list" signature="demunge_leading_underscores(className)">
+        <variable ilk="argument" name="className" />
+        <variable citdl="int" line="511" name="i" />
+      </scope>
+      <variable citdl="str" line="33" name="error" />
+      <scope doc="x.__contains__(y) &lt;==&gt; y in x." ilk="function" name="iskeyword" signature="x.__contains__(y) &lt;==&gt; y in x." />
+      <import module="pythoncom" />
+      <import module="string" />
+      <import module="sys" />
+      <variable citdl="dict" line="417" name="typeSubstMap" />
+      <variable citdl="int" name="v" />
+      <variable citdl="str" line="508" name="valid_identifier_chars" />
+      <import module="winerror" />
+      <scope attributes="protected __hidden__" ilk="function" line="29" lineend="31" name="_safeQuotedString" returns="str" signature="_safeQuotedString(s)">
+        <variable citdl="list" ilk="argument" name="s" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Builds list of args to the underlying Invoke method." ilk="function" line="486" lineend="506" name="_BuildArgList" returns="str" signature="_BuildArgList(fdesc, names)">
+        <variable ilk="argument" name="fdesc" />
+        <variable citdl="list()" ilk="argument" name="names" />
+        <variable citdl="max()" line="489" name="numArgs" />
+        <variable citdl="names.index()" line="492" name="i" />
+        <variable citdl="int" line="498" name="name_num" />
+      </scope>
+      <scope attributes="protected __hidden__" ilk="function" line="423" lineend="484" name="_ResolveType" returns="tuple" signature="_ResolveType(typerepr, itypeinfo)">
+        <variable ilk="argument" name="typerepr" />
+        <variable ilk="argument" name="itypeinfo" />
+        <variable citdl="bool" line="436" name="was_user" />
+        <variable citdl="itypeinfo.GetRefTypeInfo()" line="453" name="resultTypeInfo" />
+        <variable citdl="resultTypeInfo.GetTypeAttr()" line="460" name="resultAttr" />
+        <variable citdl="resultAttr.typekind" line="461" name="typeKind" />
+        <variable citdl="resultAttr.tdescAlias" line="463" name="tdesc" />
+        <variable line="470" name="clsid" />
+        <variable citdl="resultTypeInfo.GetDocumentation()" line="471" name="retdoc" />
+      </scope>
+    </scope>
+    

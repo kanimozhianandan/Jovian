@@ -1,0 +1,114 @@
+Generated File. Do not edit.
+
+[HEADER]
+Version|0.17|$
+Arch|x86-msvc|$
+
+[PLUGINS]
+npGoogleUpdate3.dll|$
+C:\Program Files (x86)\Google\Update\1.3.28.13\npGoogleUpdate3.dll|$
+1.3.28.13|$
+1441029607306|0|0|0|$
+Google Update|$
+Google Update|$
+2
+0|application/x-vnd.google.update3webcontrol.3|||$
+1|application/x-vnd.google.oneclickctrl.9|||$
+npscimoz.dll|$
+C:\Program Files (x86)\ActiveState Komodo IDE 9\lib\mozilla\plugins\npscimoz.dll|$
+7.1.0.0|$
+1438699114000|0|0|0|$
+ActiveState editor plugin|$
+ActiveState SciMoz|$
+1
+0|application/x-scimoz-plugin|SciMoz Plugin|cpp|$
+npMeetingJoinPluginOC.dll|$
+C:\Program Files\Microsoft Office 15\root\VFS\ProgramFilesX86\Mozilla Firefox\plugins\npMeetingJoinPluginOC.dll|$
+15.0.4703.1000|$
+1435702325090|0|0|0|$
+The plugin allows you to have a better experience with Microsoft Lync|$
+Microsoft Office 2013|$
+1
+0|application/vnd.microsoft.communicator.ocsmeeting|Lync Plug-in for Firefox||$
+NPSPWRAP.DLL|$
+C:\Program Files\Microsoft Office 15\root\Office15\NPSPWRAP.DLL|$
+15.0.4514.1000|$
+1435688959009|0|0|0|$
+The plugin allows you to have a better experience with Microsoft SharePoint|$
+Microsoft Office 2013|$
+2
+0|application/x-sharepoint|SharePoint Plug-in for Firefox||$
+1|application/x-sharepoint-uc|||$
+NPSWF32_16_0_0_305.dll|$
+C:\Windows\SysWOW64\Macromed\Flash\NPSWF32_16_0_0_305.dll|$
+16.0.0.305|$
+1435682346994|0|0|0|$
+Shockwave Flash 16.0 r0|$
+Shockwave Flash|$
+2
+0|application/x-shockwave-flash|Adobe Flash movie|swf|$
+1|application/futuresplash|FutureSplash movie|spl|$
+nppdf32.dll|$
+C:\Program Files (x86)\Adobe\Reader 11.0\Reader\AIR\nppdf32.dll|$
+11.0.12.18|$
+1435585396000|0|0|0|$
+Adobe PDF Plug-In For Firefox and Netscape 11.0.12|$
+Adobe Acrobat|$
+7
+0|application/pdf|Acrobat Portable Document Format|pdf|$
+1|application/vnd.adobe.pdfxml|Adobe PDF in XML Format|pdfxml|$
+2|application/vnd.adobe.x-mars|Adobe PDF in XML Format|mars|$
+3|application/vnd.fdf|Acrobat Forms Data Format|fdf|$
+4|application/vnd.adobe.xfdf|XML Version of Acrobat Forms Data Format|xfdf|$
+5|application/vnd.adobe.xdp+xml| Acrobat XML Data Package|xdp|$
+6|application/vnd.adobe.xfd+xml|Adobe FormFlow99 Data File|xfd|$
+npGoogleUpdate3.dll|$
+C:\Program Files (x86)\Nok Nok Labs\MFACUpdater\1.3.27.0\npGoogleUpdate3.dll|$
+1.3.27.0|$
+1429612247420|0|0|0|$
+Nok Nok Labs MFACUpdater|$
+Nok Nok Labs MFACUpdater|$
+2
+0|application/x-vnd.update.noknok.update3webcontrol.3|||$
+1|application/x-vnd.update.noknok.oneclickctrl.9|||$
+npIntelWebAPIIPT.dll|$
+C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT\npIntelWebAPIIPT.dll|$
+4.0.56.0|$
+1415646754000|0|0|0|$
+Intel web components for Intel® Identity Protection Technology|$
+Intel® Identity Protection Technology|$
+1
+0|application/x-vnd-intel-webapi-ipt-4.0.56|npIntelWebAPIipt-3-5||$
+npIntelWebAPIUpdater.dll|$
+C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT\npIntelWebAPIUpdater.dll|$
+4.0.56.0|$
+1415646754000|0|0|0|$
+Intel web components updater - Installs and updates the Intel web components|$
+Intel® Identity Protection Technology|$
+1
+0|application/x-vnd-intel-webapi-updater|npIntelWebAPIupdater-2-0|intel_webapi_updater-2-0|$
+npnitromozilla.dll|$
+C:\Program Files (x86)\Nitro\Pro 9\npnitromozilla.dll|$
+9.5.1.5|$
+1400204216000|0|0|0|$
+Nitro PDF plugin for Firefox and Chrome|$
+Nitro PDF plugin for Firefox and Chrome|$
+1
+0|application/pdf|Acrobat Portable Document Format|pdf|$
+npctrl.dll|$
+c:\Program Files (x86)\Microsoft Silverlight\5.1.30514.0\npctrl.dll|$
+5.1.30514.0|$
+1400037422000|0|0|0|$
+5.1.30514.0|$
+Silverlight Plug-In|$
+2
+0|application/x-silverlight|npctrl|scr|$
+1|application/x-silverlight-2|||$
+
+[INVALID]
+c:\Program Files (x86)\Microsoft Silverlight\5.1.30514.0\npctrlui.dll|$
+1400037422000|$
+C:\Program Files (x86)\Nitro\Pro 9\npdf.dll|$
+1400204272000|$
+C:\Program Files (x86)\Nitro\Pro 9\npnitroie.dll|$
+1400204216000|$

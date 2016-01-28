@@ -1,0 +1,312 @@
+<scope doc="Policies   Note that Dispatchers are now implemented in &quot;dispatcher.py&quot;, but" ilk="blob" lang="Python" name="win32com.server.policy">
+      <scope doc="The base class of policies.  Normally not used directly (use a child class, instead)" ilk="class" line="138" lineend="373" name="BasicWrapPolicy">
+        <scope attributes="protected" ilk="function" line="370" lineend="371" name="_GetNameSpaceParent_" returns="self._getnamespaceparent()" signature="_GetNameSpaceParent_()">
+          <variable citdl="BasicWrapPolicy" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="294" lineend="296" name="_getidsofnames_" returns="tuple" signature="_getidsofnames_(names, lcid)">
+          <variable citdl="BasicWrapPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="names" />
+          <variable ilk="argument" name="lcid" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="list" line="233" name="_com_interfaces_" />
+        <scope attributes="protected" doc="The main COM entry-point for QueryInterface." ilk="function" line="247" lineend="255" name="_QueryInterface_" returns="BasicWrapPolicy._query_interface_()" signature="_QueryInterface_(iid)">
+          <variable citdl="BasicWrapPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="iid" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="339" lineend="340" name="_DeleteMemberByDispID_" returns="self._deletememberbydispid()" signature="_DeleteMemberByDispID_(id)">
+          <variable citdl="BasicWrapPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="id" />
+        </scope>
+        <scope attributes="__ctor__" doc="Initialise the policy object" ilk="function" line="172" lineend="181" name="__init__" signature="BasicWrapPolicy(object)">
+          <variable citdl="BasicWrapPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="object" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="dict" line="214" name="_name_to_dispid_" />
+        <scope attributes="protected" doc="Creates a new instance of a **wrapped** object" ilk="function" line="183" lineend="203" name="_CreateInstance_" returns="pythoncom.WrapObject()" signature="_CreateInstance_(clsid, reqIID)">
+          <import line="199" module="win32com.util" symbol="IIDToInterfaceName" />
+          <variable citdl="BasicWrapPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="clsid" />
+          <variable ilk="argument" name="reqIID" />
+          <variable citdl="win32api.RegQueryValue()" line="190" name="classSpec" />
+          <variable citdl="call_func()" line="194" name="myob" />
+          <variable citdl="str" line="200" name="desc" />
+        </scope>
+        <scope attributes="protected" doc="The main COM entry-point for GetIDsOfNames." ilk="function" line="285" lineend="292" name="_GetIDsOfNames_" returns="BasicWrapPolicy._getidsofnames_()" signature="_GetIDsOfNames_(names, lcid)">
+          <variable citdl="BasicWrapPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="names" />
+          <variable ilk="argument" name="lcid" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="336" lineend="337" name="_deletememberbyname_" signature="_deletememberbyname_(name, fdex)">
+          <variable citdl="BasicWrapPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="fdex" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="356" lineend="368" name="_getnextdispid_" signature="_getnextdispid_(fdex, dispid)">
+          <variable citdl="BasicWrapPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="fdex" />
+          <variable ilk="argument" name="dispid" />
+          <variable citdl="self._name_to_dispid_.values()" line="357" name="ids" />
+        </scope>
+        <scope attributes="protected" doc="The main COM entry-point for InvokeEx." ilk="function" line="313" lineend="324" name="_InvokeEx_" returns="BasicWrapPolicy._invokeex_()" signature="_InvokeEx_(dispid, lcid, wFlags, args, kwargs, serviceProvider)">
+          <variable citdl="BasicWrapPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="dispid" />
+          <variable ilk="argument" name="lcid" />
+          <variable ilk="argument" name="wFlags" />
+          <variable ilk="argument" name="args" />
+          <variable ilk="argument" name="kwargs" />
+          <variable ilk="argument" name="serviceProvider" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="372" lineend="373" name="_getnamespaceparent_" signature="_getnamespaceparent_()">
+          <variable citdl="BasicWrapPolicy" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="346" lineend="347" name="_getmemberproperties_" signature="_getmemberproperties_(id, fdex)">
+          <variable citdl="BasicWrapPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="id" />
+          <variable ilk="argument" name="fdex" />
+        </scope>
+        <scope attributes="protected" doc="Called if the object does not provide the requested interface in _com_interfaces, and does not provide a _query_interface_ handler." ilk="function" line="257" lineend="263" name="_query_interface_" returns="int" signature="_query_interface_(iid)">
+          <variable citdl="BasicWrapPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="iid" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="302" lineend="303" name="_GetDispID_" returns="BasicWrapPolicy._getdispid_()" signature="_GetDispID_(name, fdex)">
+          <variable citdl="BasicWrapPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="fdex" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="334" lineend="335" name="_DeleteMemberByName_" returns="self._deletememberbyname_()" signature="_DeleteMemberByName_(name, fdex)">
+          <variable citdl="BasicWrapPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="fdex" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="354" lineend="355" name="_GetNextDispID_" returns="self._getnextdispid_()" signature="_GetNextDispID_(fdex, dispid)">
+          <variable citdl="BasicWrapPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="fdex" />
+          <variable ilk="argument" name="dispid" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="341" lineend="342" name="_deletememberbydispid_" signature="_deletememberbydispid_(id)">
+          <variable citdl="BasicWrapPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="id" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="351" lineend="352" name="_getmembername_" signature="_getmembername_(dispid)">
+          <variable citdl="BasicWrapPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="dispid" />
+        </scope>
+        <scope attributes="protected" doc="Wraps up the specified object." ilk="function" line="206" lineend="244" name="_wrap_" signature="_wrap_(object)">
+          <variable citdl="BasicWrapPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="object" />
+          <variable line="215" name="ob" />
+          <variable citdl="pythoncom.MakeIID()" line="239" name="i" />
+        </scope>
+        <scope attributes="protected" doc="The main COM entry-point for Invoke." ilk="function" line="266" lineend="277" name="_Invoke_" returns="BasicWrapPolicy._invoke_()" signature="_Invoke_(dispid, lcid, wFlags, args)">
+          <variable citdl="BasicWrapPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="dispid" />
+          <variable ilk="argument" name="lcid" />
+          <variable ilk="argument" name="wFlags" />
+          <variable ilk="argument" name="args" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="344" lineend="345" name="_GetMemberProperties_" returns="self._getmemberproperties_()" signature="_GetMemberProperties_(id, fdex)">
+          <variable citdl="BasicWrapPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="id" />
+          <variable ilk="argument" name="fdex" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="279" lineend="282" name="_invoke_" returns="tuple" signature="_invoke_(dispid, lcid, wFlags, args)">
+          <variable citdl="BasicWrapPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="dispid" />
+          <variable ilk="argument" name="lcid" />
+          <variable ilk="argument" name="wFlags" />
+          <variable ilk="argument" name="args" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="305" lineend="310" name="_getdispid_" signature="_getdispid_(name, fdex)">
+          <variable citdl="BasicWrapPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="fdex" />
+        </scope>
+        <scope attributes="protected" doc="A stub for _invokeex_ - should never be called." ilk="function" line="326" lineend="332" name="_invokeex_" signature="_invokeex_(dispid, lcid, wFlags, args, kwargs, serviceProvider)">
+          <variable citdl="BasicWrapPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="dispid" />
+          <variable ilk="argument" name="lcid" />
+          <variable ilk="argument" name="wFlags" />
+          <variable ilk="argument" name="args" />
+          <variable ilk="argument" name="kwargs" />
+          <variable ilk="argument" name="serviceProvider" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="349" lineend="350" name="_GetMemberName_" returns="self._getmembername_()" signature="_GetMemberName_(dispid)">
+          <variable citdl="BasicWrapPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="dispid" />
+        </scope>
+      </scope>
+      <scope classrefs="com_error" doc="An Exception object that is understood by the framework.  If the framework is presented with an exception of type class," ilk="class" name="COMException" />
+      <scope doc="Create a new instance of the specified IID" ilk="function" line="98" lineend="136" name="CreateInstance" returns="retObj._CreateInstance_()" signature="CreateInstance(clsid, reqIID)">
+        <variable citdl="dispatcher()" line="133" name="retObj" />
+        <variable line="111" name="addnPaths" />
+        <variable ilk="argument" name="reqIID" />
+        <variable ilk="argument" name="clsid" />
+        <variable citdl="resolve_func()" line="119" name="policy" />
+        <variable citdl="resolve_func()" line="126" name="dispatcher" />
+      </scope>
+      <variable citdl="int" name="DISPATCH_METHOD" />
+      <variable citdl="int" name="DISPATCH_PROPERTYGET" />
+      <variable citdl="int" name="DISPATCH_PROPERTYPUT" />
+      <variable citdl="int" name="DISPATCH_PROPERTYPUTREF" />
+      <variable citdl="int" name="DISPID_COLLECT" />
+      <variable citdl="int" name="DISPID_CONSTRUCTOR" />
+      <variable citdl="int" name="DISPID_DESTRUCTOR" />
+      <variable citdl="int" name="DISPID_EVALUATE" />
+      <variable citdl="int" name="DISPID_NEWENUM" />
+      <variable citdl="int" name="DISPID_PROPERTYPUT" />
+      <variable citdl="int" name="DISPID_STARTENUM" />
+      <variable citdl="int" name="DISPID_UNKNOWN" />
+      <variable citdl="int" name="DISPID_VALUE" />
+      <scope classrefs="MappedWrapPolicy" doc="A policy which uses a mapping to link functions and dispid    A MappedWrappedPolicy which allows the wrapped object to specify, via certain" ilk="class" line="701" name="DefaultPolicy" />
+      <scope classrefs="MappedWrapPolicy" doc="A policy which uses a mapping to link functions and dispid    A MappedWrappedPolicy which allows the wrapped object to specify, via certain" ilk="class" line="420" lineend="619" name="DesignatedWrapPolicy">
+        <scope attributes="protected" ilk="function" line="553" lineend="558" name="_GetTypeInfo_" returns="tuple" signature="_GetTypeInfo_(index, lcid)">
+          <variable citdl="DesignatedWrapPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="index" />
+          <variable ilk="argument" name="lcid" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="453" lineend="527" name="_wrap_" signature="_wrap_(ob)">
+          <import line="459" module="win32com" symbol="universal" />
+          <variable citdl="DesignatedWrapPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="ob" />
+          <variable citdl="getattr()" line="455" name="tlb_guid" />
+          <variable citdl="getattr()" line="458" name="tlb_lcid" />
+          <variable citdl="list" line="463" name="interfaces" />
+          <variable citdl="list" line="465" name="universal_data" />
+          <variable citdl="self._allocnextdispid()" line="504" name="next_dispid" />
+          <variable citdl="list" line="508" name="readonly" />
+          <variable citdl="self._allocnextdispid()" line="512" name="dispid" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="560" lineend="566" name="_allocnextdispid" returns="int" signature="_allocnextdispid(last_dispid)">
+          <variable citdl="DesignatedWrapPolicy" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="last_dispid" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="548" lineend="551" name="_GetTypeInfoCount_" returns="len()" signature="_GetTypeInfoCount_()">
+          <variable citdl="DesignatedWrapPolicy" ilk="argument" name="self" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="_build_typeinfos_()" line="527" name="_typeinfos_" />
+        <scope attributes="protected" ilk="function" line="529" lineend="546" name="_build_typeinfos_" returns="list" signature="_build_typeinfos_()">
+          <variable citdl="DesignatedWrapPolicy" ilk="argument" name="self" />
+          <variable citdl="getattr()" line="531" name="tlb_guid" />
+          <variable citdl="pythoncom.LoadRegTypeLib()" line="535" name="tlb" />
+          <variable citdl="tlb.GetTypeComp()" line="536" name="typecomp" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="568" lineend="619" name="_invokeex_" returns="getattr()" signature="_invokeex_(dispid, lcid, wFlags, args, kwArgs, serviceProvider)">
+          <variable citdl="DesignatedWrapPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="dispid" />
+          <variable ilk="argument" name="lcid" />
+          <variable ilk="argument" name="wFlags" />
+          <variable ilk="argument" name="args" />
+          <variable ilk="argument" name="kwArgs" />
+          <variable ilk="argument" name="serviceProvider" />
+          <variable line="573" name="funcname" />
+          <variable citdl="getattr()" line="579" name="func" />
+          <variable line="595" name="name" />
+          <variable citdl="getattr()" line="598" name="retob" />
+          <variable citdl="getattr()" line="612" name="fn" />
+        </scope>
+      </scope>
+      <scope classrefs="DispatcherBase" doc="A dispatcher, which causes a &apos;print&apos; line for each COM function called." ilk="class" name="DispatcherTrace" />
+      <scope classrefs="DispatcherTrace" doc="A tracing dispatcher that sends its output to the win32trace remote collector." ilk="class" name="DispatcherWin32trace" />
+      <scope classrefs="BasicWrapPolicy" doc="A policy which dynamically (ie, at run-time) determines public interfaces.  A dynamic policy is used to dynamically dispatch methods and properties to the" ilk="class" line="651" lineend="698" name="DynamicPolicy">
+        <scope attributes="protected" ilk="function" line="668" lineend="673" name="_wrap_" signature="_wrap_(object)">
+          <variable citdl="DynamicPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="object" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="int" line="672" name="_next_dynamic_" />
+        <variable attributes="protected __instancevar__" citdl="dict" line="673" name="_dyn_dispid_to_name_" />
+        <scope attributes="protected" ilk="function" line="686" lineend="687" name="_invoke_" returns="tuple" signature="_invoke_(dispid, lcid, wFlags, args)">
+          <variable citdl="DynamicPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="dispid" />
+          <variable ilk="argument" name="lcid" />
+          <variable ilk="argument" name="wFlags" />
+          <variable ilk="argument" name="args" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="675" lineend="684" name="_getdispid_" returns="int" signature="_getdispid_(name, fdex)">
+          <variable citdl="DynamicPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="name" />
+          <variable ilk="argument" name="fdex" />
+          <variable citdl="name.lower()" line="677" name="lname" />
+          <variable citdl="int" line="681" name="dispid" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="689" lineend="698" name="_invokeex_" returns="self._obj_._dynamic_()" signature="_invokeex_(dispid, lcid, wFlags, args, kwargs, serviceProvider)">
+          <variable citdl="DynamicPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="dispid" />
+          <variable ilk="argument" name="lcid" />
+          <variable ilk="argument" name="wFlags" />
+          <variable ilk="argument" name="args" />
+          <variable ilk="argument" name="kwargs" />
+          <variable ilk="argument" name="serviceProvider" />
+          <variable line="695" name="name" />
+        </scope>
+      </scope>
+      <scope classrefs="DesignatedWrapPolicy" doc="The default policy used by event handlers in the win32com.client package.  In addition to the base policy, this provides argument conversion semantics for" ilk="class" line="621" lineend="649" name="EventHandlerPolicy">
+        <scope attributes="protected" ilk="function" line="646" lineend="649" name="_invokeex_" returns="DesignatedWrapPolicy._invokeex_()" signature="_invokeex_(dispid, lcid, wFlags, args, kwArgs, serviceProvider)">
+          <variable citdl="EventHandlerPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="dispid" />
+          <variable ilk="argument" name="lcid" />
+          <variable ilk="argument" name="wFlags" />
+          <variable ilk="argument" name="args" />
+          <variable ilk="argument" name="kwArgs" />
+          <variable ilk="argument" name="serviceProvider" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="631" lineend="645" name="_transform_args_" returns="tuple" signature="_transform_args_(args, kwArgs, dispid, lcid, wFlags, serviceProvider)">
+          <import line="636" module="win32com.client" />
+          <import line="640" module="win32com.client" />
+          <variable citdl="EventHandlerPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="args" />
+          <variable ilk="argument" name="kwArgs" />
+          <variable ilk="argument" name="dispid" />
+          <variable ilk="argument" name="lcid" />
+          <variable ilk="argument" name="wFlags" />
+          <variable ilk="argument" name="serviceProvider" />
+          <variable citdl="list" line="632" name="ret" />
+          <variable citdl="type()" line="634" name="arg_type" />
+          <variable citdl="win32com.client.Dispatch()" line="637" name="arg" />
+        </scope>
+      </scope>
+      <scope classrefs="PyIUnknown" ilk="class" line="87" name="IDispatchType" />
+      <scope classrefs="interface-type" ilk="class" line="88" name="IUnknownType" />
+      <scope classrefs="BasicWrapPolicy" doc="Wraps an object using maps to do its magic  This policy wraps up a Python object, using a number of maps" ilk="class" line="376" lineend="418" name="MappedWrapPolicy">
+        <variable attributes="protected __instancevar__" citdl="ob._dispid_to_func_" line="398" name="_dispid_to_func_" />
+        <variable attributes="protected __instancevar__" citdl="ob._dispid_to_put_" line="406" name="_dispid_to_put_" />
+        <variable attributes="protected __instancevar__" citdl="dict" line="402" name="_dispid_to_get_" />
+        <scope attributes="protected" ilk="function" line="394" lineend="408" name="_wrap_" signature="_wrap_(object)">
+          <variable citdl="MappedWrapPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="object" />
+          <variable citdl="self._obj_" line="396" name="ob" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="410" lineend="418" name="_getmembername_" signature="_getmembername_(dispid)">
+          <variable citdl="MappedWrapPolicy" ilk="argument" name="self" />
+          <variable ilk="argument" name="dispid" />
+        </scope>
+      </scope>
+      <variable citdl="int" line="84" name="S_OK" />
+      <variable citdl="str" line="69" name="__author__" />
+      <scope doc="Call a function specified by name." ilk="function" line="721" lineend="727" name="call_func" returns="resolve_func()()" signature="call_func(spec, *args)">
+        <variable attributes="varargs" ilk="argument" name="args" />
+        <variable ilk="argument" name="spec" />
+      </scope>
+      <variable citdl="str" line="91" name="error" />
+      <import module="pythoncom" />
+      <import module="pywintypes" />
+      <variable citdl="str" line="96" name="regAddnPath" />
+      <variable citdl="str" line="95" name="regDispatcher" />
+      <variable citdl="str" line="94" name="regPolicy" />
+      <variable citdl="str" line="93" name="regSpec" />
+      <scope doc="Resolve a function by name" ilk="function" line="703" lineend="719" name="resolve_func" returns="getattr()" signature="resolve_func(spec)">
+        <variable citdl="list" line="711" name="mname" />
+        <variable citdl="_import_module()" line="716" name="module" />
+        <variable ilk="argument" name="spec" />
+        <variable citdl="spec.rindex()" line="710" name="idx" />
+        <variable citdl="list" line="712" name="fname" />
+      </scope>
+      <import module="sys" />
+      <import module="types" />
+      <import module="win32api" />
+      <import module="win32con" />
+      <import module="winerror" />
+      <scope attributes="protected __hidden__" doc="Import a module just like the &apos;import&apos; statement." ilk="function" line="729" lineend="738" name="_import_module" signature="_import_module(mname)">
+        <variable ilk="argument" name="mname" />
+      </scope>
+    </scope>
+    

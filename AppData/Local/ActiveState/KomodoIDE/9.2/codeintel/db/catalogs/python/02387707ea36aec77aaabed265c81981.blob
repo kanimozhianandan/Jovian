@@ -1,0 +1,31 @@
+<scope ilk="blob" lang="Python" name="dde">
+      <variable citdl="int" name="APPCLASS_MONITOR" />
+      <variable citdl="int" name="APPCLASS_STANDARD" />
+      <variable citdl="int" name="APPCMD_CLIENTONLY" />
+      <variable citdl="int" name="APPCMD_FILTERINITS" />
+      <variable citdl="int" name="CBF_FAIL_ADVISES" />
+      <variable citdl="int" name="CBF_FAIL_ALLSVRXACTIONS" />
+      <variable citdl="int" name="CBF_FAIL_CONNECTIONS" />
+      <variable citdl="int" name="CBF_FAIL_EXECUTES" />
+      <variable citdl="int" name="CBF_FAIL_POKES" />
+      <variable citdl="int" name="CBF_FAIL_REQUESTS" />
+      <variable citdl="int" name="CBF_FAIL_SELFCONNECTIONS" />
+      <variable citdl="int" name="CBF_SKIP_ALLNOTIFICATIONS" />
+      <variable citdl="int" name="CBF_SKIP_CONNECT_CONFIRMS" />
+      <variable citdl="int" name="CBF_SKIP_DISCONNECTS" />
+      <variable citdl="int" name="CBF_SKIP_REGISTRATIONS" />
+      <scope ilk="function" name="CreateConversation" />
+      <scope ilk="function" name="CreateServer" />
+      <scope ilk="function" name="CreateServerSystemTopic" />
+      <scope ilk="function" name="CreateStringItem" />
+      <scope ilk="function" name="CreateTopic" />
+      <variable citdl="int" name="MF_CALLBACKS" />
+      <variable citdl="int" name="MF_CONV" />
+      <variable citdl="int" name="MF_ERRORS" />
+      <variable citdl="int" name="MF_HSZ_INFO" />
+      <variable citdl="int" name="MF_LINKS" />
+      <variable citdl="int" name="MF_POSTMSGS" />
+      <variable citdl="int" name="MF_SENDMSGS" />
+      <scope classrefs="Exception" ilk="class" name="error" />
+    </scope>
+  

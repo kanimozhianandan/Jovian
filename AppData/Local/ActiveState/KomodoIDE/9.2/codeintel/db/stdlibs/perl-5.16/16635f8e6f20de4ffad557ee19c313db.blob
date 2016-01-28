@@ -1,0 +1,56 @@
+<scope ilk="blob" lang="Perl" name="DBD::CSV">
+      <import line="14" module="DynaLoader" />
+      <import line="15" module="DBD::File" />
+      <import line="16" module="IO::File" />
+      <scope classrefs="DBD::File" ilk="class" line="18" lineend="35" name="DBD::CSV">
+        <variable line="22" name="$drh" />
+        <variable line="22" name="$err" />
+        <variable line="22" name="$errstr" />
+        <variable line="22" name="$sqlstate" />
+        <variable line="22" name="$VERSION" />
+        <variable line="22" name="@ISA" />
+        <scope ilk="function" line="33" lineend="35" name="CLONE" signature="CLONE()" />
+      </scope>
+      <scope ilk="class" line="39" lineend="78" name="DBD::CSV::dr">
+        <import line="43" module="Text::CSV_XS" />
+        <variable line="44" name="@CSV_TYPES" />
+        <variable line="44" name="@ISA" />
+        <variable line="64" name="@DBD::CSV::dr::ISA" />
+        <variable line="66" name="$DBD::CSV::dr::imp_data_size" />
+        <variable line="67" name="$DBD::CSV::dr::data_sources_attr" />
+        <variable line="69" name="$DBD::CSV::ATTRIBUTION" />
+        <scope ilk="function" line="71" lineend="78" name="connect" signature="connect($drh, $dbname, $user, $auth, $attr)" />
+      </scope>
+      <scope ilk="class" line="82" lineend="167" name="DBD::CSV::db">
+        <variable line="86" name="$DBD::CSV::db::imp_data_size" />
+        <variable line="88" name="@DBD::CSV::db::ISA" />
+        <variable line="100" name="*STORE" />
+        <variable line="106" name="*FETCH" />
+        <variable line="112" name="*csv_versions" />
+        <variable line="112" name="*DBI::db::csv_versions" />
+        <scope ilk="function" line="90" lineend="95" name="set_versions" signature="set_versions($this)" />
+        <scope ilk="function" line="124" lineend="149" name="init_valid_attributes" signature="init_valid_attributes($dbh)" />
+        <scope ilk="function" line="151" lineend="167" name="get_csv_versions" signature="get_csv_versions($dbh, $table)" />
+      </scope>
+      <scope ilk="class" line="171" lineend="206" name="DBD::CSV::st">
+        <variable line="175" name="$DBD::CSV::st::imp_data_size" />
+        <variable line="177" name="@DBD::CSV::st::ISA" />
+      </scope>
+      <scope ilk="class" line="208" lineend="308" name="DBD::CSV::Statement">
+        <import line="211" module="DBD::File" symbol="*" />
+        <import line="212" module="Carp" symbol="*" />
+        <variable line="214" name="@DBD::CSV::Statement::ISA" />
+      </scope>
+      <scope ilk="class" line="310" lineend="486" name="DBD::CSV::Table">
+        <import line="313" module="DBD::File" symbol="*" />
+        <import line="314" module="Carp" symbol="*" />
+        <variable line="316" name="@DBD::CSV::Table::ISA" />
+        <variable line="484" name="*push_names" />
+        <scope ilk="function" line="318" lineend="326" name="bootstrap_table_meta" signature="bootstrap_table_meta($self, $dbh, $meta, $table)" />
+        <scope ilk="function" line="328" lineend="364" name="init_table_meta" signature="init_table_meta($self, $dbh, $meta, $table)" />
+        <scope ilk="function" line="371" lineend="384" name="table_meta_attr_changed" signature="table_meta_attr_changed($class, $meta, $attr, $value)" />
+        <scope ilk="function" line="444" lineend="468" name="fetch_row" signature="fetch_row($self, $data)" />
+        <scope ilk="function" line="470" lineend="483" name="push_row" signature="push_row($self, $data, $fields)" />
+      </scope>
+    </scope>
+    

@@ -1,0 +1,41 @@
+<scope doc="Swig doesn&apos;t do docstrings ?????" ilk="blob" lang="Python3" name="win32inet">
+      <scope ilk="function" name="CommitUrlCacheEntry" />
+      <scope ilk="function" name="CreateUrlCacheEntry" />
+      <scope ilk="function" name="CreateUrlCacheGroup" />
+      <scope ilk="function" name="DeleteUrlCacheEntry" />
+      <scope ilk="function" name="DeleteUrlCacheGroup" />
+      <scope ilk="function" name="FindCloseUrlCache" />
+      <scope ilk="function" name="FindFirstUrlCacheEntry" />
+      <scope ilk="function" name="FindFirstUrlCacheEntryEx" />
+      <scope ilk="function" name="FindFirstUrlCacheGroup" />
+      <scope ilk="function" name="FindNextUrlCacheEntry" />
+      <scope ilk="function" name="FindNextUrlCacheEntryEx" />
+      <scope ilk="function" name="FindNextUrlCacheGroup" />
+      <scope ilk="function" name="FtpCommand" />
+      <scope ilk="function" name="FtpOpenFile" />
+      <scope ilk="function" name="GetUrlCacheEntryInfo" />
+      <scope ilk="function" name="GetUrlCacheGroupAttribute" />
+      <scope ilk="function" name="InternetAttemptConnect" />
+      <scope ilk="function" name="InternetCanonicalizeUrl" />
+      <scope ilk="function" name="InternetCheckConnection" />
+      <scope ilk="function" name="InternetCloseHandle" />
+      <scope ilk="function" name="InternetConnect" />
+      <scope ilk="function" name="InternetGetCookie" />
+      <scope ilk="function" name="InternetGetLastResponseInfo" />
+      <scope ilk="function" name="InternetGoOnline" />
+      <scope ilk="function" name="InternetOpen" />
+      <scope ilk="function" name="InternetOpenUrl" />
+      <scope ilk="function" name="InternetQueryOption" />
+      <scope ilk="function" name="InternetReadFile" />
+      <scope ilk="function" name="InternetSetCookie" />
+      <scope ilk="function" name="InternetSetOption" />
+      <scope ilk="function" name="InternetWriteFile" />
+      <scope ilk="function" name="SetUrlCacheEntryGroup" />
+      <scope ilk="function" name="SetUrlCacheGroupAttribute" />
+      <variable citdl="int" name="UNICODE" />
+      <scope ilk="function" name="WinHttpGetDefaultProxyConfiguration" />
+      <scope ilk="function" name="WinHttpGetIEProxyConfigForCurrentUser" />
+      <scope ilk="function" name="WinHttpGetProxyForUrl" />
+      <scope ilk="function" name="WinHttpOpen" />
+    </scope>
+    

@@ -1,0 +1,141 @@
+<scope ilk="blob" lang="Perl" name="DBI">
+      <scope classrefs="Exporter DynaLoader" ilk="class" line="9" lineend="502" name="DBI">
+        <import line="158" module="Carp" />
+        <import line="159" module="DynaLoader" />
+        <import line="160" module="Exporter" />
+        <import line="256" module="DBI::PurePerl" />
+        <import line="289" module="Scalar::Util" />
+        <variable line="14" name="$VERSION" />
+        <variable line="247" name="$DBI::dbi_debug" />
+        <variable line="248" name="$DBI::neat_maxlen" />
+        <variable line="249" name="$DBI::stderr" />
+        <variable line="283" name="$DBI::connect_via" />
+        <variable line="295" name="%DBI::installed_drh" />
+        <variable line="297" name="%DBI::installed_methods" />
+        <variable line="381" name="%DBI::DBI_methods" />
+        <scope ilk="function" line="296" lineend="296" name="installed_drivers" signature="installed_drivers()" />
+        <scope ilk="function" line="298" lineend="298" name="installed_methods" signature="installed_methods()" />
+        <scope attributes="__ctor__" ilk="function" line="307" lineend="307" name="DBI::var::TIESCALAR" signature="DBI::var::TIESCALAR()" />
+        <scope ilk="function" line="308" lineend="308" name="DBI::var::STORE" signature="DBI::var::STORE()" />
+        <scope ilk="function" line="370" lineend="375" name="dump_dbd_registry" signature="dump_dbd_registry()">
+          <import line="371" module="Data::Dumper" />
+        </scope>
+      </scope>
+      <scope ilk="class" line="503" lineend="1292" name="DBI::common">
+        <variable line="504" name="@DBI::dr::ISA" />
+        <variable line="505" name="@DBI::db::ISA" />
+        <variable line="506" name="@DBI::st::ISA" />
+        <variable line="517" name="$DBI::PERL_ENDING" />
+        <variable line="824" name="*driver" />
+        <variable line="976" name="*internal" />
+        <variable line="1217" name="*DBI::dr::TIEHASH" />
+        <variable line="1218" name="*DBI::db::TIEHASH" />
+        <variable line="1224" name="$shared_profile" />
+        <scope ilk="function" line="522" lineend="533" name="CLONE" signature="CLONE()" />
+        <scope ilk="function" line="535" lineend="542" name="parse_dsn" signature="parse_dsn($class, $dsn)" />
+        <scope ilk="function" line="544" lineend="554" name="visit_handles" signature="visit_handles($class, $code, $outer_info)" />
+        <scope ilk="function" line="559" lineend="570" name="connect_cached" signature="connect_cached($class, $dsn, $user, $pass, $attr)" />
+        <scope ilk="function" line="572" lineend="733" name="connect" signature="connect($class, @orig_args, @args, $old_dbh, $override_attr)" />
+        <scope ilk="function" line="736" lineend="741" name="disconnect_all" signature="disconnect_all()" />
+        <scope ilk="function" line="744" lineend="746" name="disconnect" signature="disconnect()" />
+        <scope ilk="function" line="749" lineend="822" name="install_driver" signature="install_driver($class, $driver, $attr)" />
+        <scope ilk="function" line="827" lineend="842" name="setup_driver" signature="setup_driver($class, $driver_class)" />
+        <scope attributes="__ctor__" ilk="function" line="845" lineend="851" name="_rebless" signature="_rebless($dbh)" />
+        <scope ilk="function" line="854" lineend="876" name="_set_isa" signature="_set_isa($classes, $topclass)" />
+        <scope ilk="function" line="879" lineend="891" name="_rebless_dbtype_subclass" signature="_rebless_dbtype_subclass($dbh, $rootclass, $DbTypeSubclass)" />
+        <scope ilk="function" line="894" lineend="955" name="_dbtype_names" signature="_dbtype_names($dbh, $DbTypeSubclass)" />
+        <scope ilk="function" line="957" lineend="968" name="_load_class" signature="_load_class($load_class, $missing_ok)" />
+        <scope ilk="function" line="971" lineend="973" name="init_rootclass" signature="init_rootclass()" />
+        <scope ilk="function" line="978" lineend="982" name="driver_prefix" signature="driver_prefix($class, $driver)" />
+        <scope ilk="function" line="984" lineend="1016" name="available_drivers" signature="available_drivers($quiet)">
+          <import line="989" module="File::Spec" />
+        </scope>
+        <scope ilk="function" line="1018" lineend="1048" name="installed_versions" signature="installed_versions($class, $quiet)">
+          <import line="1039" module="Config" />
+        </scope>
+        <scope ilk="function" line="1051" lineend="1056" name="data_sources" signature="data_sources($class, $driver, @other)" />
+        <scope ilk="function" line="1059" lineend="1064" name="neat_list" signature="neat_list($listref, $maxlen, $sep)" />
+        <scope ilk="function" line="1067" lineend="1082" name="dump_results" signature="dump_results($sth, $maxlen, $lsep, $fsep, $fh)" />
+        <scope ilk="function" line="1085" lineend="1099" name="data_diff" signature="data_diff($a, $b, $logical)" />
+        <scope ilk="function" line="1102" lineend="1143" name="data_string_diff" signature="data_string_diff($a, $b)">
+          <import line="1116" module="utf8" />
+        </scope>
+        <scope ilk="function" line="1146" lineend="1168" name="data_string_desc" signature="data_string_desc($a)">
+          <import line="1148" module="bytes" />
+          <import line="1149" module="utf8" />
+        </scope>
+        <scope ilk="function" line="1171" lineend="1205" name="connect_test_perf" signature="connect_test_perf($class, $dsn, $dbuser, $dbpass, $attr)" />
+        <scope ilk="function" line="1210" lineend="1210" name="err" signature="err()" />
+        <scope ilk="function" line="1211" lineend="1211" name="errstr" signature="errstr()" />
+        <scope ilk="function" line="1226" lineend="1259" name="_new_drh" signature="_new_drh($class, $initial_attr, $imp_data)" />
+        <scope ilk="function" line="1261" lineend="1272" name="_new_dbh" signature="_new_dbh($drh, $attr, $imp_data)" />
+        <scope ilk="function" line="1274" lineend="1282" name="_new_sth" signature="_new_sth($dbh, $attr, $imp_data)" />
+      </scope>
+      <scope ilk="class" line="1293" lineend="1342" name="DBD::Switch::dr">
+        <variable line="1296" name="$DBD::Switch::dr::imp_data_size" />
+        <scope ilk="function" line="1300" lineend="1311" name="driver" signature="driver()" />
+        <scope ilk="function" line="1312" lineend="1314" name="CLONE" signature="CLONE()" />
+        <scope ilk="function" line="1316" lineend="1322" name="FETCH" signature="FETCH($drh, $key)" />
+        <scope ilk="function" line="1323" lineend="1332" name="STORE" signature="STORE($drh, $key, $value)" />
+      </scope>
+      <scope ilk="class" line="1343" lineend="1447" name="DBD::_::common">
+        <variable line="1367" name="*dump_handle" />
+        <scope ilk="function" line="1348" lineend="1352" name="_not_impl" signature="_not_impl($h, $method)" />
+        <scope ilk="function" line="1355" lineend="1355" name="FIRSTKEY" signature="FIRSTKEY()" />
+        <scope ilk="function" line="1356" lineend="1356" name="NEXTKEY" signature="NEXTKEY()" />
+        <scope ilk="function" line="1357" lineend="1357" name="EXISTS" signature="EXISTS()" />
+        <scope ilk="function" line="1358" lineend="1358" name="CLEAR" signature="CLEAR()" />
+        <scope ilk="function" line="1360" lineend="1365" name="FETCH_many" signature="FETCH_many($h)" />
+        <scope ilk="function" line="1369" lineend="1390" name="install_method" signature="install_method($class, $method, $attr)" />
+        <scope ilk="function" line="1392" lineend="1416" name="parse_trace_flags" signature="parse_trace_flags($h, $spec)" />
+        <scope ilk="function" line="1418" lineend="1427" name="parse_trace_flag" signature="parse_trace_flag($h, $name)" />
+        <scope ilk="function" line="1429" lineend="1431" name="private_attribute_info" signature="private_attribute_info()" />
+        <scope ilk="function" line="1433" lineend="1443" name="visit_child_handles" signature="visit_child_handles($h, $code, $info)" />
+      </scope>
+      <scope ilk="class" line="1448" lineend="1508" name="DBD::_::dr">
+        <variable line="1449" name="@DBD::_::dr::ISA" />
+        <scope ilk="function" line="1452" lineend="1457" name="default_user" signature="default_user($drh, $user, $pass, $attr)" />
+        <scope ilk="function" line="1459" lineend="1469" name="connect" signature="connect($drh, $dsn, $user, $auth)" />
+        <scope ilk="function" line="1472" lineend="1503" name="connect_cached" signature="connect_cached($drh, $dsn, $user, $auth, $attr)" />
+      </scope>
+      <scope ilk="class" line="1509" lineend="1819" name="DBD::_::db">
+        <variable line="1510" name="@DBD::_::db::ISA" />
+        <scope ilk="function" line="1513" lineend="1545" name="clone" signature="clone($old_dbh, $attr)" />
+        <scope ilk="function" line="1547" lineend="1576" name="quote_identifier" signature="quote_identifier($dbh, @id)" />
+        <scope ilk="function" line="1578" lineend="1606" name="quote" signature="quote($dbh, $str, $data_type)" />
+        <scope ilk="function" line="1608" lineend="1608" name="rows" signature="rows()" />
+        <scope ilk="function" line="1610" lineend="1616" name="do" signature="do($dbh, $statement, $attr, @params)" />
+        <scope ilk="function" line="1618" lineend="1627" name="_do_selectrow" signature="_do_selectrow($method, $dbh, $stmt, $attr, @bind)" />
+        <scope ilk="function" line="1629" lineend="1629" name="selectrow_hashref" signature="selectrow_hashref()" />
+        <scope ilk="function" line="1632" lineend="1632" name="selectrow_arrayref" signature="selectrow_arrayref()" />
+        <scope ilk="function" line="1633" lineend="1637" name="selectrow_array" signature="selectrow_array()" />
+        <scope ilk="function" line="1641" lineend="1656" name="selectall_arrayref" signature="selectall_arrayref($dbh, $stmt, $attr, @bind)" />
+        <scope ilk="function" line="1658" lineend="1664" name="selectall_hashref" signature="selectall_hashref($dbh, $stmt, $key_field, $attr, @bind)" />
+        <scope ilk="function" line="1666" lineend="1685" name="selectcol_arrayref" signature="selectcol_arrayref($dbh, $stmt, $attr, @bind)" />
+        <scope ilk="function" line="1687" lineend="1711" name="prepare_cached" signature="prepare_cached($dbh, $statement, $attr, $if_active)" />
+        <scope ilk="function" line="1713" lineend="1719" name="ping" signature="ping($dbh)" />
+        <scope ilk="function" line="1721" lineend="1728" name="begin_work" signature="begin_work($dbh)" />
+        <scope ilk="function" line="1730" lineend="1738" name="primary_key" signature="primary_key($dbh, @args)" />
+        <scope ilk="function" line="1740" lineend="1761" name="tables" signature="tables($dbh, @args)" />
+        <scope ilk="function" line="1763" lineend="1808" name="type_info" signature="type_info($dbh, $data_type)" />
+        <scope ilk="function" line="1810" lineend="1814" name="data_sources" signature="data_sources($dbh, @other)" />
+      </scope>
+      <scope ilk="class" line="1820" lineend="2116" name="DBD::_::st">
+        <variable line="1821" name="@DBD::_::st::ISA" />
+        <variable line="2083" name="*dump_results" />
+        <variable line="2110" name="@DBD::_mem::dr::ISA" />
+        <variable line="2111" name="@DBD::_mem::db::ISA" />
+        <variable line="2112" name="@DBD::_mem::st::ISA" />
+        <scope ilk="function" line="1824" lineend="1824" name="bind_param" signature="bind_param()" />
+        <scope ilk="function" line="1839" lineend="1866" name="bind_param_array" signature="bind_param_array($sth, $p_id, $value_array, $attr)" />
+        <scope ilk="function" line="1868" lineend="1875" name="bind_param_inout_array" signature="bind_param_inout_array($sth, $p_num, $value_array, $attr)" />
+        <scope ilk="function" line="1877" lineend="1897" name="bind_columns" signature="bind_columns($sth)" />
+        <scope ilk="function" line="1899" lineend="1976" name="execute_array" signature="execute_array($sth, $attr, @array_of_arrays)" />
+        <scope ilk="function" line="1978" lineend="2003" name="execute_for_fetch" signature="execute_for_fetch($sth, $fetch_tuple_sub, $tuple_status)" />
+        <scope ilk="function" line="2006" lineend="2054" name="fetchall_arrayref" signature="fetchall_arrayref($sth, $slice, $max_rows)" />
+        <scope ilk="function" line="2056" lineend="2081" name="fetchall_hashref" signature="fetchall_hashref($sth, $key_field)" />
+        <scope ilk="function" line="2085" lineend="2101" name="blob_copy_to_file" signature="blob_copy_to_file($self, $field, $filename_or_handleref, $blocksize)" />
+        <scope ilk="function" line="2103" lineend="2105" name="more_results" signature="more_results()" />
+      </scope>
+    </scope>
+    

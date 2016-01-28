@@ -1,0 +1,16 @@
+<scope ilk="blob" lang="Perl" name="Moose::Meta::Method::Accessor::Native::Collection">
+      <scope ilk="class" line="1" lineend="169" name="Moose::Meta::Method::Accessor::Native::Collection">
+        <import line="12" module="Moose::Role" symbol="*" />
+        <variable line="3" name="$Moose::Meta::Method::Accessor::Native::Collection::AUTHORITY" />
+        <variable line="6" name="$Moose::Meta::Method::Accessor::Native::Collection::VERSION" />
+        <scope ilk="function" line="16" lineend="27" name="_inline_coerce_new_values" signature="_inline_coerce_new_values($self)" />
+        <scope ilk="function" line="29" lineend="35" name="_tc_member_type_can_coerce" signature="_tc_member_type_can_coerce($self)" />
+        <scope ilk="function" line="37" lineend="48" name="_tc_member_type" signature="_tc_member_type($self)" />
+        <scope ilk="function" line="50" lineend="55" name="_writer_value_needs_copy" signature="_writer_value_needs_copy($self)" />
+        <scope ilk="function" line="57" lineend="74" name="_inline_tc_code" signature="_inline_tc_code($self, $value, $tc, $coercion, $message, $is_lazy)" />
+        <scope ilk="function" line="76" lineend="99" name="_check_new_members_only" signature="_check_new_members_only($self)" />
+        <scope ilk="function" line="101" lineend="124" name="_inline_check_member_constraint" signature="_inline_check_member_constraint($self, $new_value)" />
+        <scope ilk="function" line="126" lineend="138" name="_inline_get_old_value_for_trigger" signature="_inline_get_old_value_for_trigger($self, $instance, $old)" />
+      </scope>
+    </scope>
+    

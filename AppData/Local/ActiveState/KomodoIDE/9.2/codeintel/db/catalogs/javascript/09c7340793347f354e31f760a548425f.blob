@@ -1,0 +1,15 @@
+<scope ilk="blob" lang="JavaScript" name="DragAndDrop.js">
+      <variable citdl="Object" name="MochiKit">
+        <variable citdl="Object" name="DragAndDrop">
+          <scope doc="A object that can be drag with the mouse. You have the&#xA;following options, with corresponding default values: handle&#xA;(false): Option for giving the element where starting the&#xA;drag." ilk="class" name="Draggable">
+            <scope attributes="__ctor__" doc="A object that can be drag with the mouse. You have the&#xA;following options, with corresponding default values: handle&#xA;(false): Option for giving the element where starting the&#xA;drag." ilk="function" name="Draggable" signature="Draggable(element[, options])" />
+          </scope>
+          <scope doc="A object where you can drop a draggable. You have the&#xA;following options, with corresponding default values: greedy&#xA;(true): Stop on this droppable when a draggable drops over&#xA;it." ilk="class" name="Droppable">
+            <scope attributes="__ctor__" doc="A object where you can drop a draggable. You have the&#xA;following options, with corresponding default values: greedy&#xA;(true): Stop on this droppable when a draggable drops over&#xA;it." ilk="function" name="Droppable" signature="Droppable(element[, options])" />
+          </scope>
+        </variable>
+      </variable>
+      <variable citdl="MochiKit.DragAndDrop.Draggable" name="Draggable" />
+      <variable citdl="MochiKit.DragAndDrop.Droppable" name="Droppable" />
+    </scope>
+  

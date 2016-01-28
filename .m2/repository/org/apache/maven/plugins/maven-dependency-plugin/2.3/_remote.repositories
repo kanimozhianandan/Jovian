@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Mon Sep 14 15:58:49 EDT 2015
+maven-dependency-plugin-2.3.pom>central=
+maven-dependency-plugin-2.3.pom>nexus=
+maven-dependency-plugin-2.3.jar>nexus=
+maven-dependency-plugin-2.3.jar>central=

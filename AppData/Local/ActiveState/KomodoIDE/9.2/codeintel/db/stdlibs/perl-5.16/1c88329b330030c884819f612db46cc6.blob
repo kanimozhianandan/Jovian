@@ -1,0 +1,9 @@
+<scope ilk="blob" lang="Perl" name="Devel::PPPort">
+      <scope ilk="class" line="1359" lineend="1390" name="Devel::PPPort">
+        <variable line="1362" name="$data" />
+        <variable line="1362" name="$VERSION" />
+        <scope ilk="function" line="1366" lineend="1374" name="_init_data" signature="_init_data()" />
+        <scope ilk="function" line="1376" lineend="1388" name="WriteFile" signature="WriteFile($file)" />
+      </scope>
+    </scope>
+    

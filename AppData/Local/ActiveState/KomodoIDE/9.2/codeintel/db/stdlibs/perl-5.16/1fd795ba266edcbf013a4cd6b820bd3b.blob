@@ -1,0 +1,8 @@
+<scope ilk="blob" lang="Perl" name="CPAN::Exception::yaml_process_error">
+      <scope ilk="class" line="3" lineend="53" name="CPAN::Exception::yaml_process_error">
+        <variable line="8" name="$VERSION" />
+        <scope attributes="__ctor__" ilk="function" line="13" lineend="22" name="new" signature="new($class, $module, $file, $during, $error)" />
+        <scope ilk="function" line="24" lineend="51" name="as_string" signature="as_string()" />
+      </scope>
+    </scope>
+    

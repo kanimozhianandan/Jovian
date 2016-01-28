@@ -1,0 +1,24 @@
+<scope doc="Swig doesn&apos;t do docstrings ?????" ilk="blob" lang="Python3" name="_winxptheme">
+      <scope ilk="function" name="CloseThemeData" />
+      <scope ilk="function" name="DrawThemeBackground" />
+      <scope ilk="function" name="DrawThemeText" />
+      <variable citdl="int" name="ETDT_DISABLE" />
+      <variable citdl="int" name="ETDT_ENABLE" />
+      <variable citdl="int" name="ETDT_ENABLETAB" />
+      <variable citdl="int" name="ETDT_USETABTEXTURE" />
+      <scope ilk="function" name="EnableThemeDialogTexture" />
+      <scope ilk="function" name="EnableTheming" />
+      <scope ilk="function" name="GetCurrentThemeName" />
+      <scope ilk="function" name="GetThemeAppProperties" />
+      <scope ilk="function" name="GetThemeBackgroundContentRect" />
+      <scope ilk="function" name="GetThemeBackgroundExtent" />
+      <scope ilk="function" name="GetWindowTheme" />
+      <scope ilk="function" name="IsAppThemed" />
+      <scope ilk="function" name="IsThemeActive" />
+      <scope ilk="function" name="IsThemeDialogTextureEnabled" />
+      <scope ilk="function" name="OpenThemeData" />
+      <scope ilk="function" name="SetWindowTheme" />
+      <variable citdl="int" name="UNICODE" />
+      <scope classrefs="Exception" ilk="class" name="error" />
+    </scope>
+    

@@ -1,0 +1,11 @@
+<scope ilk="blob" lang="Python" name="win32transaction">
+      <scope ilk="function" name="CommitTransaction" />
+      <scope ilk="function" name="CommitTransactionAsync" />
+      <scope ilk="function" name="CreateTransaction" />
+      <scope ilk="function" name="GetTransactionId" />
+      <scope ilk="function" name="OpenTransaction" />
+      <scope ilk="function" name="RollbackTransaction" />
+      <scope ilk="function" name="RollbackTransactionAsync" />
+      <scope classrefs="Exception" ilk="class" name="error" />
+    </scope>
+    

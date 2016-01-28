@@ -1,0 +1,331 @@
+/* Action Icons */
+/* Folder Icons */
+/* SCC File Symbols */
+/* Subpanel icons (Places projects subpanel) */
+/* Scrolltabs */
+/* File/Folder actions */
+/* Buffer Actions */
+/* Editing Icons */
+/* Global Symbols */
+/* Menu Specific Icons */
+/* Browser Icons */
+/* Miscellaneous */
+/* OSX Only */
+/* Toolbars - Standard */
+/* Toolbars - Tools */
+/* Toolbars - Workspace */
+/* Toolbars - SCC */
+/* Toolbars - Debug */
+/* Toolbars - Macro's */
+/* Toolbars - Komodo Resources */
+/* Addon Icons */
+/* SCC Icons */
+/* Debug Icons */
+/* Unit Test Icons */
+/* Macro Icons */
+/* Breakpoint Icons */
+/* Sync Icons */
+/* Widget Icons */
+/* Notification Widget */
+/* Code Browser Widget */
+/* DOM Browser Widget */
+/* Database Widget */
+/* Collaboration Widget */
+/* Collaboration Widget */
+/* Syntax checking widget */
+/* Find Results Widget */
+/* Breadcrumbs */
+/* Pref Icons */
+/**
+ * Syntax checking statusbar images
+ */
+/* Hud Icons */
+/* Workspace Icons */
+/* Folder Icons */
+/* separators */
+/* buttons */
+/* Embedded buttons */
+/* textboxes */
+/* Checkboxes */
+/* Radioboxes */
+/* Groupboxes */
+/* Tooltips */
+/* Wizards */
+/* Alerts */
+splitter.workspace_splitter[orient="vertical"],
+splitter.workspace_splitter[orient="vertical"]:-moz-window-inactive {
+  border-top: 0 !important;
+  margin-bottom: -3px !important;
+}
+splitter.workspace_splitter[orient="horizontal"]:not(.workspace_splitter_right) {
+  border-right: 0 !important;
+  margin-left: -3px !important;
+}
+splitter.workspace_splitter[orient="horizontal"].workspace_splitter_right {
+  border-left: 0 !important;
+  margin-right: -3px !important;
+}
+#workspace_left_area tabpanel,
+#workspace_right_area tabpanel {
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
+view tabbox:not(.tabs-bottom) > tabs {
+  border-bottom: 0 !important;
+}
+#komodo-editor-vbox {
+  border-top: 0 !important;
+}
+/* Hud */
+.hud {
+  background: #181a1c !important;
+  background-image: none !important;
+  color: #c5c8c6 !important;
+  border-color: #35393c !important;
+}
+.hud separator {
+  -moz-appearance: none !important;
+  height: 1px !important;
+  max-height: 1px !important;
+  background: rgba(53, 57, 60, 0.5) !important;
+}
+.hud .docked {
+  background: rgba(53, 57, 60, 0.5) !important;
+}
+.hud .special {
+  background: #b294bb !important;
+  color: #000000 !important;
+}
+.hud richlistitem,
+.hud listitem,
+.hud row,
+.hud textbox {
+  color: #c5c8c6 !important;
+  border-color: rgba(53, 57, 60, 0) !important;
+}
+.hud richlistitem[selected="true"],
+.hud listitem[selected="true"],
+.hud row[selected="true"],
+.hud textbox[selected="true"] {
+  color: #ffffff !important;
+  background: rgba(177, 150, 185, 0.3) !important;
+}
+.hud richlistitem[focused]:not([selected="true"]),
+.hud listitem[focused]:not([selected="true"]),
+.hud row[focused]:not([selected="true"]),
+.hud textbox[focused]:not([selected="true"]) {
+  color: #f9faf9 !important;
+  border-color: #35393c !important;
+}
+.hud #commando-panel:not(.kitt) .loader {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0, #b294bb 200px, #b294bb 300px, rgba(0, 0, 0, 0) 500px) !important;
+}
+.hud ::-moz-selection {
+  color: #000000 !important;
+  background: #b294bb;
+}
+.hud :not(button) > button:not(.button-plain),
+.hud > button:not(.button-plain) {
+  background: #292c2f !important;
+  border: 1px solid #35393c !important;
+}
+.hud :not(button) > button:not(.button-plain):hover,
+.hud > button:not(.button-plain):hover {
+  background-color: #242729 !important;
+}
+.hud button:not(.button-plain) {
+  color: #c5c8c6 !important;
+}
+statusbar#statusbarviewbox :not(menupopup) > textbox:not(.transparent),
+.hud :not(menupopup) > textbox:not(.transparent) {
+  -moz-appearance: none !important;
+  background: #292c2f !important;
+  border: 0;
+}
+statusbar#statusbarviewbox :not(menupopup) > textbox:not(.transparent) > hbox,
+.hud :not(menupopup) > textbox:not(.transparent) > hbox {
+  -moz-appearance: none !important;
+  background-color: transparent !important;
+}
+statusbar#statusbarviewbox :not(menupopup) > textbox,
+.hud :not(menupopup) > textbox {
+  color: #c5c8c6 !important;
+}
+scintilla[virtualScrollbars="true"] row > scrollbar,
+.skinnedScrollbars {
+  border: 0;
+  background: transparent;
+  -moz-appearance: none !important;
+}
+scintilla[virtualScrollbars="true"] row > scrollbar slider,
+.skinnedScrollbars slider {
+  -moz-appearance: none !important;
+  border: 0;
+  background: #1d1f21 !important;
+}
+scintilla[virtualScrollbars="true"] row > scrollbar thumb,
+.skinnedScrollbars thumb {
+  -moz-appearance: none !important;
+  background: #35393c !important;
+  border: 0;
+}
+scintilla[virtualScrollbars="true"] row > scrollbar thumb:hover,
+.skinnedScrollbars thumb:hover {
+  -moz-appearance: none !important;
+  background: #41454a !important;
+}
+scintilla[virtualScrollbars="true"] row > scrollbar scrollbarbutton,
+.skinnedScrollbars scrollbarbutton {
+  visibility: collapse;
+}
+scintilla[virtualScrollbars="true"] row > scrollbar[orient="horizontal"] thumb,
+.skinnedScrollbars[orient="horizontal"] thumb {
+  min-width: 25px;
+}
+scintilla[virtualScrollbars="true"] row > scrollbar[orient="vertical"] thumb,
+.skinnedScrollbars[orient="vertical"] thumb {
+  min-height: 25px;
+}
+scintilla[virtualScrollbars="true"] row > scrollbar:hover slider,
+.skinnedScrollbars:hover slider {
+  -moz-appearance: none;
+  background: #111213 !important;
+}
+scintilla[virtualScrollbars="true"] row > scrollbar[orient="vertical"],
+.skinnedScrollbars[orient="vertical"] {
+  width: 10px;
+}
+scintilla[virtualScrollbars="true"] row > scrollbar[orient="horizontal"],
+.skinnedScrollbars[orient="horizontal"] {
+  height: 10px;
+}
+/* Do not skin non-editor scrollbars on OSX */
+.hud scrollbar {
+  border: 0;
+  background: transparent;
+  -moz-appearance: none !important;
+}
+.hud scrollbar slider {
+  -moz-appearance: none !important;
+  border: 0;
+  background: #1d1f21 !important;
+}
+.hud scrollbar thumb {
+  -moz-appearance: none !important;
+  background: #35393c !important;
+  border: 0;
+}
+.hud scrollbar thumb:hover {
+  -moz-appearance: none !important;
+  background: #41454a !important;
+}
+.hud scrollbar scrollbarbutton {
+  visibility: collapse;
+}
+.hud scrollbar[orient="horizontal"] thumb {
+  min-width: 25px;
+}
+.hud scrollbar[orient="vertical"] thumb {
+  min-height: 25px;
+}
+.hud scrollbar:hover slider {
+  -moz-appearance: none;
+  background: #111213 !important;
+}
+.hud scrollbar[orient="vertical"] {
+  width: 10px;
+}
+.hud scrollbar[orient="horizontal"] {
+  height: 10px;
+}
+/* Statusbar */
+window:not([view-type="editor"]) statusbar#statusbarviewbox {
+  visibility: collapse;
+}
+statusbar#statusbarviewbox {
+  -moz-appearance: none !important;
+  background: #181a1c !important;
+  background-image: none !important;
+  color: rgba(197, 200, 198, 0.6) !important;
+  border: 0 !important;
+  border-top: 1px solid #292c2f !important;
+  /* Statusbar Buttons */
+
+}
+statusbar#statusbarviewbox statusbarpanel {
+  -moz-appearance: none !important;
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0 2px 0 !important;
+}
+statusbar#statusbarviewbox button:not([type="menu"]),
+statusbar#statusbarviewbox sectionlist,
+statusbar#statusbarviewbox toolbarbutton {
+  -moz-appearance: none !important;
+  background: transparent;
+  color: rgba(197, 200, 198, 0.6) !important;
+  border: 0;
+  border-radius: 0 !important;
+  margin: 0;
+  padding: 0 2px !important;
+}
+statusbar#statusbarviewbox button:not([type="menu"]) > label,
+statusbar#statusbarviewbox sectionlist > label,
+statusbar#statusbarviewbox toolbarbutton > label {
+  color: rgba(197, 200, 198, 0.6) !important;
+}
+statusbar#statusbarviewbox button:not([type="menu"]):hover,
+statusbar#statusbarviewbox sectionlist:hover,
+statusbar#statusbarviewbox toolbarbutton:hover {
+  background: rgba(29, 31, 33, 0.4) !important;
+}
+statusbar#statusbarviewbox button:not([type="menu"]):hover,
+statusbar#statusbarviewbox sectionlist:hover,
+statusbar#statusbarviewbox toolbarbutton:hover,
+statusbar#statusbarviewbox button:not([type="menu"]):hover > label,
+statusbar#statusbarviewbox sectionlist:hover > label,
+statusbar#statusbarviewbox toolbarbutton:hover > label {
+  color: #dfe1e0 !important;
+}
+statusbar#statusbarviewbox sectionlist textbox {
+  -moz-appearance: none !important;
+  background: #35393c !important;
+  color: #c5c8c6 !important;
+  border: 0 !important;
+}
+statusbar#statusbarviewbox sectionlist textbox > hbox {
+  -moz-appearance: none !important;
+  background: transparent !important;
+}
+statusbar#statusbarviewbox .statusbar-resizerpanel {
+  visibility: collapse;
+}
+#quicklaunch {
+  background-image: none !important;
+}
+statusbarpanel > toolbarbutton[type="menu"] > dropmarker {
+  opacity: 0.6;
+  list-style-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-down2.svg?preset=hud") !important;
+}
+#statusbar-throbber-inner {
+  background: #b294bb !important;
+}
+#breadcrumbBar .breadcrumb .breadcrumb-arrow {
+  background-image: url("koicon://ko-svg/chrome/icomoon/skin/arrow-right3.svg?preset=hud") !important;
+}
+#commando-search-quick[open] {
+  background: #181a1c !important;
+  color: #c5c8c6 !important;
+}
+#commando-search-quick[open][placeholder="true"] {
+  color: rgba(197, 200, 198, 0.5) !important;
+}
+minimap {
+  border-left: 1px solid #35393c !important;
+}
+.hud.shell-output textbox {
+  background: transparent !important;
+}
+.hud .markdown-body {
+  color: #c5c8c6 !important;
+}

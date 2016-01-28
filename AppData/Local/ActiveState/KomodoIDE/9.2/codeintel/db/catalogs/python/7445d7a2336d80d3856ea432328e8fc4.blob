@@ -1,0 +1,770 @@
+<scope doc="This is a Py2.3 implementation of decimal floating point arithmetic based on the General Decimal Arithmetic Specification: " ilk="blob" lang="Python" name="win32com.decimal_23">
+      <variable citdl="str" line="154" name="ALWAYS_ROUND" />
+      <variable citdl="Context" line="2951" name="BasicContext" />
+      <scope classrefs="DecimalException" doc="Exponent of a 0 changed to fit bounds.  This occurs and signals clamped if the exponent of a result has been" ilk="class" line="181" name="Clamped" />
+      <scope classrefs="object" doc="Contains the context for a Decimal instance.  Contains:" ilk="class" line="2143" lineend="2776" name="Context">
+        <scope doc="Compares values numerically." ilk="function" line="2344" lineend="2371" name="compare" returns="a.compare()" signature="compare(a, b)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable ilk="argument" name="a" />
+          <variable ilk="argument" name="b" />
+        </scope>
+        <scope doc="Return the sum of the two operands." ilk="function" line="2724" lineend="2734" name="subtract" returns="a.__sub__()" signature="subtract(a, b)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable ilk="argument" name="a" />
+          <variable ilk="argument" name="b" />
+        </scope>
+        <scope doc="Decimal division in a specified context." ilk="function" line="2373" lineend="2397" name="divide" returns="a.__div__()" signature="divide(a, b)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable ilk="argument" name="a" />
+          <variable ilk="argument" name="b" />
+        </scope>
+        <scope attributes="protected" doc="Returns a shallow copy from self." ilk="function" line="2199" lineend="2204" name="_shallow_copy" signature="_shallow_copy()">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable citdl="" line="2201" name="nc" />
+        </scope>
+        <scope attributes="protected" doc="Stop ignoring the flags, if they are raised" ilk="function" line="2247" lineend="2252" name="_regard_flags" signature="_regard_flags(*flags)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="flags" />
+        </scope>
+        <scope doc="Converts a number to a string, using scientific notation." ilk="function" line="2743" lineend="2748" name="to_sci_string" returns="a.__str__()" signature="to_sci_string(a)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable ilk="argument" name="a" />
+        </scope>
+        <scope doc="Reset all flags to zero" ilk="function" line="2194" lineend="2197" name="clear_flags" signature="clear_flags()">
+          <variable citdl="Context" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Returns a value equal to &apos;a&apos; (rounded) and having the exponent of &apos;b&apos;." ilk="function" line="2573" lineend="2622" name="quantize" returns="a.quantize()" signature="quantize(a, b)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable ilk="argument" name="a" />
+          <variable ilk="argument" name="b" />
+        </scope>
+        <variable attributes="protected __instancevar__" line="2285" name="_rounding_decision" />
+        <scope attributes="protected" doc="Ignore the flags, if they are raised" ilk="function" line="2240" lineend="2245" name="_ignore_flags" returns="list()" signature="_ignore_flags(*flags)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable attributes="varargs" ilk="argument" name="flags" />
+        </scope>
+        <scope attributes="__ctor__" ilk="function" line="2163" lineend="2184" name="__init__" signature="Context(prec=None, rounding=None, traps=None, flags=None, _rounding_decision=None, Emin=None, Emax=None, capitals=None, _clamp=0, _ignored_flags=None)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable ilk="argument" name="prec" />
+          <variable ilk="argument" name="rounding" />
+          <variable citdl="dict()" ilk="argument" name="traps" />
+          <variable citdl="dict()" ilk="argument" name="flags" />
+          <variable ilk="argument" name="_rounding_decision" />
+          <variable ilk="argument" name="Emin" />
+          <variable ilk="argument" name="Emax" />
+          <variable ilk="argument" name="capitals" />
+          <variable citdl="int" ilk="argument" name="_clamp" />
+          <variable citdl="list" ilk="argument" name="_ignored_flags" />
+        </scope>
+        <scope doc="normalize reduces an operand to its simplest form." ilk="function" line="2489" lineend="2508" name="normalize" returns="a.normalize()" signature="normalize(a)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable ilk="argument" name="a" />
+        </scope>
+        <scope doc="Returns True if the two operands have the same exponent." ilk="function" line="2678" lineend="2693" name="same_quantum" returns="a.same_quantum()" signature="same_quantum(a, b)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable ilk="argument" name="a" />
+          <variable ilk="argument" name="b" />
+        </scope>
+        <scope doc="min compares two values numerically and returns the minimum." ilk="function" line="2434" lineend="2452" name="min" returns="a.min()" signature="min(a, b)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable ilk="argument" name="a" />
+          <variable ilk="argument" name="b" />
+        </scope>
+        <variable attributes="__instancevar__" line="2304" name="rounding" />
+        <scope attributes="protected" doc="Sets the rounding type." ilk="function" line="2288" lineend="2305" name="_set_rounding" returns="self.rounding" signature="_set_rounding(type)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable ilk="argument" name="type" />
+          <variable citdl="self.rounding" line="2303" name="rounding" />
+        </scope>
+        <scope doc="Rounds to an integer." ilk="function" line="2750" lineend="2776" name="to_integral" returns="a.to_integral()" signature="to_integral(a)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable ilk="argument" name="a" />
+        </scope>
+        <scope doc="Returns the square root of a non-negative number to context precision." ilk="function" line="2695" lineend="2722" name="sqrt" returns="a.sqrt()" signature="sqrt(a)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable ilk="argument" name="a" />
+        </scope>
+        <scope doc="Return the sum of the two operands." ilk="function" line="2331" lineend="2339" name="add" returns="a.__add__()" signature="add(a, b)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable ilk="argument" name="a" />
+          <variable ilk="argument" name="b" />
+        </scope>
+        <scope doc="Returns the absolute value of the operand." ilk="function" line="2313" lineend="2329" name="abs" returns="a.__abs__()" signature="abs(a)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable ilk="argument" name="a" />
+        </scope>
+        <scope attributes="protected" doc="Sets the rounding decision." ilk="function" line="2267" lineend="2286" name="_set_rounding_decision" returns="self._rounding_decision" signature="_set_rounding_decision(type)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable ilk="argument" name="type" />
+          <variable citdl="self._rounding_decision" line="2284" name="rounding" />
+        </scope>
+        <scope doc="Raises a to the power of b, to modulo if given." ilk="function" line="2524" lineend="2571" name="power" returns="a.__pow__()" signature="power(a, b, modulo=None)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable ilk="argument" name="a" />
+          <variable ilk="argument" name="b" />
+          <variable ilk="argument" name="modulo" />
+        </scope>
+        <scope doc="max compares two values numerically and returns the maximum." ilk="function" line="2414" lineend="2432" name="max" returns="a.max()" signature="max(a, b)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable ilk="argument" name="a" />
+          <variable ilk="argument" name="b" />
+        </scope>
+        <scope doc="Returns to be &quot;a - b * n&quot;, where n is the integer nearest the exact value of &quot;x / b&quot; (if two integers are equally near then the even one is chosen)." ilk="function" line="2651" lineend="2676" name="remainder_near" returns="a.remainder_near()" signature="remainder_near(a, b)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable ilk="argument" name="a" />
+          <variable ilk="argument" name="b" />
+        </scope>
+        <scope doc="Returns Etiny (= Emin - prec + 1)" ilk="function" line="2259" lineend="2261" name="Etiny" returns="int()" signature="Etiny()">
+          <variable citdl="Context" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="protected" doc="Ignore all flags, if they are raised" ilk="function" line="2236" lineend="2238" name="_ignore_all_flags" returns="self._ignore_flags()" signature="_ignore_all_flags()">
+          <variable citdl="Context" ilk="argument" name="self" />
+        </scope>
+        <scope doc="multiply multiplies two operands." ilk="function" line="2468" lineend="2487" name="multiply" returns="a.__mul__()" signature="multiply(a, b)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable ilk="argument" name="a" />
+          <variable ilk="argument" name="b" />
+        </scope>
+        <scope doc="Divides two numbers and returns the integer part of the result." ilk="function" line="2399" lineend="2409" name="divide_int" returns="a.__floordiv__()" signature="divide_int(a, b)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable ilk="argument" name="a" />
+          <variable ilk="argument" name="b" />
+        </scope>
+        <scope doc="Returns a deep copy from self." ilk="function" line="2206" lineend="2211" name="copy" signature="copy()">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable citdl="" line="2208" name="nc" />
+        </scope>
+        <scope doc="Returns the remainder from integer division." ilk="function" line="2624" lineend="2649" name="remainder" returns="a.__mod__()" signature="remainder(a, b)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable ilk="argument" name="a" />
+          <variable ilk="argument" name="b" />
+        </scope>
+        <variable attributes="protected __instancevar__" citdl="list()" line="2244" name="_ignored_flags" />
+        <scope doc="Converts a number to a string, using scientific notation." ilk="function" line="2736" lineend="2741" name="to_eng_string" returns="a.to_eng_string()" signature="to_eng_string(a)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable ilk="argument" name="a" />
+        </scope>
+        <scope doc="Returns maximum exponent (= Emax - prec + 1)" ilk="function" line="2263" lineend="2265" name="Etop" returns="int()" signature="Etop()">
+          <variable citdl="Context" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="protected" doc="Handles an error" ilk="function" line="2214" lineend="2234" name="_raise_error" signature="_raise_error(condition, explanation=None, *args)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable ilk="argument" name="condition" />
+          <variable ilk="argument" name="explanation" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+          <variable citdl="_condition_map.get()" line="2222" name="error" />
+        </scope>
+        <scope doc="Plus corresponds to unary prefix plus in Python." ilk="function" line="2510" lineend="2522" name="plus" returns="a.__pos__()" signature="plus(a)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable ilk="argument" name="a" />
+        </scope>
+        <scope doc="Show the current context." ilk="function" line="2186" lineend="2192" name="__repr__" returns="str" signature="__repr__()">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable citdl="list" line="2188" name="s" />
+        </scope>
+        <scope attributes="protected" ilk="function" line="2341" lineend="2342" name="_apply" returns="str()" signature="_apply(a)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable ilk="argument" name="a" />
+        </scope>
+        <scope doc="A Context cannot be hashed." ilk="function" line="2254" lineend="2257" name="__hash__" signature="__hash__()">
+          <variable citdl="Context" ilk="argument" name="self" />
+        </scope>
+        <variable citdl="Context.copy" line="2212" name="__copy__" />
+        <scope doc="Minus corresponds to unary prefix minus in Python." ilk="function" line="2454" lineend="2466" name="minus" returns="a.__neg__()" signature="minus(a)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable ilk="argument" name="a" />
+        </scope>
+        <scope doc="Creates a new Decimal instance but using self as context." ilk="function" line="2307" lineend="2310" name="create_decimal" returns="d._fix()" signature="create_decimal(num=&apos;0&apos;)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable citdl="str" ilk="argument" name="num" />
+          <variable citdl="Decimal" line="2309" name="d" />
+        </scope>
+        <scope ilk="function" line="2411" lineend="2412" name="divmod" returns="a.__divmod__()" signature="divmod(a, b)">
+          <variable citdl="Context" ilk="argument" name="self" />
+          <variable ilk="argument" name="a" />
+          <variable ilk="argument" name="b" />
+        </scope>
+      </scope>
+      <scope classrefs="InvalidOperation" doc="Trying to convert badly formed string.  This occurs and signals invalid-operation if an string is being" ilk="class" line="218" lineend="227" name="ConversionSyntax">
+        <scope ilk="function" line="226" lineend="227" name="handle" returns="tuple" signature="handle(context, *args)">
+          <variable citdl="ConversionSyntax" ilk="argument" name="self" />
+          <variable ilk="argument" name="context" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+        </scope>
+      </scope>
+      <scope classrefs="object" doc="Floating point class for decimal arithmetic." ilk="class" line="468" lineend="2128" name="Decimal">
+        <scope doc="Converts self to an int, truncating if necessary." ilk="function" line="1424" lineend="1439" name="__int__" returns="int()" signature="__int__()">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="getcontext()" line="1428" name="context" />
+          <variable citdl="str" line="1433" name="s" />
+          <variable citdl="self._sign" line="1438" name="sign" />
+        </scope>
+        <variable attributes="protected" citdl="dict" line="1590" name="_pick_rounding_function" />
+        <scope doc="Compares one to another." ilk="function" line="711" lineend="728" name="compare" returns="Decimal" signature="compare(other, context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="_convert_other()" ilk="argument" name="other" />
+          <variable ilk="argument" name="context" />
+          <variable citdl="_check_nans()" line="724" name="ans" />
+        </scope>
+        <variable citdl="Decimal.__rdiv__" line="1300" name="__rtruediv__" />
+        <scope attributes="protected" doc="Returns 1 if self is even. Assumes self is an integer." ilk="function" line="2102" lineend="2106" name="_iseven" returns="bool" signature="_iseven()">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="protected" doc="Returns whether the number is not actually one." ilk="function" line="608" lineend="638" name="_check_nans" returns="context._raise_error()" signature="_check_nans(other=None, context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+          <variable citdl="getcontext()" ilk="argument" name="context" />
+          <variable citdl="_isnan()" line="618" name="self_is_nan" />
+          <variable citdl="other._isnan()" line="620" name="other_is_nan" />
+        </scope>
+        <scope doc="Return string representation of the number in scientific notation." ilk="function" line="757" lineend="836" name="__str__" returns="self._exp" signature="__str__(eng=0, context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="eng" />
+          <variable citdl="getcontext()" ilk="argument" name="context" />
+          <variable citdl="self._sign" line="764" name="minus" />
+          <variable citdl="__builtins__.str.join()" line="766" name="info" />
+          <variable citdl="map()" line="779" name="tmp" />
+          <variable citdl="len()" line="780" name="numdigits" />
+          <variable citdl="self._exp" line="781" name="leftdigits" />
+          <variable citdl="str" line="784" name="s" />
+          <variable citdl="int" line="787" name="exp" />
+          <variable citdl="int" line="803" name="dotplace" />
+          <variable citdl="self._exp" line="804" name="adjexp" />
+        </scope>
+        <scope ilk="function" line="2117" lineend="2118" name="__reduce__" returns="tuple" signature="__reduce__()">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Return the adjusted exponent of self" ilk="function" line="2108" lineend="2114" name="adjusted" returns="self._exp" signature="adjusted()">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+        </scope>
+        <variable citdl="Decimal.__add__" line="1008" name="__radd__" />
+        <scope doc="Quantize self so its exponent is the same as that of exp." ilk="function" line="1778" lineend="1795" name="quantize" returns="Decimal" signature="quantize(exp, rounding=None, context=None, watchexp=1)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable ilk="argument" name="exp" />
+          <variable ilk="argument" name="rounding" />
+          <variable citdl="getcontext()" ilk="argument" name="context" />
+          <variable citdl="int" ilk="argument" name="watchexp" />
+          <variable citdl="_check_nans()" line="1784" name="ans" />
+        </scope>
+        <variable citdl="Decimal.__div__" line="1132" name="__truediv__" />
+        <scope doc="Return other + (-self)" ilk="function" line="1027" lineend="1033" name="__rsub__" returns="other.__add__()" signature="__rsub__(other, context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="_convert_other()" ilk="argument" name="other" />
+          <variable ilk="argument" name="context" />
+          <variable citdl="" line="1031" name="tmp" />
+        </scope>
+        <scope doc="Swaps self/other and returns __div__." ilk="function" line="1296" lineend="1299" name="__rdiv__" returns="other.__div__()" signature="__rdiv__(other, context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="_convert_other()" ilk="argument" name="other" />
+          <variable ilk="argument" name="context" />
+        </scope>
+        <variable citdl="Decimal.__mul__" line="1127" name="__rmul__" />
+        <scope doc="Swaps self/other and returns __mod__." ilk="function" line="1329" lineend="1332" name="__rmod__" returns="other.__mod__()" signature="__rmod__(other, context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="_convert_other()" ilk="argument" name="other" />
+          <variable ilk="argument" name="context" />
+        </scope>
+        <scope doc="Represents the number as a triple tuple." ilk="function" line="745" lineend="750" name="as_tuple" returns="tuple" signature="as_tuple()">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="protected" doc="Round 5 down" ilk="function" line="1622" lineend="1634" name="_round_half_down" returns="Decimal._round_half_up()" signature="_round_half_down(prec, expdiff, context)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable ilk="argument" name="prec" />
+          <variable ilk="argument" name="expdiff" />
+          <variable ilk="argument" name="context" />
+          <variable citdl="" line="1625" name="tmp" />
+          <variable citdl="int" line="1626" name="half" />
+        </scope>
+        <scope doc="Float representation." ilk="function" line="1420" lineend="1422" name="__float__" returns="float()" signature="__float__()">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Normalize- strip trailing 0s, change anything equal to 0 to 0e0" ilk="function" line="1756" lineend="1775" name="normalize" returns="_fix()" signature="normalize(context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable ilk="argument" name="context" />
+          <variable citdl="_check_nans()" line="1760" name="ans" />
+          <variable citdl="_fix()" line="1764" name="dup" />
+          <variable citdl="len()" line="1770" name="end" />
+          <variable citdl="dup._exp" line="1771" name="exp" />
+        </scope>
+        <scope attributes="protected" doc="Returns whether the number is not actually one." ilk="function" line="580" lineend="593" name="_isnan" returns="int" signature="_isnan()">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="self._exp" line="588" name="exp" />
+        </scope>
+        <scope doc="Test whether self and other have the same exponent." ilk="function" line="1797" lineend="1807" name="same_quantum" returns="other._isinfinity()" signature="same_quantum(other)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="Create a decimal point instance." ilk="function" line="477" lineend="578" name="__new__" returns="object.__new__()" signature="__new__(value=&apos;0&apos;, context=None)">
+          <variable citdl="Decimal" ilk="argument" name="cls" />
+          <variable citdl="str" ilk="argument" name="value" />
+          <variable citdl="getcontext()" ilk="argument" name="context" />
+          <variable citdl="object.__new__()" line="490" name="self" />
+        </scope>
+        <scope doc="Returns the smaller value." ilk="function" line="2048" lineend="2093" name="min" returns="ans._fix()" signature="min(other, context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="_convert_other()" ilk="argument" name="other" />
+          <variable citdl="getcontext()" ilk="argument" name="context" />
+          <variable citdl="_isnan()" line="2059" name="sn" />
+          <variable citdl="other._isnan()" line="2060" name="on" />
+          <variable citdl="_convert_other()" line="2068" name="ans" />
+          <variable citdl="__cmp__()" line="2069" name="c" />
+        </scope>
+        <scope doc="Remainder nearest to 0-  abs(remainder-near) &lt;= other/2" ilk="function" line="1334" lineend="1409" name="remainder_near" returns="context._raise_error()" signature="remainder_near(other, context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="_convert_other()" ilk="argument" name="other" />
+          <variable citdl="context._shallow_copy()" ilk="argument" name="context" />
+          <variable citdl="_check_nans()" line="1341" name="ans" />
+          <variable citdl="context._ignore_flags()" line="1352" name="flags" />
+          <variable citdl="context._set_rounding_decision()" line="1361" name="rounding" />
+          <variable citdl="other.__div__()" line="1364" name="comparison" />
+          <variable citdl="comparison._sign" line="1371" name="s2" />
+          <variable citdl="r._sign" line="1371" name="s1" />
+          <variable citdl="bool" line="1388" name="decrease" />
+          <variable citdl="side.__abs__()" line="1390" name="side" />
+          <variable citdl="r.__sub__()" line="1403" name="r" />
+        </scope>
+        <scope doc="Rounds to the nearest integer, without raising inexact, rounded." ilk="function" line="1864" lineend="1877" name="to_integral" returns="_rescale()" signature="to_integral(rounding=None, context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable ilk="argument" name="rounding" />
+          <variable citdl="getcontext()" ilk="argument" name="context" />
+          <variable citdl="_check_nans()" line="1867" name="ans" />
+          <variable citdl="context._ignore_flags()" line="1874" name="flags" />
+        </scope>
+        <scope doc="Return the square root of self." ilk="function" line="1879" lineend="1999" name="sqrt" returns="Decimal" signature="sqrt(context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="getcontext()" ilk="argument" name="context" />
+          <variable citdl="ans.__add__()" line="1886" name="ans" />
+          <variable citdl="int" line="1898" name="exp" />
+          <variable citdl="" line="1911" name="tmp" />
+          <variable citdl="int" line="1913" name="expadd" />
+          <variable citdl="context._ignore_all_flags()" line="1921" name="flags" />
+          <variable citdl="context.prec" line="1922" name="firstprec" />
+          <variable citdl="context.Emin" line="1937" name="Emin" />
+          <variable citdl="context.Emax" line="1937" name="Emax" />
+          <variable citdl="" line="1940" name="half" />
+          <variable citdl="context.prec" line="1942" name="maxp" />
+          <variable citdl="context._set_rounding_decision()" line="1943" name="rounding" />
+          <variable citdl="ans.adjusted()" line="1953" name="prevexp" />
+          <variable citdl="ans.__sub__()" line="1964" name="lower" />
+          <variable citdl="ans.__add__()" line="1970" name="upper" />
+        </scope>
+        <scope ilk="function" line="650" lineend="699" name="__cmp__" returns="self._sign" signature="__cmp__(other, context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="_convert_other()" ilk="argument" name="other" />
+          <variable citdl="getcontext()" ilk="argument" name="context" />
+          <variable citdl="_check_nans()" line="654" name="ans" />
+          <variable citdl="self.adjusted()" line="670" name="self_adjusted" />
+          <variable citdl="other.adjusted()" line="671" name="other_adjusted" />
+          <variable citdl="context._set_rounding()" line="686" name="rounding" />
+          <variable citdl="context._ignore_all_flags()" line="688" name="flags" />
+          <variable citdl="self.__sub__()" line="689" name="res" />
+        </scope>
+        <scope doc="Returns a copy, unless it is a sNaN." ilk="function" line="872" lineend="895" name="__pos__" returns="self._fix()" signature="__pos__(context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="getcontext()" ilk="argument" name="context" />
+          <variable citdl="" line="878" name="ans" />
+          <variable citdl="int" line="882" name="sign" />
+        </scope>
+        <scope doc="Swaps self/other and returns __floordiv__." ilk="function" line="1415" lineend="1418" name="__rfloordiv__" returns="other.__floordiv__()" signature="__rfloordiv__(other, context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="_convert_other()" ilk="argument" name="other" />
+          <variable ilk="argument" name="context" />
+        </scope>
+        <scope attributes="protected" doc="Rounds up (not away from 0 if negative.)" ilk="function" line="1648" lineend="1653" name="_round_ceiling" returns="Decimal._round_down()" signature="_round_ceiling(prec, expdiff, context)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable ilk="argument" name="prec" />
+          <variable ilk="argument" name="expdiff" />
+          <variable ilk="argument" name="context" />
+        </scope>
+        <scope attributes="protected" doc="Round if it is necessary to keep self within prec precision." ilk="function" line="1448" lineend="1466" name="_fix" returns="ans._round()" signature="_fix(context)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="getcontext()" ilk="argument" name="context" />
+          <variable citdl="context.prec" line="1461" name="prec" />
+          <variable citdl="ans._round()" line="1462" name="ans" />
+        </scope>
+        <scope doc="Returns the absolute value of self." ilk="function" line="897" lineend="918" name="__abs__" returns="__pos__()" signature="__abs__(round=1, context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="round" />
+          <variable citdl="getcontext()" ilk="argument" name="context" />
+          <variable citdl="_check_nans()" line="903" name="ans" />
+        </scope>
+        <scope attributes="protected" doc="Rounds down (not towards 0 if negative)" ilk="function" line="1655" lineend="1660" name="_round_floor" returns="Decimal._round_down()" signature="_round_floor(prec, expdiff, context)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable ilk="argument" name="prec" />
+          <variable ilk="argument" name="expdiff" />
+          <variable ilk="argument" name="context" />
+        </scope>
+        <scope ilk="function" line="706" lineend="709" name="__ne__" returns="bool" signature="__ne__(other)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope doc="Swaps self/other and returns __divmod__." ilk="function" line="1308" lineend="1311" name="__rdivmod__" returns="other.__divmod__()" signature="__rdivmod__(other, context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="_convert_other()" ilk="argument" name="other" />
+          <variable ilk="argument" name="context" />
+        </scope>
+        <scope attributes="protected" doc="Rounds 5 up (away from 0)" ilk="function" line="1596" lineend="1605" name="_round_half_up" returns="tmp._increment()" signature="_round_half_up(prec, expdiff, context, tmp=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable ilk="argument" name="prec" />
+          <variable ilk="argument" name="expdiff" />
+          <variable ilk="argument" name="context" />
+          <variable citdl="" ilk="argument" name="tmp" />
+        </scope>
+        <scope attributes="protected" doc="Return a / b, to context.prec precision." ilk="function" line="1134" lineend="1294" name="_divide" returns="tuple" signature="_divide(other, divmod=0, context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="_convert_other()" ilk="argument" name="other" />
+          <variable citdl="int" ilk="argument" name="divmod" />
+          <variable citdl="getcontext()" ilk="argument" name="context" />
+          <variable citdl="int" line="1151" name="sign" />
+          <variable citdl="" line="1154" name="ans" />
+          <variable citdl="" line="1193" name="otherside" />
+          <variable citdl="min()" line="1196" name="exp" />
+          <variable citdl="int" line="1213" name="shouldround" />
+          <variable citdl="self._rescale()" line="1221" name="ans2" />
+          <variable citdl="_WorkRep()" line="1231" name="op1" />
+          <variable citdl="_WorkRep()" line="1232" name="op2" />
+          <variable citdl="_WorkRep()" line="1234" name="res" />
+          <variable citdl="context.prec" line="1238" name="prec_limit" />
+          <variable citdl="context._ignore_all_flags()" line="1247" name="frozen" />
+        </scope>
+        <scope ilk="function" line="2125" lineend="2128" name="__deepcopy__" returns="Decimal" signature="__deepcopy__(memo)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable ilk="argument" name="memo" />
+        </scope>
+        <scope attributes="protected" doc="Fix the exponents and return a copy with the exponent in bounds." ilk="function" line="1468" lineend="1509" name="_fixexponents" returns="ans._rescale()" signature="_fixexponents(context)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable ilk="argument" name="context" />
+          <variable citdl="context._clamp" line="1472" name="folddown" />
+          <variable citdl="context.Emin" line="1473" name="Emin" />
+          <variable citdl="" line="1474" name="ans" />
+          <variable citdl="ans.adjusted()" line="1475" name="ans_adjusted" />
+          <variable citdl="context.Etiny()" line="1477" name="Etiny" />
+          <variable citdl="context.Etop()" line="1494" name="Etop" />
+          <variable citdl="context.Emax" line="1499" name="Emax" />
+        </scope>
+        <scope doc="Return self ** n (mod modulo)" ilk="function" line="1662" lineend="1749" name="__pow__" returns="val._fix()" signature="__pow__(n, modulo=None, context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="int()" ilk="argument" name="n" />
+          <variable ilk="argument" name="modulo" />
+          <variable citdl="getcontext()" ilk="argument" name="context" />
+          <variable citdl="_check_nans()" line="1677" name="ans" />
+          <variable citdl="bool" line="1693" name="sign" />
+          <variable citdl="" line="1707" name="tmp" />
+          <variable citdl="len()" line="1714" name="elength" />
+          <variable citdl="context.prec" line="1715" name="firstprec" />
+          <variable citdl="" line="1720" name="mul" />
+          <variable citdl="val.__mul__()" line="1721" name="val" />
+          <variable citdl="int" line="1729" name="spot" />
+        </scope>
+        <scope doc="Return self / other." ilk="function" line="1129" lineend="1131" name="__div__" returns="self._divide()" signature="__div__(other, context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+          <variable ilk="argument" name="context" />
+        </scope>
+        <scope doc="(self // other, self % other)" ilk="function" line="1302" lineend="1306" name="__divmod__" returns="Decimal._divide()" signature="__divmod__(other, context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+          <variable ilk="argument" name="context" />
+        </scope>
+        <scope doc="Returns self + other." ilk="function" line="920" lineend="1006" name="__add__" returns="self._rescale()" signature="__add__(other, context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="_convert_other()" ilk="argument" name="other" />
+          <variable citdl="getcontext()" ilk="argument" name="context" />
+          <variable citdl="ans._fix()" line="931" name="ans" />
+          <variable citdl="bool" line="943" name="shouldround" />
+          <variable citdl="max()" line="945" name="exp" />
+          <variable citdl="int" line="946" name="negativezero" />
+          <variable citdl="int" line="952" name="sign" />
+          <variable citdl="_WorkRep()" line="969" name="op1" />
+          <variable citdl="_WorkRep()" line="970" name="op2" />
+          <variable citdl="_WorkRep()" line="973" name="result" />
+        </scope>
+        <scope attributes="protected" doc="Special case of add, adding 1eExponent" ilk="function" line="1035" lineend="1067" name="_increment" returns="Decimal" signature="_increment(round=1, context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="round" />
+          <variable citdl="getcontext()" ilk="argument" name="context" />
+          <variable citdl="" line="1045" name="ans" />
+          <variable citdl="list()" line="1051" name="L" />
+          <variable citdl="len()" line="1053" name="spot" />
+        </scope>
+        <scope attributes="protected" doc="Also known as round-towards-0, truncate." ilk="function" line="1592" lineend="1594" name="_round_down" returns="Decimal" signature="_round_down(prec, expdiff, context)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable ilk="argument" name="prec" />
+          <variable ilk="argument" name="expdiff" />
+          <variable ilk="argument" name="context" />
+        </scope>
+        <scope ilk="function" line="701" lineend="704" name="__eq__" returns="bool" signature="__eq__(other)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+        </scope>
+        <scope attributes="protected" doc="Rounds away from 0." ilk="function" line="1636" lineend="1646" name="_round_up" returns="tmp._increment()" signature="_round_up(prec, expdiff, context)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable ilk="argument" name="prec" />
+          <variable ilk="argument" name="expdiff" />
+          <variable ilk="argument" name="context" />
+          <variable citdl="" line="1638" name="tmp" />
+        </scope>
+        <scope doc="Returns the larger value." ilk="function" line="2001" lineend="2046" name="max" returns="ans._fix()" signature="max(other, context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="_convert_other()" ilk="argument" name="other" />
+          <variable citdl="getcontext()" ilk="argument" name="context" />
+          <variable citdl="_isnan()" line="2012" name="sn" />
+          <variable citdl="other._isnan()" line="2013" name="on" />
+          <variable citdl="_convert_other()" line="2021" name="ans" />
+          <variable citdl="__cmp__()" line="2022" name="c" />
+        </scope>
+        <scope doc="self % other" ilk="function" line="1313" lineend="1327" name="__mod__" returns="context._raise_error()" signature="__mod__(other, context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="_convert_other()" ilk="argument" name="other" />
+          <variable ilk="argument" name="context" />
+          <variable citdl="_check_nans()" line="1320" name="ans" />
+        </scope>
+        <scope doc="Is the number non-zero?" ilk="function" line="640" lineend="648" name="__nonzero__" returns="bool" signature="__nonzero__()">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+        </scope>
+        <scope attributes="protected" doc="Returns whether self is an integer" ilk="function" line="2095" lineend="2100" name="_isinteger" returns="bool" signature="_isinteger()">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="list" line="2099" name="rest" />
+        </scope>
+        <scope attributes="protected" doc="Rescales so that the exponent is exp." ilk="function" line="1809" lineend="1862" name="_rescale" returns="tmp._round()" signature="_rescale(exp, rounding=None, context=None, watchexp=1)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable ilk="argument" name="exp" />
+          <variable ilk="argument" name="rounding" />
+          <variable citdl="getcontext()" ilk="argument" name="context" />
+          <variable citdl="int" ilk="argument" name="watchexp" />
+          <variable citdl="" line="1824" name="ans" />
+          <variable citdl="self._exp" line="1837" name="diff" />
+          <variable citdl="int" line="1838" name="digits" />
+          <variable citdl="" line="1843" name="tmp" />
+          <variable citdl="tmp.adjusted()" line="1857" name="tmp_adjusted" />
+        </scope>
+        <scope attributes="protected" doc="Returns a rounded version of self." ilk="function" line="1511" lineend="1588" name="_round" returns="Decimal" signature="_round(prec=None, rounding=None, context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="int" ilk="argument" name="prec" />
+          <variable citdl="context.rounding" ilk="argument" name="rounding" />
+          <variable citdl="getcontext()" ilk="argument" name="context" />
+          <variable citdl="" line="1519" name="ans" />
+          <variable citdl="tuple" line="1536" name="dig" />
+          <variable citdl="self._exp" line="1537" name="exp" />
+          <variable citdl="" line="1546" name="temp" />
+          <variable citdl="len()" line="1556" name="numdigits" />
+          <variable citdl="len()" line="1561" name="expdiff" />
+          <variable citdl="list()" line="1563" name="tmp" />
+          <variable citdl="list" line="1569" name="lostdigits" />
+          <variable citdl="getattr()" line="1578" name="this_function" />
+        </scope>
+        <scope doc="Convert to engineering-type string." ilk="function" line="838" lineend="846" name="to_eng_string" returns="Decimal.__str__()" signature="to_eng_string(context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable ilk="argument" name="context" />
+        </scope>
+        <scope attributes="protected" doc="Returns whether the number is infinite" ilk="function" line="595" lineend="606" name="_isinfinity" returns="int" signature="_isinfinity()">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+        </scope>
+        <variable citdl="tuple" line="471" name="__slots__" />
+        <scope doc="Return self * other." ilk="function" line="1069" lineend="1126" name="__mul__" returns="context._raise_error()" signature="__mul__(other, context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="_convert_other()" ilk="argument" name="other" />
+          <variable citdl="getcontext()" ilk="argument" name="context" />
+          <variable citdl="int" line="1079" name="resultsign" />
+          <variable citdl="" line="1082" name="ans" />
+          <variable citdl="self._exp" line="1096" name="resultexp" />
+          <variable citdl="bool" line="1097" name="shouldround" />
+          <variable citdl="_WorkRep()" line="1119" name="op1" />
+          <variable citdl="_WorkRep()" line="1120" name="op2" />
+        </scope>
+        <scope doc="Returns a copy with the sign switched." ilk="function" line="848" lineend="870" name="__neg__" returns="Decimal" signature="__neg__(context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="getcontext()" ilk="argument" name="context" />
+          <variable citdl="_check_nans()" line="854" name="ans" />
+          <variable citdl="int" line="860" name="sign" />
+        </scope>
+        <scope attributes="protected" doc="Round 5 to even, rest to nearest." ilk="function" line="1607" lineend="1620" name="_round_half_even" returns="Decimal._round_half_up()" signature="_round_half_even(prec, expdiff, context)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable ilk="argument" name="prec" />
+          <variable ilk="argument" name="expdiff" />
+          <variable ilk="argument" name="context" />
+          <variable citdl="" line="1610" name="tmp" />
+          <variable citdl="int" line="1611" name="half" />
+        </scope>
+        <scope doc="self // other" ilk="function" line="1411" lineend="1413" name="__floordiv__" signature="__floordiv__(other, context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable ilk="argument" name="other" />
+          <variable ilk="argument" name="context" />
+        </scope>
+        <scope ilk="function" line="730" lineend="743" name="__hash__" returns="hash()" signature="x.__hash__() &lt;==&gt; hash(x)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="int()" line="739" name="i" />
+        </scope>
+        <scope doc="Return self + (-other)" ilk="function" line="1010" lineend="1025" name="__sub__" returns="Decimal.__add__()" signature="__sub__(other, context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="_convert_other()" ilk="argument" name="other" />
+          <variable ilk="argument" name="context" />
+          <variable citdl="_check_nans()" line="1015" name="ans" />
+          <variable citdl="" line="1022" name="tmp" />
+        </scope>
+        <scope doc="Converts to a long." ilk="function" line="1441" lineend="1446" name="__long__" returns="long()" signature="__long__()">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+        </scope>
+        <scope ilk="function" line="2120" lineend="2123" name="__copy__" returns="Decimal" signature="__copy__()">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Represents the number as an instance of Decimal." ilk="function" line="752" lineend="755" name="__repr__" returns="str" signature="__repr__()">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+        </scope>
+        <scope doc="Swaps self/other and returns __pow__." ilk="function" line="1751" lineend="1754" name="__rpow__" returns="other.__pow__()" signature="__rpow__(other, context=None)">
+          <variable citdl="Decimal" ilk="argument" name="self" />
+          <variable citdl="_convert_other()" ilk="argument" name="other" />
+          <variable ilk="argument" name="context" />
+        </scope>
+      </scope>
+      <scope classrefs="ArithmeticError" doc="Base exception class.  Used exceptions derive from this." ilk="class" line="158" lineend="178" name="DecimalException">
+        <scope ilk="function" line="177" lineend="178" name="handle" signature="handle(context, *args)">
+          <variable citdl="DecimalException" ilk="argument" name="self" />
+          <variable ilk="argument" name="context" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+        </scope>
+      </scope>
+      <variable citdl="Context" line="2936" name="DefaultContext" />
+      <scope classrefs="DecimalException ZeroDivisionError" doc="Division by 0.  This occurs and signals division-by-zero if division of a finite number" ilk="class" line="229" lineend="245" name="DivisionByZero">
+        <scope ilk="function" line="242" lineend="245" name="handle" returns="tuple" signature="handle(context, sign, double=None, *args)">
+          <variable citdl="DivisionByZero" ilk="argument" name="self" />
+          <variable ilk="argument" name="context" />
+          <variable ilk="argument" name="sign" />
+          <variable ilk="argument" name="double" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+        </scope>
+      </scope>
+      <scope classrefs="InvalidOperation" doc="Cannot perform the division adequately.  This occurs and signals invalid-operation if the integer result of a" ilk="class" line="247" lineend="256" name="DivisionImpossible">
+        <scope ilk="function" line="255" lineend="256" name="handle" returns="tuple" signature="handle(context, *args)">
+          <variable citdl="DivisionImpossible" ilk="argument" name="self" />
+          <variable ilk="argument" name="context" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+        </scope>
+      </scope>
+      <scope classrefs="InvalidOperation ZeroDivisionError" doc="Undefined result of division.  This occurs and signals invalid-operation if division by zero was" ilk="class" line="258" lineend="269" name="DivisionUndefined">
+        <scope ilk="function" line="266" lineend="269" name="handle" returns="tuple" signature="handle(context, tup=None, *args)">
+          <variable citdl="DivisionUndefined" ilk="argument" name="self" />
+          <variable ilk="argument" name="context" />
+          <variable ilk="argument" name="tup" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+        </scope>
+      </scope>
+      <variable citdl="Context" line="2957" name="ExtendedContext" />
+      <scope classrefs="DecimalException" doc="Had to round, losing information.  This occurs and signals inexact whenever the result of an operation is" ilk="class" line="271" lineend="282" name="Inexact" />
+      <variable citdl="Decimal" line="2967" name="Inf" />
+      <variable citdl="tuple" line="2971" name="Infsign" />
+      <scope classrefs="InvalidOperation" doc="Invalid context.  Unknown rounding, for example.  This occurs and signals invalid-operation if an invalid context was" ilk="class" line="284" lineend="296" name="InvalidContext">
+        <scope ilk="function" line="295" lineend="296" name="handle" returns="NaN" signature="handle(context, *args)">
+          <variable citdl="InvalidContext" ilk="argument" name="self" />
+          <variable ilk="argument" name="context" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+        </scope>
+      </scope>
+      <scope classrefs="DecimalException" doc="An invalid operation was performed.  Various bad things cause this:" ilk="class" line="194" lineend="216" name="InvalidOperation">
+        <scope ilk="function" line="212" lineend="216" name="handle" returns="Decimal()" signature="handle(context, *args)">
+          <variable citdl="InvalidOperation" ilk="argument" name="self" />
+          <variable ilk="argument" name="context" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+        </scope>
+      </scope>
+      <variable citdl="str" line="153" name="NEVER_ROUND" />
+      <variable citdl="Decimal" line="2973" name="NaN" />
+      <scope classrefs="Inexact Rounded" doc="Numerical overflow.  This occurs and signals overflow if the adjusted exponent of a result" ilk="class" line="323" lineend="358" name="Overflow">
+        <scope ilk="function" line="345" lineend="358" name="handle" returns="Decimal()" signature="handle(context, sign, *args)">
+          <variable citdl="Overflow" ilk="argument" name="self" />
+          <variable ilk="argument" name="context" />
+          <variable ilk="argument" name="sign" />
+          <variable attributes="varargs" ilk="argument" name="args" />
+        </scope>
+      </scope>
+      <variable citdl="str" line="147" name="ROUND_CEILING" />
+      <variable citdl="str" line="144" name="ROUND_DOWN" />
+      <variable citdl="str" line="148" name="ROUND_FLOOR" />
+      <variable citdl="str" line="150" name="ROUND_HALF_DOWN" />
+      <variable citdl="str" line="146" name="ROUND_HALF_EVEN" />
+      <variable citdl="str" line="145" name="ROUND_HALF_UP" />
+      <variable citdl="str" line="149" name="ROUND_UP" />
+      <scope classrefs="DecimalException" doc="Number got rounded (not  necessarily changed during rounding).  This occurs and signals rounded whenever the result of an operation is" ilk="class" line="298" lineend="309" name="Rounded" />
+      <scope classrefs="DecimalException" doc="Exponent &lt; Emin before rounding.  This occurs and signals subnormal whenever the result of a conversion or" ilk="class" line="311" lineend="321" name="Subnormal" />
+      <scope classrefs="Inexact Rounded Subnormal" doc="Numerical underflow with result rounded to 0.  This occurs and signals underflow if a result is inexact and the" ilk="class" line="361" name="Underflow" />
+      <variable citdl="list" line="122" name="__all__" />
+      <import module="copy" />
+      <scope doc="Returns this thread&apos;s context." ilk="function" line="442" lineend="454" name="getcontext" returns="Context()" signature="getcontext(_local=&lt;thread._local object&gt;)">
+        <variable citdl="Context()" line="452" name="context" />
+        <variable citdl="threading.local()" ilk="argument" name="_local" />
+      </scope>
+      <variable citdl="Decimal" line="2968" name="negInf" />
+      <scope doc="Set this thread&apos;s context to context." ilk="function" line="456" lineend="461" name="setcontext" signature="setcontext(context, _local=&lt;thread._local object&gt;)">
+        <variable citdl="threading.local()" ilk="argument" name="_local" />
+        <variable citdl="context.copy()" ilk="argument" name="context" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Convert other to Decimal." ilk="function" line="2872" lineend="2882" name="_convert_other" returns="Decimal" signature="_convert_other(other)">
+        <variable ilk="argument" name="other" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Adjust op1, op2 so that op2.int * 10 &gt; op1.int &gt;= op2.int." ilk="function" line="2848" lineend="2868" name="_adjust_coefficients" returns="tuple" signature="_adjust_coefficients(op1, op2)">
+        <variable ilk="argument" name="op1" />
+        <variable ilk="argument" name="op2" />
+        <variable citdl="int" line="2855" name="adjust" />
+      </scope>
+      <variable attributes="protected __hidden__" line="2985" name="_parser" />
+      <variable attributes="__hidden__" line="2137" name="globalname" />
+      <scope attributes="protected __hidden__" ilk="function" line="3002" lineend="3042" name="_string2exact" returns="tuple" signature="_string2exact(s)">
+        <variable ilk="argument" name="s" />
+        <variable citdl="_parser()" line="3003" name="m" />
+        <variable citdl="int" line="3008" name="sign" />
+        <variable citdl="int" line="3012" name="exp" />
+        <variable citdl="str" line="3018" name="intpart" />
+        <variable citdl="m.group()" line="3021" name="fracpart" />
+        <variable citdl="str" line="3029" name="mantissa" />
+        <variable citdl="map()" line="3030" name="tmp" />
+        <variable citdl="map()" line="3031" name="backup" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="dict" line="381" name="_condition_map" />
+      <scope attributes="protected __hidden__" classrefs="object" ilk="class" line="2778" lineend="2805" name="_WorkRep">
+        <variable citdl="tuple" line="2779" name="__slots__" />
+        <scope attributes="__ctor__" ilk="function" line="2784" lineend="2800" name="__init__" signature="_WorkRep(value=None)">
+          <variable citdl="_WorkRep" ilk="argument" name="self" />
+          <variable ilk="argument" name="value" />
+          <variable citdl="int" line="2791" name="cum" />
+        </scope>
+        <variable attributes="__instancevar__" citdl="value._sign" line="2786" name="sign" />
+        <variable attributes="__instancevar__" citdl="int" line="2787" name="int" />
+        <variable attributes="__instancevar__" citdl="value._exp" line="2788" name="exp" />
+        <scope ilk="function" line="2802" lineend="2803" name="__repr__" returns="tuple" signature="__repr__()">
+          <variable citdl="_WorkRep" ilk="argument" name="self" />
+        </scope>
+        <variable citdl="_WorkRep.__repr__" line="2805" name="__str__" />
+      </scope>
+      <variable attributes="__hidden__" citdl="list" line="2134" name="rounding_functions" />
+      <variable attributes="__hidden__" citdl="MockThreading" line="402" name="threading" />
+      <variable attributes="__hidden__" line="2138" name="val" />
+      <scope attributes="protected __hidden__" doc="Determines whether a string or float is infinity." ilk="function" line="2893" lineend="2899" name="_isinfinity" returns="_infinity_map.get()" signature="_isinfinity(num)">
+        <variable ilk="argument" name="num" />
+      </scope>
+      <scope attributes="protected __hidden__" doc="Normalizes op1, op2 to have the same exp and length of coefficient." ilk="function" line="2809" lineend="2846" name="_normalize" returns="tuple" signature="_normalize(op1, op2, shouldround=0, prec=0)">
+        <variable ilk="argument" name="op1" />
+        <variable ilk="argument" name="op2" />
+        <variable citdl="int" ilk="argument" name="shouldround" />
+        <variable citdl="int" ilk="argument" name="prec" />
+        <variable citdl="int()" line="2816" name="numdigits" />
+        <variable line="2819" name="tmp" />
+        <variable line="2820" name="other" />
+        <variable citdl="len()" line="2828" name="tmp_len" />
+        <variable citdl="len()" line="2829" name="other_len" />
+        <variable citdl="len()" line="2835" name="extend" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="dict" line="2884" name="_infinity_map" />
+      <scope attributes="protected __hidden__" doc="Determines whether a string or float is NaN" ilk="function" line="2901" lineend="2928" name="_isnan" returns="tuple" signature="_isnan(num)">
+        <variable citdl="list" ilk="argument" name="num" />
+        <variable citdl="int" line="2913" name="sign" />
+      </scope>
+      <variable attributes="protected __hidden__" citdl="list" line="377" name="_signals" />
+      <variable attributes="__hidden__" citdl="threading.local()" line="438" name="local" />
+      <scope attributes="__hidden__" ilk="class" line="399" lineend="401" name="MockThreading">
+        <scope ilk="function" line="400" lineend="401" name="local" signature="local(sys=sys)">
+          <variable citdl="MockThreading" ilk="argument" name="self" />
+          <variable citdl="sys" ilk="argument" name="sys" />
+        </scope>
+      </scope>
+    </scope>
+    

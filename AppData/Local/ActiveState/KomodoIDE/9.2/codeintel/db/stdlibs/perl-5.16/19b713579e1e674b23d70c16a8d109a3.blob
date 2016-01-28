@@ -1,0 +1,25 @@
+<scope ilk="blob" lang="Perl" name="ExtUtils::Liblist::Kid">
+      <scope ilk="class" line="1" lineend="631" name="ExtUtils::Liblist::Kid">
+        <import line="16" module="ExtUtils::MakeMaker::Config" symbol="*" />
+        <import line="17" module="Cwd" symbol="cwd" />
+        <import line="18" module="File::Basename" symbol="*" />
+        <import line="19" module="File::Spec" symbol="*" />
+        <variable line="14" name="$VERSION" />
+        <scope ilk="function" line="21" lineend="25" name="ext" signature="ext()" />
+        <scope ilk="function" line="27" lineend="251" name="_unix_os2_ext" signature="_unix_os2_ext($self, $potential_libs, $verbose, $give_libs)" />
+        <scope ilk="function" line="253" lineend="343" name="_win32_ext" signature="_win32_ext($self, $potential_libs, $verbose, $give_libs)">
+          <import line="255" module="Text::ParseWords" />
+        </scope>
+        <scope ilk="function" line="345" lineend="360" name="_win32_make_lib_search_list" signature="_win32_make_lib_search_list($potential_libs, $verbose)" />
+        <scope ilk="function" line="362" lineend="375" name="_win32_default_search_paths" signature="_win32_default_search_paths($VC, $GC)" />
+        <scope ilk="function" line="377" lineend="394" name="_win32_search_file" signature="_win32_search_file($thislib, $libext, $paths, $verbose, $GC)" />
+        <scope ilk="function" line="396" lineend="401" name="_win32_build_file_list" signature="_win32_build_file_list($lib, $GC, $extensions)" />
+        <scope ilk="function" line="403" lineend="414" name="_win32_build_prefixed_list" signature="_win32_build_prefixed_list($lib, $GC)" />
+        <scope ilk="function" line="416" lineend="419" name="_win32_attach_extensions" signature="_win32_attach_extensions($lib, $extensions)" />
+        <scope ilk="function" line="421" lineend="426" name="_win32_try_attach_extension" signature="_win32_try_attach_extension($lib, $extension)" />
+        <scope ilk="function" line="428" lineend="433" name="_win32_lib_extensions" signature="_win32_lib_extensions()" />
+        <scope ilk="function" line="435" lineend="440" name="_debug" signature="_debug($message, $verbose)" />
+        <scope ilk="function" line="442" lineend="629" name="_vms_ext" signature="_vms_ext($self, $potential_libs, $verbose, $give_libs)" />
+      </scope>
+    </scope>
+    
