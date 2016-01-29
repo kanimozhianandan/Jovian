@@ -1,5 +1,0 @@
-<scope doc="Compiled extension module that provides access to the memory mapped file API" ilk="blob" lang="Python3" name="mmapfile">
-      <scope classrefs="Exception" ilk="class" name="error" />
-      <scope doc="Pymmapfile=mmapfile(File,Name,MaximumSize=0,FileOffset=0,NumberOfBytesToMap=0)  Creates a memory mapped file view" ilk="function" name="mmapfile" signature="mmapfile(File,Name,MaximumSize=0,FileOffset=0,NumberOfBytesToMap=0) -&gt; Pymmapfile" />
-    </scope>
-    

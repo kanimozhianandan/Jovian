@@ -1,2 +1,0 @@
-51:03:22.899907 main     Log continuation - Log started 2015-08-05T14:26:50.046185000Z
-51:03:22.940909 Watcher  ERROR [COM]: aRC=E_ACCESSDENIED (0x80070005) aIID={0169423f-46b4-cde9-91af-1e9d5b6cd945} aComponent={VirtualBoxWrap} aText={The object is not ready}, preserve=false aResultDetail=0

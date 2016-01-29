@@ -1,9 +1,0 @@
-<scope doc="General utility functions common to client and server.  This module contains a collection of general purpose utility functions." ilk="blob" lang="Python3" name="win32com.util">
-      <scope doc="Converts an IID to a string interface name." ilk="function" line="8" lineend="30" name="IIDToInterfaceName" returns="win32api.RegQueryValue()" signature="IIDToInterfaceName(iid)">
-        <variable ilk="argument" name="iid" />
-      </scope>
-      <import module="pythoncom" />
-      <import module="win32api" />
-      <import module="win32con" />
-    </scope>
-    

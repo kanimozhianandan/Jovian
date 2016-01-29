@@ -1,7 +1,0 @@
-#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
-#Mon Sep 14 15:58:50 EDT 2015
-abb03cf93e75a9c6e7e60f6632aa9c3323cdae8d@default-nexus-http\://nexus\:8081/nexus/content/groups/public/.lastUpdated=1442260466611
-http\://nexus.credorax.com\:8081/nexus/content/groups/public/.lastUpdated=1442260730169
-https\://repo.maven.apache.org/maven2/.lastUpdated=1442259888981
-http\://nexus\:8081/nexus/content/groups/public/.error=Could not transfer artifact com.credorax\:credorax-epower\:pom\:4.13.10g.2 from/to nexus (http\://nexus\:8081/nexus/content/groups/public)\: nexus
-https\://repo.maven.apache.org/maven2/.error=

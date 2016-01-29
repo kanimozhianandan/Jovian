@@ -1,7 +1,0 @@
-<scope doc="A module encapsulating the Windows 2000 extensions to the Remote Access Service (RAS) API." ilk="blob" lang="Python3" name="win2kras">
-      <scope ilk="function" name="GetEapUserIdentity" />
-      <variable citdl="int" name="RASEAPF_Logon" />
-      <variable citdl="int" name="RASEAPF_NonInteractive" />
-      <variable citdl="int" name="RASEAPF_Preview" />
-    </scope>
-    

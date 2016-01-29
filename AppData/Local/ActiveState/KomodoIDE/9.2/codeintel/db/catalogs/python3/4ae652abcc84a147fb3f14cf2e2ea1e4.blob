@@ -1,8 +1,0 @@
-<scope doc="Contains functions and objects wrapping the Performance Monitor APIs" ilk="blob" lang="Python3" name="perfmon">
-      <scope ilk="function" name="CounterDefinition" />
-      <scope ilk="function" name="LoadPerfCounterTextStrings" />
-      <scope ilk="function" name="ObjectType" />
-      <scope ilk="function" name="PerfMonManager" />
-      <scope ilk="function" name="UnloadPerfCounterTextStrings" />
-    </scope>
-    

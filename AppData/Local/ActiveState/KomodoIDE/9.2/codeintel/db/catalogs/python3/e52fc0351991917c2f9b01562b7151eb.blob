@@ -1,9 +1,0 @@
-<scope doc="Utilities for the win32 Performance Data Helper module  Example:" ilk="blob" lang="Python3" name="win32pdhutil">
-      <scope doc="# NOTE: This BrowseCallback doesn&apos;t seem to work on Vista for markh." ilk="function" name="BrowseCallBackDemo" signature="BrowseCallBackDemo(counter)" />
-      <scope doc="Find peformance attributes by (case insensitive) instance name." ilk="function" name="FindPerformanceAttributesByName" signature="FindPerformanceAttributesByName(instanceName, object=None, counter=None, format=256, machine=None, bRefresh=0)" />
-      <scope ilk="function" name="GetPerformanceAttributes" signature="GetPerformanceAttributes(object, counter, instance=None, inum=-1, format=256, machine=None)" />
-      <scope ilk="function" name="ShowAllProcesses" signature="ShowAllProcesses()" />
-      <scope ilk="function" name="browse" signature="browse(callback=&lt;function BrowseCallBackDemo at 0x057584B0&gt;, title=&apos;Python Browser&apos;, level=400)" />
-      <variable citdl="dict" name="counter_english_map" />
-    </scope>
-    

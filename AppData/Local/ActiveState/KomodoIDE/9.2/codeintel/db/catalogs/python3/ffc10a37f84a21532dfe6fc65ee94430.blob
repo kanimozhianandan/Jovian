@@ -1,5 +1,0 @@
-<scope doc="Helper classes for SSPI authentication via the win32security module.  SSPI authentication involves a token-exchange &quot;dance&quot;, the exact details" ilk="blob" lang="Python3" name="sspi">
-      <scope classrefs="_BaseAuth" doc="Manages the client side of an SSPI authentication handshake" ilk="class" name="ClientAuth" />
-      <scope classrefs="_BaseAuth" doc="Manages the server side of an SSPI authentication handshake" ilk="class" name="ServerAuth" />
-    </scope>
-    

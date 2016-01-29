@@ -1,7 +1,0 @@
-<scope doc="# Empty __init__ file to designate a sub-package." ilk="blob" lang="Python" name="win32com.server">
-      <import module="dispatcher" />
-      <import module="exception" />
-      <import module="policy" />
-      <import module="util" />
-    </scope>
-    
