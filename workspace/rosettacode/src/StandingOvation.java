@@ -2,7 +2,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 /*
- * 
+ *  Find the min number of persons to be added with shyness level represented.
  */
 
 public class StandingOvation{
